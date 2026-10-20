@@ -1,0 +1,102 @@
+{
+  "_note": "词表均为初始版本，用于预处理与辅助特征，不直接产生指标得分。建议在试编码后按误判样例增删。",
+  "cliches": [
+    "国之大者", "以梦为马", "不负韶华", "砥砺前行", "勇攀高峰", "厚积薄发", "初心", "使命担当", "青春之我",
+    "逐梦", "奋斗底色", "家国情怀", "扎根祖国大地", "把论文写在祖国大地上", "知行合一", "追光", "向阳而生",
+    "绽放", "答卷", "青春篇章", "青春力量", "青春担当", "奋斗者", "勇毅前行", "笃行不怠", "踔厉奋发",
+    "强国有我", "请党放心", "时代新人", "接续奋斗", "无悔", "闪耀", "璀璨", "光芒", "星辰大海", "乘风破浪",
+    "披荆斩棘", "迎难而上", "永不言弃", "敢为人先", "勇于创新", "追求卓越", "精益求精", "脚踏实地",
+    "仰望星空", "心有所信", "方能行远", "梦想照进现实", "书写", "谱写", "诠释", "榜样", "标杆", "楷模",
+    "德智体美劳", "全面发展", "品学兼优", "立德树人", "红色基因", "赤子之心", "报国之志", "奉献青春",
+    "行稳致远", "躬身入局", "破茧成蝶", "一路生花", "热爱可抵岁月漫长", "未来可期"
+  ],
+  "evaluative_terms": [
+    "优秀", "出色", "杰出", "卓越", "非凡", "了不起", "令人敬佩", "充满热情", "热爱", "执着", "坚韧",
+    "勤奋", "刻苦", "认真", "踏实", "严谨", "善于", "勇于", "敢于", "富有"
+  ],
+  "event_markers": {
+    "time": "((19|20)\\d{2}年|\\d{1,2}月|大[一二三四五]|研[一二三]|博[一二三四五]|高[一二三]|初[一二三]|本科|硕士|博士|博士后|入学|毕业|寒假|暑假|学期|那年|那天|当时|起初|后来|之后|随后|第[一二三四五六七八九十\\d]+[次年轮版])",
+    "quantity": "(\\d+(\\.\\d+)?\\s*(篇|项|次|个|件|轮|版|组|台|套|万|千|百|小时|天|周|月|年|%|％)|[一二三四五六七八九十百千万]+(篇|项|次|轮|版|个月|年))",
+    "action": "(设计|搭建|推导|证明|编写|开发|测试|测量|调试|实验|仿真|建模|改进|优化|重做|推翻|修改|调整|提出|发现|注意到|发表|投稿|申请|授权|联系|请教|检索|查阅|自学|旁听|组建|发起|带领|完成|攻克|失败|被拒|放弃|转向|复盘|验证|对照|采集|标注|迭代)",
+    "artifact": "(论文|期刊|会议|专利|软件著作权|原型|样机|芯片|算法|模型|数据集|平台|系统|装置|仪器|代码|作品|报告|项目|课题|基金|竞赛|大赛|挑战杯|互联网\\+|建模|ICPC|ACM|Nature|Science|Cell|IEEE|SCI|EI|CSSCI)",
+    "first_person": "(我|我们|自己)"
+  },
+  "event_markers_en": {
+    "time": "\\b((1[6-9]|20)\\d{2}|as a (boy|girl|child|student)|at the age of|when I was|in my (first|second|third|final|last) year|in the (spring|summer|autumn|fall|winter) of)\\b",
+    "quantity": "\\b(\\d+(\\.\\d+)?|one|two|three|four|five|six|seven|eight|nine|ten|several|dozens?)\\s+(years?|months?|weeks?|days?|papers?|experiments?|times|attempts|versions)\\b",
+    "action": "\\b(designed|built|constructed|measured|derived|proved|calculated|computed|wrote|published|submitted|discovered|noticed|observed|tried|failed|repeated|modified|changed|abandoned|returned|asked|read|taught myself|visited|wrote to|joined|started|founded|tested|developed|improved|realized|found)\\b",
+    "artifact": "\\b(paper|thesis|experiment|apparatus|instrument|laboratory|lab|theory|model|method|technique|prototype|data|results?|equations?|journal|lecture|seminar|problem)\\b",
+    "first_person": "\\b(I|[Mm]y|[Mm]e|[Ww]e|[Oo]ur|[Mm]yself)\\b"
+  },
+  "life_period_patterns_en": {
+    "P0": "\\b(childhood|as a (boy|girl|child)|elementary school|primary school|my parents|kindergarten|was born)\\b",
+    "P1": "\\b(high school|secondary school|gymnasium|lyc[eé]e|grammar school|school days|teenager)\\b",
+    "P2": "\\b(undergraduate|college|bachelor|freshman|sophomore|university studies|first degree)\\b",
+    "P3": "\\b(graduate (school|student|studies)|Ph\\.? ?D|doctoral|doctorate|dissertation|thesis advisor|my thesis)\\b",
+    "P4": "\\b(postdoc|post-doctoral|postdoctoral|research fellow|assistant professor|instructor)\\b",
+    "P5": "\\b(professor|my (own )?(group|laboratory|lab)|director|department chair|my students)\\b"
+  },
+  "cliches_en": [
+    "passion for science", "thirst for knowledge", "never gave up", "follow your dreams", "stand on the shoulders of giants"
+  ],
+  "attribution_markers": {
+    "quote_open": "[“\"「]",
+    "speech_verbs": "(说|表示|回忆|坦言|笑着说|告诉记者|谈到|认为|感慨|直言)",
+    "other_roles": "(导师|老师|教授|院士|同学|室友|队友|评委|审稿人|师兄|师姐|辅导员|父亲|母亲)"
+  },
+  "life_period_patterns": {
+    "P0": "(小时候|童年|幼年|幼儿园|小学|孩提|儿时|上学前)",
+    "P1": "(初中|高中|中学|初[一二三]|高[一二三]|高考|竞赛班|少年班)",
+    "P2": "(本科|大[一二三四五]|大学(一|二|三|四)年级|本科生|专科|保研|推免|毕业设计|大创)",
+    "P3": "(硕士|博士|研究生|研[一二三]|博[一二三四五]|直博|读博|博士论文|开题|答辩)",
+    "P4": "(博士后|青年教师|助理教授|讲师|副研究员|访问学者)",
+    "P5": "(教授|研究员|课题组长|实验室主任|院士|PI|独立实验室|团队负责人)"
+  },
+  "sample_type_signals": {
+    "research": ["论文", "SCI", "SSCI", "EI", "CSSCI", "一作", "第一作者", "通讯作者", "发表", "期刊", "顶会", "国际会议", "专利", "授权", "实验", "课题", "科研", "研究成果", "算法", "模型", "芯片", "器件", "数据集", "原型", "Nature", "Science", "Cell", "IEEE", "ACM"],
+    "competition": ["挑战杯", "互联网+", "互联网＋", "创青春", "数学建模", "ICPC", "电子设计", "机器人", "智能车", "学科竞赛", "创新大赛", "金奖", "特等奖", "一等奖", "全国冠军"],
+    "venture": ["创业", "公司", "成果转化", "产品", "融资", "孵化", "落地", "推广应用"],
+    "academic": ["绩点", "GPA", "排名第", "专业第一", "年级第一", "综合测评", "保研", "推免", "满分"],
+    "service": ["志愿", "支教", "服务时长", "社会实践", "乡村振兴", "公益", "西部计划", "献血", "义诊", "调研"],
+    "leadership": ["学生会", "班长", "支部书记", "团支书", "主席", "部长", "学生干部", "党支部"],
+    "arts_sports": ["运动会", "冠军", "田径", "游泳", "篮球", "足球", "艺术团", "舞蹈", "合唱", "演出", "马拉松", "国家队"],
+    "resilience": ["家境", "贫困", "残疾", "失明", "听障", "单亲", "自强", "助学贷款", "勤工俭学"]
+  },
+  "local_code_cues": {
+    "L01": ["国家需要", "国家需求", "国家重大", "卡脖子", "自主可控", "国产化", "填补国内空白", "服务国家"],
+    "L02": ["导师邀请", "导师推荐", "加入团队", "进入课题组", "师兄带", "师姐带", "跟随导师", "团队攻关"],
+    "L03": ["挑战杯", "互联网+", "大创", "数学建模", "竞赛", "大赛"],
+    "L04": ["党支部", "学生会", "班长", "团支书", "主席", "负责人"],
+    "L05": ["支教", "志愿", "乡村振兴", "社会实践", "基层"],
+    "L06": ["熬夜", "通宵", "凌晨", "只睡", "放弃假期", "春节都在", "带病"],
+    "L07": ["强基计划", "拔尖计划", "书院", "少年班", "实验班", "本硕博", "英才计划", "珠峰计划"],
+    "L08": ["家境", "家乡", "农村", "父母", "家人"]
+  },
+  "indicator_cues": {
+    "_note": "辅助词典特征：只表示文本出现了相关表述，不等于指标得分。",
+    "C01": ["目标", "规划", "计划", "下一步", "打算"],
+    "C04": ["我是学", "作为一名", "研究者", "科研工作者"],
+    "C05": ["一直想", "早就决定", "如愿", "坚定选择"],
+    "C06": ["好奇", "为什么", "想知道", "着迷"],
+    "C07": ["空白", "不足", "缺陷", "没有解决", "无法解释", "矛盾"],
+    "C08": ["提出问题", "追问", "发问", "疑问"],
+    "C10": ["查阅", "检索", "请教", "联系", "旁听", "自学", "写信"],
+    "C11": ["又回到", "重新拾起", "一直关注", "始终"],
+    "C14": ["意外", "偶然", "异常", "噪声", "不起眼"],
+    "C18": ["借鉴", "迁移", "类比", "引入", "跨学科", "交叉"],
+    "C19": ["换个角度", "重新定义", "转化为", "拆解", "重新思考"],
+    "C20": ["另辟蹊径", "颠覆", "打破", "非常规", "不同于传统"],
+    "C21": ["规律", "模式", "规律性"],
+    "C22": ["灵感", "突然想到", "豁然开朗", "顿悟"],
+    "C24": ["备选", "方案比较", "筛选", "取舍"],
+    "C25": ["质疑", "不被看好", "反对", "坚持己见", "少数"],
+    "C26": ["推翻", "修正", "与预期不符", "重新审视"],
+    "C27": ["审稿意见", "批评", "建议下", "意见后"],
+    "C28": ["自发", "自主发起", "自己组建", "主动发起", "自学"],
+    "C29": ["坚持", "持续", "多年", "年复一年"],
+    "C30": ["失败", "落选", "被拒", "挫折", "重新开始"],
+    "C31": ["调整", "改变思路", "换一种", "转向"],
+    "C32": ["版本", "迭代", "修改", "改进", "打磨"],
+    "C33": ["验证", "设计实验", "原型", "样机", "测试方案", "假设"]
+  }
+}

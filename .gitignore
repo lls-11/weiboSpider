@@ -14,3 +14,5 @@ weibo.db
 *.log
 
 .idea
+
+talent_data/

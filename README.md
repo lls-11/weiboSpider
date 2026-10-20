@@ -53,6 +53,10 @@
   - [贡献者](#贡献者)
   - [注意事项](#注意事项)
 
+## 创新人才文本语料（talent_corpus）
+
+本仓库另含 `talent_corpus` 模块，用于采集《人民日报》国家奖学金获奖学生代表名录、高校新闻与公众号报道、诺贝尔奖获得者自传等公开文本，按《创新人才识别模型》的 33 项指标编码并分析。研究方案与使用方法见 [docs/talent_corpus.md](docs/talent_corpus.md)，编码手册见 [docs/talent_codebook.md](docs/talent_codebook.md)。
+
 ## 获取到的字段
 
 本部分为爬取到的字段信息说明，为了与[免cookie版](https://github.com/dataabc/weibo-crawler)区分，下面将两者爬取到的信息都列出来。如果是免cookie版所特有的信息，会有免cookie标注，没有标注的为二者共有的信息。

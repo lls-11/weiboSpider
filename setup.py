@@ -13,7 +13,8 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     url='https://github.com/dataabc/weiboSpider',
     packages=setuptools.find_packages(),
-    package_data={'weibo_spider': ['config_sample.json', 'logging.conf']},
+    package_data={'weibo_spider': ['config_sample.json', 'logging.conf'],
+                  'talent_corpus': ['data/*.json']},
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
