@@ -6,7 +6,7 @@
           https://paper.people.com.cn/rmrb/pc/content/202605/04/content_30154802.html
     旧版  https://paper.people.com.cn/rmrb/html/2024-05/04/nbs.D110000renmrb_06.htm
           https://paper.people.com.cn/rmrb/html/2024-05/04/nw.D110000renmrb_20240504_1-06.htm
-程序先试新版，再试旧版。
+2024 年 12 月 1 日起为新版；程序按日期先试对应格式，再试另一种。
 
 名录条目的排版各年可能不同。parse_entries 先用“段首加粗姓名”识别条目，
 再用“姓名 + 院校名”的正则兜底；每年首次运行后请用 --dump-raw 输出的原文核对条目数。
@@ -44,14 +44,19 @@ _NOT_NAME_START = ('他', '她', '在', '从', '作', '曾', '以', '为', '将'
                    '于', '自', '和', '与', '先', '并', '共', '全')
 
 
+# 2024-12-01 起使用新版地址（与 github.com/AnzhiZhang/PeoplesDaily 的判断一致）
+NEW_FORMAT_FROM = date(2024, 12, 1)
+
+
 def page_one_urls(d):
-    """返回 [(格式, 第 1 版地址)]，新版在前。"""
-    return [
+    """返回 [(格式, 第 1 版地址)]：按日期把更可能的格式放在前面，另一种作为后备。"""
+    urls = [
         ('new', BASE + 'pc/layout/%s/%s/node_01.html' %
          (d.strftime('%Y%m'), d.strftime('%d'))),
         ('old', BASE + 'html/%s/%s/nbs.D110000renmrb_01.htm' %
          (d.strftime('%Y-%m'), d.strftime('%d'))),
     ]
+    return urls if d >= NEW_FORMAT_FROM else urls[::-1]
 
 
 _DAY = re.compile(r'/(\d{6}/\d{2}|\d{4}-\d{2}/\d{2})/')

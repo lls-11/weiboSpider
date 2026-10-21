@@ -1,0 +1,650 @@
+﻿laureate_id,full_name,category_code,year,summary_page,api_query,status
+160,Jacobus Henricus van 't Hoff,che,1901,https://www.nobelprize.org/prizes/chemistry/1901/summary/,https://api.nobelprize.org/2.1/laureate/160,未抓取
+293,Emil Adolf von Behring,med,1901,https://www.nobelprize.org/prizes/medicine/1901/summary/,https://api.nobelprize.org/2.1/laureate/293,未抓取
+1,Wilhelm Conrad Röntgen,phy,1901,https://www.nobelprize.org/prizes/physics/1901/summary/,https://api.nobelprize.org/2.1/laureate/1,未抓取
+161,Hermann Emil Fischer,che,1902,https://www.nobelprize.org/prizes/chemistry/1902/summary/,https://api.nobelprize.org/2.1/laureate/161,未抓取
+294,Ronald Ross,med,1902,https://www.nobelprize.org/prizes/medicine/1902/summary/,https://api.nobelprize.org/2.1/laureate/294,未抓取
+2,Hendrik Antoon Lorentz,phy,1902,https://www.nobelprize.org/prizes/physics/1902/summary/,https://api.nobelprize.org/2.1/laureate/2,未抓取
+3,Pieter Zeeman,phy,1902,https://www.nobelprize.org/prizes/physics/1902/summary/,https://api.nobelprize.org/2.1/laureate/3,未抓取
+162,Svante August Arrhenius,che,1903,https://www.nobelprize.org/prizes/chemistry/1903/summary/,https://api.nobelprize.org/2.1/laureate/162,未抓取
+295,Niels Ryberg Finsen,med,1903,https://www.nobelprize.org/prizes/medicine/1903/summary/,https://api.nobelprize.org/2.1/laureate/295,未抓取
+4,Antoine Henri Becquerel,phy,1903,https://www.nobelprize.org/prizes/physics/1903/summary/,https://api.nobelprize.org/2.1/laureate/4,未抓取
+6,"Marie Curie, née Sklodowska",phy,1903,https://www.nobelprize.org/prizes/physics/1903/summary/,https://api.nobelprize.org/2.1/laureate/6,未抓取
+5,Pierre Curie,phy,1903,https://www.nobelprize.org/prizes/physics/1903/summary/,https://api.nobelprize.org/2.1/laureate/5,未抓取
+163,Sir William Ramsay,che,1904,https://www.nobelprize.org/prizes/chemistry/1904/summary/,https://api.nobelprize.org/2.1/laureate/163,未抓取
+296,Ivan Petrovich Pavlov,med,1904,https://www.nobelprize.org/prizes/medicine/1904/summary/,https://api.nobelprize.org/2.1/laureate/296,未抓取
+8,Lord Rayleigh (John William Strutt),phy,1904,https://www.nobelprize.org/prizes/physics/1904/summary/,https://api.nobelprize.org/2.1/laureate/8,未抓取
+164,Johann Friedrich Wilhelm Adolf von Baeyer,che,1905,https://www.nobelprize.org/prizes/chemistry/1905/summary/,https://api.nobelprize.org/2.1/laureate/164,未抓取
+297,Robert Koch,med,1905,https://www.nobelprize.org/prizes/medicine/1905/summary/,https://api.nobelprize.org/2.1/laureate/297,未抓取
+9,Philipp Eduard Anton von Lenard,phy,1905,https://www.nobelprize.org/prizes/physics/1905/summary/,https://api.nobelprize.org/2.1/laureate/9,未抓取
+165,Henri Moissan,che,1906,https://www.nobelprize.org/prizes/chemistry/1906/summary/,https://api.nobelprize.org/2.1/laureate/165,未抓取
+298,Camillo Golgi,med,1906,https://www.nobelprize.org/prizes/medicine/1906/summary/,https://api.nobelprize.org/2.1/laureate/298,未抓取
+299,Santiago Ramón y Cajal,med,1906,https://www.nobelprize.org/prizes/medicine/1906/summary/,https://api.nobelprize.org/2.1/laureate/299,未抓取
+10,Joseph John Thomson,phy,1906,https://www.nobelprize.org/prizes/physics/1906/summary/,https://api.nobelprize.org/2.1/laureate/10,未抓取
+166,Eduard Buchner,che,1907,https://www.nobelprize.org/prizes/chemistry/1907/summary/,https://api.nobelprize.org/2.1/laureate/166,未抓取
+300,Charles Louis Alphonse Laveran,med,1907,https://www.nobelprize.org/prizes/medicine/1907/summary/,https://api.nobelprize.org/2.1/laureate/300,未抓取
+11,Albert Abraham Michelson,phy,1907,https://www.nobelprize.org/prizes/physics/1907/summary/,https://api.nobelprize.org/2.1/laureate/11,未抓取
+167,Ernest Rutherford,che,1908,https://www.nobelprize.org/prizes/chemistry/1908/summary/,https://api.nobelprize.org/2.1/laureate/167,未抓取
+301,Ilya Ilyich Mechnikov,med,1908,https://www.nobelprize.org/prizes/medicine/1908/summary/,https://api.nobelprize.org/2.1/laureate/301,未抓取
+302,Paul Ehrlich,med,1908,https://www.nobelprize.org/prizes/medicine/1908/summary/,https://api.nobelprize.org/2.1/laureate/302,未抓取
+12,Gabriel Lippmann,phy,1908,https://www.nobelprize.org/prizes/physics/1908/summary/,https://api.nobelprize.org/2.1/laureate/12,未抓取
+168,Wilhelm Ostwald,che,1909,https://www.nobelprize.org/prizes/chemistry/1909/summary/,https://api.nobelprize.org/2.1/laureate/168,未抓取
+303,Emil Theodor Kocher,med,1909,https://www.nobelprize.org/prizes/medicine/1909/summary/,https://api.nobelprize.org/2.1/laureate/303,未抓取
+13,Guglielmo Marconi,phy,1909,https://www.nobelprize.org/prizes/physics/1909/summary/,https://api.nobelprize.org/2.1/laureate/13,未抓取
+14,Karl Ferdinand Braun,phy,1909,https://www.nobelprize.org/prizes/physics/1909/summary/,https://api.nobelprize.org/2.1/laureate/14,未抓取
+169,Otto Wallach,che,1910,https://www.nobelprize.org/prizes/chemistry/1910/summary/,https://api.nobelprize.org/2.1/laureate/169,未抓取
+304,Albrecht Kossel,med,1910,https://www.nobelprize.org/prizes/medicine/1910/summary/,https://api.nobelprize.org/2.1/laureate/304,未抓取
+15,Johannes Diderik van der Waals,phy,1910,https://www.nobelprize.org/prizes/physics/1910/summary/,https://api.nobelprize.org/2.1/laureate/15,未抓取
+6,"Marie Curie, née Sklodowska",che,1911,https://www.nobelprize.org/prizes/chemistry/1911/summary/,https://api.nobelprize.org/2.1/laureate/6,未抓取
+305,Allvar Gullstrand,med,1911,https://www.nobelprize.org/prizes/medicine/1911/summary/,https://api.nobelprize.org/2.1/laureate/305,未抓取
+16,Wilhelm Wien,phy,1911,https://www.nobelprize.org/prizes/physics/1911/summary/,https://api.nobelprize.org/2.1/laureate/16,未抓取
+173,Paul Sabatier,che,1912,https://www.nobelprize.org/prizes/chemistry/1912/summary/,https://api.nobelprize.org/2.1/laureate/173,未抓取
+172,Victor Grignard,che,1912,https://www.nobelprize.org/prizes/chemistry/1912/summary/,https://api.nobelprize.org/2.1/laureate/172,未抓取
+306,Alexis Carrel,med,1912,https://www.nobelprize.org/prizes/medicine/1912/summary/,https://api.nobelprize.org/2.1/laureate/306,未抓取
+17,Nils Gustaf Dalén,phy,1912,https://www.nobelprize.org/prizes/physics/1912/summary/,https://api.nobelprize.org/2.1/laureate/17,未抓取
+174,Alfred Werner,che,1913,https://www.nobelprize.org/prizes/chemistry/1913/summary/,https://api.nobelprize.org/2.1/laureate/174,未抓取
+307,Charles Robert Richet,med,1913,https://www.nobelprize.org/prizes/medicine/1913/summary/,https://api.nobelprize.org/2.1/laureate/307,未抓取
+18,Heike Kamerlingh Onnes,phy,1913,https://www.nobelprize.org/prizes/physics/1913/summary/,https://api.nobelprize.org/2.1/laureate/18,未抓取
+175,Theodore William Richards,che,1914,https://www.nobelprize.org/prizes/chemistry/1914/summary/,https://api.nobelprize.org/2.1/laureate/175,未抓取
+308,Robert Bárány,med,1914,https://www.nobelprize.org/prizes/medicine/1914/summary/,https://api.nobelprize.org/2.1/laureate/308,未抓取
+19,Max von Laue,phy,1914,https://www.nobelprize.org/prizes/physics/1914/summary/,https://api.nobelprize.org/2.1/laureate/19,未抓取
+176,Richard Martin Willstätter,che,1915,https://www.nobelprize.org/prizes/chemistry/1915/summary/,https://api.nobelprize.org/2.1/laureate/176,未抓取
+20,Sir William Henry Bragg,phy,1915,https://www.nobelprize.org/prizes/physics/1915/summary/,https://api.nobelprize.org/2.1/laureate/20,未抓取
+21,William Lawrence Bragg,phy,1915,https://www.nobelprize.org/prizes/physics/1915/summary/,https://api.nobelprize.org/2.1/laureate/21,未抓取
+22,Charles Glover Barkla,phy,1917,https://www.nobelprize.org/prizes/physics/1917/summary/,https://api.nobelprize.org/2.1/laureate/22,未抓取
+177,Fritz Haber,che,1918,https://www.nobelprize.org/prizes/chemistry/1918/summary/,https://api.nobelprize.org/2.1/laureate/177,未抓取
+23,Max Karl Ernst Ludwig Planck,phy,1918,https://www.nobelprize.org/prizes/physics/1918/summary/,https://api.nobelprize.org/2.1/laureate/23,未抓取
+309,Jules Bordet,med,1919,https://www.nobelprize.org/prizes/medicine/1919/summary/,https://api.nobelprize.org/2.1/laureate/309,未抓取
+24,Johannes Stark,phy,1919,https://www.nobelprize.org/prizes/physics/1919/summary/,https://api.nobelprize.org/2.1/laureate/24,未抓取
+178,Walther Hermann Nernst,che,1920,https://www.nobelprize.org/prizes/chemistry/1920/summary/,https://api.nobelprize.org/2.1/laureate/178,未抓取
+310,Schack August Steenberg Krogh,med,1920,https://www.nobelprize.org/prizes/medicine/1920/summary/,https://api.nobelprize.org/2.1/laureate/310,未抓取
+25,Charles Edouard Guillaume,phy,1920,https://www.nobelprize.org/prizes/physics/1920/summary/,https://api.nobelprize.org/2.1/laureate/25,未抓取
+179,Frederick Soddy,che,1921,https://www.nobelprize.org/prizes/chemistry/1921/summary/,https://api.nobelprize.org/2.1/laureate/179,未抓取
+26,Albert Einstein,phy,1921,https://www.nobelprize.org/prizes/physics/1921/summary/,https://api.nobelprize.org/2.1/laureate/26,未抓取
+180,Francis William Aston,che,1922,https://www.nobelprize.org/prizes/chemistry/1922/summary/,https://api.nobelprize.org/2.1/laureate/180,未抓取
+311,Archibald Vivian Hill,med,1922,https://www.nobelprize.org/prizes/medicine/1922/summary/,https://api.nobelprize.org/2.1/laureate/311,未抓取
+312,Otto Fritz Meyerhof,med,1922,https://www.nobelprize.org/prizes/medicine/1922/summary/,https://api.nobelprize.org/2.1/laureate/312,未抓取
+27,Niels Henrik David Bohr,phy,1922,https://www.nobelprize.org/prizes/physics/1922/summary/,https://api.nobelprize.org/2.1/laureate/27,未抓取
+181,Fritz Pregl,che,1923,https://www.nobelprize.org/prizes/chemistry/1923/summary/,https://api.nobelprize.org/2.1/laureate/181,未抓取
+313,Frederick Grant Banting,med,1923,https://www.nobelprize.org/prizes/medicine/1923/summary/,https://api.nobelprize.org/2.1/laureate/313,未抓取
+314,John James Rickard Macleod,med,1923,https://www.nobelprize.org/prizes/medicine/1923/summary/,https://api.nobelprize.org/2.1/laureate/314,未抓取
+28,Robert Andrews Millikan,phy,1923,https://www.nobelprize.org/prizes/physics/1923/summary/,https://api.nobelprize.org/2.1/laureate/28,未抓取
+315,Willem Einthoven,med,1924,https://www.nobelprize.org/prizes/medicine/1924/summary/,https://api.nobelprize.org/2.1/laureate/315,未抓取
+29,Karl Manne Georg Siegbahn,phy,1924,https://www.nobelprize.org/prizes/physics/1924/summary/,https://api.nobelprize.org/2.1/laureate/29,未抓取
+182,Richard Adolf Zsigmondy,che,1925,https://www.nobelprize.org/prizes/chemistry/1925/summary/,https://api.nobelprize.org/2.1/laureate/182,未抓取
+31,Gustav Ludwig Hertz,phy,1925,https://www.nobelprize.org/prizes/physics/1925/summary/,https://api.nobelprize.org/2.1/laureate/31,未抓取
+30,James Franck,phy,1925,https://www.nobelprize.org/prizes/physics/1925/summary/,https://api.nobelprize.org/2.1/laureate/30,未抓取
+183,The (Theodor) Svedberg,che,1926,https://www.nobelprize.org/prizes/chemistry/1926/summary/,https://api.nobelprize.org/2.1/laureate/183,未抓取
+316,Johannes Andreas Grib Fibiger,med,1926,https://www.nobelprize.org/prizes/medicine/1926/summary/,https://api.nobelprize.org/2.1/laureate/316,未抓取
+32,Jean Baptiste Perrin,phy,1926,https://www.nobelprize.org/prizes/physics/1926/summary/,https://api.nobelprize.org/2.1/laureate/32,未抓取
+184,Heinrich Otto Wieland,che,1927,https://www.nobelprize.org/prizes/chemistry/1927/summary/,https://api.nobelprize.org/2.1/laureate/184,未抓取
+317,Julius Wagner-Jauregg,med,1927,https://www.nobelprize.org/prizes/medicine/1927/summary/,https://api.nobelprize.org/2.1/laureate/317,未抓取
+33,Arthur Holly Compton,phy,1927,https://www.nobelprize.org/prizes/physics/1927/summary/,https://api.nobelprize.org/2.1/laureate/33,未抓取
+34,Charles Thomson Rees Wilson,phy,1927,https://www.nobelprize.org/prizes/physics/1927/summary/,https://api.nobelprize.org/2.1/laureate/34,未抓取
+185,Adolf Otto Reinhold Windaus,che,1928,https://www.nobelprize.org/prizes/chemistry/1928/summary/,https://api.nobelprize.org/2.1/laureate/185,未抓取
+318,Charles Jules Henri Nicolle,med,1928,https://www.nobelprize.org/prizes/medicine/1928/summary/,https://api.nobelprize.org/2.1/laureate/318,未抓取
+35,Owen Willans Richardson,phy,1928,https://www.nobelprize.org/prizes/physics/1928/summary/,https://api.nobelprize.org/2.1/laureate/35,未抓取
+186,Arthur Harden,che,1929,https://www.nobelprize.org/prizes/chemistry/1929/summary/,https://api.nobelprize.org/2.1/laureate/186,未抓取
+187,Hans Karl August Simon von Euler-Chelpin,che,1929,https://www.nobelprize.org/prizes/chemistry/1929/summary/,https://api.nobelprize.org/2.1/laureate/187,未抓取
+319,Christiaan Eijkman,med,1929,https://www.nobelprize.org/prizes/medicine/1929/summary/,https://api.nobelprize.org/2.1/laureate/319,未抓取
+320,Sir Frederick Gowland Hopkins,med,1929,https://www.nobelprize.org/prizes/medicine/1929/summary/,https://api.nobelprize.org/2.1/laureate/320,未抓取
+36,Prince Louis-Victor Pierre Raymond de Broglie,phy,1929,https://www.nobelprize.org/prizes/physics/1929/summary/,https://api.nobelprize.org/2.1/laureate/36,未抓取
+188,Hans Fischer,che,1930,https://www.nobelprize.org/prizes/chemistry/1930/summary/,https://api.nobelprize.org/2.1/laureate/188,未抓取
+321,Karl Landsteiner,med,1930,https://www.nobelprize.org/prizes/medicine/1930/summary/,https://api.nobelprize.org/2.1/laureate/321,未抓取
+37,Sir Chandrasekhara Venkata Raman,phy,1930,https://www.nobelprize.org/prizes/physics/1930/summary/,https://api.nobelprize.org/2.1/laureate/37,未抓取
+189,Carl Bosch,che,1931,https://www.nobelprize.org/prizes/chemistry/1931/summary/,https://api.nobelprize.org/2.1/laureate/189,未抓取
+190,Friedrich Bergius,che,1931,https://www.nobelprize.org/prizes/chemistry/1931/summary/,https://api.nobelprize.org/2.1/laureate/190,未抓取
+322,Otto Heinrich Warburg,med,1931,https://www.nobelprize.org/prizes/medicine/1931/summary/,https://api.nobelprize.org/2.1/laureate/322,未抓取
+191,Irving Langmuir,che,1932,https://www.nobelprize.org/prizes/chemistry/1932/summary/,https://api.nobelprize.org/2.1/laureate/191,未抓取
+324,Edgar Douglas Adrian,med,1932,https://www.nobelprize.org/prizes/medicine/1932/summary/,https://api.nobelprize.org/2.1/laureate/324,未抓取
+323,Sir Charles Scott Sherrington,med,1932,https://www.nobelprize.org/prizes/medicine/1932/summary/,https://api.nobelprize.org/2.1/laureate/323,未抓取
+38,Werner Karl Heisenberg,phy,1932,https://www.nobelprize.org/prizes/physics/1932/summary/,https://api.nobelprize.org/2.1/laureate/38,未抓取
+325,Thomas Hunt Morgan,med,1933,https://www.nobelprize.org/prizes/medicine/1933/summary/,https://api.nobelprize.org/2.1/laureate/325,未抓取
+39,Erwin Schrödinger,phy,1933,https://www.nobelprize.org/prizes/physics/1933/summary/,https://api.nobelprize.org/2.1/laureate/39,未抓取
+40,Paul Adrien Maurice Dirac,phy,1933,https://www.nobelprize.org/prizes/physics/1933/summary/,https://api.nobelprize.org/2.1/laureate/40,未抓取
+192,Harold Clayton Urey,che,1934,https://www.nobelprize.org/prizes/chemistry/1934/summary/,https://api.nobelprize.org/2.1/laureate/192,未抓取
+326,George Hoyt Whipple,med,1934,https://www.nobelprize.org/prizes/medicine/1934/summary/,https://api.nobelprize.org/2.1/laureate/326,未抓取
+327,George Richards Minot,med,1934,https://www.nobelprize.org/prizes/medicine/1934/summary/,https://api.nobelprize.org/2.1/laureate/327,未抓取
+328,William Parry Murphy,med,1934,https://www.nobelprize.org/prizes/medicine/1934/summary/,https://api.nobelprize.org/2.1/laureate/328,未抓取
+193,Frédéric Joliot,che,1935,https://www.nobelprize.org/prizes/chemistry/1935/summary/,https://api.nobelprize.org/2.1/laureate/193,未抓取
+194,Irène Joliot-Curie,che,1935,https://www.nobelprize.org/prizes/chemistry/1935/summary/,https://api.nobelprize.org/2.1/laureate/194,未抓取
+329,Hans Spemann,med,1935,https://www.nobelprize.org/prizes/medicine/1935/summary/,https://api.nobelprize.org/2.1/laureate/329,未抓取
+41,James Chadwick,phy,1935,https://www.nobelprize.org/prizes/physics/1935/summary/,https://api.nobelprize.org/2.1/laureate/41,未抓取
+195,Petrus (Peter) Josephus Wilhelmus Debye,che,1936,https://www.nobelprize.org/prizes/chemistry/1936/summary/,https://api.nobelprize.org/2.1/laureate/195,未抓取
+331,Otto Loewi,med,1936,https://www.nobelprize.org/prizes/medicine/1936/summary/,https://api.nobelprize.org/2.1/laureate/331,未抓取
+330,Sir Henry Hallett Dale,med,1936,https://www.nobelprize.org/prizes/medicine/1936/summary/,https://api.nobelprize.org/2.1/laureate/330,未抓取
+43,Carl David Anderson,phy,1936,https://www.nobelprize.org/prizes/physics/1936/summary/,https://api.nobelprize.org/2.1/laureate/43,未抓取
+42,Victor Franz Hess,phy,1936,https://www.nobelprize.org/prizes/physics/1936/summary/,https://api.nobelprize.org/2.1/laureate/42,未抓取
+197,Paul Karrer,che,1937,https://www.nobelprize.org/prizes/chemistry/1937/summary/,https://api.nobelprize.org/2.1/laureate/197,未抓取
+196,Walter Norman Haworth,che,1937,https://www.nobelprize.org/prizes/chemistry/1937/summary/,https://api.nobelprize.org/2.1/laureate/196,未抓取
+332,Albert von Szent-Györgyi Nagyrápolt,med,1937,https://www.nobelprize.org/prizes/medicine/1937/summary/,https://api.nobelprize.org/2.1/laureate/332,未抓取
+44,Clinton Joseph Davisson,phy,1937,https://www.nobelprize.org/prizes/physics/1937/summary/,https://api.nobelprize.org/2.1/laureate/44,未抓取
+45,George Paget Thomson,phy,1937,https://www.nobelprize.org/prizes/physics/1937/summary/,https://api.nobelprize.org/2.1/laureate/45,未抓取
+198,Richard Kuhn,che,1938,https://www.nobelprize.org/prizes/chemistry/1938/summary/,https://api.nobelprize.org/2.1/laureate/198,未抓取
+333,Corneille Jean François Heymans,med,1938,https://www.nobelprize.org/prizes/medicine/1938/summary/,https://api.nobelprize.org/2.1/laureate/333,未抓取
+46,Enrico Fermi,phy,1938,https://www.nobelprize.org/prizes/physics/1938/summary/,https://api.nobelprize.org/2.1/laureate/46,未抓取
+199,Adolf Friedrich Johann Butenandt,che,1939,https://www.nobelprize.org/prizes/chemistry/1939/summary/,https://api.nobelprize.org/2.1/laureate/199,未抓取
+200,Leopold Ruzicka,che,1939,https://www.nobelprize.org/prizes/chemistry/1939/summary/,https://api.nobelprize.org/2.1/laureate/200,未抓取
+334,Gerhard Domagk,med,1939,https://www.nobelprize.org/prizes/medicine/1939/summary/,https://api.nobelprize.org/2.1/laureate/334,未抓取
+47,Ernest Orlando Lawrence,phy,1939,https://www.nobelprize.org/prizes/physics/1939/summary/,https://api.nobelprize.org/2.1/laureate/47,未抓取
+201,George de Hevesy,che,1943,https://www.nobelprize.org/prizes/chemistry/1943/summary/,https://api.nobelprize.org/2.1/laureate/201,未抓取
+336,Edward Adelbert Doisy,med,1943,https://www.nobelprize.org/prizes/medicine/1943/summary/,https://api.nobelprize.org/2.1/laureate/336,未抓取
+335,Henrik Carl Peter Dam,med,1943,https://www.nobelprize.org/prizes/medicine/1943/summary/,https://api.nobelprize.org/2.1/laureate/335,未抓取
+48,Otto Stern,phy,1943,https://www.nobelprize.org/prizes/physics/1943/summary/,https://api.nobelprize.org/2.1/laureate/48,未抓取
+202,Otto Hahn,che,1944,https://www.nobelprize.org/prizes/chemistry/1944/summary/,https://api.nobelprize.org/2.1/laureate/202,未抓取
+338,Herbert Spencer Gasser,med,1944,https://www.nobelprize.org/prizes/medicine/1944/summary/,https://api.nobelprize.org/2.1/laureate/338,未抓取
+337,Joseph Erlanger,med,1944,https://www.nobelprize.org/prizes/medicine/1944/summary/,https://api.nobelprize.org/2.1/laureate/337,未抓取
+49,Isidor Isaac Rabi,phy,1944,https://www.nobelprize.org/prizes/physics/1944/summary/,https://api.nobelprize.org/2.1/laureate/49,未抓取
+203,Artturi Ilmari Virtanen,che,1945,https://www.nobelprize.org/prizes/chemistry/1945/summary/,https://api.nobelprize.org/2.1/laureate/203,未抓取
+340,Ernst Boris Chain,med,1945,https://www.nobelprize.org/prizes/medicine/1945/summary/,https://api.nobelprize.org/2.1/laureate/340,未抓取
+339,Sir Alexander Fleming,med,1945,https://www.nobelprize.org/prizes/medicine/1945/summary/,https://api.nobelprize.org/2.1/laureate/339,未抓取
+341,Sir Howard Walter Florey,med,1945,https://www.nobelprize.org/prizes/medicine/1945/summary/,https://api.nobelprize.org/2.1/laureate/341,未抓取
+50,Wolfgang Pauli,phy,1945,https://www.nobelprize.org/prizes/physics/1945/summary/,https://api.nobelprize.org/2.1/laureate/50,未抓取
+204,James Batcheller Sumner,che,1946,https://www.nobelprize.org/prizes/chemistry/1946/summary/,https://api.nobelprize.org/2.1/laureate/204,未抓取
+205,John Howard Northrop,che,1946,https://www.nobelprize.org/prizes/chemistry/1946/summary/,https://api.nobelprize.org/2.1/laureate/205,未抓取
+206,Wendell Meredith Stanley,che,1946,https://www.nobelprize.org/prizes/chemistry/1946/summary/,https://api.nobelprize.org/2.1/laureate/206,未抓取
+342,Hermann Joseph Muller,med,1946,https://www.nobelprize.org/prizes/medicine/1946/summary/,https://api.nobelprize.org/2.1/laureate/342,未抓取
+51,Percy Williams Bridgman,phy,1946,https://www.nobelprize.org/prizes/physics/1946/summary/,https://api.nobelprize.org/2.1/laureate/51,未抓取
+207,Sir Robert Robinson,che,1947,https://www.nobelprize.org/prizes/chemistry/1947/summary/,https://api.nobelprize.org/2.1/laureate/207,未抓取
+345,Bernardo Alberto Houssay,med,1947,https://www.nobelprize.org/prizes/medicine/1947/summary/,https://api.nobelprize.org/2.1/laureate/345,未抓取
+343,Carl Ferdinand Cori,med,1947,https://www.nobelprize.org/prizes/medicine/1947/summary/,https://api.nobelprize.org/2.1/laureate/343,未抓取
+344,"Gerty Theresa Cori, née Radnitz",med,1947,https://www.nobelprize.org/prizes/medicine/1947/summary/,https://api.nobelprize.org/2.1/laureate/344,未抓取
+52,Sir Edward Victor Appleton,phy,1947,https://www.nobelprize.org/prizes/physics/1947/summary/,https://api.nobelprize.org/2.1/laureate/52,未抓取
+208,Arne Wilhelm Kaurin Tiselius,che,1948,https://www.nobelprize.org/prizes/chemistry/1948/summary/,https://api.nobelprize.org/2.1/laureate/208,未抓取
+346,Paul Hermann Müller,med,1948,https://www.nobelprize.org/prizes/medicine/1948/summary/,https://api.nobelprize.org/2.1/laureate/346,未抓取
+53,Patrick Maynard Stuart Blackett,phy,1948,https://www.nobelprize.org/prizes/physics/1948/summary/,https://api.nobelprize.org/2.1/laureate/53,未抓取
+209,William Francis Giauque,che,1949,https://www.nobelprize.org/prizes/chemistry/1949/summary/,https://api.nobelprize.org/2.1/laureate/209,未抓取
+348,Antonio Caetano de Abreu Freire Egas Moniz,med,1949,https://www.nobelprize.org/prizes/medicine/1949/summary/,https://api.nobelprize.org/2.1/laureate/348,未抓取
+347,Walter Rudolf Hess,med,1949,https://www.nobelprize.org/prizes/medicine/1949/summary/,https://api.nobelprize.org/2.1/laureate/347,未抓取
+54,Hideki Yukawa,phy,1949,https://www.nobelprize.org/prizes/physics/1949/summary/,https://api.nobelprize.org/2.1/laureate/54,未抓取
+211,Kurt Alder,che,1950,https://www.nobelprize.org/prizes/chemistry/1950/summary/,https://api.nobelprize.org/2.1/laureate/211,未抓取
+210,Otto Paul Hermann Diels,che,1950,https://www.nobelprize.org/prizes/chemistry/1950/summary/,https://api.nobelprize.org/2.1/laureate/210,未抓取
+349,Edward Calvin Kendall,med,1950,https://www.nobelprize.org/prizes/medicine/1950/summary/,https://api.nobelprize.org/2.1/laureate/349,未抓取
+351,Philip Showalter Hench,med,1950,https://www.nobelprize.org/prizes/medicine/1950/summary/,https://api.nobelprize.org/2.1/laureate/351,未抓取
+350,Tadeus Reichstein,med,1950,https://www.nobelprize.org/prizes/medicine/1950/summary/,https://api.nobelprize.org/2.1/laureate/350,未抓取
+55,Cecil Frank Powell,phy,1950,https://www.nobelprize.org/prizes/physics/1950/summary/,https://api.nobelprize.org/2.1/laureate/55,未抓取
+212,Edwin Mattison McMillan,che,1951,https://www.nobelprize.org/prizes/chemistry/1951/summary/,https://api.nobelprize.org/2.1/laureate/212,未抓取
+213,Glenn Theodore Seaborg,che,1951,https://www.nobelprize.org/prizes/chemistry/1951/summary/,https://api.nobelprize.org/2.1/laureate/213,未抓取
+352,Max Theiler,med,1951,https://www.nobelprize.org/prizes/medicine/1951/summary/,https://api.nobelprize.org/2.1/laureate/352,未抓取
+57,Ernest Thomas Sinton Walton,phy,1951,https://www.nobelprize.org/prizes/physics/1951/summary/,https://api.nobelprize.org/2.1/laureate/57,未抓取
+56,Sir John Douglas Cockcroft,phy,1951,https://www.nobelprize.org/prizes/physics/1951/summary/,https://api.nobelprize.org/2.1/laureate/56,未抓取
+214,Archer John Porter Martin,che,1952,https://www.nobelprize.org/prizes/chemistry/1952/summary/,https://api.nobelprize.org/2.1/laureate/214,未抓取
+215,Richard Laurence Millington Synge,che,1952,https://www.nobelprize.org/prizes/chemistry/1952/summary/,https://api.nobelprize.org/2.1/laureate/215,未抓取
+353,Selman Abraham Waksman,med,1952,https://www.nobelprize.org/prizes/medicine/1952/summary/,https://api.nobelprize.org/2.1/laureate/353,未抓取
+59,Edward Mills Purcell,phy,1952,https://www.nobelprize.org/prizes/physics/1952/summary/,https://api.nobelprize.org/2.1/laureate/59,未抓取
+58,Felix Bloch,phy,1952,https://www.nobelprize.org/prizes/physics/1952/summary/,https://api.nobelprize.org/2.1/laureate/58,未抓取
+216,Hermann Staudinger,che,1953,https://www.nobelprize.org/prizes/chemistry/1953/summary/,https://api.nobelprize.org/2.1/laureate/216,未抓取
+355,Fritz Albert Lipmann,med,1953,https://www.nobelprize.org/prizes/medicine/1953/summary/,https://api.nobelprize.org/2.1/laureate/355,未抓取
+354,Hans Adolf Krebs,med,1953,https://www.nobelprize.org/prizes/medicine/1953/summary/,https://api.nobelprize.org/2.1/laureate/354,未抓取
+60,Frits Zernike,phy,1953,https://www.nobelprize.org/prizes/physics/1953/summary/,https://api.nobelprize.org/2.1/laureate/60,未抓取
+217,Linus Carl Pauling,che,1954,https://www.nobelprize.org/prizes/chemistry/1954/summary/,https://api.nobelprize.org/2.1/laureate/217,未抓取
+358,Frederick Chapman Robbins,med,1954,https://www.nobelprize.org/prizes/medicine/1954/summary/,https://api.nobelprize.org/2.1/laureate/358,未抓取
+356,John Franklin Enders,med,1954,https://www.nobelprize.org/prizes/medicine/1954/summary/,https://api.nobelprize.org/2.1/laureate/356,未抓取
+357,Thomas Huckle Weller,med,1954,https://www.nobelprize.org/prizes/medicine/1954/summary/,https://api.nobelprize.org/2.1/laureate/357,未抓取
+61,Max Born,phy,1954,https://www.nobelprize.org/prizes/physics/1954/summary/,https://api.nobelprize.org/2.1/laureate/61,未抓取
+62,Walther Bothe,phy,1954,https://www.nobelprize.org/prizes/physics/1954/summary/,https://api.nobelprize.org/2.1/laureate/62,未抓取
+218,Vincent du Vigneaud,che,1955,https://www.nobelprize.org/prizes/chemistry/1955/summary/,https://api.nobelprize.org/2.1/laureate/218,未抓取
+359,Axel Hugo Theodor Theorell,med,1955,https://www.nobelprize.org/prizes/medicine/1955/summary/,https://api.nobelprize.org/2.1/laureate/359,未抓取
+64,Polykarp Kusch,phy,1955,https://www.nobelprize.org/prizes/physics/1955/summary/,https://api.nobelprize.org/2.1/laureate/64,未抓取
+63,Willis Eugene Lamb,phy,1955,https://www.nobelprize.org/prizes/physics/1955/summary/,https://api.nobelprize.org/2.1/laureate/63,未抓取
+220,Nikolay Nikolaevich Semenov,che,1956,https://www.nobelprize.org/prizes/chemistry/1956/summary/,https://api.nobelprize.org/2.1/laureate/220,未抓取
+219,Sir Cyril Norman Hinshelwood,che,1956,https://www.nobelprize.org/prizes/chemistry/1956/summary/,https://api.nobelprize.org/2.1/laureate/219,未抓取
+360,André Frédéric Cournand,med,1956,https://www.nobelprize.org/prizes/medicine/1956/summary/,https://api.nobelprize.org/2.1/laureate/360,未抓取
+362,Dickinson W. Richards,med,1956,https://www.nobelprize.org/prizes/medicine/1956/summary/,https://api.nobelprize.org/2.1/laureate/362,未抓取
+361,Werner Forssmann,med,1956,https://www.nobelprize.org/prizes/medicine/1956/summary/,https://api.nobelprize.org/2.1/laureate/361,未抓取
+66,John Bardeen,phy,1956,https://www.nobelprize.org/prizes/physics/1956/summary/,https://api.nobelprize.org/2.1/laureate/66,未抓取
+67,Walter Houser Brattain,phy,1956,https://www.nobelprize.org/prizes/physics/1956/summary/,https://api.nobelprize.org/2.1/laureate/67,未抓取
+65,William Bradford Shockley,phy,1956,https://www.nobelprize.org/prizes/physics/1956/summary/,https://api.nobelprize.org/2.1/laureate/65,未抓取
+221,Lord (Alexander R.) Todd,che,1957,https://www.nobelprize.org/prizes/chemistry/1957/summary/,https://api.nobelprize.org/2.1/laureate/221,未抓取
+363,Daniel Bovet,med,1957,https://www.nobelprize.org/prizes/medicine/1957/summary/,https://api.nobelprize.org/2.1/laureate/363,未抓取
+68,Chen Ning Yang,phy,1957,https://www.nobelprize.org/prizes/physics/1957/summary/,https://api.nobelprize.org/2.1/laureate/68,未抓取
+69,Tsung-Dao (T.D.) Lee,phy,1957,https://www.nobelprize.org/prizes/physics/1957/summary/,https://api.nobelprize.org/2.1/laureate/69,未抓取
+222,Frederick Sanger,che,1958,https://www.nobelprize.org/prizes/chemistry/1958/summary/,https://api.nobelprize.org/2.1/laureate/222,未抓取
+365,Edward Lawrie Tatum,med,1958,https://www.nobelprize.org/prizes/medicine/1958/summary/,https://api.nobelprize.org/2.1/laureate/365,未抓取
+364,George Wells Beadle,med,1958,https://www.nobelprize.org/prizes/medicine/1958/summary/,https://api.nobelprize.org/2.1/laureate/364,未抓取
+366,Joshua Lederberg,med,1958,https://www.nobelprize.org/prizes/medicine/1958/summary/,https://api.nobelprize.org/2.1/laureate/366,未抓取
+71,Igor Yevgenyevich Tamm,phy,1958,https://www.nobelprize.org/prizes/physics/1958/summary/,https://api.nobelprize.org/2.1/laureate/71,未抓取
+721,Il´ja Mikhailovich Frank,phy,1958,https://www.nobelprize.org/prizes/physics/1958/summary/,https://api.nobelprize.org/2.1/laureate/721,未抓取
+70,Pavel Alekseyevich Cherenkov,phy,1958,https://www.nobelprize.org/prizes/physics/1958/summary/,https://api.nobelprize.org/2.1/laureate/70,未抓取
+223,Jaroslav Heyrovsky,che,1959,https://www.nobelprize.org/prizes/chemistry/1959/summary/,https://api.nobelprize.org/2.1/laureate/223,未抓取
+368,Arthur Kornberg,med,1959,https://www.nobelprize.org/prizes/medicine/1959/summary/,https://api.nobelprize.org/2.1/laureate/368,未抓取
+367,Severo Ochoa,med,1959,https://www.nobelprize.org/prizes/medicine/1959/summary/,https://api.nobelprize.org/2.1/laureate/367,未抓取
+72,Emilio Gino Segrè,phy,1959,https://www.nobelprize.org/prizes/physics/1959/summary/,https://api.nobelprize.org/2.1/laureate/72,未抓取
+73,Owen Chamberlain,phy,1959,https://www.nobelprize.org/prizes/physics/1959/summary/,https://api.nobelprize.org/2.1/laureate/73,未抓取
+224,Willard Frank Libby,che,1960,https://www.nobelprize.org/prizes/chemistry/1960/summary/,https://api.nobelprize.org/2.1/laureate/224,未抓取
+370,Peter Brian Medawar,med,1960,https://www.nobelprize.org/prizes/medicine/1960/summary/,https://api.nobelprize.org/2.1/laureate/370,未抓取
+369,Sir Frank Macfarlane Burnet,med,1960,https://www.nobelprize.org/prizes/medicine/1960/summary/,https://api.nobelprize.org/2.1/laureate/369,未抓取
+74,Donald Arthur Glaser,phy,1960,https://www.nobelprize.org/prizes/physics/1960/summary/,https://api.nobelprize.org/2.1/laureate/74,未抓取
+225,Melvin Calvin,che,1961,https://www.nobelprize.org/prizes/chemistry/1961/summary/,https://api.nobelprize.org/2.1/laureate/225,未抓取
+371,Georg von Békésy,med,1961,https://www.nobelprize.org/prizes/medicine/1961/summary/,https://api.nobelprize.org/2.1/laureate/371,未抓取
+75,Robert Hofstadter,phy,1961,https://www.nobelprize.org/prizes/physics/1961/summary/,https://api.nobelprize.org/2.1/laureate/75,未抓取
+76,Rudolf Ludwig Mössbauer,phy,1961,https://www.nobelprize.org/prizes/physics/1961/summary/,https://api.nobelprize.org/2.1/laureate/76,未抓取
+227,John Cowdery Kendrew,che,1962,https://www.nobelprize.org/prizes/chemistry/1962/summary/,https://api.nobelprize.org/2.1/laureate/227,未抓取
+226,Max Ferdinand Perutz,che,1962,https://www.nobelprize.org/prizes/chemistry/1962/summary/,https://api.nobelprize.org/2.1/laureate/226,未抓取
+372,Francis Harry Compton Crick,med,1962,https://www.nobelprize.org/prizes/medicine/1962/summary/,https://api.nobelprize.org/2.1/laureate/372,未抓取
+373,James Dewey Watson,med,1962,https://www.nobelprize.org/prizes/medicine/1962/summary/,https://api.nobelprize.org/2.1/laureate/373,未抓取
+374,Maurice Hugh Frederick Wilkins,med,1962,https://www.nobelprize.org/prizes/medicine/1962/summary/,https://api.nobelprize.org/2.1/laureate/374,未抓取
+77,Lev Davidovich Landau,phy,1962,https://www.nobelprize.org/prizes/physics/1962/summary/,https://api.nobelprize.org/2.1/laureate/77,未抓取
+229,Giulio Natta,che,1963,https://www.nobelprize.org/prizes/chemistry/1963/summary/,https://api.nobelprize.org/2.1/laureate/229,未抓取
+228,Karl Ziegler,che,1963,https://www.nobelprize.org/prizes/chemistry/1963/summary/,https://api.nobelprize.org/2.1/laureate/228,未抓取
+376,Alan Lloyd Hodgkin,med,1963,https://www.nobelprize.org/prizes/medicine/1963/summary/,https://api.nobelprize.org/2.1/laureate/376,未抓取
+377,Andrew Fielding Huxley,med,1963,https://www.nobelprize.org/prizes/medicine/1963/summary/,https://api.nobelprize.org/2.1/laureate/377,未抓取
+375,Sir John Carew Eccles,med,1963,https://www.nobelprize.org/prizes/medicine/1963/summary/,https://api.nobelprize.org/2.1/laureate/375,未抓取
+78,Eugene Paul Wigner,phy,1963,https://www.nobelprize.org/prizes/physics/1963/summary/,https://api.nobelprize.org/2.1/laureate/78,未抓取
+80,J. Hans D. Jensen,phy,1963,https://www.nobelprize.org/prizes/physics/1963/summary/,https://api.nobelprize.org/2.1/laureate/80,未抓取
+79,Maria Goeppert Mayer,phy,1963,https://www.nobelprize.org/prizes/physics/1963/summary/,https://api.nobelprize.org/2.1/laureate/79,未抓取
+230,Dorothy Crowfoot Hodgkin,che,1964,https://www.nobelprize.org/prizes/chemistry/1964/summary/,https://api.nobelprize.org/2.1/laureate/230,未抓取
+379,Feodor Lynen,med,1964,https://www.nobelprize.org/prizes/medicine/1964/summary/,https://api.nobelprize.org/2.1/laureate/379,未抓取
+378,Konrad Bloch,med,1964,https://www.nobelprize.org/prizes/medicine/1964/summary/,https://api.nobelprize.org/2.1/laureate/378,未抓取
+83,Aleksandr Mikhailovich Prokhorov,phy,1964,https://www.nobelprize.org/prizes/physics/1964/summary/,https://api.nobelprize.org/2.1/laureate/83,未抓取
+81,Charles Hard Townes,phy,1964,https://www.nobelprize.org/prizes/physics/1964/summary/,https://api.nobelprize.org/2.1/laureate/81,未抓取
+82,Nicolay Gennadiyevich Basov,phy,1964,https://www.nobelprize.org/prizes/physics/1964/summary/,https://api.nobelprize.org/2.1/laureate/82,未抓取
+231,Robert Burns Woodward,che,1965,https://www.nobelprize.org/prizes/chemistry/1965/summary/,https://api.nobelprize.org/2.1/laureate/231,未抓取
+381,André Lwoff,med,1965,https://www.nobelprize.org/prizes/medicine/1965/summary/,https://api.nobelprize.org/2.1/laureate/381,未抓取
+380,François Jacob,med,1965,https://www.nobelprize.org/prizes/medicine/1965/summary/,https://api.nobelprize.org/2.1/laureate/380,未抓取
+382,Jacques Monod,med,1965,https://www.nobelprize.org/prizes/medicine/1965/summary/,https://api.nobelprize.org/2.1/laureate/382,未抓取
+85,Julian Schwinger,phy,1965,https://www.nobelprize.org/prizes/physics/1965/summary/,https://api.nobelprize.org/2.1/laureate/85,未抓取
+86,Richard P. Feynman,phy,1965,https://www.nobelprize.org/prizes/physics/1965/summary/,https://api.nobelprize.org/2.1/laureate/86,未抓取
+84,Sin-Itiro Tomonaga,phy,1965,https://www.nobelprize.org/prizes/physics/1965/summary/,https://api.nobelprize.org/2.1/laureate/84,未抓取
+232,Robert S. Mulliken,che,1966,https://www.nobelprize.org/prizes/chemistry/1966/summary/,https://api.nobelprize.org/2.1/laureate/232,未抓取
+384,Charles Brenton Huggins,med,1966,https://www.nobelprize.org/prizes/medicine/1966/summary/,https://api.nobelprize.org/2.1/laureate/384,未抓取
+383,Peyton Rous,med,1966,https://www.nobelprize.org/prizes/medicine/1966/summary/,https://api.nobelprize.org/2.1/laureate/383,未抓取
+87,Alfred Kastler,phy,1966,https://www.nobelprize.org/prizes/physics/1966/summary/,https://api.nobelprize.org/2.1/laureate/87,未抓取
+235,George Porter,che,1967,https://www.nobelprize.org/prizes/chemistry/1967/summary/,https://api.nobelprize.org/2.1/laureate/235,未抓取
+233,Manfred Eigen,che,1967,https://www.nobelprize.org/prizes/chemistry/1967/summary/,https://api.nobelprize.org/2.1/laureate/233,未抓取
+234,Ronald George Wreyford Norrish,che,1967,https://www.nobelprize.org/prizes/chemistry/1967/summary/,https://api.nobelprize.org/2.1/laureate/234,未抓取
+387,George Wald,med,1967,https://www.nobelprize.org/prizes/medicine/1967/summary/,https://api.nobelprize.org/2.1/laureate/387,未抓取
+386,Haldan Keffer Hartline,med,1967,https://www.nobelprize.org/prizes/medicine/1967/summary/,https://api.nobelprize.org/2.1/laureate/386,未抓取
+385,Ragnar Granit,med,1967,https://www.nobelprize.org/prizes/medicine/1967/summary/,https://api.nobelprize.org/2.1/laureate/385,未抓取
+88,Hans Albrecht Bethe,phy,1967,https://www.nobelprize.org/prizes/physics/1967/summary/,https://api.nobelprize.org/2.1/laureate/88,未抓取
+236,Lars Onsager,che,1968,https://www.nobelprize.org/prizes/chemistry/1968/summary/,https://api.nobelprize.org/2.1/laureate/236,未抓取
+389,Har Gobind Khorana,med,1968,https://www.nobelprize.org/prizes/medicine/1968/summary/,https://api.nobelprize.org/2.1/laureate/389,未抓取
+390,Marshall W. Nirenberg,med,1968,https://www.nobelprize.org/prizes/medicine/1968/summary/,https://api.nobelprize.org/2.1/laureate/390,未抓取
+388,Robert W. Holley,med,1968,https://www.nobelprize.org/prizes/medicine/1968/summary/,https://api.nobelprize.org/2.1/laureate/388,未抓取
+89,Luis Walter Alvarez,phy,1968,https://www.nobelprize.org/prizes/physics/1968/summary/,https://api.nobelprize.org/2.1/laureate/89,未抓取
+237,Derek H. R. Barton,che,1969,https://www.nobelprize.org/prizes/chemistry/1969/summary/,https://api.nobelprize.org/2.1/laureate/237,未抓取
+238,Odd Hassel,che,1969,https://www.nobelprize.org/prizes/chemistry/1969/summary/,https://api.nobelprize.org/2.1/laureate/238,未抓取
+392,Alfred D. Hershey,med,1969,https://www.nobelprize.org/prizes/medicine/1969/summary/,https://api.nobelprize.org/2.1/laureate/392,未抓取
+391,Max Delbrück,med,1969,https://www.nobelprize.org/prizes/medicine/1969/summary/,https://api.nobelprize.org/2.1/laureate/391,未抓取
+393,Salvador E. Luria,med,1969,https://www.nobelprize.org/prizes/medicine/1969/summary/,https://api.nobelprize.org/2.1/laureate/393,未抓取
+90,Murray Gell-Mann,phy,1969,https://www.nobelprize.org/prizes/physics/1969/summary/,https://api.nobelprize.org/2.1/laureate/90,未抓取
+239,Luis F. Leloir,che,1970,https://www.nobelprize.org/prizes/chemistry/1970/summary/,https://api.nobelprize.org/2.1/laureate/239,未抓取
+396,Julius Axelrod,med,1970,https://www.nobelprize.org/prizes/medicine/1970/summary/,https://api.nobelprize.org/2.1/laureate/396,未抓取
+394,Sir Bernard Katz,med,1970,https://www.nobelprize.org/prizes/medicine/1970/summary/,https://api.nobelprize.org/2.1/laureate/394,未抓取
+395,Ulf von Euler,med,1970,https://www.nobelprize.org/prizes/medicine/1970/summary/,https://api.nobelprize.org/2.1/laureate/395,未抓取
+91,Hannes Olof Gösta Alfvén,phy,1970,https://www.nobelprize.org/prizes/physics/1970/summary/,https://api.nobelprize.org/2.1/laureate/91,未抓取
+92,Louis Eugène Félix Néel,phy,1970,https://www.nobelprize.org/prizes/physics/1970/summary/,https://api.nobelprize.org/2.1/laureate/92,未抓取
+240,Gerhard Herzberg,che,1971,https://www.nobelprize.org/prizes/chemistry/1971/summary/,https://api.nobelprize.org/2.1/laureate/240,未抓取
+397,"Earl W. Sutherland, Jr.",med,1971,https://www.nobelprize.org/prizes/medicine/1971/summary/,https://api.nobelprize.org/2.1/laureate/397,未抓取
+93,Dennis Gabor,phy,1971,https://www.nobelprize.org/prizes/physics/1971/summary/,https://api.nobelprize.org/2.1/laureate/93,未抓取
+241,Christian B. Anfinsen,che,1972,https://www.nobelprize.org/prizes/chemistry/1972/summary/,https://api.nobelprize.org/2.1/laureate/241,未抓取
+242,Stanford Moore,che,1972,https://www.nobelprize.org/prizes/chemistry/1972/summary/,https://api.nobelprize.org/2.1/laureate/242,未抓取
+243,William H. Stein,che,1972,https://www.nobelprize.org/prizes/chemistry/1972/summary/,https://api.nobelprize.org/2.1/laureate/243,未抓取
+398,Gerald M. Edelman,med,1972,https://www.nobelprize.org/prizes/medicine/1972/summary/,https://api.nobelprize.org/2.1/laureate/398,未抓取
+399,Rodney R. Porter,med,1972,https://www.nobelprize.org/prizes/medicine/1972/summary/,https://api.nobelprize.org/2.1/laureate/399,未抓取
+66,John Bardeen,phy,1972,https://www.nobelprize.org/prizes/physics/1972/summary/,https://api.nobelprize.org/2.1/laureate/66,未抓取
+96,John Robert Schrieffer,phy,1972,https://www.nobelprize.org/prizes/physics/1972/summary/,https://api.nobelprize.org/2.1/laureate/96,未抓取
+95,Leon Neil Cooper,phy,1972,https://www.nobelprize.org/prizes/physics/1972/summary/,https://api.nobelprize.org/2.1/laureate/95,未抓取
+244,Ernst Otto Fischer,che,1973,https://www.nobelprize.org/prizes/chemistry/1973/summary/,https://api.nobelprize.org/2.1/laureate/244,未抓取
+245,Geoffrey Wilkinson,che,1973,https://www.nobelprize.org/prizes/chemistry/1973/summary/,https://api.nobelprize.org/2.1/laureate/245,未抓取
+400,Karl von Frisch,med,1973,https://www.nobelprize.org/prizes/medicine/1973/summary/,https://api.nobelprize.org/2.1/laureate/400,未抓取
+401,Konrad Lorenz,med,1973,https://www.nobelprize.org/prizes/medicine/1973/summary/,https://api.nobelprize.org/2.1/laureate/401,未抓取
+402,Nikolaas Tinbergen,med,1973,https://www.nobelprize.org/prizes/medicine/1973/summary/,https://api.nobelprize.org/2.1/laureate/402,未抓取
+99,Brian David Josephson,phy,1973,https://www.nobelprize.org/prizes/physics/1973/summary/,https://api.nobelprize.org/2.1/laureate/99,未抓取
+98,Ivar Giaever,phy,1973,https://www.nobelprize.org/prizes/physics/1973/summary/,https://api.nobelprize.org/2.1/laureate/98,未抓取
+97,Leo Esaki,phy,1973,https://www.nobelprize.org/prizes/physics/1973/summary/,https://api.nobelprize.org/2.1/laureate/97,未抓取
+246,Paul J. Flory,che,1974,https://www.nobelprize.org/prizes/chemistry/1974/summary/,https://api.nobelprize.org/2.1/laureate/246,未抓取
+403,Albert Claude,med,1974,https://www.nobelprize.org/prizes/medicine/1974/summary/,https://api.nobelprize.org/2.1/laureate/403,未抓取
+404,Christian de Duve,med,1974,https://www.nobelprize.org/prizes/medicine/1974/summary/,https://api.nobelprize.org/2.1/laureate/404,未抓取
+405,George E. Palade,med,1974,https://www.nobelprize.org/prizes/medicine/1974/summary/,https://api.nobelprize.org/2.1/laureate/405,未抓取
+101,Antony Hewish,phy,1974,https://www.nobelprize.org/prizes/physics/1974/summary/,https://api.nobelprize.org/2.1/laureate/101,未抓取
+100,Sir Martin Ryle,phy,1974,https://www.nobelprize.org/prizes/physics/1974/summary/,https://api.nobelprize.org/2.1/laureate/100,未抓取
+247,John Warcup Cornforth,che,1975,https://www.nobelprize.org/prizes/chemistry/1975/summary/,https://api.nobelprize.org/2.1/laureate/247,未抓取
+248,Vladimir Prelog,che,1975,https://www.nobelprize.org/prizes/chemistry/1975/summary/,https://api.nobelprize.org/2.1/laureate/248,未抓取
+406,David Baltimore,med,1975,https://www.nobelprize.org/prizes/medicine/1975/summary/,https://api.nobelprize.org/2.1/laureate/406,未抓取
+408,Howard Martin Temin,med,1975,https://www.nobelprize.org/prizes/medicine/1975/summary/,https://api.nobelprize.org/2.1/laureate/408,未抓取
+407,Renato Dulbecco,med,1975,https://www.nobelprize.org/prizes/medicine/1975/summary/,https://api.nobelprize.org/2.1/laureate/407,未抓取
+102,Aage Niels Bohr,phy,1975,https://www.nobelprize.org/prizes/physics/1975/summary/,https://api.nobelprize.org/2.1/laureate/102,未抓取
+103,Ben Roy Mottelson,phy,1975,https://www.nobelprize.org/prizes/physics/1975/summary/,https://api.nobelprize.org/2.1/laureate/103,未抓取
+104,Leo James Rainwater,phy,1975,https://www.nobelprize.org/prizes/physics/1975/summary/,https://api.nobelprize.org/2.1/laureate/104,未抓取
+249,William N. Lipscomb,che,1976,https://www.nobelprize.org/prizes/chemistry/1976/summary/,https://api.nobelprize.org/2.1/laureate/249,未抓取
+409,Baruch S. Blumberg,med,1976,https://www.nobelprize.org/prizes/medicine/1976/summary/,https://api.nobelprize.org/2.1/laureate/409,未抓取
+410,D. Carleton Gajdusek,med,1976,https://www.nobelprize.org/prizes/medicine/1976/summary/,https://api.nobelprize.org/2.1/laureate/410,未抓取
+105,Burton Richter,phy,1976,https://www.nobelprize.org/prizes/physics/1976/summary/,https://api.nobelprize.org/2.1/laureate/105,未抓取
+106,Samuel Chao Chung Ting,phy,1976,https://www.nobelprize.org/prizes/physics/1976/summary/,https://api.nobelprize.org/2.1/laureate/106,未抓取
+250,Ilya Prigogine,che,1977,https://www.nobelprize.org/prizes/chemistry/1977/summary/,https://api.nobelprize.org/2.1/laureate/250,未抓取
+412,Andrew V. Schally,med,1977,https://www.nobelprize.org/prizes/medicine/1977/summary/,https://api.nobelprize.org/2.1/laureate/412,未抓取
+411,Roger Guillemin,med,1977,https://www.nobelprize.org/prizes/medicine/1977/summary/,https://api.nobelprize.org/2.1/laureate/411,未抓取
+413,Rosalyn Yalow,med,1977,https://www.nobelprize.org/prizes/medicine/1977/summary/,https://api.nobelprize.org/2.1/laureate/413,未抓取
+109,John Hasbrouck van Vleck,phy,1977,https://www.nobelprize.org/prizes/physics/1977/summary/,https://api.nobelprize.org/2.1/laureate/109,未抓取
+107,Philip Warren Anderson,phy,1977,https://www.nobelprize.org/prizes/physics/1977/summary/,https://api.nobelprize.org/2.1/laureate/107,未抓取
+108,Sir Nevill Francis Mott,phy,1977,https://www.nobelprize.org/prizes/physics/1977/summary/,https://api.nobelprize.org/2.1/laureate/108,未抓取
+251,Peter D. Mitchell,che,1978,https://www.nobelprize.org/prizes/chemistry/1978/summary/,https://api.nobelprize.org/2.1/laureate/251,未抓取
+415,Daniel Nathans,med,1978,https://www.nobelprize.org/prizes/medicine/1978/summary/,https://api.nobelprize.org/2.1/laureate/415,未抓取
+416,Hamilton O. Smith,med,1978,https://www.nobelprize.org/prizes/medicine/1978/summary/,https://api.nobelprize.org/2.1/laureate/416,未抓取
+414,Werner Arber,med,1978,https://www.nobelprize.org/prizes/medicine/1978/summary/,https://api.nobelprize.org/2.1/laureate/414,未抓取
+111,Arno Allan Penzias,phy,1978,https://www.nobelprize.org/prizes/physics/1978/summary/,https://api.nobelprize.org/2.1/laureate/111,未抓取
+110,Pyotr Leonidovich Kapitsa,phy,1978,https://www.nobelprize.org/prizes/physics/1978/summary/,https://api.nobelprize.org/2.1/laureate/110,未抓取
+112,Robert Woodrow Wilson,phy,1978,https://www.nobelprize.org/prizes/physics/1978/summary/,https://api.nobelprize.org/2.1/laureate/112,未抓取
+253,Georg Wittig,che,1979,https://www.nobelprize.org/prizes/chemistry/1979/summary/,https://api.nobelprize.org/2.1/laureate/253,未抓取
+252,Herbert C. Brown,che,1979,https://www.nobelprize.org/prizes/chemistry/1979/summary/,https://api.nobelprize.org/2.1/laureate/252,未抓取
+417,Allan M. Cormack,med,1979,https://www.nobelprize.org/prizes/medicine/1979/summary/,https://api.nobelprize.org/2.1/laureate/417,未抓取
+418,Godfrey N. Hounsfield,med,1979,https://www.nobelprize.org/prizes/medicine/1979/summary/,https://api.nobelprize.org/2.1/laureate/418,未抓取
+114,Abdus Salam,phy,1979,https://www.nobelprize.org/prizes/physics/1979/summary/,https://api.nobelprize.org/2.1/laureate/114,未抓取
+113,Sheldon Lee Glashow,phy,1979,https://www.nobelprize.org/prizes/physics/1979/summary/,https://api.nobelprize.org/2.1/laureate/113,未抓取
+115,Steven Weinberg,phy,1979,https://www.nobelprize.org/prizes/physics/1979/summary/,https://api.nobelprize.org/2.1/laureate/115,未抓取
+222,Frederick Sanger,che,1980,https://www.nobelprize.org/prizes/chemistry/1980/summary/,https://api.nobelprize.org/2.1/laureate/222,未抓取
+254,Paul Berg,che,1980,https://www.nobelprize.org/prizes/chemistry/1980/summary/,https://api.nobelprize.org/2.1/laureate/254,未抓取
+255,Walter Gilbert,che,1980,https://www.nobelprize.org/prizes/chemistry/1980/summary/,https://api.nobelprize.org/2.1/laureate/255,未抓取
+419,Baruj Benacerraf,med,1980,https://www.nobelprize.org/prizes/medicine/1980/summary/,https://api.nobelprize.org/2.1/laureate/419,未抓取
+421,George D. Snell,med,1980,https://www.nobelprize.org/prizes/medicine/1980/summary/,https://api.nobelprize.org/2.1/laureate/421,未抓取
+420,Jean Dausset,med,1980,https://www.nobelprize.org/prizes/medicine/1980/summary/,https://api.nobelprize.org/2.1/laureate/420,未抓取
+116,James Watson Cronin,phy,1980,https://www.nobelprize.org/prizes/physics/1980/summary/,https://api.nobelprize.org/2.1/laureate/116,未抓取
+117,Val Logsdon Fitch,phy,1980,https://www.nobelprize.org/prizes/physics/1980/summary/,https://api.nobelprize.org/2.1/laureate/117,未抓取
+257,Kenichi Fukui,che,1981,https://www.nobelprize.org/prizes/chemistry/1981/summary/,https://api.nobelprize.org/2.1/laureate/257,未抓取
+258,Roald Hoffmann,che,1981,https://www.nobelprize.org/prizes/chemistry/1981/summary/,https://api.nobelprize.org/2.1/laureate/258,未抓取
+423,David H. Hubel,med,1981,https://www.nobelprize.org/prizes/medicine/1981/summary/,https://api.nobelprize.org/2.1/laureate/423,未抓取
+422,Roger W. Sperry,med,1981,https://www.nobelprize.org/prizes/medicine/1981/summary/,https://api.nobelprize.org/2.1/laureate/422,未抓取
+424,Torsten N. Wiesel,med,1981,https://www.nobelprize.org/prizes/medicine/1981/summary/,https://api.nobelprize.org/2.1/laureate/424,未抓取
+119,Arthur Leonard Schawlow,phy,1981,https://www.nobelprize.org/prizes/physics/1981/summary/,https://api.nobelprize.org/2.1/laureate/119,未抓取
+120,Kai M. Siegbahn,phy,1981,https://www.nobelprize.org/prizes/physics/1981/summary/,https://api.nobelprize.org/2.1/laureate/120,未抓取
+118,Nicolaas Bloembergen,phy,1981,https://www.nobelprize.org/prizes/physics/1981/summary/,https://api.nobelprize.org/2.1/laureate/118,未抓取
+259,Aaron Klug,che,1982,https://www.nobelprize.org/prizes/chemistry/1982/summary/,https://api.nobelprize.org/2.1/laureate/259,未抓取
+426,Bengt I. Samuelsson,med,1982,https://www.nobelprize.org/prizes/medicine/1982/summary/,https://api.nobelprize.org/2.1/laureate/426,未抓取
+427,John R. Vane,med,1982,https://www.nobelprize.org/prizes/medicine/1982/summary/,https://api.nobelprize.org/2.1/laureate/427,未抓取
+425,Sune K. Bergström,med,1982,https://www.nobelprize.org/prizes/medicine/1982/summary/,https://api.nobelprize.org/2.1/laureate/425,未抓取
+121,Kenneth G. Wilson,phy,1982,https://www.nobelprize.org/prizes/physics/1982/summary/,https://api.nobelprize.org/2.1/laureate/121,未抓取
+260,Henry Taube,che,1983,https://www.nobelprize.org/prizes/chemistry/1983/summary/,https://api.nobelprize.org/2.1/laureate/260,未抓取
+428,Barbara McClintock,med,1983,https://www.nobelprize.org/prizes/medicine/1983/summary/,https://api.nobelprize.org/2.1/laureate/428,未抓取
+122,Subramanyan Chandrasekhar,phy,1983,https://www.nobelprize.org/prizes/physics/1983/summary/,https://api.nobelprize.org/2.1/laureate/122,未抓取
+123,William Alfred Fowler,phy,1983,https://www.nobelprize.org/prizes/physics/1983/summary/,https://api.nobelprize.org/2.1/laureate/123,未抓取
+261,Robert Bruce Merrifield,che,1984,https://www.nobelprize.org/prizes/chemistry/1984/summary/,https://api.nobelprize.org/2.1/laureate/261,未抓取
+431,César Milstein,med,1984,https://www.nobelprize.org/prizes/medicine/1984/summary/,https://api.nobelprize.org/2.1/laureate/431,未抓取
+430,Georges J.F. Köhler,med,1984,https://www.nobelprize.org/prizes/medicine/1984/summary/,https://api.nobelprize.org/2.1/laureate/430,未抓取
+429,Niels K. Jerne,med,1984,https://www.nobelprize.org/prizes/medicine/1984/summary/,https://api.nobelprize.org/2.1/laureate/429,未抓取
+124,Carlo Rubbia,phy,1984,https://www.nobelprize.org/prizes/physics/1984/summary/,https://api.nobelprize.org/2.1/laureate/124,未抓取
+125,Simon van der Meer,phy,1984,https://www.nobelprize.org/prizes/physics/1984/summary/,https://api.nobelprize.org/2.1/laureate/125,未抓取
+262,Herbert A. Hauptman,che,1985,https://www.nobelprize.org/prizes/chemistry/1985/summary/,https://api.nobelprize.org/2.1/laureate/262,未抓取
+263,Jerome Karle,che,1985,https://www.nobelprize.org/prizes/chemistry/1985/summary/,https://api.nobelprize.org/2.1/laureate/263,未抓取
+433,Joseph L. Goldstein,med,1985,https://www.nobelprize.org/prizes/medicine/1985/summary/,https://api.nobelprize.org/2.1/laureate/433,未抓取
+432,Michael S. Brown,med,1985,https://www.nobelprize.org/prizes/medicine/1985/summary/,https://api.nobelprize.org/2.1/laureate/432,未抓取
+126,Klaus von Klitzing,phy,1985,https://www.nobelprize.org/prizes/physics/1985/summary/,https://api.nobelprize.org/2.1/laureate/126,未抓取
+264,Dudley R. Herschbach,che,1986,https://www.nobelprize.org/prizes/chemistry/1986/summary/,https://api.nobelprize.org/2.1/laureate/264,未抓取
+266,John C. Polanyi,che,1986,https://www.nobelprize.org/prizes/chemistry/1986/summary/,https://api.nobelprize.org/2.1/laureate/266,未抓取
+265,Yuan T. Lee,che,1986,https://www.nobelprize.org/prizes/chemistry/1986/summary/,https://api.nobelprize.org/2.1/laureate/265,未抓取
+435,Rita Levi-Montalcini,med,1986,https://www.nobelprize.org/prizes/medicine/1986/summary/,https://api.nobelprize.org/2.1/laureate/435,未抓取
+434,Stanley Cohen,med,1986,https://www.nobelprize.org/prizes/medicine/1986/summary/,https://api.nobelprize.org/2.1/laureate/434,未抓取
+127,Ernst Ruska,phy,1986,https://www.nobelprize.org/prizes/physics/1986/summary/,https://api.nobelprize.org/2.1/laureate/127,未抓取
+128,Gerd Binnig,phy,1986,https://www.nobelprize.org/prizes/physics/1986/summary/,https://api.nobelprize.org/2.1/laureate/128,未抓取
+129,Heinrich Rohrer,phy,1986,https://www.nobelprize.org/prizes/physics/1986/summary/,https://api.nobelprize.org/2.1/laureate/129,未抓取
+269,Charles J. Pedersen,che,1987,https://www.nobelprize.org/prizes/chemistry/1987/summary/,https://api.nobelprize.org/2.1/laureate/269,未抓取
+267,Donald J. Cram,che,1987,https://www.nobelprize.org/prizes/chemistry/1987/summary/,https://api.nobelprize.org/2.1/laureate/267,未抓取
+268,Jean-Marie Lehn,che,1987,https://www.nobelprize.org/prizes/chemistry/1987/summary/,https://api.nobelprize.org/2.1/laureate/268,未抓取
+436,Susumu Tonegawa,med,1987,https://www.nobelprize.org/prizes/medicine/1987/summary/,https://api.nobelprize.org/2.1/laureate/436,未抓取
+130,J. Georg Bednorz,phy,1987,https://www.nobelprize.org/prizes/physics/1987/summary/,https://api.nobelprize.org/2.1/laureate/130,未抓取
+131,K. Alexander Müller,phy,1987,https://www.nobelprize.org/prizes/physics/1987/summary/,https://api.nobelprize.org/2.1/laureate/131,未抓取
+272,Hartmut Michel,che,1988,https://www.nobelprize.org/prizes/chemistry/1988/summary/,https://api.nobelprize.org/2.1/laureate/272,未抓取
+270,Johann Deisenhofer,che,1988,https://www.nobelprize.org/prizes/chemistry/1988/summary/,https://api.nobelprize.org/2.1/laureate/270,未抓取
+271,Robert Huber,che,1988,https://www.nobelprize.org/prizes/chemistry/1988/summary/,https://api.nobelprize.org/2.1/laureate/271,未抓取
+439,George H. Hitchings,med,1988,https://www.nobelprize.org/prizes/medicine/1988/summary/,https://api.nobelprize.org/2.1/laureate/439,未抓取
+438,Gertrude B. Elion,med,1988,https://www.nobelprize.org/prizes/medicine/1988/summary/,https://api.nobelprize.org/2.1/laureate/438,未抓取
+437,Sir James W. Black,med,1988,https://www.nobelprize.org/prizes/medicine/1988/summary/,https://api.nobelprize.org/2.1/laureate/437,未抓取
+134,Jack Steinberger,phy,1988,https://www.nobelprize.org/prizes/physics/1988/summary/,https://api.nobelprize.org/2.1/laureate/134,未抓取
+132,Leon M. Lederman,phy,1988,https://www.nobelprize.org/prizes/physics/1988/summary/,https://api.nobelprize.org/2.1/laureate/132,未抓取
+133,Melvin Schwartz,phy,1988,https://www.nobelprize.org/prizes/physics/1988/summary/,https://api.nobelprize.org/2.1/laureate/133,未抓取
+273,Sidney Altman,che,1989,https://www.nobelprize.org/prizes/chemistry/1989/summary/,https://api.nobelprize.org/2.1/laureate/273,未抓取
+274,Thomas R. Cech,che,1989,https://www.nobelprize.org/prizes/chemistry/1989/summary/,https://api.nobelprize.org/2.1/laureate/274,未抓取
+441,Harold E. Varmus,med,1989,https://www.nobelprize.org/prizes/medicine/1989/summary/,https://api.nobelprize.org/2.1/laureate/441,未抓取
+440,J. Michael Bishop,med,1989,https://www.nobelprize.org/prizes/medicine/1989/summary/,https://api.nobelprize.org/2.1/laureate/440,未抓取
+136,Hans G. Dehmelt,phy,1989,https://www.nobelprize.org/prizes/physics/1989/summary/,https://api.nobelprize.org/2.1/laureate/136,未抓取
+135,Norman F. Ramsey,phy,1989,https://www.nobelprize.org/prizes/physics/1989/summary/,https://api.nobelprize.org/2.1/laureate/135,未抓取
+137,Wolfgang Paul,phy,1989,https://www.nobelprize.org/prizes/physics/1989/summary/,https://api.nobelprize.org/2.1/laureate/137,未抓取
+275,Elias James Corey,che,1990,https://www.nobelprize.org/prizes/chemistry/1990/summary/,https://api.nobelprize.org/2.1/laureate/275,未抓取
+443,E. Donnall Thomas,med,1990,https://www.nobelprize.org/prizes/medicine/1990/summary/,https://api.nobelprize.org/2.1/laureate/443,未抓取
+442,Joseph E. Murray,med,1990,https://www.nobelprize.org/prizes/medicine/1990/summary/,https://api.nobelprize.org/2.1/laureate/442,未抓取
+139,Henry W. Kendall,phy,1990,https://www.nobelprize.org/prizes/physics/1990/summary/,https://api.nobelprize.org/2.1/laureate/139,未抓取
+138,Jerome I. Friedman,phy,1990,https://www.nobelprize.org/prizes/physics/1990/summary/,https://api.nobelprize.org/2.1/laureate/138,未抓取
+140,Richard E. Taylor,phy,1990,https://www.nobelprize.org/prizes/physics/1990/summary/,https://api.nobelprize.org/2.1/laureate/140,未抓取
+276,Richard R. Ernst,che,1991,https://www.nobelprize.org/prizes/chemistry/1991/summary/,https://api.nobelprize.org/2.1/laureate/276,未抓取
+445,Bert Sakmann,med,1991,https://www.nobelprize.org/prizes/medicine/1991/summary/,https://api.nobelprize.org/2.1/laureate/445,未抓取
+444,Erwin Neher,med,1991,https://www.nobelprize.org/prizes/medicine/1991/summary/,https://api.nobelprize.org/2.1/laureate/444,未抓取
+141,Pierre-Gilles de Gennes,phy,1991,https://www.nobelprize.org/prizes/physics/1991/summary/,https://api.nobelprize.org/2.1/laureate/141,未抓取
+277,Rudolph A. Marcus,che,1992,https://www.nobelprize.org/prizes/chemistry/1992/summary/,https://api.nobelprize.org/2.1/laureate/277,未抓取
+446,Edmond H. Fischer,med,1992,https://www.nobelprize.org/prizes/medicine/1992/summary/,https://api.nobelprize.org/2.1/laureate/446,未抓取
+447,Edwin G. Krebs,med,1992,https://www.nobelprize.org/prizes/medicine/1992/summary/,https://api.nobelprize.org/2.1/laureate/447,未抓取
+142,Georges Charpak,phy,1992,https://www.nobelprize.org/prizes/physics/1992/summary/,https://api.nobelprize.org/2.1/laureate/142,未抓取
+278,Kary B. Mullis,che,1993,https://www.nobelprize.org/prizes/chemistry/1993/summary/,https://api.nobelprize.org/2.1/laureate/278,未抓取
+279,Michael Smith,che,1993,https://www.nobelprize.org/prizes/chemistry/1993/summary/,https://api.nobelprize.org/2.1/laureate/279,未抓取
+449,Phillip A. Sharp,med,1993,https://www.nobelprize.org/prizes/medicine/1993/summary/,https://api.nobelprize.org/2.1/laureate/449,未抓取
+448,Richard J. Roberts,med,1993,https://www.nobelprize.org/prizes/medicine/1993/summary/,https://api.nobelprize.org/2.1/laureate/448,未抓取
+144,Joseph H. Taylor Jr.,phy,1993,https://www.nobelprize.org/prizes/physics/1993/summary/,https://api.nobelprize.org/2.1/laureate/144,未抓取
+143,Russell A. Hulse,phy,1993,https://www.nobelprize.org/prizes/physics/1993/summary/,https://api.nobelprize.org/2.1/laureate/143,未抓取
+280,George A. Olah,che,1994,https://www.nobelprize.org/prizes/chemistry/1994/summary/,https://api.nobelprize.org/2.1/laureate/280,未抓取
+450,Alfred G. Gilman,med,1994,https://www.nobelprize.org/prizes/medicine/1994/summary/,https://api.nobelprize.org/2.1/laureate/450,未抓取
+451,Martin Rodbell,med,1994,https://www.nobelprize.org/prizes/medicine/1994/summary/,https://api.nobelprize.org/2.1/laureate/451,未抓取
+145,Bertram N. Brockhouse,phy,1994,https://www.nobelprize.org/prizes/physics/1994/summary/,https://api.nobelprize.org/2.1/laureate/145,未抓取
+146,Clifford G. Shull,phy,1994,https://www.nobelprize.org/prizes/physics/1994/summary/,https://api.nobelprize.org/2.1/laureate/146,未抓取
+283,F. Sherwood Rowland,che,1995,https://www.nobelprize.org/prizes/chemistry/1995/summary/,https://api.nobelprize.org/2.1/laureate/283,未抓取
+282,Mario J. Molina,che,1995,https://www.nobelprize.org/prizes/chemistry/1995/summary/,https://api.nobelprize.org/2.1/laureate/282,未抓取
+281,Paul J. Crutzen,che,1995,https://www.nobelprize.org/prizes/chemistry/1995/summary/,https://api.nobelprize.org/2.1/laureate/281,未抓取
+453,Christiane Nüsslein-Volhard,med,1995,https://www.nobelprize.org/prizes/medicine/1995/summary/,https://api.nobelprize.org/2.1/laureate/453,未抓取
+452,Edward B. Lewis,med,1995,https://www.nobelprize.org/prizes/medicine/1995/summary/,https://api.nobelprize.org/2.1/laureate/452,未抓取
+454,Eric F. Wieschaus,med,1995,https://www.nobelprize.org/prizes/medicine/1995/summary/,https://api.nobelprize.org/2.1/laureate/454,未抓取
+148,Frederick Reines,phy,1995,https://www.nobelprize.org/prizes/physics/1995/summary/,https://api.nobelprize.org/2.1/laureate/148,未抓取
+147,Martin L. Perl,phy,1995,https://www.nobelprize.org/prizes/physics/1995/summary/,https://api.nobelprize.org/2.1/laureate/147,未抓取
+286,Richard E. Smalley,che,1996,https://www.nobelprize.org/prizes/chemistry/1996/summary/,https://api.nobelprize.org/2.1/laureate/286,未抓取
+284,Robert F. Curl Jr.,che,1996,https://www.nobelprize.org/prizes/chemistry/1996/summary/,https://api.nobelprize.org/2.1/laureate/284,未抓取
+285,Sir Harold W. Kroto,che,1996,https://www.nobelprize.org/prizes/chemistry/1996/summary/,https://api.nobelprize.org/2.1/laureate/285,未抓取
+455,Peter C. Doherty,med,1996,https://www.nobelprize.org/prizes/medicine/1996/summary/,https://api.nobelprize.org/2.1/laureate/455,未抓取
+456,Rolf M. Zinkernagel,med,1996,https://www.nobelprize.org/prizes/medicine/1996/summary/,https://api.nobelprize.org/2.1/laureate/456,未抓取
+149,David M. Lee,phy,1996,https://www.nobelprize.org/prizes/physics/1996/summary/,https://api.nobelprize.org/2.1/laureate/149,未抓取
+150,Douglas D. Osheroff,phy,1996,https://www.nobelprize.org/prizes/physics/1996/summary/,https://api.nobelprize.org/2.1/laureate/150,未抓取
+151,Robert C. Richardson,phy,1996,https://www.nobelprize.org/prizes/physics/1996/summary/,https://api.nobelprize.org/2.1/laureate/151,未抓取
+289,Jens C. Skou,che,1997,https://www.nobelprize.org/prizes/chemistry/1997/summary/,https://api.nobelprize.org/2.1/laureate/289,未抓取
+288,John E. Walker,che,1997,https://www.nobelprize.org/prizes/chemistry/1997/summary/,https://api.nobelprize.org/2.1/laureate/288,未抓取
+287,Paul D. Boyer,che,1997,https://www.nobelprize.org/prizes/chemistry/1997/summary/,https://api.nobelprize.org/2.1/laureate/287,未抓取
+457,Stanley B. Prusiner,med,1997,https://www.nobelprize.org/prizes/medicine/1997/summary/,https://api.nobelprize.org/2.1/laureate/457,未抓取
+153,Claude Cohen-Tannoudji,phy,1997,https://www.nobelprize.org/prizes/physics/1997/summary/,https://api.nobelprize.org/2.1/laureate/153,未抓取
+152,Steven Chu,phy,1997,https://www.nobelprize.org/prizes/physics/1997/summary/,https://api.nobelprize.org/2.1/laureate/152,未抓取
+154,William D. Phillips,phy,1997,https://www.nobelprize.org/prizes/physics/1997/summary/,https://api.nobelprize.org/2.1/laureate/154,未抓取
+291,John A. Pople,che,1998,https://www.nobelprize.org/prizes/chemistry/1998/summary/,https://api.nobelprize.org/2.1/laureate/291,未抓取
+290,Walter Kohn,che,1998,https://www.nobelprize.org/prizes/chemistry/1998/summary/,https://api.nobelprize.org/2.1/laureate/290,未抓取
+460,Ferid Murad,med,1998,https://www.nobelprize.org/prizes/medicine/1998/summary/,https://api.nobelprize.org/2.1/laureate/460,未抓取
+459,Louis J. Ignarro,med,1998,https://www.nobelprize.org/prizes/medicine/1998/summary/,https://api.nobelprize.org/2.1/laureate/459,未抓取
+458,Robert F. Furchgott,med,1998,https://www.nobelprize.org/prizes/medicine/1998/summary/,https://api.nobelprize.org/2.1/laureate/458,未抓取
+157,Daniel C. Tsui,phy,1998,https://www.nobelprize.org/prizes/physics/1998/summary/,https://api.nobelprize.org/2.1/laureate/157,未抓取
+156,Horst L. Störmer,phy,1998,https://www.nobelprize.org/prizes/physics/1998/summary/,https://api.nobelprize.org/2.1/laureate/156,未抓取
+155,Robert B. Laughlin,phy,1998,https://www.nobelprize.org/prizes/physics/1998/summary/,https://api.nobelprize.org/2.1/laureate/155,未抓取
+292,Ahmed H. Zewail,che,1999,https://www.nobelprize.org/prizes/chemistry/1999/summary/,https://api.nobelprize.org/2.1/laureate/292,未抓取
+461,Günter Blobel,med,1999,https://www.nobelprize.org/prizes/medicine/1999/summary/,https://api.nobelprize.org/2.1/laureate/461,未抓取
+158,Gerardus 't Hooft,phy,1999,https://www.nobelprize.org/prizes/physics/1999/summary/,https://api.nobelprize.org/2.1/laureate/158,未抓取
+159,Martinus J.G. Veltman,phy,1999,https://www.nobelprize.org/prizes/physics/1999/summary/,https://api.nobelprize.org/2.1/laureate/159,未抓取
+730,Alan G. MacDiarmid,che,2000,https://www.nobelprize.org/prizes/chemistry/2000/summary/,https://api.nobelprize.org/2.1/laureate/730,未抓取
+729,Alan J. Heeger,che,2000,https://www.nobelprize.org/prizes/chemistry/2000/summary/,https://api.nobelprize.org/2.1/laureate/729,未抓取
+731,Hideki Shirakawa,che,2000,https://www.nobelprize.org/prizes/chemistry/2000/summary/,https://api.nobelprize.org/2.1/laureate/731,未抓取
+722,Arvid Carlsson,med,2000,https://www.nobelprize.org/prizes/medicine/2000/summary/,https://api.nobelprize.org/2.1/laureate/722,未抓取
+724,Eric R. Kandel,med,2000,https://www.nobelprize.org/prizes/medicine/2000/summary/,https://api.nobelprize.org/2.1/laureate/724,未抓取
+723,Paul Greengard,med,2000,https://www.nobelprize.org/prizes/medicine/2000/summary/,https://api.nobelprize.org/2.1/laureate/723,未抓取
+727,Herbert Kroemer,phy,2000,https://www.nobelprize.org/prizes/physics/2000/summary/,https://api.nobelprize.org/2.1/laureate/727,未抓取
+728,Jack S. Kilby,phy,2000,https://www.nobelprize.org/prizes/physics/2000/summary/,https://api.nobelprize.org/2.1/laureate/728,未抓取
+726,Zhores I. Alferov,phy,2000,https://www.nobelprize.org/prizes/physics/2000/summary/,https://api.nobelprize.org/2.1/laureate/726,未抓取
+743,K. Barry Sharpless,che,2001,https://www.nobelprize.org/prizes/chemistry/2001/summary/,https://api.nobelprize.org/2.1/laureate/743,未抓取
+742,Ryoji Noyori,che,2001,https://www.nobelprize.org/prizes/chemistry/2001/summary/,https://api.nobelprize.org/2.1/laureate/742,未抓取
+741,William S. Knowles,che,2001,https://www.nobelprize.org/prizes/chemistry/2001/summary/,https://api.nobelprize.org/2.1/laureate/741,未抓取
+735,Leland H. Hartwell,med,2001,https://www.nobelprize.org/prizes/medicine/2001/summary/,https://api.nobelprize.org/2.1/laureate/735,未抓取
+737,Sir Paul M. Nurse,med,2001,https://www.nobelprize.org/prizes/medicine/2001/summary/,https://api.nobelprize.org/2.1/laureate/737,未抓取
+736,Tim Hunt,med,2001,https://www.nobelprize.org/prizes/medicine/2001/summary/,https://api.nobelprize.org/2.1/laureate/736,未抓取
+740,Carl E. Wieman,phy,2001,https://www.nobelprize.org/prizes/physics/2001/summary/,https://api.nobelprize.org/2.1/laureate/740,未抓取
+738,Eric A. Cornell,phy,2001,https://www.nobelprize.org/prizes/physics/2001/summary/,https://api.nobelprize.org/2.1/laureate/738,未抓取
+739,Wolfgang Ketterle,phy,2001,https://www.nobelprize.org/prizes/physics/2001/summary/,https://api.nobelprize.org/2.1/laureate/739,未抓取
+756,John B. Fenn,che,2002,https://www.nobelprize.org/prizes/chemistry/2002/summary/,https://api.nobelprize.org/2.1/laureate/756,未抓取
+757,Koichi Tanaka,che,2002,https://www.nobelprize.org/prizes/chemistry/2002/summary/,https://api.nobelprize.org/2.1/laureate/757,未抓取
+758,Kurt Wüthrich,che,2002,https://www.nobelprize.org/prizes/chemistry/2002/summary/,https://api.nobelprize.org/2.1/laureate/758,未抓取
+751,H. Robert Horvitz,med,2002,https://www.nobelprize.org/prizes/medicine/2002/summary/,https://api.nobelprize.org/2.1/laureate/751,未抓取
+752,John E. Sulston,med,2002,https://www.nobelprize.org/prizes/medicine/2002/summary/,https://api.nobelprize.org/2.1/laureate/752,未抓取
+750,Sydney Brenner,med,2002,https://www.nobelprize.org/prizes/medicine/2002/summary/,https://api.nobelprize.org/2.1/laureate/750,未抓取
+754,Masatoshi Koshiba,phy,2002,https://www.nobelprize.org/prizes/physics/2002/summary/,https://api.nobelprize.org/2.1/laureate/754,未抓取
+753,Raymond Davis Jr.,phy,2002,https://www.nobelprize.org/prizes/physics/2002/summary/,https://api.nobelprize.org/2.1/laureate/753,未抓取
+755,Riccardo Giacconi,phy,2002,https://www.nobelprize.org/prizes/physics/2002/summary/,https://api.nobelprize.org/2.1/laureate/755,未抓取
+769,Peter Agre,che,2003,https://www.nobelprize.org/prizes/chemistry/2003/summary/,https://api.nobelprize.org/2.1/laureate/769,未抓取
+770,Roderick MacKinnon,che,2003,https://www.nobelprize.org/prizes/chemistry/2003/summary/,https://api.nobelprize.org/2.1/laureate/770,未抓取
+764,Paul C. Lauterbur,med,2003,https://www.nobelprize.org/prizes/medicine/2003/summary/,https://api.nobelprize.org/2.1/laureate/764,未抓取
+765,Sir Peter Mansfield,med,2003,https://www.nobelprize.org/prizes/medicine/2003/summary/,https://api.nobelprize.org/2.1/laureate/765,未抓取
+766,Alexei A. Abrikosov,phy,2003,https://www.nobelprize.org/prizes/physics/2003/summary/,https://api.nobelprize.org/2.1/laureate/766,未抓取
+768,Anthony J. Leggett,phy,2003,https://www.nobelprize.org/prizes/physics/2003/summary/,https://api.nobelprize.org/2.1/laureate/768,未抓取
+767,Vitaly L. Ginzburg,phy,2003,https://www.nobelprize.org/prizes/physics/2003/summary/,https://api.nobelprize.org/2.1/laureate/767,未抓取
+779,Aaron Ciechanover,che,2004,https://www.nobelprize.org/prizes/chemistry/2004/summary/,https://api.nobelprize.org/2.1/laureate/779,未抓取
+780,Avram Hershko,che,2004,https://www.nobelprize.org/prizes/chemistry/2004/summary/,https://api.nobelprize.org/2.1/laureate/780,未抓取
+781,Irwin Rose,che,2004,https://www.nobelprize.org/prizes/chemistry/2004/summary/,https://api.nobelprize.org/2.1/laureate/781,未抓取
+775,Linda B. Buck,med,2004,https://www.nobelprize.org/prizes/medicine/2004/summary/,https://api.nobelprize.org/2.1/laureate/775,未抓取
+774,Richard Axel,med,2004,https://www.nobelprize.org/prizes/medicine/2004/summary/,https://api.nobelprize.org/2.1/laureate/774,未抓取
+776,David J. Gross,phy,2004,https://www.nobelprize.org/prizes/physics/2004/summary/,https://api.nobelprize.org/2.1/laureate/776,未抓取
+778,Frank Wilczek,phy,2004,https://www.nobelprize.org/prizes/physics/2004/summary/,https://api.nobelprize.org/2.1/laureate/778,未抓取
+777,H. David Politzer,phy,2004,https://www.nobelprize.org/prizes/physics/2004/summary/,https://api.nobelprize.org/2.1/laureate/777,未抓取
+796,Richard R. Schrock,che,2005,https://www.nobelprize.org/prizes/chemistry/2005/summary/,https://api.nobelprize.org/2.1/laureate/796,未抓取
+795,Robert H. Grubbs,che,2005,https://www.nobelprize.org/prizes/chemistry/2005/summary/,https://api.nobelprize.org/2.1/laureate/795,未抓取
+794,Yves Chauvin,che,2005,https://www.nobelprize.org/prizes/chemistry/2005/summary/,https://api.nobelprize.org/2.1/laureate/794,未抓取
+789,Barry J. Marshall,med,2005,https://www.nobelprize.org/prizes/medicine/2005/summary/,https://api.nobelprize.org/2.1/laureate/789,未抓取
+790,J. Robin Warren,med,2005,https://www.nobelprize.org/prizes/medicine/2005/summary/,https://api.nobelprize.org/2.1/laureate/790,未抓取
+792,John L. Hall,phy,2005,https://www.nobelprize.org/prizes/physics/2005/summary/,https://api.nobelprize.org/2.1/laureate/792,未抓取
+791,Roy J. Glauber,phy,2005,https://www.nobelprize.org/prizes/physics/2005/summary/,https://api.nobelprize.org/2.1/laureate/791,未抓取
+793,Theodor W. Hänsch,phy,2005,https://www.nobelprize.org/prizes/physics/2005/summary/,https://api.nobelprize.org/2.1/laureate/793,未抓取
+806,Roger D. Kornberg,che,2006,https://www.nobelprize.org/prizes/chemistry/2006/summary/,https://api.nobelprize.org/2.1/laureate/806,未抓取
+802,Andrew Z. Fire,med,2006,https://www.nobelprize.org/prizes/medicine/2006/summary/,https://api.nobelprize.org/2.1/laureate/802,未抓取
+803,Craig C. Mello,med,2006,https://www.nobelprize.org/prizes/medicine/2006/summary/,https://api.nobelprize.org/2.1/laureate/803,未抓取
+805,George F. Smoot,phy,2006,https://www.nobelprize.org/prizes/physics/2006/summary/,https://api.nobelprize.org/2.1/laureate/805,未抓取
+804,John C. Mather,phy,2006,https://www.nobelprize.org/prizes/physics/2006/summary/,https://api.nobelprize.org/2.1/laureate/804,未抓取
+816,Gerhard Ertl,che,2007,https://www.nobelprize.org/prizes/chemistry/2007/summary/,https://api.nobelprize.org/2.1/laureate/816,未抓取
+811,Mario R. Capecchi,med,2007,https://www.nobelprize.org/prizes/medicine/2007/summary/,https://api.nobelprize.org/2.1/laureate/811,未抓取
+813,Oliver Smithies,med,2007,https://www.nobelprize.org/prizes/medicine/2007/summary/,https://api.nobelprize.org/2.1/laureate/813,未抓取
+812,Sir Martin J. Evans,med,2007,https://www.nobelprize.org/prizes/medicine/2007/summary/,https://api.nobelprize.org/2.1/laureate/812,未抓取
+814,Albert Fert,phy,2007,https://www.nobelprize.org/prizes/physics/2007/summary/,https://api.nobelprize.org/2.1/laureate/814,未抓取
+815,Peter Grünberg,phy,2007,https://www.nobelprize.org/prizes/physics/2007/summary/,https://api.nobelprize.org/2.1/laureate/815,未抓取
+830,Martin Chalfie,che,2008,https://www.nobelprize.org/prizes/chemistry/2008/summary/,https://api.nobelprize.org/2.1/laureate/830,未抓取
+829,Osamu Shimomura,che,2008,https://www.nobelprize.org/prizes/chemistry/2008/summary/,https://api.nobelprize.org/2.1/laureate/829,未抓取
+831,Roger Y. Tsien,che,2008,https://www.nobelprize.org/prizes/chemistry/2008/summary/,https://api.nobelprize.org/2.1/laureate/831,未抓取
+824,Françoise Barré-Sinoussi,med,2008,https://www.nobelprize.org/prizes/medicine/2008/summary/,https://api.nobelprize.org/2.1/laureate/824,未抓取
+823,Harald zur Hausen,med,2008,https://www.nobelprize.org/prizes/medicine/2008/summary/,https://api.nobelprize.org/2.1/laureate/823,未抓取
+825,Luc Montagnier,med,2008,https://www.nobelprize.org/prizes/medicine/2008/summary/,https://api.nobelprize.org/2.1/laureate/825,未抓取
+827,Makoto Kobayashi,phy,2008,https://www.nobelprize.org/prizes/physics/2008/summary/,https://api.nobelprize.org/2.1/laureate/827,未抓取
+828,Toshihide Maskawa,phy,2008,https://www.nobelprize.org/prizes/physics/2008/summary/,https://api.nobelprize.org/2.1/laureate/828,未抓取
+826,Yoichiro Nambu,phy,2008,https://www.nobelprize.org/prizes/physics/2008/summary/,https://api.nobelprize.org/2.1/laureate/826,未抓取
+843,Ada E. Yonath,che,2009,https://www.nobelprize.org/prizes/chemistry/2009/summary/,https://api.nobelprize.org/2.1/laureate/843,未抓取
+842,Thomas A. Steitz,che,2009,https://www.nobelprize.org/prizes/chemistry/2009/summary/,https://api.nobelprize.org/2.1/laureate/842,未抓取
+841,Venkatraman Ramakrishnan,che,2009,https://www.nobelprize.org/prizes/chemistry/2009/summary/,https://api.nobelprize.org/2.1/laureate/841,未抓取
+836,Carol W. Greider,med,2009,https://www.nobelprize.org/prizes/medicine/2009/summary/,https://api.nobelprize.org/2.1/laureate/836,未抓取
+835,Elizabeth H. Blackburn,med,2009,https://www.nobelprize.org/prizes/medicine/2009/summary/,https://api.nobelprize.org/2.1/laureate/835,未抓取
+837,Jack W. Szostak,med,2009,https://www.nobelprize.org/prizes/medicine/2009/summary/,https://api.nobelprize.org/2.1/laureate/837,未抓取
+838,Charles Kuen Kao,phy,2009,https://www.nobelprize.org/prizes/physics/2009/summary/,https://api.nobelprize.org/2.1/laureate/838,未抓取
+840,George E. Smith,phy,2009,https://www.nobelprize.org/prizes/physics/2009/summary/,https://api.nobelprize.org/2.1/laureate/840,未抓取
+839,Willard S. Boyle,phy,2009,https://www.nobelprize.org/prizes/physics/2009/summary/,https://api.nobelprize.org/2.1/laureate/839,未抓取
+853,Akira Suzuki,che,2010,https://www.nobelprize.org/prizes/chemistry/2010/summary/,https://api.nobelprize.org/2.1/laureate/853,未抓取
+852,Ei-ichi Negishi,che,2010,https://www.nobelprize.org/prizes/chemistry/2010/summary/,https://api.nobelprize.org/2.1/laureate/852,未抓取
+851,Richard F. Heck,che,2010,https://www.nobelprize.org/prizes/chemistry/2010/summary/,https://api.nobelprize.org/2.1/laureate/851,未抓取
+848,Robert G. Edwards,med,2010,https://www.nobelprize.org/prizes/medicine/2010/summary/,https://api.nobelprize.org/2.1/laureate/848,未抓取
+849,Andre Geim,phy,2010,https://www.nobelprize.org/prizes/physics/2010/summary/,https://api.nobelprize.org/2.1/laureate/849,未抓取
+850,Konstantin Novoselov,phy,2010,https://www.nobelprize.org/prizes/physics/2010/summary/,https://api.nobelprize.org/2.1/laureate/850,未抓取
+867,Dan Shechtman,che,2011,https://www.nobelprize.org/prizes/chemistry/2011/summary/,https://api.nobelprize.org/2.1/laureate/867,未抓取
+861,Bruce A. Beutler,med,2011,https://www.nobelprize.org/prizes/medicine/2011/summary/,https://api.nobelprize.org/2.1/laureate/861,未抓取
+862,Jules A. Hoffmann,med,2011,https://www.nobelprize.org/prizes/medicine/2011/summary/,https://api.nobelprize.org/2.1/laureate/862,未抓取
+863,Ralph M. Steinman,med,2011,https://www.nobelprize.org/prizes/medicine/2011/summary/,https://api.nobelprize.org/2.1/laureate/863,未抓取
+866,Adam G. Riess,phy,2011,https://www.nobelprize.org/prizes/physics/2011/summary/,https://api.nobelprize.org/2.1/laureate/866,未抓取
+865,Brian P. Schmidt,phy,2011,https://www.nobelprize.org/prizes/physics/2011/summary/,https://api.nobelprize.org/2.1/laureate/865,未抓取
+864,Saul Perlmutter,phy,2011,https://www.nobelprize.org/prizes/physics/2011/summary/,https://api.nobelprize.org/2.1/laureate/864,未抓取
+879,Brian K. Kobilka,che,2012,https://www.nobelprize.org/prizes/chemistry/2012/summary/,https://api.nobelprize.org/2.1/laureate/879,未抓取
+878,Robert J. Lefkowitz,che,2012,https://www.nobelprize.org/prizes/chemistry/2012/summary/,https://api.nobelprize.org/2.1/laureate/878,未抓取
+875,Shinya Yamanaka,med,2012,https://www.nobelprize.org/prizes/medicine/2012/summary/,https://api.nobelprize.org/2.1/laureate/875,未抓取
+874,Sir John B. Gurdon,med,2012,https://www.nobelprize.org/prizes/medicine/2012/summary/,https://api.nobelprize.org/2.1/laureate/874,未抓取
+877,David J. Wineland,phy,2012,https://www.nobelprize.org/prizes/physics/2012/summary/,https://api.nobelprize.org/2.1/laureate/877,未抓取
+876,Serge Haroche,phy,2012,https://www.nobelprize.org/prizes/physics/2012/summary/,https://api.nobelprize.org/2.1/laureate/876,未抓取
+891,Arieh Warshel,che,2013,https://www.nobelprize.org/prizes/chemistry/2013/summary/,https://api.nobelprize.org/2.1/laureate/891,未抓取
+889,Martin Karplus,che,2013,https://www.nobelprize.org/prizes/chemistry/2013/summary/,https://api.nobelprize.org/2.1/laureate/889,未抓取
+890,Michael Levitt,che,2013,https://www.nobelprize.org/prizes/chemistry/2013/summary/,https://api.nobelprize.org/2.1/laureate/890,未抓取
+884,James E. Rothman,med,2013,https://www.nobelprize.org/prizes/medicine/2013/summary/,https://api.nobelprize.org/2.1/laureate/884,未抓取
+885,Randy W. Schekman,med,2013,https://www.nobelprize.org/prizes/medicine/2013/summary/,https://api.nobelprize.org/2.1/laureate/885,未抓取
+886,Thomas C. Südhof,med,2013,https://www.nobelprize.org/prizes/medicine/2013/summary/,https://api.nobelprize.org/2.1/laureate/886,未抓取
+887,François Englert,phy,2013,https://www.nobelprize.org/prizes/physics/2013/summary/,https://api.nobelprize.org/2.1/laureate/887,未抓取
+888,Peter W. Higgs,phy,2013,https://www.nobelprize.org/prizes/physics/2013/summary/,https://api.nobelprize.org/2.1/laureate/888,未抓取
+909,Eric Betzig,che,2014,https://www.nobelprize.org/prizes/chemistry/2014/summary/,https://api.nobelprize.org/2.1/laureate/909,未抓取
+910,Stefan W. Hell,che,2014,https://www.nobelprize.org/prizes/chemistry/2014/summary/,https://api.nobelprize.org/2.1/laureate/910,未抓取
+911,William E. Moerner,che,2014,https://www.nobelprize.org/prizes/chemistry/2014/summary/,https://api.nobelprize.org/2.1/laureate/911,未抓取
+905,Edvard I. Moser,med,2014,https://www.nobelprize.org/prizes/medicine/2014/summary/,https://api.nobelprize.org/2.1/laureate/905,未抓取
+903,John O'Keefe,med,2014,https://www.nobelprize.org/prizes/medicine/2014/summary/,https://api.nobelprize.org/2.1/laureate/903,未抓取
+904,May-Britt Moser,med,2014,https://www.nobelprize.org/prizes/medicine/2014/summary/,https://api.nobelprize.org/2.1/laureate/904,未抓取
+907,Hiroshi Amano,phy,2014,https://www.nobelprize.org/prizes/physics/2014/summary/,https://api.nobelprize.org/2.1/laureate/907,未抓取
+906,Isamu Akasaki,phy,2014,https://www.nobelprize.org/prizes/physics/2014/summary/,https://api.nobelprize.org/2.1/laureate/906,未抓取
+908,Shuji Nakamura,phy,2014,https://www.nobelprize.org/prizes/physics/2014/summary/,https://api.nobelprize.org/2.1/laureate/908,未抓取
+923,Aziz Sancar,che,2015,https://www.nobelprize.org/prizes/chemistry/2015/summary/,https://api.nobelprize.org/2.1/laureate/923,未抓取
+922,Paul Modrich,che,2015,https://www.nobelprize.org/prizes/chemistry/2015/summary/,https://api.nobelprize.org/2.1/laureate/922,未抓取
+921,Tomas Lindahl,che,2015,https://www.nobelprize.org/prizes/chemistry/2015/summary/,https://api.nobelprize.org/2.1/laureate/921,未抓取
+917,Satoshi Ōmura,med,2015,https://www.nobelprize.org/prizes/medicine/2015/summary/,https://api.nobelprize.org/2.1/laureate/917,未抓取
+916,William C. Campbell,med,2015,https://www.nobelprize.org/prizes/medicine/2015/summary/,https://api.nobelprize.org/2.1/laureate/916,未抓取
+918,Youyou Tu,med,2015,https://www.nobelprize.org/prizes/medicine/2015/summary/,https://api.nobelprize.org/2.1/laureate/918,未抓取
+920,Arthur B. McDonald,phy,2015,https://www.nobelprize.org/prizes/physics/2015/summary/,https://api.nobelprize.org/2.1/laureate/920,未抓取
+919,Takaaki Kajita,phy,2015,https://www.nobelprize.org/prizes/physics/2015/summary/,https://api.nobelprize.org/2.1/laureate/919,未抓取
+933,Bernard L. Feringa,che,2016,https://www.nobelprize.org/prizes/chemistry/2016/summary/,https://api.nobelprize.org/2.1/laureate/933,未抓取
+931,Jean-Pierre Sauvage,che,2016,https://www.nobelprize.org/prizes/chemistry/2016/summary/,https://api.nobelprize.org/2.1/laureate/931,未抓取
+932,Sir J. Fraser Stoddart,che,2016,https://www.nobelprize.org/prizes/chemistry/2016/summary/,https://api.nobelprize.org/2.1/laureate/932,未抓取
+927,Yoshinori Ohsumi,med,2016,https://www.nobelprize.org/prizes/medicine/2016/summary/,https://api.nobelprize.org/2.1/laureate/927,未抓取
+928,David J. Thouless,phy,2016,https://www.nobelprize.org/prizes/physics/2016/summary/,https://api.nobelprize.org/2.1/laureate/928,未抓取
+929,F. Duncan M. Haldane,phy,2016,https://www.nobelprize.org/prizes/physics/2016/summary/,https://api.nobelprize.org/2.1/laureate/929,未抓取
+930,J. Michael Kosterlitz,phy,2016,https://www.nobelprize.org/prizes/physics/2016/summary/,https://api.nobelprize.org/2.1/laureate/930,未抓取
+944,Jacques Dubochet,che,2017,https://www.nobelprize.org/prizes/chemistry/2017/summary/,https://api.nobelprize.org/2.1/laureate/944,未抓取
+945,Joachim Frank,che,2017,https://www.nobelprize.org/prizes/chemistry/2017/summary/,https://api.nobelprize.org/2.1/laureate/945,未抓取
+946,Richard Henderson,che,2017,https://www.nobelprize.org/prizes/chemistry/2017/summary/,https://api.nobelprize.org/2.1/laureate/946,未抓取
+938,Jeffrey C. Hall,med,2017,https://www.nobelprize.org/prizes/medicine/2017/summary/,https://api.nobelprize.org/2.1/laureate/938,未抓取
+939,Michael Rosbash,med,2017,https://www.nobelprize.org/prizes/medicine/2017/summary/,https://api.nobelprize.org/2.1/laureate/939,未抓取
+940,Michael W. Young,med,2017,https://www.nobelprize.org/prizes/medicine/2017/summary/,https://api.nobelprize.org/2.1/laureate/940,未抓取
+942,Barry C. Barish,phy,2017,https://www.nobelprize.org/prizes/physics/2017/summary/,https://api.nobelprize.org/2.1/laureate/942,未抓取
+943,Kip S. Thorne,phy,2017,https://www.nobelprize.org/prizes/physics/2017/summary/,https://api.nobelprize.org/2.1/laureate/943,未抓取
+941,Rainer Weiss,phy,2017,https://www.nobelprize.org/prizes/physics/2017/summary/,https://api.nobelprize.org/2.1/laureate/941,未抓取
+963,Frances H. Arnold,che,2018,https://www.nobelprize.org/prizes/chemistry/2018/summary/,https://api.nobelprize.org/2.1/laureate/963,未抓取
+964,George P. Smith,che,2018,https://www.nobelprize.org/prizes/chemistry/2018/summary/,https://api.nobelprize.org/2.1/laureate/964,未抓取
+965,Sir Gregory P. Winter,che,2018,https://www.nobelprize.org/prizes/chemistry/2018/summary/,https://api.nobelprize.org/2.1/laureate/965,未抓取
+958,James P. Allison,med,2018,https://www.nobelprize.org/prizes/medicine/2018/summary/,https://api.nobelprize.org/2.1/laureate/958,未抓取
+959,Tasuku Honjo,med,2018,https://www.nobelprize.org/prizes/medicine/2018/summary/,https://api.nobelprize.org/2.1/laureate/959,未抓取
+960,Arthur Ashkin,phy,2018,https://www.nobelprize.org/prizes/physics/2018/summary/,https://api.nobelprize.org/2.1/laureate/960,未抓取
+962,Donna Strickland,phy,2018,https://www.nobelprize.org/prizes/physics/2018/summary/,https://api.nobelprize.org/2.1/laureate/962,未抓取
+961,Gérard Mourou,phy,2018,https://www.nobelprize.org/prizes/physics/2018/summary/,https://api.nobelprize.org/2.1/laureate/961,未抓取
+978,Akira Yoshino,che,2019,https://www.nobelprize.org/prizes/chemistry/2019/summary/,https://api.nobelprize.org/2.1/laureate/978,未抓取
+976,John Goodenough,che,2019,https://www.nobelprize.org/prizes/chemistry/2019/summary/,https://api.nobelprize.org/2.1/laureate/976,未抓取
+977,M. Stanley Whittingham,che,2019,https://www.nobelprize.org/prizes/chemistry/2019/summary/,https://api.nobelprize.org/2.1/laureate/977,未抓取
+972,Gregg Semenza,med,2019,https://www.nobelprize.org/prizes/medicine/2019/summary/,https://api.nobelprize.org/2.1/laureate/972,未抓取
+971,Peter Ratcliffe,med,2019,https://www.nobelprize.org/prizes/medicine/2019/summary/,https://api.nobelprize.org/2.1/laureate/971,未抓取
+970,William Kaelin,med,2019,https://www.nobelprize.org/prizes/medicine/2019/summary/,https://api.nobelprize.org/2.1/laureate/970,未抓取
+975,Didier Queloz,phy,2019,https://www.nobelprize.org/prizes/physics/2019/summary/,https://api.nobelprize.org/2.1/laureate/975,未抓取
+973,James Peebles,phy,2019,https://www.nobelprize.org/prizes/physics/2019/summary/,https://api.nobelprize.org/2.1/laureate/973,未抓取
+974,Michel Mayor,phy,2019,https://www.nobelprize.org/prizes/physics/2019/summary/,https://api.nobelprize.org/2.1/laureate/974,未抓取
+991,Emmanuelle Charpentier,che,2020,https://www.nobelprize.org/prizes/chemistry/2020/summary/,https://api.nobelprize.org/2.1/laureate/991,未抓取
+992,Jennifer A. Doudna,che,2020,https://www.nobelprize.org/prizes/chemistry/2020/summary/,https://api.nobelprize.org/2.1/laureate/992,未抓取
+987,Charles Rice,med,2020,https://www.nobelprize.org/prizes/medicine/2020/summary/,https://api.nobelprize.org/2.1/laureate/987,未抓取
+985,Harvey Alter,med,2020,https://www.nobelprize.org/prizes/medicine/2020/summary/,https://api.nobelprize.org/2.1/laureate/985,未抓取
+986,Michael Houghton,med,2020,https://www.nobelprize.org/prizes/medicine/2020/summary/,https://api.nobelprize.org/2.1/laureate/986,未抓取
+990,Andrea Ghez,phy,2020,https://www.nobelprize.org/prizes/physics/2020/summary/,https://api.nobelprize.org/2.1/laureate/990,未抓取
+989,Reinhard Genzel,phy,2020,https://www.nobelprize.org/prizes/physics/2020/summary/,https://api.nobelprize.org/2.1/laureate/989,未抓取
+988,Roger Penrose,phy,2020,https://www.nobelprize.org/prizes/physics/2020/summary/,https://api.nobelprize.org/2.1/laureate/988,未抓取
+1002,Benjamin List,che,2021,https://www.nobelprize.org/prizes/chemistry/2021/summary/,https://api.nobelprize.org/2.1/laureate/1002,未抓取
+1003,David MacMillan,che,2021,https://www.nobelprize.org/prizes/chemistry/2021/summary/,https://api.nobelprize.org/2.1/laureate/1003,未抓取
+998,Ardem Patapoutian,med,2021,https://www.nobelprize.org/prizes/medicine/2021/summary/,https://api.nobelprize.org/2.1/laureate/998,未抓取
+997,David Julius,med,2021,https://www.nobelprize.org/prizes/medicine/2021/summary/,https://api.nobelprize.org/2.1/laureate/997,未抓取
+1001,Giorgio Parisi,phy,2021,https://www.nobelprize.org/prizes/physics/2021/summary/,https://api.nobelprize.org/2.1/laureate/1001,未抓取
+1000,Klaus Hasselmann,phy,2021,https://www.nobelprize.org/prizes/physics/2021/summary/,https://api.nobelprize.org/2.1/laureate/1000,未抓取
+999,Syukuro Manabe,phy,2021,https://www.nobelprize.org/prizes/physics/2021/summary/,https://api.nobelprize.org/2.1/laureate/999,未抓取
+743,Barry Sharpless,che,2022,https://www.nobelprize.org/prizes/chemistry/2022/summary/,https://api.nobelprize.org/2.1/laureate/743,未抓取
+1015,Carolyn Bertozzi,che,2022,https://www.nobelprize.org/prizes/chemistry/2022/summary/,https://api.nobelprize.org/2.1/laureate/1015,未抓取
+1016,Morten Meldal,che,2022,https://www.nobelprize.org/prizes/chemistry/2022/summary/,https://api.nobelprize.org/2.1/laureate/1016,未抓取
+1011,Svante Pääbo,med,2022,https://www.nobelprize.org/prizes/medicine/2022/summary/,https://api.nobelprize.org/2.1/laureate/1011,未抓取
+1012,Alain Aspect,phy,2022,https://www.nobelprize.org/prizes/physics/2022/summary/,https://api.nobelprize.org/2.1/laureate/1012,未抓取
+1014,Anton Zeilinger,phy,2022,https://www.nobelprize.org/prizes/physics/2022/summary/,https://api.nobelprize.org/2.1/laureate/1014,未抓取
+1013,John Clauser,phy,2022,https://www.nobelprize.org/prizes/physics/2022/summary/,https://api.nobelprize.org/2.1/laureate/1013,未抓取
+1031,Aleksey Yekimov,che,2023,https://www.nobelprize.org/prizes/chemistry/2023/summary/,https://api.nobelprize.org/2.1/laureate/1031,未抓取
+1030,Louis Brus,che,2023,https://www.nobelprize.org/prizes/chemistry/2023/summary/,https://api.nobelprize.org/2.1/laureate/1030,未抓取
+1029,Moungi Bawendi,che,2023,https://www.nobelprize.org/prizes/chemistry/2023/summary/,https://api.nobelprize.org/2.1/laureate/1029,未抓取
+1025,Drew Weissman,med,2023,https://www.nobelprize.org/prizes/medicine/2023/summary/,https://api.nobelprize.org/2.1/laureate/1025,未抓取
+1024,Katalin Karikó,med,2023,https://www.nobelprize.org/prizes/medicine/2023/summary/,https://api.nobelprize.org/2.1/laureate/1024,未抓取
+1028,Anne L’Huillier,phy,2023,https://www.nobelprize.org/prizes/physics/2023/summary/,https://api.nobelprize.org/2.1/laureate/1028,未抓取
+1027,Ferenc Krausz,phy,2023,https://www.nobelprize.org/prizes/physics/2023/summary/,https://api.nobelprize.org/2.1/laureate/1027,未抓取
+1026,Pierre Agostini,phy,2023,https://www.nobelprize.org/prizes/physics/2023/summary/,https://api.nobelprize.org/2.1/laureate/1026,未抓取
+,David Baker,che,2024,https://www.nobelprize.org/prizes/chemistry/2024/summary/,https://api.nobelprize.org/2.1/laureate/,未抓取
+,Victor Ambros,med,2024,https://www.nobelprize.org/prizes/medicine/2024/summary/,https://api.nobelprize.org/2.1/laureate/,未抓取
+,John J. Hopfield,phy,2024,https://www.nobelprize.org/prizes/physics/2024/summary/,https://api.nobelprize.org/2.1/laureate/,未抓取

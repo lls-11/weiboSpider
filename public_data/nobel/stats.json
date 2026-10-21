@@ -1,0 +1,378 @@
+{
+  "overview": {
+    "prizes_all_categories": 1006,
+    "stem_individual_prizes": 649,
+    "stem_by_category": {
+      "Chemistry": 195,
+      "Medicine": 228,
+      "Physics": 226
+    },
+    "female_share_stem": 0.04,
+    "median_age_at_award": 57.0,
+    "affiliation_match_rate_all": 0.924,
+    "stem_with_alma_and_institutions": 490,
+    "share_worked_at_own_alma_mater": 0.376
+  },
+  "median_age_by_decade": {
+    "1900s": {
+      "n": 33,
+      "median_age": 52
+    },
+    "1910s": {
+      "n": 24,
+      "median_age": 47.0
+    },
+    "1920s": {
+      "n": 33,
+      "median_age": 50
+    },
+    "1930s": {
+      "n": 38,
+      "median_age": 46.5
+    },
+    "1940s": {
+      "n": 30,
+      "median_age": 54.5
+    },
+    "1950s": {
+      "n": 54,
+      "median_age": 52.0
+    },
+    "1960s": {
+      "n": 57,
+      "median_age": 53
+    },
+    "1970s": {
+      "n": 65,
+      "median_age": 56
+    },
+    "1980s": {
+      "n": 66,
+      "median_age": 58.0
+    },
+    "1990s": {
+      "n": 60,
+      "median_age": 60.5
+    },
+    "2000s": {
+      "n": 78,
+      "median_age": 65.5
+    },
+    "2010s": {
+      "n": 76,
+      "median_age": 70.5
+    },
+    "2020s": {
+      "n": 30,
+      "median_age": 68.0
+    }
+  },
+  "top_alma_maters": [
+    [
+      "University of Cambridge",
+      57
+    ],
+    [
+      "Harvard University",
+      55
+    ],
+    [
+      "Columbia University",
+      34
+    ],
+    [
+      "University of California, Berkeley",
+      27
+    ],
+    [
+      "Massachusetts Institute of Technology",
+      26
+    ],
+    [
+      "California Institute of Technology",
+      23
+    ],
+    [
+      "University of Chicago",
+      20
+    ],
+    [
+      "University of Berlin",
+      19
+    ],
+    [
+      "University of Paris",
+      17
+    ],
+    [
+      "University of Gottingen",
+      17
+    ],
+    [
+      "University of Oxford",
+      17
+    ],
+    [
+      "Yale University",
+      14
+    ],
+    [
+      "Cornell University",
+      14
+    ],
+    [
+      "University of Munich",
+      12
+    ],
+    [
+      "Princeton University",
+      12
+    ],
+    [
+      "Johns Hopkins University",
+      11
+    ],
+    [
+      "University of Vienna",
+      10
+    ],
+    [
+      "Technical University of Munich",
+      10
+    ],
+    [
+      "University of Strasbourg",
+      9
+    ],
+    [
+      "University of Illinois Urbana-Champaign",
+      9
+    ]
+  ],
+  "top_institutions": [
+    [
+      "University of Cambridge",
+      51
+    ],
+    [
+      "University of California, Berkeley",
+      44
+    ],
+    [
+      "Columbia University",
+      39
+    ],
+    [
+      "University of Chicago",
+      37
+    ],
+    [
+      "Harvard University",
+      36
+    ],
+    [
+      "Stanford University",
+      33
+    ],
+    [
+      "California Institute of Technology",
+      26
+    ],
+    [
+      "Rockefeller University",
+      25
+    ],
+    [
+      "Massachusetts Institute of Technology",
+      24
+    ],
+    [
+      "Princeton University",
+      22
+    ],
+    [
+      "Cornell University",
+      20
+    ],
+    [
+      "University of Oxford",
+      19
+    ],
+    [
+      "Washington University in St. Louis",
+      18
+    ],
+    [
+      "Yale University",
+      17
+    ],
+    [
+      "University of Berlin",
+      16
+    ],
+    [
+      "ETH Zurich",
+      16
+    ],
+    [
+      "Johns Hopkins University",
+      15
+    ],
+    [
+      "University College London",
+      13
+    ],
+    [
+      "University of Munich",
+      11
+    ],
+    [
+      "University of Manchester",
+      11
+    ]
+  ],
+  "top_award_organizations": [
+    [
+      "University of California",
+      28
+    ],
+    [
+      "Harvard University",
+      19
+    ],
+    [
+      "Stanford University",
+      17
+    ],
+    [
+      "California Institute of Technology (Caltech)",
+      16
+    ],
+    [
+      "University of Cambridge",
+      14
+    ],
+    [
+      "Massachusetts Institute of Technology (MIT)",
+      14
+    ],
+    [
+      "Rockefeller University",
+      13
+    ],
+    [
+      "Columbia University",
+      12
+    ],
+    [
+      "Princeton University",
+      11
+    ],
+    [
+      "University of Oxford",
+      10
+    ],
+    [
+      "MRC Laboratory of Molecular Biology",
+      10
+    ],
+    [
+      "Cornell University",
+      8
+    ],
+    [
+      "University College",
+      7
+    ],
+    [
+      "Harvard Medical School",
+      7
+    ],
+    [
+      "Berlin University",
+      6
+    ],
+    [
+      "Institut Pasteur",
+      6
+    ],
+    [
+      "University of Heidelberg",
+      6
+    ],
+    [
+      "Rockefeller Institute for Medical Research",
+      6
+    ],
+    [
+      "London University",
+      6
+    ],
+    [
+      "NA",
+      5
+    ]
+  ],
+  "top_birth_countries": [
+    [
+      "United States of America",
+      209
+    ],
+    [
+      "United Kingdom",
+      73
+    ],
+    [
+      "Germany",
+      72
+    ],
+    [
+      "France",
+      35
+    ],
+    [
+      "Japan",
+      24
+    ],
+    [
+      "Poland",
+      18
+    ],
+    [
+      "Russia",
+      17
+    ],
+    [
+      "Sweden",
+      16
+    ],
+    [
+      "Netherlands",
+      15
+    ],
+    [
+      "Switzerland",
+      15
+    ],
+    [
+      "Austria",
+      15
+    ],
+    [
+      "Canada",
+      14
+    ],
+    [
+      "Italy",
+      12
+    ],
+    [
+      "Australia",
+      10
+    ],
+    [
+      "Hungary",
+      9
+    ]
+  ]
+}

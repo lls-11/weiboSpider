@@ -55,8 +55,9 @@ def test_rmrb_old_layout_links():
 
 def test_rmrb_page_one_urls():
     fmt_urls = rmrb.page_one_urls(date(2024, 5, 4))
-    assert fmt_urls[0][1].endswith('pc/layout/202405/04/node_01.html')
-    assert fmt_urls[1][1].endswith('html/2024-05/04/nbs.D110000renmrb_01.htm')
+    assert fmt_urls[0][1].endswith('html/2024-05/04/nbs.D110000renmrb_01.htm')
+    assert fmt_urls[1][1].endswith('pc/layout/202405/04/node_01.html')
+    assert rmrb.page_one_urls(date(2026, 5, 4))[0][0] == 'new'
 
 
 def test_rmrb_parse_entries():
