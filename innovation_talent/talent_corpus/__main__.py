@@ -44,7 +44,7 @@ def cmd_rmrb(args):
         days = rmrb.dates_for(_years(args.years), args.window.split(':'))
     docs, raw = [], []
     for d in days:
-        for art in rmrb.crawl_date(f, d):
+        for art in rmrb.crawl_date(f, d, scan_all=args.scan_all):
             raw.append({k: art[k] for k in ('date', 'page', 'url', 'title',
                                             'text')})
             docs.extend(rmrb.to_docs(art, args.include_vocational))
@@ -305,9 +305,11 @@ def main(argv=None):
 
     s = sub.add_parser('rmrb', help='抓取人民日报国家奖学金获奖学生代表名录')
     s.add_argument('--years', default='2019-2026')
-    s.add_argument('--window', default='05-03:05-06', help='每年抓取的日期区间')
+    s.add_argument('--window', default='05-04:05-05', help='每年抓取的日期区间（名录通常在 5 月 4、5 日）')
     s.add_argument('--dates', help='直接指定日期，逗号分隔，如 2026-05-04,2026-05-05')
     s.add_argument('--include-vocational', action='store_true', help='同时保留中职名录')
+    s.add_argument('--scan-all', action='store_true',
+                   help='打开每天全部文章再判断（慢），默认只打开标题含“国家奖学金”的文章')
     s.add_argument('--dump-raw', help='把名录原文另存为 JSONL，便于核对条目切分')
     s.add_argument('--out', default=os.path.join(DATA, 'raw', 'rmrb.jsonl'))
     s.set_defaults(func=cmd_rmrb)

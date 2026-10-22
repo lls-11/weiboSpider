@@ -105,7 +105,7 @@ cd innovation_talent                        # 以下命令均在本文件夹内�
 pip install -r ../requirements.txt
 pip install -r talent_corpus/requirements.txt   # 编码与导出 Excel 需要
 
-# 1. 名录（2019–2026 年 5 月 3–6 日），--dump-raw 保存原文用于核对条目切分
+# 1. 名录（2019–2026 年 5 月 4–5 日，可用 --window 调整），--dump-raw 保存原文用于核对条目切分
 python3 -m talent_corpus rmrb --years 2019-2026 --dump-raw talent_data/rmrb_raw.jsonl
 
 # 2. 检索工作表 → 研究助理填写 url 列 → 抓取正文

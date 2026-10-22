@@ -82,16 +82,23 @@ def page_urls(html_text, base_url, fmt):
     return [found[k] for k in sorted(found)]
 
 
-def article_urls(html_text, base_url, fmt):
+def article_links(html_text, base_url, fmt):
+    """返回 [(文章地址, 链接文字)]，同一地址的多个链接文字合并。"""
     pat = _NEW_ART if fmt == 'new' else _OLD_ART
     tree = extract.parse(html_text)
-    urls = []
+    links = {}
     if tree is not None:
-        for href in tree.xpath('//a/@href'):
+        for a in tree.xpath('//a[@href]'):
+            href = a.get('href')
             u = urljoin(base_url, href)
-            if pat.search(href) and _same_day(u, base_url) and u not in urls:
-                urls.append(u)
-    return urls
+            if pat.search(href) and _same_day(u, base_url):
+                text = extract.normalize(a.text_content()).replace('\n', ' ')
+                links[u] = (links.get(u, '') + ' ' + text).strip()
+    return list(links.items())
+
+
+def article_urls(html_text, base_url, fmt):
+    return [u for u, _ in article_links(html_text, base_url, fmt)]
 
 
 def article_paragraphs(html_text):
@@ -183,8 +190,12 @@ def award_year(title):
     return m.group(1) if m else ''
 
 
-def crawl_date(fetcher, d, keywords=DEFAULT_KEYWORDS):
-    """抓取某一天的电子版，返回标题或正文含关键词的文章。"""
+def crawl_date(fetcher, d, keywords=DEFAULT_KEYWORDS, scan_all=False):
+    """抓取某一天的电子版，返回标题或正文含关键词的文章。
+
+    默认只打开版面目录中标题含关键词的文章（每天约 20 个版面 + 几篇文章）；
+    scan_all=True 时打开全部文章再判断，慢很多，用于标题不含关键词的年份。
+    """
     for fmt, first in page_one_urls(d):
         html_text = fetcher.get(first)
         # 某些不存在的版面会返回 200 的提示页，以能否找到当天的文章链接为准
@@ -193,12 +204,17 @@ def crawl_date(fetcher, d, keywords=DEFAULT_KEYWORDS):
     else:
         logger.info('%s 无电子版或无法访问', d)
         return []
+    pages = page_urls(html_text, first, fmt)
+    logger.info('%s 共 %d 个版面（%s版地址）', d, len(pages),
+                '新' if fmt == 'new' else '旧')
     articles = []
-    for i, purl in enumerate(page_urls(html_text, first, fmt)):
+    for i, purl in enumerate(pages):
         page_html = html_text if i == 0 else fetcher.get(purl)
         if not page_html:
             continue
-        for aurl in article_urls(page_html, purl, fmt):
+        for aurl, link_text in article_links(page_html, purl, fmt):
+            if not scan_all and not any(k in link_text for k in keywords):
+                continue
             ahtml = fetcher.get(aurl)
             if not ahtml:
                 continue
@@ -207,11 +223,14 @@ def crawl_date(fetcher, d, keywords=DEFAULT_KEYWORDS):
             text = parsed.get('text', '')
             if not any(k in title or k in text[:300] for k in keywords):
                 continue
+            logger.info('  第 %d 版：%s', i + 1, title)
             articles.append({
                 'date': d.isoformat(), 'page': i + 1, 'url': aurl,
                 'format': fmt, 'title': title, 'text': text,
                 'paragraphs': article_paragraphs(ahtml),
             })
+    if not articles:
+        logger.info('%s 未找到名录', d)
     return articles
 
 
