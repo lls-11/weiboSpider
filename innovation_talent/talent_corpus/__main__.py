@@ -397,7 +397,7 @@ def main(argv=None):
     s.set_defaults(func=cmd_analyze)
 
     s = sub.add_parser('codebook', help='把编码手册导出为 Markdown，供专家评审')
-    s.add_argument('--out', default='talent_codebook.md')
+    s.add_argument('--out', default=os.path.join('docs', 'codebook.md'))
     s.set_defaults(func=cmd_codebook)
 
     args = p.parse_args(argv)

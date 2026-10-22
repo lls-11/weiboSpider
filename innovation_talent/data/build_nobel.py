@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
-"""由两个公开 GitHub 数据集生成 public_data/nobel/ 下的表格。
+"""由两个公开 GitHub 数据集生成 data/nobel/ 下的表格。
 
 用法：
     git clone https://github.com/JeffersonConza/The_Nobel_Laureates
     git clone https://github.com/frishberg/Nobel-Prizes-by-Academic-Affiliations
-    python3 public_data/build_nobel.py <The_Nobel_Laureates 目录> <Nobel-Prizes-by-Academic-Affiliations 目录>
+    python3 data/build_nobel.py <The_Nobel_Laureates 目录> <Nobel-Prizes-by-Academic-Affiliations 目录>
 """
 
 import csv

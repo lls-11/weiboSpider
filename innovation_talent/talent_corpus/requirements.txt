@@ -1,4 +1,4 @@
-# 采集与预处理只需要仓库根目录 requirements.txt 中的 lxml、requests。
+# 采集与预处理只需要lxml、requests（weiboSpider 根目录 requirements.txt 已包含）。
 # 以下为可选依赖：
 anthropic>=1.15.0  # code 子命令（大模型编码），需要 Python 3.10+
 openpyxl>=3.1      # analyze 子命令同时输出 analysis.xlsx

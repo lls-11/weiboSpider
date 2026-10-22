@@ -1,6 +1,6 @@
 # 创新人才识别模型：公开文本数据的初步验证方案
 
-本文说明如何用公开文本对《创新人才识别模型（TAD 四阶段版）》做初步验证，以及仓库中 `talent_corpus` 模块的使用方法。编码手册全文（33 项指标 × 4 个阶段的行为锚点）见 [talent_codebook.md](talent_codebook.md)，由 `talent_corpus/data/codebook.json` 生成。
+本文说明如何用公开文本对《创新人才识别模型（TAD 四阶段版）》做初步验证，以及本文件夹中 `talent_corpus` 模块的使用方法。编码手册全文（33 项指标 × 4 个阶段的行为锚点）见 [codebook.md](codebook.md)，由 `talent_corpus/data/codebook.json` 生成。
 
 ## 一、能验证什么，不能验证什么
 
@@ -62,7 +62,7 @@
 
 ### 3.4 微博数据的用法
 
-本仓库原有的 `weibo_spider` 按账号抓取微博。把高校官方微博、团委、中国大学生在线等账号的 user_id 写入 `user_id_list`（查找方法见 [userid.md](userid.md)）运行后，用 `talent_corpus weibo` 按关键词和名录姓名筛选，并把其中的头条文章地址交给 `articles` 抓取。
+本仓库原有的 `weibo_spider` 按账号抓取微博。把高校官方微博、团委、中国大学生在线等账号的 user_id 写入 `user_id_list`（查找方法见 [userid.md](../../docs/userid.md)）运行后，用 `talent_corpus weibo` 按关键词和名录姓名筛选，并把其中的头条文章地址交给 `articles` 抓取。
 
 ## 四、编码方案
 
@@ -101,7 +101,8 @@
 ## 六、操作步骤
 
 ```bash
-pip install -r requirements.txt
+cd innovation_talent                        # 以下命令均在本文件夹内运行
+pip install -r ../requirements.txt
 pip install -r talent_corpus/requirements.txt   # 编码与导出 Excel 需要
 
 # 1. 名录（2019–2026 年 5 月 3–6 日），--dump-raw 保存原文用于核对条目切分
@@ -115,8 +116,8 @@ python3 -m talent_corpus articles --local-dir 保存的网页目录   # 微信�
 # 3. 诺贝尔奖获得者（物理、化学、医学）
 python3 -m talent_corpus nobel --categories phy,che,med
 
-# 4. 可选：微博（先运行 python3 -m weibo_spider）
-python3 -m talent_corpus weibo --weibo-dir weibo --entries talent_data/raw/rmrb.jsonl
+# 4. 可选：微博（先在仓库根目录运行 python3 -m weibo_spider，结果在 ../weibo）
+python3 -m talent_corpus weibo --weibo-dir ../weibo --entries talent_data/raw/rmrb.jsonl
 
 # 5. 预处理、样本分类、词典特征
 python3 -m talent_corpus prepare

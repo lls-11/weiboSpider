@@ -9,12 +9,12 @@
 1. **诺贝尔奖获得者的结构化信息**：来自 GitHub 上两个公开数据集，整理成科学类获奖者的采样框；
 2. **名录与报道的地址清单**：通过网页检索确认的人民日报名录页面及转载、高校报道地址。这些是下一步抓取的入口，内容本身尚未抓取。
 
-在能访问上述网站的电脑上运行 `talent_corpus` 的命令（见 [docs/talent_corpus.md](../docs/talent_corpus.md)），即可在这些清单的基础上取得正文。
+在能访问上述网站的电脑上运行 `talent_corpus` 的命令（见 [docs/research_design.md](../docs/research_design.md)），即可在这些清单的基础上取得正文。
 
 ## 目录结构
 
 ```
-public_data/
+data/
 ├── README.md                       本说明
 ├── build_nobel.py                  由原始数据集生成 nobel/ 下各表的脚本
 ├── nobel/
@@ -96,6 +96,6 @@ python3 -m talent_corpus nobel --categories phy,che,med
 1. 在可访问外网的电脑上运行 `talent_corpus rmrb`，按 `list_sources.csv` 核对每份名录约 100 条；
 2. 运行 `search-sheet` 生成每人的检索表，把 `school_report_leads.csv` 中已有的地址填进去；
 3. 运行 `nobel`，按 `crawl_frame_stem.csv` 检查抓取覆盖率；
-4. 正文取得后，按 docs/talent_corpus.md 的步骤预处理、编码与分析。
+4. 正文取得后，按 docs/research_design.md 的步骤预处理、编码与分析。
 
 若希望在云端环境里直接抓取，需要在环境设置的 Network access 中放行 paper.people.com.cn、edu.people.com.cn、www.moe.gov.cn、api.nobelprize.org、www.nobelprize.org 等域名。
