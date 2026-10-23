@@ -1,0 +1,1261 @@
+﻿person_id,name,corpus,level,school,award_year,n_docs,sample_type,innovation,stage
+p_2258a73ea651,刘胜与,rmrb_scholarship,undergraduate,北京大学,2022-2023,1,research,False,2.0
+p_2dac439d9f14,李俊霖,rmrb_scholarship,undergraduate,中国人民大学,2022-2023,1,competition,True,2.0
+p_b3c4bc9becdb,金朝,rmrb_scholarship,undergraduate,清华大学,2022-2023,1,competition,False,2.0
+p_8a3f5cd3c962,刘晶晶,rmrb_scholarship,undergraduate,北京科技大学,2022-2023,1,competition,True,2.0
+p_13812824007e,梁梦坤,rmrb_scholarship,undergraduate,北京化工大学,2022-2023,1,research,True,2.0
+p_6a65c46aa24b,杨发光,rmrb_scholarship,undergraduate,北京师范大学,2022-2023,1,unclear,False,2.0
+p_f1a76d709bc5,黄世鸿,rmrb_scholarship,undergraduate,北京交通大学,2022-2023,1,competition,True,2.0
+p_e2d9b3465fd5,封慧琪,rmrb_scholarship,undergraduate,北京邮电大学,2022-2023,1,research,True,2.0
+p_b68139fb9293,陈爽,rmrb_scholarship,undergraduate,中国农业大学,2022-2023,1,research,True,2.0
+p_92075c0fef7e,李君威,rmrb_scholarship,undergraduate,北京林业大学,2022-2023,1,competition,False,2.0
+p_a6656258f323,吴师尧,rmrb_scholarship,undergraduate,中央财经大学,2022-2023,1,competition,True,2.0
+p_5da8d2956c10,王轶尧,rmrb_scholarship,undergraduate,中国政法大学,2022-2023,1,competition,True,2.0
+p_57bb74c8d6fb,李梓豪,rmrb_scholarship,undergraduate,中央戏剧学院,2022-2023,1,unclear,False,2.0
+p_16c900ba2719,叶妙童,rmrb_scholarship,undergraduate,对外经济贸易大学,2022-2023,1,competition,False,2.0
+p_8bde0d9fc8f9,贾文君,rmrb_scholarship,undergraduate,北京航空航天大学,2022-2023,1,competition,True,2.0
+p_5794f749e221,祁伊凡,rmrb_scholarship,undergraduate,北京理工大学,2022-2023,1,research,True,2.0
+p_e2c0cd61ba2a,刘昕格,rmrb_scholarship,undergraduate,北京体育大学,2022-2023,1,research,True,2.0
+p_994e93df97ad,宋江川,rmrb_scholarship,undergraduate,华北电力大学,2022-2023,1,service,False,2.0
+p_8700fe9c545a,刘奕辰,rmrb_scholarship,undergraduate,外交学院,2022-2023,1,service,False,2.0
+p_4e74e282aeb9,董祥瑞,rmrb_scholarship,undergraduate,中国地质大学（北京）,2022-2023,1,research,True,2.0
+p_b0d931dd639b,陶若祎,rmrb_scholarship,undergraduate,中国矿业大学（北京）,2022-2023,1,research,True,2.0
+p_ec3a44501569,张傲林,rmrb_scholarship,undergraduate,中国人民公安大学,2022-2023,1,research,True,2.0
+p_711bb72c78e1,赵惠怡,rmrb_scholarship,undergraduate,中央民族大学,2022-2023,1,competition,False,2.0
+p_cf5ee49aceaa,生馨蕾,rmrb_scholarship,undergraduate,天津大学,2022-2023,1,competition,True,2.0
+p_f02f34c25b6f,张海鹏,rmrb_scholarship,undergraduate,中国民航大学,2022-2023,1,competition,True,2.0
+p_dcd976813cd5,李昊宇,rmrb_scholarship,undergraduate,大连理工大学,2022-2023,1,research,True,2.0
+p_531a14ea6735,宋政杭,rmrb_scholarship,undergraduate,东北大学,2022-2023,1,research,True,2.0
+p_03f7ffe736ba,徐润昕,rmrb_scholarship,undergraduate,大连海事大学,2022-2023,1,research,True,2.0
+p_6078fff7a765,毕润生,rmrb_scholarship,undergraduate,东北师范大学,2022-2023,1,competition,True,2.0
+p_1b114406de10,魏久洋,rmrb_scholarship,undergraduate,东北林业大学,2022-2023,1,research,True,2.0
+p_2d08b4a0c610,张佳奕,rmrb_scholarship,undergraduate,哈尔滨工程大学,2022-2023,1,research,True,2.0
+p_00bdf252e918,宋炳榕,rmrb_scholarship,undergraduate,哈尔滨工业大学,2022-2023,1,competition,True,2.0
+p_8f4daac17ae6,吕昊天,rmrb_scholarship,undergraduate,上海交通大学,2022-2023,1,research,True,2.0
+p_53586463885c,范世昌,rmrb_scholarship,undergraduate,华东理工大学,2022-2023,1,research,True,2.0
+p_69a1e45008a5,贾灏,rmrb_scholarship,undergraduate,华东师范大学,2022-2023,1,competition,True,2.0
+p_418d5820a9dd,廖天一,rmrb_scholarship,undergraduate,东南大学,2022-2023,1,research,True,2.0
+p_70380e825beb,沈明威,rmrb_scholarship,undergraduate,中国矿业大学,2022-2023,1,research,True,2.0
+p_dc09bc2b4cb5,王明礼,rmrb_scholarship,undergraduate,江南大学,2022-2023,1,research,True,2.0
+p_ce6243737fff,张镕皓,rmrb_scholarship,undergraduate,南京航空航天大学,2022-2023,1,leadership,False,2.0
+p_8c633f3a79a3,周诗羽,rmrb_scholarship,undergraduate,南京理工大学,2022-2023,1,research,True,2.0
+p_d3d491d74bd9,袁泽清,rmrb_scholarship,undergraduate,浙江大学,2022-2023,1,research,True,2.0
+p_644e9fd51b4f,龙娜沙,rmrb_scholarship,undergraduate,厦门大学,2022-2023,1,unclear,False,2.0
+p_b5aacf0979c2,王君豪,rmrb_scholarship,undergraduate,山东大学,2022-2023,1,research,True,2.0
+p_f0f01b756d0f,杨子文,rmrb_scholarship,undergraduate,中国石油大学（华东）,2022-2023,1,research,True,2.0
+p_2e42d0a0aa33,戴子恒,rmrb_scholarship,undergraduate,武汉理工大学,2022-2023,1,competition,False,2.0
+p_76a546c4f1d0,赵心瑜,rmrb_scholarship,undergraduate,华中师范大学,2022-2023,1,research,True,2.0
+p_61a6615ed677,郝彦鑫,rmrb_scholarship,undergraduate,中南民族大学,2022-2023,1,research,True,2.0
+p_a46a78921107,王玺涵,rmrb_scholarship,undergraduate,湖南大学,2022-2023,1,service,False,2.0
+p_54670ebeedf9,唐健恒,rmrb_scholarship,undergraduate,中南大学,2022-2023,1,research,True,2.0
+p_a1b4abcbbcb4,王梓杰,rmrb_scholarship,undergraduate,中山大学,2022-2023,1,research,True,2.0
+p_78d464ad9792,陈浩铭,rmrb_scholarship,undergraduate,华南理工大学,2022-2023,1,research,True,2.0
+p_a46ceb7fa706,刘芸丽,rmrb_scholarship,undergraduate,暨南大学,2022-2023,1,research,False,2.0
+p_5ae8d3633a6f,王颜青,rmrb_scholarship,undergraduate,四川大学,2022-2023,1,arts_sports,False,2.0
+p_b41af1bbecb1,何昳矾,rmrb_scholarship,undergraduate,西南财经大学,2022-2023,1,service,False,2.0
+p_89180eddb033,叶文帅,rmrb_scholarship,undergraduate,西南交通大学,2022-2023,1,unclear,False,2.0
+p_6a1377b6a2ed,王灿,rmrb_scholarship,undergraduate,重庆大学,2022-2023,1,research,True,2.0
+p_4679f906da8a,方承煜,rmrb_scholarship,undergraduate,西南大学,2022-2023,1,research,True,2.0
+p_35aa2c73991a,徐海涛,rmrb_scholarship,undergraduate,西安交通大学,2022-2023,1,research,True,2.0
+p_4c65ceb12ce9,张羽灵,rmrb_scholarship,undergraduate,陕西师范大学,2022-2023,1,service,False,2.0
+p_8a17d28245ad,张运泽,rmrb_scholarship,undergraduate,西安电子科技大学,2022-2023,1,research,True,2.0
+p_ba470037fcf2,黎敏琦,rmrb_scholarship,undergraduate,长安大学,2022-2023,1,research,True,2.0
+p_b09b203d65a0,李奕辰,rmrb_scholarship,undergraduate,西北工业大学,2022-2023,1,research,True,2.0
+p_087f2879bf7f,官凌,rmrb_scholarship,undergraduate,兰州大学,2022-2023,1,research,True,2.0
+p_1906c333dbde,秦紫瑄,rmrb_scholarship,undergraduate,中国人民解放军空军军医大学,2022-2023,1,research,True,2.0
+p_556ccfaff794,伍泓冰,rmrb_scholarship,undergraduate,天津工业大学,2022-2023,1,research,True,2.0
+p_8ca98a09f9cc,田丽君,rmrb_scholarship,undergraduate,华北理工大学,2022-2023,1,research,True,2.0
+p_495bcd52f766,翟淑媛,rmrb_scholarship,undergraduate,山西农业大学,2022-2023,1,competition,True,2.0
+p_951ef2e77eac,白坚,rmrb_scholarship,undergraduate,内蒙古大学,2022-2023,1,research,True,2.0
+p_90549c2e3adf,杨茗惠,rmrb_scholarship,undergraduate,中国医科大学,2022-2023,1,research,True,2.0
+p_58622910bfe1,李璐,rmrb_scholarship,undergraduate,东北石油大学,2022-2023,1,research,True,2.0
+p_cf1f9d2f9ebf,苏舒摇,rmrb_scholarship,undergraduate,上海科技大学,2022-2023,1,competition,True,2.0
+p_322b92628221,李婷婷,rmrb_scholarship,undergraduate,宁波大学,2022-2023,1,research,True,2.0
+p_56c6cd652ea7,周嘉晟,rmrb_scholarship,undergraduate,福州大学,2022-2023,1,research,True,2.0
+p_31f272c3ef60,谌昕悦,rmrb_scholarship,undergraduate,南昌大学,2022-2023,1,research,True,2.0
+p_40928e2a7ef4,刘艺旋,rmrb_scholarship,undergraduate,山东中医药大学,2022-2023,1,research,True,2.0
+p_3a226f56ffc7,苏柯瑞,rmrb_scholarship,undergraduate,河南工业大学,2022-2023,1,research,True,2.0
+p_b3be7daf74b9,汪礼原,rmrb_scholarship,undergraduate,湖北师范大学,2022-2023,1,competition,True,2.0
+p_f4dee3e97a53,黄月胜,rmrb_scholarship,undergraduate,广东技术师范大学,2022-2023,1,competition,True,2.0
+p_0cdfe2eea127,曹夏馨,rmrb_scholarship,undergraduate,海南大学,2022-2023,1,research,True,2.0
+p_b59b06bf8d27,陈乐,rmrb_scholarship,undergraduate,重庆理工大学,2022-2023,1,research,True,2.0
+p_75a1473a200c,刘青平,rmrb_scholarship,undergraduate,西藏农牧学院,2022-2023,1,competition,False,2.0
+p_08e9c229c656,罗嘉钰,rmrb_scholarship,undergraduate,西北大学,2022-2023,1,research,True,2.0
+p_788410c9c4ac,韩泊雅,rmrb_scholarship,undergraduate,青海大学,2022-2023,1,competition,True,2.0
+p_6aacd3ea8f5c,郭文城,rmrb_scholarship,undergraduate,宁夏理工学院,2022-2023,1,research,True,2.0
+p_5a717cebbbcc,阮礼顺,rmrb_scholarship,undergraduate,新疆大学,2022-2023,1,competition,True,2.0
+p_7cabb3f29de3,何家龙,rmrb_scholarship,undergraduate,石河子大学,2022-2023,1,competition,False,2.0
+p_2f299cbd4b77,张瑶,rmrb_scholarship,undergraduate,青岛城市学院,2022-2023,1,unclear,False,2.0
+p_4c061813caed,何晶,rmrb_scholarship,undergraduate,厦门华厦学院,2022-2023,1,competition,False,2.0
+p_b6cc04843b84,孟雨晴,rmrb_scholarship,undergraduate,北京农业职业学院,2022-2023,1,unclear,False,2.0
+p_f63504c2d4ba,付狄瑄,rmrb_scholarship,undergraduate,吉林工业职业技术学院,2022-2023,1,research,True,2.0
+p_9d143ac00706,刘苏龙,rmrb_scholarship,undergraduate,无锡职业技术学院,2022-2023,1,research,True,2.0
+p_12c99926c8a0,邱银杰,rmrb_scholarship,undergraduate,浙江经济职业技术学院,2022-2023,1,competition,True,2.0
+p_483e1932163c,李云龙,rmrb_scholarship,undergraduate,安徽职业技术学院,2022-2023,1,research,True,2.0
+p_f80ca8e7aa04,曹敬宇,rmrb_scholarship,undergraduate,长沙民政职业技术学院,2022-2023,1,competition,True,2.0
+p_c0484ef5f8b8,曹巨,rmrb_scholarship,undergraduate,广西电力职业技术学院,2022-2023,1,competition,False,2.0
+p_9ca8757c44fc,李红基,rmrb_scholarship,undergraduate,成都锦城学院,2022-2023,1,competition,True,2.0
+p_bc5edcae048a,袁金凤,rmrb_scholarship,undergraduate,贵州经贸职业技术学院,2022-2023,1,competition,True,2.0
+p_d2c3fb8b5627,黄远川,rmrb_scholarship,undergraduate,云南机电职业技术学院,2022-2023,1,research,True,2.0
+p_15a1c72d838d,于滟鑫,rmrb_scholarship,undergraduate,大连职业技术学院,2022-2023,1,venture,False,2.0
+p_4d1ff812e86f,岳杉,rmrb_scholarship,undergraduate,石家庄邮电职业技术学院,2022-2023,1,research,True,2.0
+p_437d59f19807,黄子健,rmrb_scholarship,graduate,北京大学,2022-2023,1,research,True,3.0
+p_7ad4e942fe0e,金光照,rmrb_scholarship,graduate,中国人民大学,2022-2023,1,research,True,3.0
+p_fc28c22d6cd2,刘少峰,rmrb_scholarship,graduate,清华大学,2022-2023,1,research,True,3.0
+p_07b7f973f48d,杨倩倩,rmrb_scholarship,graduate,北京科技大学,2022-2023,1,research,True,3.0
+p_9fa8121957b9,杨柳,rmrb_scholarship,graduate,北京师范大学,2022-2023,1,research,True,3.0
+p_8502a901a8ff,孟祥宇,rmrb_scholarship,graduate,北京航空航天大学,2022-2023,1,research,True,3.0
+p_34ad90cc591e,宋治祥,rmrb_scholarship,graduate,中国矿业大学（北京）,2022-2023,1,research,True,3.0
+p_d9e453285b6c,李双阳,rmrb_scholarship,graduate,天津大学,2022-2023,1,research,True,3.0
+p_492b107e5d4c,王禹,rmrb_scholarship,graduate,大连理工大学,2022-2023,1,research,True,3.0
+p_e4df5b49ddf4,阚雨菲,rmrb_scholarship,graduate,东北林业大学,2022-2023,1,research,True,3.0
+p_b01603913202,马博宇,rmrb_scholarship,graduate,哈尔滨工业大学,2022-2023,1,research,True,3.0
+p_f5603dd7b3cc,胡亦清,rmrb_scholarship,graduate,复旦大学,2022-2023,1,research,True,3.0
+p_db6a45aa5de6,徐坤,rmrb_scholarship,graduate,上海交通大学,2022-2023,1,research,True,3.0
+p_0a534fa3fafa,周莲蓉,rmrb_scholarship,graduate,华东师范大学,2022-2023,1,research,True,3.0
+p_959112dbe346,刘震,rmrb_scholarship,graduate,东南大学,2022-2023,1,research,True,3.0
+p_e900e1cd0873,关瑞卿,rmrb_scholarship,graduate,南京航空航天大学,2022-2023,1,research,True,3.0
+p_e129bc808896,高益凡,rmrb_scholarship,graduate,山东大学,2022-2023,1,research,True,3.0
+p_99172ef865e0,苏海鹏,rmrb_scholarship,graduate,中国海洋大学,2022-2023,1,research,True,3.0
+p_842131b3ca32,周颖,rmrb_scholarship,graduate,华中科技大学,2022-2023,1,research,True,3.0
+p_ee4f89ec9cb5,车华超,rmrb_scholarship,graduate,中国地质大学（武汉）,2022-2023,1,research,True,3.0
+p_70e6600fb0d9,班铭媛,rmrb_scholarship,graduate,中南财经政法大学,2022-2023,1,research,True,3.0
+p_8f8ec9faf2de,潘南方,rmrb_scholarship,graduate,四川大学,2022-2023,1,research,True,3.0
+p_8e72dc337863,熊晴,rmrb_scholarship,graduate,西南大学,2022-2023,1,research,True,3.0
+p_85213d4eba7e,秦皓楠,rmrb_scholarship,graduate,西安电子科技大学,2022-2023,1,research,True,3.0
+p_127d8fd1f83e,陈柯帆,rmrb_scholarship,graduate,长安大学,2022-2023,1,research,True,3.0
+p_b9fdaac2385c,李波,rmrb_scholarship,graduate,西北工业大学,2022-2023,1,research,True,3.0
+p_424465ffb91d,陈乐利,rmrb_scholarship,graduate,江苏大学,2022-2023,1,research,True,3.0
+p_1c17bdb0b913,杨光绪,rmrb_scholarship,graduate,福建农林大学,2022-2023,1,research,True,3.0
+p_632d5d653f29,梁晓媚,rmrb_scholarship,graduate,南方医科大学,2022-2023,1,research,True,3.0
+p_5d7a0181e53f,金朝强,rmrb_scholarship,graduate,海南大学,2022-2023,1,research,True,3.0
+p_c30bc80f31db,章誉兴,rmrb_scholarship,graduate,云南大学,2022-2023,1,research,True,3.0
+p_13f03121468f,戴艳会,rmrb_scholarship,graduate,南方科技大学,2022-2023,1,research,True,3.0
+p_c1a23d6840ce,王月莹,rmrb_scholarship,graduate,北京化工大学,2022-2023,1,research,True,2.5
+p_c712b3237f7c,廖智超,rmrb_scholarship,graduate,北京外国语大学,2022-2023,1,research,True,2.5
+p_0e5eed6d0523,林宇鹏,rmrb_scholarship,graduate,北京语言大学,2022-2023,1,research,True,2.5
+p_aa131977d386,张一,rmrb_scholarship,graduate,中国石油大学（北京）,2022-2023,1,research,True,2.5
+p_c8e1eca03eb1,鲍璇,rmrb_scholarship,graduate,中国农业大学,2022-2023,1,unclear,False,2.5
+p_9d768f9f5f82,肖杰文,rmrb_scholarship,graduate,北京林业大学,2022-2023,1,research,True,2.5
+p_00f72e2f2d24,刘江彬,rmrb_scholarship,graduate,中国政法大学,2022-2023,1,research,True,2.5
+p_bea85824301c,尚津锋,rmrb_scholarship,graduate,北京中医药大学,2022-2023,1,research,True,2.5
+p_ae0222067611,金枭雨,rmrb_scholarship,graduate,北京理工大学,2022-2023,1,research,True,2.5
+p_5808ccc124ed,张承婉,rmrb_scholarship,graduate,华北电力大学,2022-2023,1,research,True,2.5
+p_c10b060b7989,胡勉宁,rmrb_scholarship,graduate,中国人民公安大学,2022-2023,1,research,True,2.5
+p_6e1526327bc2,姚征,rmrb_scholarship,graduate,南开大学,2022-2023,1,research,True,2.5
+p_e365948e229e,王佳洋,rmrb_scholarship,graduate,东北大学,2022-2023,1,research,True,2.5
+p_faf148636ebf,王昭洋,rmrb_scholarship,graduate,大连海事大学,2022-2023,1,research,True,2.5
+p_c1e9cf209f12,王婧仪,rmrb_scholarship,graduate,吉林大学,2022-2023,1,research,True,2.5
+p_8b32dd5b64d7,杨小康,rmrb_scholarship,graduate,哈尔滨工程大学,2022-2023,1,research,True,2.5
+p_65334dc23f79,段雪雯,rmrb_scholarship,graduate,同济大学,2022-2023,1,research,True,2.5
+p_802f1ee15edc,宋飞,rmrb_scholarship,graduate,华东理工大学,2022-2023,1,research,True,2.5
+p_cbdcfd0a82c0,李萌,rmrb_scholarship,graduate,东华大学,2022-2023,1,research,True,2.5
+p_73faeecdae48,邱向楠,rmrb_scholarship,graduate,南京大学,2022-2023,1,research,True,2.5
+p_d1826e5a5eb5,孙锦鑫,rmrb_scholarship,graduate,中国矿业大学,2022-2023,1,research,True,2.5
+p_5c051f2c9e1d,张轶成,rmrb_scholarship,graduate,南京农业大学,2022-2023,1,unclear,False,2.5
+p_5cc89a8e9810,田超群,rmrb_scholarship,graduate,南京理工大学,2022-2023,1,competition,False,2.5
+p_cc6039d77f16,包睿成,rmrb_scholarship,graduate,中国科学技术大学,2022-2023,1,research,True,2.5
+p_413d0f4c516b,程凌洲,rmrb_scholarship,graduate,浙江大学,2022-2023,1,research,True,2.5
+p_3ee17a474972,张凯婷,rmrb_scholarship,graduate,厦门大学,2022-2023,1,service,True,2.5
+p_3f99572c84c0,袁涛,rmrb_scholarship,graduate,华侨大学,2022-2023,1,research,True,2.5
+p_f6878e37225e,韩晨玉,rmrb_scholarship,graduate,中国石油大学（华东）,2022-2023,1,research,True,2.5
+p_1025773ceab6,万柳柳,rmrb_scholarship,graduate,武汉大学,2022-2023,1,research,True,2.5
+p_a14a6a5db121,吴汉辉,rmrb_scholarship,graduate,华中农业大学,2022-2023,1,research,True,2.5
+p_ee4f915e5a99,翁廷坤,rmrb_scholarship,graduate,湖南大学,2022-2023,1,research,True,2.5
+p_9ec6987a01b4,黄谦,rmrb_scholarship,graduate,中山大学,2022-2023,1,competition,True,2.5
+p_51df5324dde5,王怡焯,rmrb_scholarship,graduate,西南财经大学,2022-2023,1,arts_sports,False,2.5
+p_0e195db041ad,代鑫泓,rmrb_scholarship,graduate,电子科技大学,2022-2023,1,research,True,2.5
+p_e85bacb5e1ae,吕赫,rmrb_scholarship,graduate,西南民族大学,2022-2023,1,research,True,2.5
+p_3abb60d45fdc,苏洪臣,rmrb_scholarship,graduate,重庆大学,2022-2023,1,research,True,2.5
+p_a7104995473e,高鑫羽,rmrb_scholarship,graduate,西安交通大学,2022-2023,1,research,True,2.5
+p_b35b9e3cbbce,许兴时,rmrb_scholarship,graduate,西北农林科技大学,2022-2023,1,research,True,2.5
+p_d40822a2c4e3,杨雯,rmrb_scholarship,graduate,兰州大学,2022-2023,1,research,True,2.5
+p_00ea1baea241,石建都,rmrb_scholarship,graduate,西北民族大学,2022-2023,1,research,True,2.5
+p_508f68e59c43,陈智睿,rmrb_scholarship,graduate,中国社会科学院大学,2022-2023,1,research,True,2.5
+p_ce617ff8bdd8,田翔,rmrb_scholarship,graduate,中国人民解放军空军军医大学,2022-2023,1,research,True,2.5
+p_21cf5ec4e159,贾崧淏,rmrb_scholarship,graduate,首都医科大学,2022-2023,2,research,True,2.5
+p_e7f0c3143c12,顾天娇,rmrb_scholarship,graduate,天津中医药大学,2022-2023,1,research,True,2.5
+p_0943bc511fb8,李耀庭,rmrb_scholarship,graduate,河北医科大学,2022-2023,1,research,True,2.5
+p_a7191c0f1190,赵璐瑶,rmrb_scholarship,graduate,山西农业大学,2022-2023,1,research,True,2.5
+p_fad165bdc1cf,张天祥,rmrb_scholarship,graduate,内蒙古工业大学,2022-2023,1,research,True,2.5
+p_3bbfd4cc1469,赵衡,rmrb_scholarship,graduate,渤海大学,2022-2023,1,research,True,2.5
+p_1e92f3482c79,栗玉朋,rmrb_scholarship,graduate,长春师范大学,2022-2023,1,research,True,2.5
+p_85ac68d378f5,赵梓旭,rmrb_scholarship,graduate,黑龙江大学,2022-2023,1,service,True,2.5
+p_e232afcac817,张淼,rmrb_scholarship,graduate,上海中医药大学,2022-2023,1,research,True,2.5
+p_c4c6d2bc2b49,周星灿,rmrb_scholarship,graduate,浙江师范大学,2022-2023,1,research,True,2.5
+p_c1a35cba9d74,曹凡,rmrb_scholarship,graduate,安徽医科大学,2022-2023,1,research,True,2.5
+p_556ed1b315e8,高东煜,rmrb_scholarship,graduate,景德镇陶瓷大学,2022-2023,1,research,True,2.5
+p_9f1019cdec33,陈昊宇,rmrb_scholarship,graduate,青岛农业大学,2022-2023,1,research,True,2.5
+p_c64dc884ea6b,艾福轲,rmrb_scholarship,graduate,河南农业大学,2022-2023,1,research,True,2.5
+p_d108f4519234,袁晓曼,rmrb_scholarship,graduate,三峡大学,2022-2023,1,research,True,2.5
+p_8e265a2f3a90,雷翔茗,rmrb_scholarship,graduate,湖南农业大学,2022-2023,1,competition,True,2.5
+p_611ae2a8fe81,谢沛羲,rmrb_scholarship,graduate,南宁师范大学,2022-2023,1,research,True,2.5
+p_fbc8e6928f2d,刘粤蛟,rmrb_scholarship,graduate,重庆科技大学,2022-2023,1,research,True,2.5
+p_c23a2bf0e441,何佳,rmrb_scholarship,graduate,四川农业大学,2022-2023,1,research,True,2.5
+p_6dabe737ba35,赵伟,rmrb_scholarship,graduate,贵州民族大学,2022-2023,1,research,True,2.5
+p_222584bab73b,才旦曲措,rmrb_scholarship,graduate,西藏大学,2022-2023,1,research,True,2.5
+p_d59bdd604f4b,南静静,rmrb_scholarship,graduate,西安工程大学,2022-2023,1,research,True,2.5
+p_1b7dc379842e,仇栋栋,rmrb_scholarship,graduate,西北师范大学,2022-2023,1,research,True,2.5
+p_e4769a4e0410,智绪璇,rmrb_scholarship,graduate,青海师范大学,2022-2023,1,research,True,2.5
+p_a2bd5d1d5cdb,张娣,rmrb_scholarship,graduate,宁夏大学,2022-2023,1,research,True,2.5
+p_b696abcf66f1,唐新生,rmrb_scholarship,graduate,新疆大学,2022-2023,1,research,True,2.5
+p_fa7255c9d873,钱炜楠,rmrb_scholarship,undergraduate,北京大学,2023-2024,1,research,True,2.0
+p_247925006166,冉皓文,rmrb_scholarship,undergraduate,中国人民大学,2023-2024,1,research,True,2.0
+p_5bc4bf5d6c20,刘子晗,rmrb_scholarship,undergraduate,清华大学,2023-2024,1,research,True,2.0
+p_75aa88d0c4af,张海斌,rmrb_scholarship,undergraduate,北京交通大学,2023-2024,1,competition,True,2.0
+p_646c600d9303,纪祥,rmrb_scholarship,undergraduate,北京理工大学,2023-2024,1,research,True,2.0
+p_522e13742461,杨春悦,rmrb_scholarship,undergraduate,北京化工大学,2023-2024,1,service,False,2.0
+p_6671987dd5e7,杨婧涵,rmrb_scholarship,undergraduate,北京邮电大学,2023-2024,1,research,True,2.0
+p_2d6e682a5641,张晟民,rmrb_scholarship,undergraduate,中国农业大学,2023-2024,1,research,True,2.0
+p_0d4a8fa17730,周曼慈,rmrb_scholarship,undergraduate,北京中医药大学,2023-2024,1,research,True,2.0
+p_af5b2cda667b,杜文卓,rmrb_scholarship,undergraduate,中国人民公安大学,2023-2024,1,research,True,2.0
+p_eebb29b16b95,毕友恒,rmrb_scholarship,undergraduate,中央音乐学院,2023-2024,1,unclear,False,2.0
+p_454dcd476afe,王钟晗,rmrb_scholarship,undergraduate,中国地质大学（北京）,2023-2024,1,research,True,2.0
+p_d88e0dbe3a01,李宇驰,rmrb_scholarship,undergraduate,中国劳动关系学院,2023-2024,1,research,True,2.0
+p_60afde0fe655,张文櫆,rmrb_scholarship,undergraduate,天津大学,2023-2024,1,research,False,2.0
+p_1237cee47876,杨楠,rmrb_scholarship,undergraduate,中国民航大学,2023-2024,1,research,True,2.0
+p_b9da71693728,李朋霏,rmrb_scholarship,undergraduate,大连理工大学,2023-2024,1,research,True,2.0
+p_2b56c6271f5a,杨庆宇,rmrb_scholarship,undergraduate,吉林大学,2023-2024,1,research,True,2.0
+p_340de9415161,李禹都,rmrb_scholarship,undergraduate,东北师范大学,2023-2024,1,competition,False,2.0
+p_d972cca489b1,张卓,rmrb_scholarship,undergraduate,哈尔滨工业大学,2023-2024,1,research,True,2.0
+p_276b75bdb2c0,孙珂婧,rmrb_scholarship,undergraduate,哈尔滨工程大学,2023-2024,1,research,True,2.0
+p_534ece029ccd,王婧怡,rmrb_scholarship,undergraduate,东北林业大学,2023-2024,1,research,True,2.0
+p_61ab50aed267,王家俊,rmrb_scholarship,undergraduate,复旦大学,2023-2024,1,research,False,2.0
+p_c99b148ea139,任思剑,rmrb_scholarship,undergraduate,同济大学,2023-2024,1,competition,False,2.0
+p_4fae5e858bdf,刘彦希,rmrb_scholarship,undergraduate,上海交通大学,2023-2024,1,research,True,2.0
+p_18c58b84416c,陈佳妮,rmrb_scholarship,undergraduate,华东师范大学,2023-2024,1,competition,False,2.0
+p_767dd8ec47dc,买热合巴·艾尼瓦尔,rmrb_scholarship,undergraduate,南京大学,2023-2024,1,unclear,False,2.0
+p_18b718ff291f,田昱锟,rmrb_scholarship,undergraduate,东南大学,2023-2024,1,research,True,2.0
+p_e285cc8576b5,孙宏伟,rmrb_scholarship,undergraduate,南京航空航天大学,2023-2024,1,competition,False,2.0
+p_156dfea20031,沈蓥,rmrb_scholarship,undergraduate,南京理工大学,2023-2024,1,research,True,2.0
+p_25b45ba7bc97,刘家豪,rmrb_scholarship,undergraduate,中国矿业大学,2023-2024,1,competition,True,2.0
+p_4fc5dd330f45,刘垚,rmrb_scholarship,undergraduate,江南大学,2023-2024,1,research,True,2.0
+p_34d7e540dd94,许晋嘉,rmrb_scholarship,undergraduate,合肥工业大学,2023-2024,1,competition,True,2.0
+p_fa5cc1ce471a,沙婉秋,rmrb_scholarship,undergraduate,厦门大学,2023-2024,1,research,True,2.0
+p_0081bec4ad94,吴炳毅,rmrb_scholarship,undergraduate,华侨大学,2023-2024,1,service,True,2.0
+p_b95c19ce2b75,王炳楠,rmrb_scholarship,undergraduate,山东大学,2023-2024,1,research,True,2.0
+p_31cb3b03fd1a,赵为之,rmrb_scholarship,undergraduate,华中科技大学,2023-2024,1,research,True,2.0
+p_f1f0ce2edd28,陈楷夫,rmrb_scholarship,undergraduate,中国地质大学（武汉）,2023-2024,1,research,True,2.0
+p_c4d76ecfb1c9,黄悦翔,rmrb_scholarship,undergraduate,武汉理工大学,2023-2024,1,research,True,2.0
+p_be02847792ba,吴文婧,rmrb_scholarship,undergraduate,华中农业大学,2023-2024,1,research,True,2.0
+p_8af0e1f92023,邬丽婷,rmrb_scholarship,undergraduate,华中师范大学,2023-2024,1,competition,True,2.0
+p_f227bcefc2cc,张骋旭,rmrb_scholarship,undergraduate,湖南大学,2023-2024,1,service,True,2.0
+p_336f10ad9d8f,谢广阳,rmrb_scholarship,undergraduate,中南大学,2023-2024,1,research,True,2.0
+p_7cf699a38f72,林心玫,rmrb_scholarship,undergraduate,中山大学,2023-2024,1,research,True,2.0
+p_167c2895a1d3,陆智强,rmrb_scholarship,undergraduate,暨南大学,2023-2024,1,research,True,2.0
+p_2fcc25ae19fe,刘培乔,rmrb_scholarship,undergraduate,重庆大学,2023-2024,1,research,True,2.0
+p_7757b247d85d,唐佳龙,rmrb_scholarship,undergraduate,西南大学,2023-2024,1,research,True,2.0
+p_46b4de71172d,雷宇,rmrb_scholarship,undergraduate,四川大学,2023-2024,1,research,True,2.0
+p_d9ff12c39a48,冯洪赟,rmrb_scholarship,undergraduate,西南交通大学,2023-2024,1,research,True,2.0
+p_dc87b7f23787,贾紫晨,rmrb_scholarship,undergraduate,西南财经大学,2023-2024,1,competition,False,2.0
+p_7d540ab162a3,卢思羽,rmrb_scholarship,undergraduate,西南民族大学,2023-2024,1,research,True,2.0
+p_eb29153eb619,邓官正,rmrb_scholarship,undergraduate,西安交通大学,2023-2024,1,competition,True,2.0
+p_43e753c39121,柳雨萌,rmrb_scholarship,undergraduate,西北工业大学,2023-2024,1,venture,False,2.0
+p_b82c9c7147e2,吕明远,rmrb_scholarship,undergraduate,西安电子科技大学,2023-2024,1,research,False,2.0
+p_46d8154754ff,张瑞轩,rmrb_scholarship,undergraduate,长安大学,2023-2024,1,research,True,2.0
+p_c4a11ea78dea,冯琳惠,rmrb_scholarship,undergraduate,西北农林科技大学,2023-2024,1,research,True,2.0
+p_c931a53b705d,蒋子臻,rmrb_scholarship,undergraduate,兰州大学,2023-2024,1,research,True,2.0
+p_16dd45e156f5,李昌益,rmrb_scholarship,undergraduate,国防科技大学,2023-2024,1,research,True,2.0
+p_3c514d3bdbe6,刘诚,rmrb_scholarship,undergraduate,首都医科大学,2023-2024,1,competition,True,2.0
+p_5bee32e92e3c,王俊懿,rmrb_scholarship,undergraduate,天津理工大学,2023-2024,1,research,True,2.0
+p_036c6476e297,王孟凡,rmrb_scholarship,undergraduate,河北建筑工程学院,2023-2024,1,research,True,2.0
+p_835c2f85f5ec,谢宏飞,rmrb_scholarship,undergraduate,中北大学,2023-2024,1,research,True,2.0
+p_950ebe0c8a27,张富华,rmrb_scholarship,undergraduate,内蒙古工业大学,2023-2024,1,service,False,2.0
+p_64578fd8ad60,姚骁,rmrb_scholarship,undergraduate,沈阳理工大学,2023-2024,1,research,False,2.0
+p_0fab6536207f,黄建胜,rmrb_scholarship,undergraduate,吉林财经大学,2023-2024,1,research,True,2.0
+p_ab9713fcd57a,于翔宇,rmrb_scholarship,undergraduate,哈尔滨理工大学,2023-2024,1,research,True,2.0
+p_c22cb64bdee6,石悦言,rmrb_scholarship,undergraduate,上海理工大学,2023-2024,1,research,True,2.0
+p_2e51c434260b,汤文劼,rmrb_scholarship,undergraduate,江苏警官学院,2023-2024,1,research,True,2.0
+p_6a8fd8455a65,林春博,rmrb_scholarship,undergraduate,浙江工业大学,2023-2024,1,research,True,2.0
+p_5736f5374b75,贺建伟,rmrb_scholarship,undergraduate,安徽大学,2023-2024,1,research,True,2.0
+p_cabf0a2758a4,郑佳祥,rmrb_scholarship,undergraduate,泉州师范学院,2023-2024,1,competition,True,2.0
+p_354729d1359f,吴若琛,rmrb_scholarship,undergraduate,江西理工大学,2023-2024,1,research,True,2.0
+p_57ca66f23897,齐秦,rmrb_scholarship,undergraduate,曲阜师范大学,2023-2024,1,research,True,2.0
+p_c58ba27ec21f,石祥立,rmrb_scholarship,undergraduate,郑州大学,2023-2024,1,research,True,2.0
+p_282b1026ec80,宫咪雪,rmrb_scholarship,undergraduate,武汉工程大学,2023-2024,1,research,True,2.0
+p_3a9319d1abc8,李伊翔,rmrb_scholarship,undergraduate,湖南农业大学,2023-2024,1,research,True,2.0
+p_b1a4d9b2cfb1,高泽涛,rmrb_scholarship,undergraduate,华南农业大学,2023-2024,1,competition,False,2.0
+p_01c72fe865c8,赵翩,rmrb_scholarship,undergraduate,桂林理工大学,2023-2024,1,research,True,2.0
+p_8d179a6bae90,张浩然,rmrb_scholarship,undergraduate,海南热带海洋学院,2023-2024,1,research,True,2.0
+p_2ab49735f567,江佳玲,rmrb_scholarship,undergraduate,重庆医科大学,2023-2024,1,service,False,2.0
+p_c66a8d80c4c8,郑如愿,rmrb_scholarship,undergraduate,西南科技大学,2023-2024,1,research,True,2.0
+p_cd74ff1d39e3,苏芝乾,rmrb_scholarship,undergraduate,贵州大学,2023-2024,1,research,True,2.0
+p_7d48b7a11db8,邓福斌,rmrb_scholarship,undergraduate,云南经济管理学院,2023-2024,1,research,True,2.0
+p_026ccb034367,许捷,rmrb_scholarship,undergraduate,西藏大学,2023-2024,1,research,True,2.0
+p_beed24379bf0,应心怡,rmrb_scholarship,undergraduate,西北大学,2023-2024,1,competition,False,2.0
+p_fa1daf862585,黄文翔,rmrb_scholarship,undergraduate,兰州交通大学,2023-2024,1,research,True,2.0
+p_0c82fd869bf6,赵嘉,rmrb_scholarship,undergraduate,青海大学,2023-2024,1,research,True,2.0
+p_5bc9f4d00b6a,张涛,rmrb_scholarship,undergraduate,宁夏师范大学,2023-2024,1,competition,False,2.0
+p_f09f0e787a91,朱稷蔚,rmrb_scholarship,undergraduate,新疆医科大学,2023-2024,1,research,True,2.0
+p_12f1afd6c45d,党涛,rmrb_scholarship,undergraduate,宁波大学,2023-2024,1,research,True,2.0
+p_1f9a78a4b9dc,房英乾,rmrb_scholarship,undergraduate,塔里木大学,2023-2024,1,competition,True,2.0
+p_873e1d3d0522,于辉龙,rmrb_scholarship,undergraduate,长沙航空职业技术学院,2023-2024,1,competition,False,2.0
+p_9cb15281ef5a,贾渭东,rmrb_scholarship,undergraduate,北京科技职业大学,2023-2024,1,research,True,2.0
+p_8e2349c159a4,姚海鹏,rmrb_scholarship,undergraduate,天津铁道职业技术学院,2023-2024,1,research,True,2.0
+p_7c4d7793e38e,帅栩,rmrb_scholarship,undergraduate,浙江机电职业技术大学,2023-2024,1,research,True,2.0
+p_0a50cf6d7856,杨晨,rmrb_scholarship,undergraduate,安徽职业技术学院,2023-2024,1,competition,True,2.0
+p_f0be9612c8b0,林立根,rmrb_scholarship,undergraduate,泉州轻工职业学院,2023-2024,1,research,True,2.0
+p_6884bf638781,张林月,rmrb_scholarship,undergraduate,江西旅游商贸职业学院,2023-2024,1,competition,True,2.0
+p_9e94c2cb1773,王慧香,rmrb_scholarship,undergraduate,潍坊职业学院,2023-2024,1,competition,False,2.0
+p_c775450f02dd,孙豪哲,rmrb_scholarship,undergraduate,陕西工业职业技术学院,2023-2024,1,service,False,2.0
+p_427856c5508b,黄宏伟,rmrb_scholarship,undergraduate,深圳信息职业技术学院,2023-2024,1,service,False,2.0
+p_28d4df31cc39,李昊轩,rmrb_scholarship,graduate,北京大学,2024,1,research,True,3.0
+p_9159d07f9add,孙忠祥,rmrb_scholarship,graduate,中国人民大学,2024,1,research,True,3.0
+p_b52d36cd1fc3,张子健,rmrb_scholarship,graduate,清华大学,2024,1,research,True,3.0
+p_9f401a8203d7,刘泽昌,rmrb_scholarship,graduate,北京理工大学,2024,1,research,True,3.0
+p_8a08565ccca0,周新峰,rmrb_scholarship,graduate,北京化工大学,2024,1,research,True,3.0
+p_93685cc56eea,张宇涵,rmrb_scholarship,graduate,中国人民公安大学,2024,1,research,True,3.0
+p_96d22919eea0,王翰宇,rmrb_scholarship,graduate,中国地质大学（北京）,2024,1,research,True,3.0
+p_2d2b7e6513e8,张玉莹,rmrb_scholarship,graduate,南开大学,2024,1,research,True,3.0
+p_fb8ec3873974,何衍英,rmrb_scholarship,graduate,天津大学,2024,1,research,True,3.0
+p_6cd887a3658e,赵骁骐,rmrb_scholarship,graduate,大连理工大学,2024,1,research,True,3.0
+p_47dbb231b8af,宁语苹,rmrb_scholarship,graduate,东北林业大学,2024,1,research,True,3.0
+p_45b98d7a461e,张子煜,rmrb_scholarship,graduate,复旦大学,2024,1,research,True,3.0
+p_e1f6abe10ada,乔壬路,rmrb_scholarship,graduate,同济大学,2024,1,research,True,3.0
+p_2f4f7eb5addf,山訸,rmrb_scholarship,graduate,上海交通大学,2024,1,research,True,3.0
+p_2e39480196f5,何昕阳,rmrb_scholarship,graduate,东华大学,2024,1,research,True,3.0
+p_aa1131773ac0,隋峰锐,rmrb_scholarship,graduate,华东师范大学,2024,1,research,True,3.0
+p_14d346ea0dbb,段升顺,rmrb_scholarship,graduate,东南大学,2024,1,research,True,3.0
+p_b996b996bb0b,李可,rmrb_scholarship,graduate,江南大学,2024,1,research,True,3.0
+p_670802c3b9e9,杜诗雨,rmrb_scholarship,graduate,南京农业大学,2024,1,research,True,3.0
+p_999e75689b6d,王良,rmrb_scholarship,graduate,山东大学,2024,1,research,True,2.5
+p_556becc318d6,苟睿健,rmrb_scholarship,graduate,中国海洋大学,2024,1,research,True,3.0
+p_bf20bf93d59d,房文生,rmrb_scholarship,graduate,华中科技大学,2024,1,research,True,3.0
+p_09ddc4b6ea03,张一帆,rmrb_scholarship,graduate,中国地质大学（武汉）,2024,1,research,True,3.0
+p_460a359586b4,王峰,rmrb_scholarship,graduate,中南大学,2024,1,research,True,3.0
+p_43b610787e6d,魏蒋坤,rmrb_scholarship,graduate,中山大学,2024,1,research,True,3.0
+p_e39ccfb3817c,钟文烨,rmrb_scholarship,graduate,华南理工大学,2024,1,research,True,3.0
+p_448724db0aa3,毛旖旎,rmrb_scholarship,graduate,西南大学,2024,1,research,True,3.0
+p_ecc3db520964,唐湘,rmrb_scholarship,graduate,西南财经大学,2024,1,research,True,3.0
+p_cc61d914d364,张大禹,rmrb_scholarship,graduate,西安交通大学,2024,1,research,True,3.0
+p_0c50aae62890,申汶涛,rmrb_scholarship,graduate,兰州大学,2024,1,research,True,3.0
+p_848207ffb81e,龙腾,rmrb_scholarship,graduate,首都师范大学,2024,1,research,True,3.0
+p_5e469c85ae73,王景熠,rmrb_scholarship,graduate,上海科技大学,2024,1,research,True,3.0
+p_955f69c47ee5,张力航,rmrb_scholarship,graduate,西湖大学,2024,1,research,True,3.0
+p_96b4402003c0,塔巴江才,rmrb_scholarship,graduate,西藏藏医药大学,2024,1,research,True,3.0
+p_36bebeaf9f49,张绍华,rmrb_scholarship,graduate,新疆大学,2024,1,research,True,3.0
+p_fd05182cd195,袁军杰,rmrb_scholarship,graduate,北京科技大学,2024,1,research,True,2.5
+p_4d1cc5ebef2c,成嘉,rmrb_scholarship,graduate,中国农业大学,2024,1,research,True,2.5
+p_2dc6f3945215,李俊莹,rmrb_scholarship,graduate,北京林业大学,2024,1,research,True,2.5
+p_46c77ebf3f40,张颖,rmrb_scholarship,graduate,北京协和医学院,2024,1,research,True,2.5
+p_2c07d49292f8,邵可欣,rmrb_scholarship,graduate,北京师范大学,2024,1,research,True,2.5
+p_bb5240131471,莫晓莹,rmrb_scholarship,graduate,北京外国语大学,2024,1,unclear,False,2.5
+p_265d7c60028f,赵建铭,rmrb_scholarship,graduate,中央财经大学,2024,1,service,False,2.5
+p_bf2e2002ffb6,王者,rmrb_scholarship,graduate,对外经济贸易大学,2024,1,research,True,2.5
+p_a850d94b8749,何国昊,rmrb_scholarship,graduate,中央民族大学,2024,1,research,True,2.5
+p_861e47ea3a67,李·萨仁高娃,rmrb_scholarship,graduate,华北电力大学,2024,1,research,True,2.5
+p_3d551e0ee8e6,宋泽华,rmrb_scholarship,graduate,中国石油大学（北京）,2024,1,research,True,2.5
+p_9913a103facd,蔡铭修,rmrb_scholarship,graduate,东北大学,2024,1,research,True,2.5
+p_32c2e9145ced,黄哲,rmrb_scholarship,graduate,大连海事大学,2024,1,research,True,2.5
+p_a25df6627c29,许春艳,rmrb_scholarship,graduate,东北师范大学,2024,1,research,True,2.5
+p_2931efe7c774,魏迅桐,rmrb_scholarship,graduate,哈尔滨工业大学,2024,1,research,True,2.5
+p_54b52d7f427c,陈腾飞,rmrb_scholarship,graduate,南京大学,2024,1,research,True,2.5
+p_1eae3ca7891e,吴日新,rmrb_scholarship,graduate,南京航空航天大学,2024,1,research,True,2.5
+p_7b333cd3a730,王百一,rmrb_scholarship,graduate,中国矿业大学,2024,1,research,True,2.5
+p_c06b85b7eeb4,洪成,rmrb_scholarship,graduate,河海大学,2024,1,research,True,2.5
+p_7daf0f1b2827,王洁,rmrb_scholarship,graduate,浙江大学,2024,1,research,True,2.5
+p_3073bd24d9a3,薛尚子,rmrb_scholarship,graduate,中国科学技术大学,2024,1,research,True,2.5
+p_8545322c7293,张欢,rmrb_scholarship,graduate,中国石油大学（华东）,2024,1,research,True,2.5
+p_f820c23da308,李政灿,rmrb_scholarship,graduate,武汉大学,2024,1,research,True,2.5
+p_49f9d7deff52,方炜,rmrb_scholarship,graduate,华中师范大学,2024,1,research,True,2.5
+p_96685280e3d8,苏正民,rmrb_scholarship,graduate,中南财经政法大学,2024,1,service,False,2.5
+p_f2ab4bb2a822,张夏伊维,rmrb_scholarship,graduate,湖南大学,2024,1,research,True,2.5
+p_7aaa503db295,黄健,rmrb_scholarship,graduate,四川大学,2024,1,competition,False,2.5
+p_14e98f27e443,杨川,rmrb_scholarship,graduate,西南交通大学,2024,1,research,True,2.5
+p_1f948ed12224,王洁,rmrb_scholarship,graduate,电子科技大学,2024,1,research,True,2.5
+p_c35fedaa1552,杨淑淇,rmrb_scholarship,graduate,西南民族大学,2024,1,research,True,2.5
+p_c0a5fc79176e,付一方,rmrb_scholarship,graduate,西北工业大学,2024,1,research,True,2.5
+p_cb64c092fda0,黎佳骏,rmrb_scholarship,graduate,西安电子科技大学,2024,1,research,True,2.5
+p_6f6cdfdc1ae1,蒲长乐,rmrb_scholarship,graduate,长安大学,2024,1,research,True,2.5
+p_acd4d33f1c84,江晗慧,rmrb_scholarship,graduate,西北农林科技大学,2024,1,research,True,2.5
+p_38fcec61b926,高浏璐,rmrb_scholarship,graduate,西北民族大学,2024,1,research,True,2.5
+p_b8ae116712e4,时维嘉,rmrb_scholarship,graduate,国防科技大学,2024,1,unclear,False,2.5
+p_cd092e9ce739,李俊瑶,rmrb_scholarship,graduate,中国人民解放军空军军医大学,2024,1,research,True,2.5
+p_aa60cc3a58ec,李沁徽,rmrb_scholarship,graduate,北京印刷学院,2024,1,competition,True,2.5
+p_7f6722fb4992,温浩明,rmrb_scholarship,graduate,天津师范大学,2024,1,research,True,2.5
+p_1cedb3749d36,朱瑞,rmrb_scholarship,graduate,燕山大学,2024,1,research,True,2.5
+p_828124df27fb,陈浚杰,rmrb_scholarship,graduate,中北大学,2024,1,research,True,2.5
+p_f2fd42451d66,王思梦,rmrb_scholarship,graduate,内蒙古大学,2024,1,research,True,2.5
+p_6b913c4480d7,余科金,rmrb_scholarship,graduate,渤海大学,2024,1,research,True,2.5
+p_2e4c66951d3b,付佳,rmrb_scholarship,graduate,吉林农业大学,2024,1,research,True,2.5
+p_9524fddd74e6,赵延杰,rmrb_scholarship,graduate,东北石油大学,2024,1,research,True,2.5
+p_25c9ae8214ea,万宝飞,rmrb_scholarship,graduate,南京邮电大学,2024,1,research,True,2.5
+p_1ff3e8631577,张锐,rmrb_scholarship,graduate,皖南医学院,2024,1,research,True,2.5
+p_f34bbf322d15,黄昀壄,rmrb_scholarship,graduate,福州大学,2024,1,research,True,2.5
+p_d4e889717c03,陆茵,rmrb_scholarship,graduate,景德镇陶瓷大学,2024,1,unclear,False,2.5
+p_6d2ad282d76b,于漫亚,rmrb_scholarship,graduate,山东中医药大学,2024,1,research,True,2.5
+p_46039236c5ad,朱定康,rmrb_scholarship,graduate,河南科技大学,2024,1,research,True,2.5
+p_5e8c14c65c8d,刘本立,rmrb_scholarship,graduate,湖北工业大学,2024,1,research,True,2.5
+p_31f9c358dd53,徐伟伟,rmrb_scholarship,graduate,湖南农业大学,2024,1,research,True,2.5
+p_e752dfab8681,邱俊豪,rmrb_scholarship,graduate,广东工业大学,2024,1,research,True,2.5
+p_695584ce9475,刘付萍,rmrb_scholarship,graduate,广西艺术学院,2024,1,venture,False,2.5
+p_b0fbfc3e4596,陈磊,rmrb_scholarship,graduate,海南师范大学,2024,1,service,False,2.5
+p_4d8d783bc733,周翱,rmrb_scholarship,graduate,重庆邮电大学,2024,1,research,True,2.5
+p_a8a2d2349656,李茜,rmrb_scholarship,graduate,西南石油大学,2024,1,research,True,2.5
+p_5af5b6ff9ada,易杨,rmrb_scholarship,graduate,遵义医科大学,2024,1,research,True,2.5
+p_0acaab54b152,刘跃龙,rmrb_scholarship,graduate,云南师范大学,2024,1,research,True,2.5
+p_c0753809a118,王晓超,rmrb_scholarship,graduate,西北大学,2024,1,research,True,2.5
+p_cc42b1bdf5f2,左建刚,rmrb_scholarship,graduate,西北师范大学,2024,1,research,True,2.5
+p_01860485c96e,王承祥,rmrb_scholarship,graduate,青海师范大学,2024,1,research,True,2.5
+p_f9bdc0a2256a,陈云欢,rmrb_scholarship,graduate,宁夏大学,2024,1,research,True,2.5
+p_e66307da5187,黄玺,rmrb_scholarship,graduate,厦门理工学院,2024,1,research,True,2.5
+p_b6b3b518a334,罗珑赞,rmrb_scholarship,undergraduate,北京大学,2024-2025,1,research,True,2.0
+p_1dd8fea0e65a,陈秀虎,rmrb_scholarship,undergraduate,清华大学,2024-2025,1,research,False,2.0
+p_13ab0e7546a9,沙瑞欣,rmrb_scholarship,undergraduate,北京师范大学,2024-2025,1,service,False,2.0
+p_a1849adb88fc,刘斯嘉,rmrb_scholarship,undergraduate,中国农业大学,2024-2025,1,competition,False,2.0
+p_ffcc85c6ff56,郝熙鸣,rmrb_scholarship,undergraduate,南开大学,2024-2025,1,research,True,2.0
+p_7194c4be644b,冯晓天,rmrb_scholarship,undergraduate,东北大学,2024-2025,1,competition,True,2.0
+p_19b98feca224,姜鹄,rmrb_scholarship,undergraduate,吉林大学,2024-2025,1,research,True,2.0
+p_a930a1bbf1e1,邱子杰,rmrb_scholarship,undergraduate,复旦大学,2024-2025,1,research,True,2.0
+p_8a6019a00117,陈洋,rmrb_scholarship,undergraduate,同济大学,2024-2025,1,competition,True,2.0
+p_a89080d6333c,张政亮,rmrb_scholarship,undergraduate,上海交通大学,2024-2025,1,competition,True,2.0
+p_bb068d8c3fbf,杜沛阳,rmrb_scholarship,undergraduate,华东师范大学,2024-2025,1,research,True,2.0
+p_2fc3b0a92e22,周自豪,rmrb_scholarship,undergraduate,东南大学,2024-2025,1,research,True,2.0
+p_a08b7cfb9115,赵晨,rmrb_scholarship,undergraduate,山东大学,2024-2025,1,research,True,2.0
+p_1396bb89fc08,冯雅辰,rmrb_scholarship,undergraduate,中国海洋大学,2024-2025,1,research,True,2.0
+p_56548a263619,熊元卿,rmrb_scholarship,undergraduate,华中科技大学,2024-2025,1,research,True,2.0
+p_0be0c8e8ca92,唐佳蔓,rmrb_scholarship,undergraduate,湖南大学,2024-2025,1,competition,True,2.0
+p_22a075531237,陈诗雨,rmrb_scholarship,undergraduate,中山大学,2024-2025,1,research,True,2.0
+p_6ac7a7b06787,汪之棂,rmrb_scholarship,undergraduate,四川大学,2024-2025,1,research,True,2.0
+p_cdb66f72086f,苏怡梦,rmrb_scholarship,undergraduate,电子科技大学,2024-2025,1,research,True,2.0
+p_bf36d000890e,周晓菲,rmrb_scholarship,undergraduate,西安交通大学,2024-2025,1,research,True,2.0
+p_37689340d395,彭魁,rmrb_scholarship,undergraduate,兰州大学,2024-2025,1,service,False,2.0
+p_670c11e81788,高嘉然,rmrb_scholarship,undergraduate,北京科技大学,2024-2025,1,research,True,2.0
+p_05b578dc1827,龙之行,rmrb_scholarship,undergraduate,北京化工大学,2024-2025,1,research,True,2.0
+p_8c7e2fb5a353,张路宁,rmrb_scholarship,undergraduate,北京外国语大学,2024-2025,1,competition,True,2.0
+p_2c568ccc5fca,刘静,rmrb_scholarship,undergraduate,中国石油大学（北京）,2024-2025,1,research,True,2.0
+p_cfaf841dacf3,王丹青,rmrb_scholarship,undergraduate,中国传媒大学,2024-2025,1,research,True,2.0
+p_ce5a3fd0c817,叶钰儿,rmrb_scholarship,undergraduate,中央音乐学院,2024-2025,1,unclear,False,2.0
+p_7d93691b1e5c,王泽桐,rmrb_scholarship,undergraduate,北京中医药大学,2024-2025,1,service,False,2.0
+p_8639bbf2ad88,马文清,rmrb_scholarship,undergraduate,华北电力大学,2024-2025,1,research,True,2.0
+p_d5205614e150,张伯江,rmrb_scholarship,undergraduate,中国地质大学（北京）,2024-2025,1,research,True,2.0
+p_a55b876622ef,李傲然,rmrb_scholarship,undergraduate,中国矿业大学（北京）,2024-2025,1,research,True,2.0
+p_7f99d570b248,李天一,rmrb_scholarship,undergraduate,东北师范大学,2024-2025,1,research,True,2.0
+p_48185ca0de0b,王赫荪,rmrb_scholarship,undergraduate,东北林业大学,2024-2025,1,research,True,2.0
+p_19740628ebb7,唐宇杰,rmrb_scholarship,undergraduate,华东理工大学,2024-2025,1,research,True,2.0
+p_89b10e098685,白锦梁,rmrb_scholarship,undergraduate,中国矿业大学,2024-2025,1,research,True,2.0
+p_6423fce40373,王子为,rmrb_scholarship,undergraduate,河海大学,2024-2025,1,research,True,2.0
+p_36ae52559064,万翔,rmrb_scholarship,undergraduate,江南大学,2024-2025,1,service,False,2.0
+p_178248482b86,贾筱茜,rmrb_scholarship,undergraduate,中国药科大学,2024-2025,1,research,True,2.0
+p_6cd16749c3ed,王腾昊,rmrb_scholarship,undergraduate,合肥工业大学,2024-2025,1,competition,True,2.0
+p_269f1247f2d8,宿新元,rmrb_scholarship,undergraduate,中国石油大学（华东）,2024-2025,1,research,True,2.0
+p_23f5c7a6dfd9,林梓田,rmrb_scholarship,undergraduate,中国地质大学（武汉）,2024-2025,1,research,True,2.0
+p_41b4b25f669a,龙云翀,rmrb_scholarship,undergraduate,武汉理工大学,2024-2025,1,research,True,2.0
+p_7324b4e6a662,夏宇,rmrb_scholarship,undergraduate,华中师范大学,2024-2025,1,research,True,2.0
+p_dc8f561cd551,姜雨珊,rmrb_scholarship,undergraduate,华中农业大学,2024-2025,1,research,True,2.0
+p_12941e781925,吕梵迪,rmrb_scholarship,undergraduate,中南财经政法大学,2024-2025,1,competition,False,2.0
+p_051887f3bb7e,周佳怡,rmrb_scholarship,undergraduate,西南财经大学,2024-2025,1,research,True,2.0
+p_08ca9c45f949,陈嘉凯,rmrb_scholarship,undergraduate,西南交通大学,2024-2025,1,research,True,2.0
+p_0cc3a4246d40,牛作鹏,rmrb_scholarship,undergraduate,西南大学,2024-2025,1,competition,True,2.0
+p_711ff4c36f3d,吴与同,rmrb_scholarship,undergraduate,陕西师范大学,2024-2025,1,research,True,2.0
+p_d8da01c02c9d,朱晨,rmrb_scholarship,undergraduate,西安电子科技大学,2024-2025,1,research,True,2.0
+p_0a247e370b2d,周浩,rmrb_scholarship,undergraduate,长安大学,2024-2025,1,research,True,2.0
+p_ac3e292b697e,陈楷哲,rmrb_scholarship,undergraduate,中国科学技术大学,2024-2025,1,research,True,2.0
+p_f55e1d2660ce,刘弘雨,rmrb_scholarship,undergraduate,中国社会科学院大学,2024-2025,1,research,True,2.0
+p_e8d64ef5f407,李欣蔚,rmrb_scholarship,undergraduate,国防科技大学,2024-2025,1,research,True,2.0
+p_34d5511019db,谢奕哲,rmrb_scholarship,undergraduate,中央民族大学,2024-2025,1,research,True,2.0
+p_085994c01064,张宝婵,rmrb_scholarship,undergraduate,西南民族大学,2024-2025,1,service,False,2.0
+p_0a01c8bd2fde,葛嘉瑞,rmrb_scholarship,undergraduate,南京警察学院,2024-2025,1,competition,True,2.0
+p_e62e8544d68b,唐琦,rmrb_scholarship,undergraduate,华侨大学,2024-2025,1,research,True,2.0
+p_a22965ba33cf,郭圆圆,rmrb_scholarship,undergraduate,暨南大学,2024-2025,1,research,True,2.0
+p_884eb964e2b7,曹竞天,rmrb_scholarship,undergraduate,北京理工大学,2024-2025,1,research,True,2.0
+p_1e9d79a1425a,姚尊皓,rmrb_scholarship,undergraduate,哈尔滨工业大学,2024-2025,1,research,True,2.0
+p_f6d1ef7d46c6,韩嘉懿,rmrb_scholarship,undergraduate,哈尔滨工程大学,2024-2025,1,research,True,2.0
+p_8663cbb75819,韩璐,rmrb_scholarship,undergraduate,南京航空航天大学,2024-2025,1,research,True,2.0
+p_ed0b3ccc5692,曾鑫,rmrb_scholarship,undergraduate,南京理工大学,2024-2025,1,research,True,2.0
+p_7083c4287b68,徐中一,rmrb_scholarship,undergraduate,中国民航大学,2024-2025,1,research,True,2.0
+p_a5f296c372f6,谭博文,rmrb_scholarship,undergraduate,中国民用航空飞行学院,2024-2025,1,research,True,2.0
+p_76324d05d9c6,杨子健,rmrb_scholarship,undergraduate,大连海事大学,2024-2025,1,research,True,2.0
+p_4f03fab56991,朱丹阳,rmrb_scholarship,undergraduate,北京工商大学,2024-2025,1,competition,True,2.0
+p_e053af24ecd2,王佳雯,rmrb_scholarship,undergraduate,天津师范大学,2024-2025,1,research,False,2.0
+p_54e4b457fff1,韩泽斌,rmrb_scholarship,undergraduate,中北大学,2024-2025,1,research,True,2.0
+p_4ec2285d5318,李岩,rmrb_scholarship,undergraduate,内蒙古科技大学,2024-2025,1,research,True,2.0
+p_938335a7c0a1,田馨,rmrb_scholarship,undergraduate,沈阳理工大学,2024-2025,1,research,True,2.0
+p_88430ccb1740,刘子萌,rmrb_scholarship,undergraduate,吉林农业科技学院,2024-2025,1,research,True,2.0
+p_824c311d0e9d,杨宾,rmrb_scholarship,undergraduate,东北石油大学,2024-2025,1,research,True,2.0
+p_4b8fefb0cbbf,刘启祯,rmrb_scholarship,undergraduate,上海科技大学,2024-2025,1,competition,False,2.0
+p_69ed74ca050f,殷旭鹏,rmrb_scholarship,undergraduate,南京信息工程大学,2024-2025,1,research,True,2.0
+p_d8ebb4d3f5de,陈黄未,rmrb_scholarship,undergraduate,杭州电子科技大学,2024-2025,1,research,True,2.0
+p_1c14e316a2b2,周俊辰,rmrb_scholarship,undergraduate,安徽工业大学,2024-2025,1,research,True,2.0
+p_0ba6c0a72026,房思甜,rmrb_scholarship,undergraduate,南昌大学,2024-2025,1,research,True,2.0
+p_7801eb633375,刘家豪,rmrb_scholarship,undergraduate,河南大学,2024-2025,1,research,True,2.0
+p_442f3d2dcc03,张志超,rmrb_scholarship,undergraduate,湖北工业大学,2024-2025,1,research,True,2.0
+p_0351dc180ea6,朱俊超,rmrb_scholarship,undergraduate,湘潭大学,2024-2025,1,research,True,2.0
+p_94ea904a3f63,董骏,rmrb_scholarship,undergraduate,华南师范大学,2024-2025,1,research,True,2.0
+p_d58782e4f048,孟德昕,rmrb_scholarship,undergraduate,广西民族大学,2024-2025,1,research,True,2.0
+p_7051b2c47fa5,徐少琦,rmrb_scholarship,undergraduate,重庆城市科技学院,2024-2025,1,research,True,2.0
+p_e3a90d7cd3cc,周游,rmrb_scholarship,undergraduate,成都理工大学,2024-2025,1,research,True,2.0
+p_1d9cacee1523,管奕,rmrb_scholarship,undergraduate,西藏民族大学,2024-2025,1,competition,False,2.0
+p_dc2aac4fe9a1,杨凯文,rmrb_scholarship,undergraduate,西安理工大学,2024-2025,1,research,True,2.0
+p_1624fe1763ae,苗抒洁,rmrb_scholarship,undergraduate,兰州交通大学,2024-2025,1,research,False,2.0
+p_d888cc69d8bf,肖伟强,rmrb_scholarship,undergraduate,青海大学,2024-2025,1,competition,True,2.0
+p_079dfc33cfb7,刘佳睿,rmrb_scholarship,undergraduate,喀什大学,2024-2025,1,research,True,2.0
+p_5039e493f24c,王鸣宇,rmrb_scholarship,undergraduate,青岛黄海学院,2024-2025,1,research,True,2.0
+p_5d2f5bc18e7d,王政,rmrb_scholarship,undergraduate,石家庄铁路职业技术学院,2024-2025,1,research,False,2.0
+p_84b95717957c,薛志远,rmrb_scholarship,undergraduate,徐州工业职业技术学院,2024-2025,1,research,True,2.0
+p_312b790c0be8,吴良铭,rmrb_scholarship,undergraduate,福州职业技术学院,2024-2025,1,unclear,False,2.0
+p_8bc2a9899e33,韩文灿,rmrb_scholarship,undergraduate,烟台职业学院,2024-2025,1,research,True,2.0
+p_31d7679216f7,李加亮,rmrb_scholarship,undergraduate,海南软件职业技术学院,2024-2025,1,competition,False,2.0
+p_79ccb01cb891,朱新宇,rmrb_scholarship,undergraduate,贵州工商职业学院,2024-2025,1,competition,False,2.0
+p_27c8e17b5b81,车应乡,rmrb_scholarship,undergraduate,云南林业职业技术学院,2024-2025,1,research,True,2.0
+p_f39a0c2e17df,权文博,rmrb_scholarship,undergraduate,宁夏工商职业技术大学,2024-2025,1,research,True,2.0
+p_b18f4cabdd46,邓睿逸,rmrb_scholarship,graduate,北京大学,2025,1,research,True,3.0
+p_a08112b6a32c,程泽堃,rmrb_scholarship,graduate,清华大学,2025,1,research,True,3.0
+p_3ec2f9b6e1ed,马英剑,rmrb_scholarship,graduate,中国农业大学,2025,1,research,True,3.0
+p_26da101ec3d3,刘东喜,rmrb_scholarship,graduate,天津大学,2025,1,research,True,3.0
+p_238e1cd559ee,苑克花,rmrb_scholarship,graduate,同济大学,2025,1,research,True,3.0
+p_6988653bff6a,李京昊,rmrb_scholarship,graduate,南京大学,2025,1,research,True,3.0
+p_7afd4e7b9a03,丁昊晖,rmrb_scholarship,graduate,东南大学,2025,1,research,True,3.0
+p_0f3b7ecc430f,夏杨修,rmrb_scholarship,graduate,浙江大学,2025,1,research,True,3.0
+p_b6cf54c78af8,罗姝,rmrb_scholarship,graduate,山东大学,2025,1,research,True,3.0
+p_00101b81f09c,肖日宏,rmrb_scholarship,graduate,华中科技大学,2025,1,research,True,3.0
+p_ca739abca560,阳建,rmrb_scholarship,graduate,四川大学,2025,1,research,True,3.0
+p_a5840ed1547f,罗皓翔,rmrb_scholarship,graduate,电子科技大学,2025,1,research,True,3.0
+p_1fda25dfe6ca,沈巍,rmrb_scholarship,graduate,兰州大学,2025,1,research,True,3.0
+p_22bdfc1d9ac7,陈章毅,rmrb_scholarship,graduate,北京科技大学,2025,1,research,True,3.0
+p_04a4cdf7aee5,李栋,rmrb_scholarship,graduate,北京化工大学,2025,1,research,True,3.0
+p_ac028ed3178f,王琳,rmrb_scholarship,graduate,中国传媒大学,2025,1,research,True,3.0
+p_61a50c412d84,陆洪敏,rmrb_scholarship,graduate,东北林业大学,2025,1,research,True,3.0
+p_70b14319cad6,徐连琛,rmrb_scholarship,graduate,河海大学,2025,1,research,True,3.0
+p_c3b39c9ace30,李钰涛,rmrb_scholarship,graduate,中国药科大学,2025,1,research,True,3.0
+p_83064796c3a2,刘一龙,rmrb_scholarship,graduate,中国地质大学（武汉）,2025,1,research,True,3.0
+p_9ee705493df5,王安邦,rmrb_scholarship,graduate,华中农业大学,2025,1,research,True,3.0
+p_2436c6c72046,曹雪梅,rmrb_scholarship,graduate,西南财经大学,2025,1,research,True,3.0
+p_3de37a2e297f,曹渡帆,rmrb_scholarship,graduate,西南大学,2025,1,research,True,3.0
+p_067920381704,龚灿,rmrb_scholarship,graduate,西安电子科技大学,2025,1,research,True,2.5
+p_6b8d1cf49278,文渊博,rmrb_scholarship,graduate,长安大学,2025,1,research,True,3.0
+p_7b6e331d826c,张俊,rmrb_scholarship,graduate,中国科学技术大学,2025,1,research,True,3.0
+p_19cba2f5dfbd,杨建伟,rmrb_scholarship,graduate,北京理工大学,2025,1,research,True,3.0
+p_c50885cb5b75,李冰,rmrb_scholarship,graduate,哈尔滨工程大学,2025,1,research,True,3.0
+p_1823d4cd6ad7,王赵军,rmrb_scholarship,graduate,水利部交通运输部国家能源局南京水利科学研究院,2025,1,research,True,3.0
+p_ec40b7f1e4af,薛启隆,rmrb_scholarship,graduate,天津中医药大学,2025,1,research,True,3.0
+p_2f0fee6f7ae8,章仕起,rmrb_scholarship,graduate,燕山大学,2025,1,research,True,3.0
+p_1a14e1241e6d,潘越,rmrb_scholarship,graduate,沈阳农业大学,2025,1,research,True,3.0
+p_1c295813f0e1,庞立冬,rmrb_scholarship,graduate,东北农业大学,2025,1,research,True,3.0
+p_5e0bb520ce4d,胡巍,rmrb_scholarship,graduate,南昌大学,2025,1,research,True,3.0
+p_c2aff829feee,万冲,rmrb_scholarship,graduate,西北大学,2025,1,research,True,3.0
+p_3072c7929e3a,隋意,rmrb_scholarship,graduate,中国人民大学,2025,1,research,True,2.5
+p_1aedb93b5058,王培仲,rmrb_scholarship,graduate,北京师范大学,2025,1,research,True,2.5
+p_66a3034ef234,孔雪宁,rmrb_scholarship,graduate,南开大学,2025,1,research,True,2.5
+p_49e46a53a08e,周绍杰,rmrb_scholarship,graduate,大连理工大学,2025,1,research,True,2.5
+p_958ee2c6816e,崔秀文,rmrb_scholarship,graduate,东北大学,2025,1,research,True,2.5
+p_320d2884bd5e,孙雨治,rmrb_scholarship,graduate,吉林大学,2025,1,research,True,2.5
+p_a3b31ed9f8fc,罗涛,rmrb_scholarship,graduate,复旦大学,2025,1,research,True,2.5
+p_77ec3c680c9d,时晓颖,rmrb_scholarship,graduate,上海交通大学,2025,1,research,True,2.5
+p_1fc0717e5eff,李德渊,rmrb_scholarship,graduate,华东师范大学,2025,1,research,True,2.5
+p_0747f5ffae39,郑泓凌,rmrb_scholarship,graduate,武汉大学,2025,1,research,True,2.5
+p_5ea396402bd5,汪玮,rmrb_scholarship,graduate,湖南大学,2025,1,research,True,2.5
+p_bc4d29aa63b1,邝宇航,rmrb_scholarship,graduate,华南理工大学,2025,1,research,True,2.5
+p_8a6aedd60c1b,戴陈霖,rmrb_scholarship,graduate,西北农林科技大学,2025,1,competition,True,2.5
+p_781cfa0eebbc,柳心敬,rmrb_scholarship,graduate,北京邮电大学,2025,1,research,True,2.5
+p_18de35eb4400,张毅龙,rmrb_scholarship,graduate,中国石油大学（北京）,2025,1,research,True,2.5
+p_c9b9f7e5cf45,晏正伟,rmrb_scholarship,graduate,中央财经大学,2025,1,research,True,2.5
+p_414dcc41a07e,谢小玉,rmrb_scholarship,graduate,中国矿业大学（北京）,2025,1,research,True,2.5
+p_165c787c09f1,段瑞丹,rmrb_scholarship,graduate,华东理工大学,2025,1,research,True,2.5
+p_bb73edc3e1e6,李妍,rmrb_scholarship,graduate,上海外国语大学,2025,1,research,False,2.5
+p_07d1bf6f6848,余先宇,rmrb_scholarship,graduate,中国矿业大学,2025,1,research,True,2.5
+p_4bf58c815199,来欣宇,rmrb_scholarship,graduate,合肥工业大学,2025,1,research,True,2.5
+p_840fd46fb583,李涛,rmrb_scholarship,graduate,武汉理工大学,2025,1,research,True,2.5
+p_ce4875ea5f30,李建,rmrb_scholarship,graduate,华中师范大学,2025,1,research,True,2.5
+p_6a8854350fee,李彦静,rmrb_scholarship,graduate,中南财经政法大学,2025,1,service,False,2.5
+p_0e16e63c401c,易曾瑞,rmrb_scholarship,graduate,西南交通大学,2025,1,research,True,2.5
+p_877b3a849e5c,韩易家,rmrb_scholarship,graduate,中央美术学院,2025,1,research,True,2.5
+p_40a75846a126,刘浩洋,rmrb_scholarship,graduate,中国科学院大学,2025,1,research,True,2.5
+p_0cd20f999fb6,周宜顺,rmrb_scholarship,graduate,中国社会科学院大学,2025,1,research,True,2.5
+p_cfbceb7e5e77,管仁祥,rmrb_scholarship,graduate,国防科技大学,2025,1,research,True,2.5
+p_17f3babfcb27,原毅轩,rmrb_scholarship,graduate,空军军医大学,2025,1,research,True,2.5
+p_f965d5ef46af,高文于,rmrb_scholarship,graduate,大连民族大学,2025,1,research,True,2.5
+p_0c3d514a6e42,黄译莹,rmrb_scholarship,graduate,中南民族大学,2025,1,service,False,2.5
+p_6389f425d0a4,瞿颖,rmrb_scholarship,graduate,中华女子学院,2025,1,research,True,2.5
+p_294b8017f13e,林远达,rmrb_scholarship,graduate,华侨大学,2025,1,research,True,2.5
+p_6b27b4fe3775,马华龙,rmrb_scholarship,graduate,暨南大学,2025,1,research,True,2.5
+p_4044b59eb340,刘旭东,rmrb_scholarship,graduate,北京航空航天大学,2025,1,research,True,2.5
+p_415576e720df,田蔚瑶,rmrb_scholarship,graduate,哈尔滨工业大学（威海）,2025,1,research,True,2.5
+p_f619f3fa8385,赵书乐,rmrb_scholarship,graduate,西北工业大学,2025,1,research,True,2.5
+p_8a3715c50c35,陈江河,rmrb_scholarship,graduate,中国地震局地震预测研究所,2025,1,research,True,2.5
+p_d04f6e22f84b,王冰冰,rmrb_scholarship,graduate,中北大学,2025,1,research,True,2.5
+p_0a49d631a651,夏妍,rmrb_scholarship,graduate,内蒙古大学,2025,1,research,True,2.5
+p_b01b9e743695,郭伟,rmrb_scholarship,graduate,长春工业大学,2025,1,research,True,2.5
+p_2062e064b366,李亮,rmrb_scholarship,graduate,上海电机学院,2025,1,research,True,2.5
+p_8243d7ce5319,刘庆成,rmrb_scholarship,graduate,江苏大学,2025,1,research,True,2.5
+p_69611ffbcd74,刘泷,rmrb_scholarship,graduate,中国计量大学,2025,1,research,True,2.5
+p_9503c933be9f,何瑞琳,rmrb_scholarship,graduate,安徽医科大学,2025,1,research,True,2.5
+p_9afe659c482d,林焕泰,rmrb_scholarship,graduate,福建农林大学,2025,1,research,True,2.5
+p_53d82dabbaa9,魏家晖,rmrb_scholarship,graduate,青岛科技大学,2025,1,research,True,2.5
+p_484226db0b59,毛研旭,rmrb_scholarship,graduate,河南大学,2025,1,research,True,2.5
+p_9c7a40031f29,杨硕,rmrb_scholarship,graduate,三峡大学,2025,1,research,True,2.5
+p_3bac905712ef,卢景琪,rmrb_scholarship,graduate,湖南农业大学,2025,1,research,True,2.5
+p_9e42cc33ed71,王孙康宏,rmrb_scholarship,graduate,广东工业大学,2025,1,research,True,2.5
+p_1379764086b0,杜金泽,rmrb_scholarship,graduate,北部湾大学,2025,1,research,True,2.5
+p_6b725e9b574f,于浩然,rmrb_scholarship,graduate,海南大学,2025,1,research,True,2.5
+p_dc3385cd930d,袁侨伟,rmrb_scholarship,graduate,四川美术学院,2025,1,research,True,2.5
+p_2aed33c52f45,颜诗纯,rmrb_scholarship,graduate,成都理工大学,2025,1,research,True,2.5
+p_e1fdc6ba1290,龙洋,rmrb_scholarship,graduate,贵州民族大学,2025,1,research,True,2.5
+p_0cb01604c916,杨林宇,rmrb_scholarship,graduate,昆明理工大学,2025,1,research,True,2.5
+p_c49e5b0809be,桑木旦,rmrb_scholarship,graduate,西藏农牧大学,2025,1,research,True,2.5
+p_6fe0f0677f80,张颖,rmrb_scholarship,graduate,兰州财经大学,2025,1,research,True,2.5
+p_3f7a3da72c5b,王伟杰,rmrb_scholarship,graduate,青海师范大学,2025,1,research,True,2.5
+p_e37632ad8bbc,王正兴,rmrb_scholarship,graduate,宁夏大学,2025,1,research,True,2.5
+p_92d892ae017a,葛凡煜,rmrb_scholarship,graduate,新疆大学,2025,1,research,True,2.5
+p_a7f5faa21a23,张金秋,rmrb_scholarship,graduate,宁波大学,2025,1,research,True,2.5
+nobel_102,Aage N. Bohr,nobel,,,1975,2,unclear,False,4.0
+nobel_114,Abdus Salam,nobel,,,1979,2,unclear,False,4.0
+nobel_866,Adam G. Riess,nobel,,,2011,1,unclear,False,4.0
+nobel_1012,Alain Aspect,nobel,,,2022,2,unclear,False,4.0
+nobel_11,Albert A. Michelson,nobel,,,1907,1,research,True,4.0
+nobel_26,Albert Einstein,nobel,,,1921,2,unclear,False,4.0
+nobel_814,Albert Fert,nobel,,,2007,3,unclear,False,4.0
+nobel_83,Aleksandr M. Prokhorov,nobel,,,1964,1,unclear,False,4.0
+nobel_766,Alexei Abrikosov,nobel,,,2003,2,research,True,4.0
+nobel_87,Alfred Kastler,nobel,,,1966,2,research,True,4.0
+nobel_849,Andre Geim,nobel,,,2010,3,research,True,4.0
+nobel_990,Andrea Ghez,nobel,,,2020,1,unclear,False,4.0
+nobel_1028,Anne L’Huillier,nobel,,,2023,3,research,True,4.0
+nobel_768,Anthony J. Leggett,nobel,,,2003,3,research,False,4.0
+nobel_1014,Anton Zeilinger,nobel,,,2022,1,unclear,False,4.0
+nobel_101,Antony Hewish,nobel,,,1974,3,research,True,4.0
+nobel_111,Arno Penzias,nobel,,,1978,3,research,True,4.0
+nobel_960,Arthur Ashkin,nobel,,,2018,2,research,True,4.0
+nobel_920,Arthur B. McDonald,nobel,,,2015,3,research,True,4.0
+nobel_33,Arthur H. Compton,nobel,,,1927,2,research,True,4.0
+nobel_119,Arthur L. Schawlow,nobel,,,1981,1,research,False,4.0
+nobel_942,Barry C. Barish,nobel,,,2017,2,research,True,4.0
+nobel_103,Ben R. Mottelson,nobel,,,1975,2,unclear,False,4.0
+nobel_145,Bertram N. Brockhouse,nobel,,,1994,1,unclear,False,4.0
+nobel_99,Brian D. Josephson,nobel,,,1973,2,research,False,4.0
+nobel_865,Brian P. Schmidt,nobel,,,2011,1,unclear,False,4.0
+nobel_105,Burton Richter,nobel,,,1976,2,unclear,False,4.0
+nobel_34,C.T.R. Wilson,nobel,,,1927,2,research,False,4.0
+nobel_43,Carl D. Anderson,nobel,,,1936,2,unclear,False,4.0
+nobel_740,Carl Wieman,nobel,,,2001,3,research,False,4.0
+nobel_124,Carlo Rubbia,nobel,,,1984,3,research,False,4.0
+nobel_55,Cecil Powell,nobel,,,1950,2,research,False,4.0
+nobel_25,Charles Edouard Guillaume,nobel,,,1920,2,research,False,4.0
+nobel_22,Charles Glover Barkla,nobel,,,1917,2,research,True,4.0
+nobel_81,Charles H. Townes,nobel,,,1964,3,research,False,4.0
+nobel_838,Charles K. Kao,nobel,,,2009,2,research,True,4.0
+nobel_68,Chen Ning Yang,nobel,,,1957,2,research,False,4.0
+nobel_153,Claude Cohen-Tannoudji,nobel,,,1997,3,unclear,False,4.0
+nobel_146,Clifford G. Shull,nobel,,,1994,2,unclear,False,4.0
+nobel_44,Clinton Davisson,nobel,,,1937,2,unclear,False,4.0
+nobel_157,Daniel C. Tsui,nobel,,,1998,1,unclear,False,4.0
+nobel_776,David J. Gross,nobel,,,2004,3,research,True,4.0
+nobel_928,David J. Thouless,nobel,,,2016,1,research,False,4.0
+nobel_877,David J. Wineland,nobel,,,2012,2,research,False,4.0
+nobel_149,David M. Lee,nobel,,,1996,2,research,False,4.0
+nobel_93,Dennis Gabor,nobel,,,1971,2,research,True,4.0
+nobel_975,Didier Queloz,nobel,,,2019,2,research,True,4.0
+nobel_74,Donald A. Glaser,nobel,,,1960,3,research,True,4.0
+nobel_962,Donna Strickland,nobel,,,2018,3,research,True,4.0
+nobel_150,Douglas D. Osheroff,nobel,,,1996,2,unclear,False,4.0
+nobel_59,E. M. Purcell,nobel,,,1952,2,research,False,4.0
+nobel_52,Edward V. Appleton,nobel,,,1947,2,research,True,4.0
+nobel_72,Emilio Segrè,nobel,,,1959,2,unclear,False,4.0
+nobel_46,Enrico Fermi,nobel,,,1938,1,unclear,False,4.0
+nobel_738,Eric Cornell,nobel,,,2001,2,unclear,False,4.0
+nobel_47,Ernest Lawrence,nobel,,,1939,2,research,True,4.0
+nobel_57,Ernest T.S. Walton,nobel,,,1951,2,research,False,4.0
+nobel_127,Ernst Ruska,nobel,,,1986,2,unclear,False,4.0
+nobel_39,Erwin Schrödinger,nobel,,,1933,2,unclear,False,4.0
+nobel_78,Eugene Wigner,nobel,,,1963,2,research,False,4.0
+nobel_929,F. Duncan M. Haldane,nobel,,,2016,3,research,True,4.0
+nobel_58,Felix Bloch,nobel,,,1952,2,unclear,False,4.0
+nobel_14,Ferdinand Braun,nobel,,,1909,1,unclear,False,4.0
+nobel_1027,Ferenc Krausz,nobel,,,2023,2,unclear,False,4.0
+nobel_1064,Francis Halzen,nobel,,,2026,1,research,False,4.0
+nobel_887,François Englert,nobel,,,2013,2,research,True,4.0
+nobel_778,Frank Wilczek,nobel,,,2004,2,research,False,4.0
+nobel_148,Frederick Reines,nobel,,,1995,1,research,True,4.0
+nobel_60,Frits Zernike,nobel,,,1953,1,unclear,False,4.0
+nobel_12,Gabriel Lippmann,nobel,,,1908,2,research,True,4.0
+nobel_1038,Geoffrey Hinton,nobel,,,2024,2,unclear,False,4.0
+nobel_840,George E. Smith,nobel,,,2009,3,research,True,4.0
+nobel_805,George F. Smoot,nobel,,,2006,2,unclear,False,4.0
+nobel_45,George Paget Thomson,nobel,,,1937,2,research,True,4.0
+nobel_142,Georges Charpak,nobel,,,1992,3,research,False,4.0
+nobel_961,Gérard Mourou,nobel,,,2018,2,research,True,4.0
+nobel_158,Gerardus 't Hooft,nobel,,,1999,2,research,True,4.0
+nobel_128,Gerd Binnig,nobel,,,1986,1,unclear,False,4.0
+nobel_1001,Giorgio Parisi,nobel,,,2021,1,unclear,False,4.0
+nobel_13,Guglielmo Marconi,nobel,,,1909,2,unclear,False,4.0
+nobel_17,Gustaf Dalén,nobel,,,1912,2,unclear,False,4.0
+nobel_31,Gustav Hertz,nobel,,,1925,1,research,False,4.0
+nobel_91,Hannes Alfvén,nobel,,,1970,2,unclear,False,4.0
+nobel_88,Hans Bethe,nobel,,,1967,2,unclear,False,4.0
+nobel_136,Hans G. Dehmelt,nobel,,,1989,1,research,True,4.0
+nobel_18,Heike Kamerlingh Onnes,nobel,,,1913,2,research,True,4.0
+nobel_129,Heinrich Rohrer,nobel,,,1986,2,unclear,False,4.0
+nobel_2,Hendrik A. Lorentz,nobel,,,1902,3,research,True,4.0
+nobel_4,Henri Becquerel,nobel,,,1903,1,research,False,4.0
+nobel_139,Henry W. Kendall,nobel,,,1990,1,research,False,4.0
+nobel_727,Herbert Kroemer,nobel,,,2000,2,research,True,4.0
+nobel_54,Hideki Yukawa,nobel,,,1949,2,research,True,4.0
+nobel_907,Hiroshi Amano,nobel,,,2014,2,research,True,4.0
+nobel_156,Horst L. Störmer,nobel,,,1998,1,unclear,False,4.0
+nobel_71,Igor Y. Tamm,nobel,,,1958,2,research,True,4.0
+nobel_721,Il´ja M. Frank,nobel,,,1958,1,research,False,4.0
+nobel_906,Isamu Akasaki,nobel,,,2014,2,research,True,4.0
+nobel_49,Isidor Isaac Rabi,nobel,,,1944,1,research,True,4.0
+nobel_98,Ivar Giaever,nobel,,,1973,2,unclear,False,4.0
+nobel_130,J. Georg Bednorz,nobel,,,1987,1,unclear,False,4.0
+nobel_80,J. Hans D. Jensen,nobel,,,1963,1,unclear,False,4.0
+nobel_930,J. Michael Kosterlitz,nobel,,,2016,2,research,False,4.0
+nobel_10,J.J. Thomson,nobel,,,1906,1,unclear,False,4.0
+nobel_728,Jack Kilby,nobel,,,2000,2,research,True,4.0
+nobel_134,Jack Steinberger,nobel,,,1988,2,unclear,False,4.0
+nobel_41,James Chadwick,nobel,,,1935,1,unclear,False,4.0
+nobel_116,James Cronin,nobel,,,1980,2,research,False,4.0
+nobel_30,James Franck,nobel,,,1925,2,unclear,False,4.0
+nobel_973,James Peebles,nobel,,,2019,3,research,False,4.0
+nobel_104,James Rainwater,nobel,,,1975,1,research,False,4.0
+nobel_32,Jean Baptiste Perrin,nobel,,,1926,2,research,True,4.0
+nobel_138,Jerome I. Friedman,nobel,,,1990,1,research,False,4.0
+nobel_15,Johannes Diderik van der Waals,nobel,,,1910,1,research,False,4.0
+nobel_24,Johannes Stark,nobel,,,1919,2,research,False,4.0
+nobel_66,John Bardeen,nobel,,,1956,1,research,False,4.0
+nobel_804,John C. Mather,nobel,,,2006,3,research,True,4.0
+nobel_1050,John Clarke,nobel,,,2025,1,unclear,False,4.0
+nobel_1013,John Clauser,nobel,,,2022,1,unclear,False,4.0
+nobel_56,John Cockcroft,nobel,,,1951,2,research,True,4.0
+nobel_109,John H. Van Vleck,nobel,,,1977,2,research,False,4.0
+nobel_1037,John J. Hopfield,nobel,,,2024,1,unclear,False,4.0
+nobel_792,John L. Hall,nobel,,,2005,2,research,False,4.0
+nobel_1052,John M. Martinis,nobel,,,2025,1,unclear,False,4.0
+nobel_144,Joseph H. Taylor Jr.,nobel,,,1993,2,unclear,False,4.0
+nobel_85,Julian Schwinger,nobel,,,1965,2,research,False,4.0
+nobel_131,K. Alex Müller,nobel,,,1987,2,research,False,4.0
+nobel_120,Kai M. Siegbahn,nobel,,,1981,1,research,True,4.0
+nobel_121,Kenneth G. Wilson,nobel,,,1982,2,unclear,False,4.0
+nobel_943,Kip S. Thorne,nobel,,,2017,2,research,True,4.0
+nobel_1000,Klaus Hasselmann,nobel,,,2021,1,unclear,False,4.0
+nobel_126,Klaus von Klitzing,nobel,,,1985,3,unclear,False,4.0
+nobel_850,Konstantin Novoselov,nobel,,,2010,2,research,True,4.0
+nobel_21,Lawrence Bragg,nobel,,,1915,1,research,False,4.0
+nobel_97,Leo Esaki,nobel,,,1973,3,research,True,4.0
+nobel_132,Leon M. Lederman,nobel,,,1988,3,research,True,4.0
+nobel_95,Leon N. Cooper,nobel,,,1972,2,research,True,4.0
+nobel_77,Lev Landau,nobel,,,1962,2,research,True,4.0
+nobel_8,Lord Rayleigh,nobel,,,1904,1,unclear,False,4.0
+nobel_36,Louis de Broglie,nobel,,,1929,2,research,True,4.0
+nobel_92,Louis Néel,nobel,,,1970,2,research,False,4.0
+nobel_89,Luis Alvarez,nobel,,,1968,2,research,True,4.0
+nobel_827,Makoto Kobayashi,nobel,,,2008,3,research,False,4.0
+nobel_29,Manne Siegbahn,nobel,,,1924,2,research,False,4.0
+nobel_79,Maria Goeppert Mayer,nobel,,,1963,1,research,False,4.0
+nobel_6,Marie Curie,nobel,,,1903,1,research,False,4.0
+nobel_147,Martin L. Perl,nobel,,,1995,3,research,True,4.0
+nobel_100,Martin Ryle,nobel,,,1974,1,research,True,4.0
+nobel_159,Martinus J.G. Veltman,nobel,,,1999,3,research,True,4.0
+nobel_754,Masatoshi Koshiba,nobel,,,2002,2,research,True,4.0
+nobel_61,Max Born,nobel,,,1954,2,research,True,4.0
+nobel_23,Max Planck,nobel,,,1918,3,research,True,4.0
+nobel_19,Max von Laue,nobel,,,1914,1,research,False,4.0
+nobel_133,Melvin Schwartz,nobel,,,1988,1,unclear,False,4.0
+nobel_1051,Michel H. Devoret,nobel,,,2025,2,unclear,False,4.0
+nobel_974,Michel Mayor,nobel,,,2019,2,research,False,4.0
+nobel_90,Murray Gell-Mann,nobel,,,1969,3,research,True,4.0
+nobel_118,Nicolaas Bloembergen,nobel,,,1981,3,research,True,4.0
+nobel_82,Nicolay G. Basov,nobel,,,1964,2,research,False,4.0
+nobel_27,Niels Bohr,nobel,,,1922,2,research,True,4.0
+nobel_135,Norman F. Ramsey,nobel,,,1989,3,research,True,4.0
+nobel_48,Otto Stern,nobel,,,1943,1,research,False,4.0
+nobel_73,Owen Chamberlain,nobel,,,1959,2,research,False,4.0
+nobel_35,Owen Willans Richardson,nobel,,,1928,2,research,False,4.0
+nobel_53,Patrick M.S. Blackett,nobel,,,1948,2,research,True,4.0
+nobel_40,Paul A.M. Dirac,nobel,,,1933,2,unclear,False,4.0
+nobel_70,Pavel A. Cherenkov,nobel,,,1958,1,research,False,4.0
+nobel_51,Percy W. Bridgman,nobel,,,1946,2,research,True,4.0
+nobel_815,Peter Grünberg,nobel,,,2007,2,unclear,False,4.0
+nobel_888,Peter Higgs,nobel,,,2013,3,research,True,4.0
+nobel_107,Philip W. Anderson,nobel,,,1977,1,research,True,4.0
+nobel_9,Philipp Lenard,nobel,,,1905,1,unclear,False,4.0
+nobel_1026,Pierre Agostini,nobel,,,2023,2,research,True,4.0
+nobel_5,Pierre Curie,nobel,,,1903,1,research,True,4.0
+nobel_141,Pierre-Gilles de Gennes,nobel,,,1991,2,research,False,4.0
+nobel_3,Pieter Zeeman,nobel,,,1902,2,research,True,4.0
+nobel_64,Polykarp Kusch,nobel,,,1955,2,research,True,4.0
+nobel_110,Pyotr Kapitsa,nobel,,,1978,2,research,True,4.0
+nobel_941,Rainer Weiss,nobel,,,2017,3,research,False,4.0
+nobel_753,Raymond Davis Jr.,nobel,,,2002,2,research,True,4.0
+nobel_989,Reinhard Genzel,nobel,,,2020,2,research,False,4.0
+nobel_755,Riccardo Giacconi,nobel,,,2002,3,research,True,4.0
+nobel_140,Richard E. Taylor,nobel,,,1990,3,unclear,False,4.0
+nobel_86,Richard P. Feynman,nobel,,,1965,3,research,False,4.0
+nobel_28,Robert A. Millikan,nobel,,,1923,1,research,False,4.0
+nobel_155,Robert B. Laughlin,nobel,,,1998,2,unclear,False,4.0
+nobel_151,Robert C. Richardson,nobel,,,1996,2,unclear,False,4.0
+nobel_75,Robert Hofstadter,nobel,,,1961,2,research,False,4.0
+nobel_96,Robert Schrieffer,nobel,,,1972,1,research,True,4.0
+nobel_112,Robert Woodrow Wilson,nobel,,,1978,2,research,False,4.0
+nobel_988,Roger Penrose,nobel,,,2020,2,unclear,False,4.0
+nobel_791,Roy J. Glauber,nobel,,,2005,3,research,True,4.0
+nobel_76,Rudolf Mössbauer,nobel,,,1961,3,unclear,False,4.0
+nobel_143,Russell A. Hulse,nobel,,,1993,1,research,False,4.0
+nobel_106,Samuel C.C. Ting,nobel,,,1976,2,research,True,4.0
+nobel_864,Saul Perlmutter,nobel,,,2011,3,research,True,4.0
+nobel_876,Serge Haroche,nobel,,,2012,3,research,False,4.0
+nobel_113,Sheldon Glashow,nobel,,,1979,1,research,True,4.0
+nobel_908,Shuji Nakamura,nobel,,,2014,3,research,True,4.0
+nobel_125,Simon van der Meer,nobel,,,1984,1,research,False,4.0
+nobel_84,Sin-Itiro Tomonaga,nobel,,,1965,3,research,True,4.0
+nobel_37,Sir Chandrasekhara Venkata Raman,nobel,,,1930,1,research,True,4.0
+nobel_108,Sir Nevill F. Mott,nobel,,,1977,1,unclear,False,4.0
+nobel_152,Steven Chu,nobel,,,1997,2,unclear,False,4.0
+nobel_115,Steven Weinberg,nobel,,,1979,2,research,True,4.0
+nobel_122,Subrahmanyan Chandrasekhar,nobel,,,1983,2,research,False,4.0
+nobel_999,Syukuro Manabe,nobel,,,2021,2,research,True,4.0
+nobel_919,Takaaki Kajita,nobel,,,2015,2,research,False,4.0
+nobel_793,Theodor W. Hänsch,nobel,,,2005,2,research,False,4.0
+nobel_828,Toshihide Maskawa,nobel,,,2008,2,research,False,4.0
+nobel_69,Tsung-Dao Lee,nobel,,,1957,3,research,True,4.0
+nobel_117,Val Fitch,nobel,,,1980,3,unclear,False,4.0
+nobel_42,Victor F. Hess,nobel,,,1936,2,research,True,4.0
+nobel_767,Vitaly L. Ginzburg,nobel,,,2003,2,research,True,4.0
+nobel_67,Walter H. Brattain,nobel,,,1956,1,research,False,4.0
+nobel_62,Walther Bothe,nobel,,,1954,2,research,True,4.0
+nobel_38,Werner Heisenberg,nobel,,,1932,1,unclear,False,4.0
+nobel_1,Wilhelm Conrad Röntgen,nobel,,,1901,1,unclear,False,4.0
+nobel_16,Wilhelm Wien,nobel,,,1911,3,research,False,4.0
+nobel_839,Willard S. Boyle,nobel,,,2009,2,research,True,4.0
+nobel_123,William A. Fowler,nobel,,,1983,2,research,True,4.0
+nobel_65,William B. Shockley,nobel,,,1956,2,research,False,4.0
+nobel_20,William Bragg,nobel,,,1915,1,unclear,False,4.0
+nobel_154,William D. Phillips,nobel,,,1997,2,unclear,False,4.0
+nobel_63,Willis E. Lamb,nobel,,,1955,2,research,False,4.0
+nobel_739,Wolfgang Ketterle,nobel,,,2001,2,research,False,4.0
+nobel_137,Wolfgang Paul,nobel,,,1989,1,research,False,4.0
+nobel_50,Wolfgang Pauli,nobel,,,1945,1,unclear,False,4.0
+nobel_826,Yoichiro Nambu,nobel,,,2008,1,research,False,4.0
+nobel_726,Zhores Alferov,nobel,,,2000,3,research,True,4.0
+nobel_779,Aaron Ciechanover,nobel,,,2004,2,research,False,4.0
+nobel_259,Aaron Klug,nobel,,,1982,3,research,False,4.0
+nobel_843,Ada E. Yonath,nobel,,,2009,3,research,False,4.0
+nobel_199,Adolf Butenandt,nobel,,,1939,1,unclear,False,4.0
+nobel_164,Adolf von Baeyer,nobel,,,1905,1,unclear,False,4.0
+nobel_185,Adolf Windaus,nobel,,,1928,1,unclear,False,4.0
+nobel_292,Ahmed Zewail,nobel,,,1999,3,research,True,4.0
+nobel_853,Akira Suzuki,nobel,,,2010,2,research,True,4.0
+nobel_978,Akira Yoshino,nobel,,,2019,2,research,False,4.0
+nobel_729,Alan Heeger,nobel,,,2000,3,research,False,4.0
+nobel_730,Alan MacDiarmid,nobel,,,2000,2,unclear,False,4.0
+nobel_1031,Aleksey Yekimov ,nobel,,,2023,1,unclear,False,4.0
+nobel_174,Alfred Werner,nobel,,,1913,2,research,False,4.0
+nobel_214,Archer J.P. Martin,nobel,,,1952,1,unclear,False,4.0
+nobel_891,Arieh Warshel,nobel,,,2013,2,research,True,4.0
+nobel_208,Arne Tiselius,nobel,,,1948,2,research,False,4.0
+nobel_186,Arthur Harden,nobel,,,1929,2,research,True,4.0
+nobel_203,Artturi Virtanen,nobel,,,1945,2,research,False,4.0
+nobel_780,Avram Hershko,nobel,,,2004,3,research,True,4.0
+nobel_923,Aziz Sancar,nobel,,,2015,2,research,True,4.0
+nobel_1002,Benjamin List,nobel,,,2021,2,unclear,False,4.0
+nobel_933,Bernard L. Feringa,nobel,,,2016,2,research,False,4.0
+nobel_879,Brian Kobilka,nobel,,,2012,2,research,True,4.0
+nobel_261,Bruce Merrifield,nobel,,,1984,2,research,False,4.0
+nobel_189,Carl Bosch,nobel,,,1931,2,unclear,False,4.0
+nobel_1015,Carolyn Bertozzi,nobel,,,2022,2,unclear,False,4.0
+nobel_269,Charles J. Pedersen,nobel,,,1987,1,unclear,False,4.0
+nobel_241,Christian Anfinsen,nobel,,,1972,2,research,True,4.0
+nobel_867,Dan Shechtman,nobel,,,2011,2,research,False,4.0
+nobel_1039,David Baker,nobel,,,2024,2,unclear,False,4.0
+nobel_1003,David W.C. MacMillan,nobel,,,2021,1,unclear,False,4.0
+nobel_1040,Demis Hassabis,nobel,,,2024,1,unclear,False,4.0
+nobel_237,Derek Barton,nobel,,,1969,1,research,False,4.0
+nobel_267,Donald J. Cram,nobel,,,1987,1,unclear,False,4.0
+nobel_230,Dorothy Crowfoot Hodgkin,nobel,,,1964,2,research,False,4.0
+nobel_264,Dudley R. Herschbach,nobel,,,1986,2,research,True,4.0
+nobel_166,Eduard Buchner,nobel,,,1907,1,unclear,False,4.0
+nobel_212,Edwin M. McMillan,nobel,,,1951,2,research,False,4.0
+nobel_852,Ei-ichi Negishi,nobel,,,2010,3,research,False,4.0
+nobel_275,Elias James Corey,nobel,,,1990,2,unclear,False,4.0
+nobel_161,Emil Fischer,nobel,,,1902,2,unclear,False,4.0
+nobel_991,Emmanuelle Charpentier,nobel,,,2020,1,research,True,4.0
+nobel_909,Eric Betzig,nobel,,,2014,2,research,True,4.0
+nobel_167,Ernest Rutherford,nobel,,,1908,2,research,True,4.0
+nobel_244,Ernst Otto Fischer,nobel,,,1973,2,research,False,4.0
+nobel_283,F. Sherwood Rowland,nobel,,,1995,3,research,False,4.0
+nobel_963,Frances H. Arnold,nobel,,,2018,3,research,True,4.0
+nobel_180,Francis W. Aston,nobel,,,1922,1,unclear,False,4.0
+nobel_193,Frédéric Joliot,nobel,,,1935,2,research,False,4.0
+nobel_222,Frederick Sanger,nobel,,,1958,3,research,False,4.0
+nobel_179,Frederick Soddy,nobel,,,1921,2,research,True,4.0
+nobel_190,Friedrich Bergius,nobel,,,1931,2,unclear,False,4.0
+nobel_177,Fritz Haber,nobel,,,1918,1,unclear,False,4.0
+nobel_181,Fritz Pregl,nobel,,,1923,3,research,True,4.0
+nobel_245,Geoffrey Wilkinson,nobel,,,1973,2,research,False,4.0
+nobel_253,Georg Wittig,nobel,,,1979,1,research,False,4.0
+nobel_280,George A. Olah,nobel,,,1994,3,research,False,4.0
+nobel_201,George de Hevesy,nobel,,,1943,1,research,False,4.0
+nobel_964,George P. Smith,nobel,,,2018,2,research,True,4.0
+nobel_235,George Porter,nobel,,,1967,2,research,False,4.0
+nobel_816,Gerhard Ertl,nobel,,,2007,3,research,False,4.0
+nobel_240,Gerhard Herzberg,nobel,,,1971,2,research,False,4.0
+nobel_229,Giulio Natta,nobel,,,1963,1,research,True,4.0
+nobel_213,Glenn T. Seaborg,nobel,,,1951,2,research,True,4.0
+nobel_188,Hans Fischer,nobel,,,1930,1,unclear,False,4.0
+nobel_187,Hans von Euler-Chelpin,nobel,,,1929,1,research,True,4.0
+nobel_192,Harold C. Urey,nobel,,,1934,1,research,True,4.0
+nobel_272,Hartmut Michel,nobel,,,1988,3,research,False,4.0
+nobel_184,Heinrich Wieland,nobel,,,1927,1,research,False,4.0
+nobel_165,Henri Moissan,nobel,,,1906,1,research,False,4.0
+nobel_260,Henry Taube,nobel,,,1983,2,research,True,4.0
+nobel_262,Herbert A. Hauptman,nobel,,,1985,2,unclear,False,4.0
+nobel_252,Herbert C. Brown,nobel,,,1979,1,research,False,4.0
+nobel_216,Hermann Staudinger,nobel,,,1953,2,research,False,4.0
+nobel_731,Hideki Shirakawa,nobel,,,2000,2,research,True,4.0
+nobel_250,Ilya Prigogine,nobel,,,1977,2,research,True,4.0
+nobel_194,Irène Joliot-Curie,nobel,,,1935,2,research,True,4.0
+nobel_191,Irving Langmuir,nobel,,,1932,2,research,False,4.0
+nobel_781,Irwin Rose,nobel,,,2004,2,research,False,4.0
+nobel_160,Jacobus H. van 't Hoff,nobel,,,1901,1,research,True,4.0
+nobel_944,Jacques Dubochet,nobel,,,2017,3,research,True,4.0
+nobel_204,James B. Sumner,nobel,,,1946,2,research,False,4.0
+nobel_223,Jaroslav Heyrovsky,nobel,,,1959,2,research,True,4.0
+nobel_268,Jean-Marie Lehn,nobel,,,1987,3,research,True,4.0
+nobel_931,Jean-Pierre Sauvage,nobel,,,2016,2,research,False,4.0
+nobel_992,Jennifer A. Doudna,nobel,,,2020,2,research,True,4.0
+nobel_289,Jens C. Skou,nobel,,,1997,2,unclear,False,4.0
+nobel_263,Jerome Karle,nobel,,,1985,2,unclear,False,4.0
+nobel_945,Joachim Frank,nobel,,,2017,2,research,True,4.0
+nobel_270,Johann Deisenhofer,nobel,,,1988,2,research,False,4.0
+nobel_756,John B. Fenn,nobel,,,2002,3,research,True,4.0
+nobel_976,John B. Goodenough,nobel,,,2019,2,research,True,4.0
+nobel_227,John C. Kendrew,nobel,,,1962,2,unclear,False,4.0
+nobel_266,John C. Polanyi,nobel,,,1986,3,research,True,4.0
+nobel_247,John Cornforth,nobel,,,1975,2,research,False,4.0
+nobel_288,John E. Walker,nobel,,,1997,2,unclear,False,4.0
+nobel_205,John H. Northrop,nobel,,,1946,1,research,False,4.0
+nobel_1041,John Jumper,nobel,,,2024,1,unclear,False,4.0
+nobel_291,John Pople,nobel,,,1998,3,unclear,False,4.0
+nobel_743,K. Barry Sharpless,nobel,,,2001,3,research,True,4.0
+nobel_228,Karl Ziegler,nobel,,,1963,2,unclear,False,4.0
+nobel_278,Kary B. Mullis,nobel,,,1993,3,research,True,4.0
+nobel_257,Kenichi Fukui,nobel,,,1981,2,research,True,4.0
+nobel_1066,Kenso Soai,nobel,,,2026,1,unclear,False,4.0
+nobel_757,Koichi Tanaka,nobel,,,2002,2,unclear,False,4.0
+nobel_211,Kurt Alder,nobel,,,1950,2,unclear,False,4.0
+nobel_758,Kurt Wüthrich,nobel,,,2002,2,unclear,False,4.0
+nobel_236,Lars Onsager,nobel,,,1968,2,research,True,4.0
+nobel_200,Leopold Ruzicka,nobel,,,1939,2,unclear,False,4.0
+nobel_217,Linus Pauling,nobel,,,1954,2,unclear,False,4.0
+nobel_221,Lord Todd,nobel,,,1957,2,research,True,4.0
+nobel_1030,Louis Brus,nobel,,,2023,2,unclear,False,4.0
+nobel_239,Luis Leloir,nobel,,,1970,2,research,False,4.0
+nobel_977,M. Stanley Whittingham,nobel,,,2019,3,research,True,4.0
+nobel_233,Manfred Eigen,nobel,,,1967,3,research,False,4.0
+nobel_282,Mario J. Molina,nobel,,,1995,2,research,False,4.0
+nobel_830,Martin Chalfie,nobel,,,2008,2,research,False,4.0
+nobel_889,Martin Karplus,nobel,,,2013,2,research,True,4.0
+nobel_226,Max F. Perutz,nobel,,,1962,2,research,True,4.0
+nobel_225,Melvin Calvin,nobel,,,1961,2,research,False,4.0
+nobel_890,Michael Levitt,nobel,,,2013,3,research,True,4.0
+nobel_279,Michael Smith,nobel,,,1993,2,research,True,4.0
+nobel_1016,Morten Meldal,nobel,,,2022,2,research,False,4.0
+nobel_1029,Moungi Bawendi,nobel,,,2023,2,unclear,False,4.0
+nobel_220,Nikolay Semenov,nobel,,,1956,2,research,False,4.0
+nobel_196,Norman Haworth,nobel,,,1937,2,research,True,4.0
+nobel_238,Odd Hassel,nobel,,,1969,2,research,False,4.0
+nobel_1055,Omar M. Yaghi,nobel,,,2025,2,unclear,False,4.0
+nobel_829,Osamu Shimomura,nobel,,,2008,2,research,True,4.0
+nobel_210,Otto Diels,nobel,,,1950,2,unclear,False,4.0
+nobel_202,Otto Hahn,nobel,,,1944,2,unclear,False,4.0
+nobel_169,Otto Wallach,nobel,,,1910,1,unclear,False,4.0
+nobel_254,Paul Berg,nobel,,,1980,3,unclear,False,4.0
+nobel_287,Paul D. Boyer,nobel,,,1997,2,research,False,4.0
+nobel_281,Paul J. Crutzen,nobel,,,1995,2,research,False,4.0
+nobel_246,Paul J. Flory,nobel,,,1974,2,research,False,4.0
+nobel_197,Paul Karrer,nobel,,,1937,2,research,False,4.0
+nobel_922,Paul Modrich,nobel,,,2015,2,research,True,4.0
+nobel_173,Paul Sabatier,nobel,,,1912,3,research,True,4.0
+nobel_769,Peter Agre,nobel,,,2003,3,research,True,4.0
+nobel_195,Peter Debye,nobel,,,1936,1,unclear,False,4.0
+nobel_251,Peter Mitchell,nobel,,,1978,2,research,True,4.0
+nobel_286,Richard E. Smalley,nobel,,,1996,1,research,True,4.0
+nobel_851,Richard F. Heck,nobel,,,2010,2,unclear,False,4.0
+nobel_946,Richard Henderson,nobel,,,2017,2,research,True,4.0
+nobel_198,Richard Kuhn,nobel,,,1938,1,unclear,False,4.0
+nobel_215,Richard L.M. Synge,nobel,,,1952,2,research,False,4.0
+nobel_276,Richard R. Ernst,nobel,,,1991,3,unclear,False,4.0
+nobel_796,Richard R. Schrock,nobel,,,2005,2,research,True,4.0
+nobel_1054,Richard Robson,nobel,,,2025,1,unclear,False,4.0
+nobel_176,Richard Willstätter,nobel,,,1915,1,unclear,False,4.0
+nobel_182,Richard Zsigmondy,nobel,,,1925,2,unclear,False,4.0
+nobel_258,Roald Hoffmann,nobel,,,1981,3,research,False,4.0
+nobel_231,Robert B. Woodward,nobel,,,1965,2,research,True,4.0
+nobel_284,Robert F. Curl Jr.,nobel,,,1996,3,unclear,False,4.0
+nobel_795,Robert H. Grubbs,nobel,,,2005,3,unclear,False,4.0
+nobel_271,Robert Huber,nobel,,,1988,2,unclear,False,4.0
+nobel_878,Robert J. Lefkowitz,nobel,,,2012,3,research,True,4.0
+nobel_232,Robert S. Mulliken,nobel,,,1966,1,unclear,False,4.0
+nobel_770,Roderick MacKinnon,nobel,,,2003,2,research,True,4.0
+nobel_806,Roger D. Kornberg,nobel,,,2006,3,research,True,4.0
+nobel_831,Roger Y. Tsien,nobel,,,2008,3,research,True,4.0
+nobel_234,Ronald G.W. Norrish,nobel,,,1967,2,research,True,4.0
+nobel_277,Rudolph A. Marcus,nobel,,,1992,3,research,False,4.0
+nobel_742,Ryoji Noyori,nobel,,,2001,2,research,True,4.0
+nobel_273,Sidney Altman,nobel,,,1989,3,research,False,4.0
+nobel_219,Sir Cyril Hinshelwood,nobel,,,1956,2,research,True,4.0
+nobel_965,Sir Gregory P. Winter,nobel,,,2018,2,research,True,4.0
+nobel_285,Sir Harold Kroto,nobel,,,1996,2,research,False,4.0
+nobel_932,Sir J. Fraser Stoddart,nobel,,,2016,3,research,True,4.0
+nobel_207,Sir Robert Robinson,nobel,,,1947,2,research,False,4.0
+nobel_163,Sir William Ramsay,nobel,,,1904,2,unclear,False,4.0
+nobel_242,Stanford Moore,nobel,,,1972,2,research,False,4.0
+nobel_910,Stefan W. Hell,nobel,,,2014,3,research,True,4.0
+nobel_1053,Susumu Kitagawa,nobel,,,2025,1,unclear,False,4.0
+nobel_162,Svante Arrhenius,nobel,,,1903,2,research,False,4.0
+nobel_183,The Svedberg,nobel,,,1926,2,research,False,4.0
+nobel_175,Theodore W. Richards,nobel,,,1914,2,research,True,4.0
+nobel_842,Thomas A. Steitz,nobel,,,2009,2,research,False,4.0
+nobel_274,Thomas R. Cech,nobel,,,1989,2,research,False,4.0
+nobel_921,Tomas Lindahl,nobel,,,2015,3,research,True,4.0
+nobel_841,Venkatraman Ramakrishnan,nobel,,,2009,2,research,True,4.0
+nobel_172,Victor Grignard,nobel,,,1912,1,research,True,4.0
+nobel_218,Vincent du Vigneaud,nobel,,,1955,2,unclear,False,4.0
+nobel_248,Vladimir Prelog,nobel,,,1975,1,unclear,False,4.0
+nobel_255,Walter Gilbert,nobel,,,1980,2,unclear,False,4.0
+nobel_290,Walter Kohn,nobel,,,1998,2,unclear,False,4.0
+nobel_178,Walther Nernst,nobel,,,1920,2,unclear,False,4.0
+nobel_206,Wendell M. Stanley,nobel,,,1946,1,research,False,4.0
+nobel_168,Wilhelm Ostwald,nobel,,,1909,2,research,True,4.0
+nobel_224,Willard F. Libby,nobel,,,1960,2,research,True,4.0
+nobel_911,William E. Moerner,nobel,,,2014,2,research,True,4.0
+nobel_209,William F. Giauque,nobel,,,1949,2,research,False,4.0
+nobel_243,William H. Stein,nobel,,,1972,1,unclear,False,4.0
+nobel_741,William Knowles,nobel,,,2001,2,unclear,False,4.0
+nobel_249,William Lipscomb,nobel,,,1976,3,research,True,4.0
+nobel_265,Yuan T. Lee,nobel,,,1986,2,research,True,4.0
+nobel_794,Yves Chauvin,nobel,,,2005,2,unclear,False,4.0
+nobel_376,Alan Hodgkin,nobel,,,1963,2,unclear,False,4.0
+nobel_403,Albert Claude,nobel,,,1974,2,research,True,4.0
+nobel_332,Albert Szent-Györgyi,nobel,,,1937,2,research,False,4.0
+nobel_304,Albrecht Kossel,nobel,,,1910,2,research,False,4.0
+nobel_306,Alexis Carrel,nobel,,,1912,3,unclear,False,4.0
+nobel_392,Alfred D. Hershey,nobel,,,1969,2,research,False,4.0
+nobel_450,Alfred G. Gilman,nobel,,,1994,2,research,False,4.0
+nobel_417,Allan M. Cormack,nobel,,,1979,2,research,False,4.0
+nobel_305,Allvar Gullstrand,nobel,,,1911,2,research,True,4.0
+nobel_300,Alphonse Laveran,nobel,,,1907,2,research,True,4.0
+nobel_360,André F. Cournand,nobel,,,1956,2,research,False,4.0
+nobel_381,André Lwoff,nobel,,,1965,3,research,True,4.0
+nobel_377,Andrew Huxley,nobel,,,1963,2,unclear,False,4.0
+nobel_412,Andrew V. Schally,nobel,,,1977,1,unclear,False,4.0
+nobel_802,Andrew Z. Fire,nobel,,,2006,3,unclear,False,4.0
+nobel_311,Archibald V. Hill,nobel,,,1922,3,research,True,4.0
+nobel_998,Ardem Patapoutian,nobel,,,2021,2,unclear,False,4.0
+nobel_368,Arthur Kornberg,nobel,,,1959,2,research,True,4.0
+nobel_722,Arvid Carlsson,nobel,,,2000,2,research,False,4.0
+nobel_310,August Krogh,nobel,,,1920,3,research,False,4.0
+nobel_428,Barbara McClintock,nobel,,,1983,2,research,True,4.0
+nobel_789,Barry J. Marshall,nobel,,,2005,3,unclear,False,4.0
+nobel_409,Baruch S. Blumberg,nobel,,,1976,3,unclear,False,4.0
+nobel_419,Baruj Benacerraf,nobel,,,1980,1,research,False,4.0
+nobel_426,Bengt I. Samuelsson,nobel,,,1982,2,research,True,4.0
+nobel_345,Bernardo Houssay,nobel,,,1947,3,research,False,4.0
+nobel_445,Bert Sakmann,nobel,,,1991,2,unclear,False,4.0
+nobel_861,Bruce A. Beutler,nobel,,,2011,2,research,True,4.0
+nobel_298,Camillo Golgi,nobel,,,1906,1,unclear,False,4.0
+nobel_343,Carl Cori,nobel,,,1947,2,research,True,4.0
+nobel_836,Carol W. Greider,nobel,,,2009,2,research,True,4.0
+nobel_431,César Milstein,nobel,,,1984,1,research,False,4.0
+nobel_384,Charles B. Huggins,nobel,,,1966,1,research,False,4.0
+nobel_987,Charles M. Rice,nobel,,,2020,2,research,True,4.0
+nobel_318,Charles Nicolle,nobel,,,1928,3,research,False,4.0
+nobel_307,Charles Richet,nobel,,,1913,3,unclear,False,4.0
+nobel_319,Christiaan Eijkman,nobel,,,1929,2,research,False,4.0
+nobel_404,Christian de Duve,nobel,,,1974,3,research,False,4.0
+nobel_453,Christiane Nüsslein-Volhard,nobel,,,1995,3,research,True,4.0
+nobel_333,Corneille Heymans,nobel,,,1938,2,research,True,4.0
+nobel_803,Craig C. Mello,nobel,,,2006,2,research,False,4.0
+nobel_410,D. Carleton Gajdusek,nobel,,,1976,2,unclear,False,4.0
+nobel_363,Daniel Bovet,nobel,,,1957,2,unclear,False,4.0
+nobel_415,Daniel Nathans,nobel,,,1978,2,research,True,4.0
+nobel_406,David Baltimore,nobel,,,1975,2,research,True,4.0
+nobel_423,David H. Hubel,nobel,,,1981,2,unclear,False,4.0
+nobel_997,David Julius,nobel,,,2021,2,unclear,False,4.0
+nobel_362,Dickinson W. Richards,nobel,,,1956,2,unclear,False,4.0
+nobel_1025,Drew Weissman,nobel,,,2023,1,unclear,False,4.0
+nobel_443,E. Donnall Thomas,nobel,,,1990,1,unclear,False,4.0
+nobel_397,"Earl W. Sutherland, Jr.",nobel,,,1971,2,unclear,False,4.0
+nobel_324,Edgar Adrian,nobel,,,1932,3,research,True,4.0
+nobel_446,Edmond H. Fischer,nobel,,,1992,3,research,False,4.0
+nobel_905,Edvard I. Moser,nobel,,,2014,2,research,True,4.0
+nobel_336,Edward A. Doisy,nobel,,,1943,1,unclear,False,4.0
+nobel_452,Edward B. Lewis,nobel,,,1995,1,research,True,4.0
+nobel_349,Edward C. Kendall,nobel,,,1950,2,research,False,4.0
+nobel_365,Edward Tatum,nobel,,,1958,3,research,True,4.0
+nobel_447,Edwin G. Krebs,nobel,,,1992,1,unclear,False,4.0
+nobel_348,Egas Moniz,nobel,,,1949,2,research,False,4.0
+nobel_835,Elizabeth H. Blackburn,nobel,,,2009,3,research,False,4.0
+nobel_293,Emil von Behring,nobel,,,1901,3,research,False,4.0
+nobel_454,Eric F. Wieschaus,nobel,,,1995,2,unclear,False,4.0
+nobel_724,Eric Kandel,nobel,,,2000,3,research,True,4.0
+nobel_340,Ernst B. Chain,nobel,,,1945,2,unclear,False,4.0
+nobel_444,Erwin Neher,nobel,,,1991,3,research,False,4.0
+nobel_379,Feodor Lynen,nobel,,,1964,2,unclear,False,4.0
+nobel_460,Ferid Murad,nobel,,,1998,2,research,False,4.0
+nobel_372,Francis Crick,nobel,,,1962,2,research,True,4.0
+nobel_380,François Jacob,nobel,,,1965,3,research,True,4.0
+nobel_824,Françoise Barré-Sinoussi,nobel,,,2008,2,research,True,4.0
+nobel_1048,Fred Ramsdell,nobel,,,2025,1,unclear,False,4.0
+nobel_358,Frederick C. Robbins,nobel,,,1954,1,research,False,4.0
+nobel_313,Frederick G. Banting,nobel,,,1923,2,unclear,False,4.0
+nobel_355,Fritz Lipmann,nobel,,,1953,2,research,False,4.0
+nobel_1036,Gary Ruvkun,nobel,,,2024,2,unclear,False,4.0
+nobel_1063,Georg Nagel,nobel,,,2026,1,unclear,False,4.0
+nobel_371,Georg von Békésy,nobel,,,1961,2,research,False,4.0
+nobel_364,George Beadle,nobel,,,1958,1,research,False,4.0
+nobel_421,George D. Snell,nobel,,,1980,1,unclear,False,4.0
+nobel_405,George E. Palade,nobel,,,1974,2,research,True,4.0
+nobel_439,George H. Hitchings,nobel,,,1988,2,unclear,False,4.0
+nobel_326,George H. Whipple,nobel,,,1934,2,unclear,False,4.0
+nobel_327,George R. Minot,nobel,,,1934,3,unclear,False,4.0
+nobel_387,George Wald,nobel,,,1967,2,research,True,4.0
+nobel_430,Georges J.F. Köhler,nobel,,,1984,1,unclear,False,4.0
+nobel_398,Gerald M. Edelman,nobel,,,1972,3,research,False,4.0
+nobel_334,Gerhard Domagk,nobel,,,1939,1,unclear,False,4.0
+nobel_438,Gertrude B. Elion,nobel,,,1988,1,research,False,4.0
+nobel_344,Gerty Cori,nobel,,,1947,1,research,False,4.0
+nobel_418,Godfrey N. Hounsfield,nobel,,,1979,1,unclear,False,4.0
+nobel_972,Gregg L. Semenza,nobel,,,2019,2,research,True,4.0
+nobel_461,Günter Blobel,nobel,,,1999,3,research,True,4.0
+nobel_389,H. Gobind Khorana,nobel,,,1968,1,unclear,False,4.0
+nobel_751,H. Robert Horvitz,nobel,,,2002,2,research,True,4.0
+nobel_416,Hamilton O. Smith,nobel,,,1978,2,unclear,False,4.0
+nobel_354,Hans Krebs,nobel,,,1953,2,research,False,4.0
+nobel_329,Hans Spemann,nobel,,,1935,3,unclear,False,4.0
+nobel_823,Harald zur Hausen,nobel,,,2008,3,unclear,False,4.0
+nobel_441,Harold E. Varmus,nobel,,,1989,3,research,False,4.0
+nobel_985,Harvey J. Alter,nobel,,,2020,2,unclear,False,4.0
+nobel_335,Henrik Dam,nobel,,,1943,1,research,False,4.0
+nobel_338,Herbert S. Gasser,nobel,,,1944,2,unclear,False,4.0
+nobel_342,Hermann J. Muller,nobel,,,1946,3,research,True,4.0
+nobel_408,Howard M. Temin,nobel,,,1975,2,research,True,4.0
+nobel_359,Hugo Theorell,nobel,,,1955,2,research,False,4.0
+nobel_301,Ilya Mechnikov,nobel,,,1908,2,unclear,False,4.0
+nobel_296,Ivan Pavlov,nobel,,,1904,2,research,False,4.0
+nobel_440,J. Michael Bishop,nobel,,,1989,2,research,True,4.0
+nobel_790,J. Robin Warren,nobel,,,2005,2,research,False,4.0
+nobel_837,Jack W. Szostak,nobel,,,2009,2,research,True,4.0
+nobel_382,Jacques Monod,nobel,,,1965,2,research,True,4.0
+nobel_884,James E. Rothman,nobel,,,2013,2,research,True,4.0
+nobel_958,James P. Allison,nobel,,,2018,2,research,True,4.0
+nobel_373,James Watson,nobel,,,1962,3,unclear,False,4.0
+nobel_420,Jean Dausset,nobel,,,1980,2,research,True,4.0
+nobel_938,Jeffrey C. Hall,nobel,,,2017,2,research,False,4.0
+nobel_316,Johannes Fibiger,nobel,,,1926,2,research,False,4.0
+nobel_752,John E. Sulston,nobel,,,2002,2,research,True,4.0
+nobel_356,John F. Enders,nobel,,,1954,1,unclear,False,4.0
+nobel_314,John Macleod,nobel,,,1923,2,unclear,False,4.0
+nobel_903,John O'Keefe,nobel,,,2014,3,research,True,4.0
+nobel_427,John R. Vane,nobel,,,1982,2,research,True,4.0
+nobel_442,Joseph E. Murray,nobel,,,1990,4,research,True,4.0
+nobel_337,Joseph Erlanger,nobel,,,1944,1,unclear,False,4.0
+nobel_433,Joseph L. Goldstein,nobel,,,1985,3,research,True,4.0
+nobel_366,Joshua Lederberg,nobel,,,1958,2,unclear,False,4.0
+nobel_862,Jules A. Hoffmann,nobel,,,2011,2,unclear,False,4.0
+nobel_309,Jules Bordet,nobel,,,1919,1,unclear,False,4.0
+nobel_396,Julius Axelrod,nobel,,,1970,2,research,True,4.0
+nobel_317,Julius Wagner-Jauregg,nobel,,,1927,3,unclear,False,4.0
+nobel_1061,Karl Deisseroth,nobel,,,2026,1,unclear,False,4.0
+nobel_321,Karl Landsteiner,nobel,,,1930,1,unclear,False,4.0
+nobel_400,Karl von Frisch,nobel,,,1973,1,unclear,False,4.0
+nobel_1024,Katalin Karikó,nobel,,,2023,2,unclear,False,4.0
+nobel_386,Keffer Hartline,nobel,,,1967,2,research,False,4.0
+nobel_378,Konrad Bloch,nobel,,,1964,2,research,True,4.0
+nobel_401,Konrad Lorenz,nobel,,,1973,2,research,False,4.0
+nobel_735,Leland Hartwell,nobel,,,2001,3,unclear,False,4.0
+nobel_775,Linda B. Buck,nobel,,,2004,2,research,True,4.0
+nobel_459,Louis J. Ignarro,nobel,,,1998,2,unclear,False,4.0
+nobel_825,Luc Montagnier,nobel,,,2008,2,research,True,4.0
+nobel_811,Mario R. Capecchi,nobel,,,2007,2,research,False,4.0
+nobel_390,Marshall W. Nirenberg,nobel,,,1968,3,research,True,4.0
+nobel_451,Martin Rodbell,nobel,,,1994,2,research,False,4.0
+nobel_1047,Mary E. Brunkow,nobel,,,2025,2,unclear,False,4.0
+nobel_374,Maurice Wilkins,nobel,,,1962,1,unclear,False,4.0
+nobel_391,Max Delbrück,nobel,,,1969,2,research,True,4.0
+nobel_352,Max Theiler,nobel,,,1951,3,research,False,4.0
+nobel_904,May-Britt Moser,nobel,,,2014,2,research,True,4.0
+nobel_986,Michael Houghton,nobel,,,2020,2,research,True,4.0
+nobel_939,Michael Rosbash,nobel,,,2017,3,research,False,4.0
+nobel_432,Michael S. Brown,nobel,,,1985,3,research,True,4.0
+nobel_940,Michael W. Young,nobel,,,2017,2,research,True,4.0
+nobel_429,Niels K. Jerne,nobel,,,1984,2,research,True,4.0
+nobel_295,Niels Ryberg Finsen,nobel,,,1903,2,unclear,False,4.0
+nobel_402,Nikolaas Tinbergen,nobel,,,1973,1,research,False,4.0
+nobel_813,Oliver Smithies,nobel,,,2007,3,research,True,4.0
+nobel_331,Otto Loewi,nobel,,,1936,3,research,False,4.0
+nobel_312,Otto Meyerhof,nobel,,,1922,2,unclear,False,4.0
+nobel_322,Otto Warburg,nobel,,,1931,2,research,False,4.0
+nobel_764,Paul C. Lauterbur,nobel,,,2003,2,research,False,4.0
+nobel_302,Paul Ehrlich,nobel,,,1908,1,unclear,False,4.0
+nobel_723,Paul Greengard,nobel,,,2000,2,unclear,False,4.0
+nobel_346,Paul Müller,nobel,,,1948,2,unclear,False,4.0
+nobel_455,Peter C. Doherty,nobel,,,1996,2,unclear,False,4.0
+nobel_1062,Peter Hegemann,nobel,,,2026,1,unclear,False,4.0
+nobel_370,Peter Medawar,nobel,,,1960,3,research,True,4.0
+nobel_383,Peyton Rous,nobel,,,1966,3,research,True,4.0
+nobel_351,Philip S. Hench,nobel,,,1950,2,unclear,False,4.0
+nobel_449,Phillip A. Sharp,nobel,,,1993,2,research,True,4.0
+nobel_385,Ragnar Granit,nobel,,,1967,2,research,False,4.0
+nobel_863,Ralph M. Steinman,nobel,,,2011,1,research,True,4.0
+nobel_885,Randy W. Schekman,nobel,,,2013,3,research,False,4.0
+nobel_407,Renato Dulbecco,nobel,,,1975,2,research,True,4.0
+nobel_774,Richard Axel,nobel,,,2004,3,unclear,False,4.0
+nobel_448,Richard J. Roberts,nobel,,,1993,3,research,False,4.0
+nobel_435,Rita Levi-Montalcini,nobel,,,1986,3,unclear,False,4.0
+nobel_308,Robert Bárány,nobel,,,1914,2,unclear,False,4.0
+nobel_458,Robert F. Furchgott,nobel,,,1998,2,research,True,4.0
+nobel_297,Robert Koch,nobel,,,1905,2,unclear,False,4.0
+nobel_388,Robert W. Holley,nobel,,,1968,1,research,False,4.0
+nobel_399,Rodney R. Porter,nobel,,,1972,1,unclear,False,4.0
+nobel_411,Roger Guillemin,nobel,,,1977,2,research,False,4.0
+nobel_422,Roger W. Sperry,nobel,,,1981,2,research,True,4.0
+nobel_456,Rolf M. Zinkernagel,nobel,,,1996,3,research,True,4.0
+nobel_294,Ronald Ross,nobel,,,1902,2,research,True,4.0
+nobel_413,Rosalyn Yalow,nobel,,,1977,2,research,False,4.0
+nobel_393,Salvador E. Luria,nobel,,,1969,1,research,False,4.0
+nobel_299,Santiago Ramón y Cajal,nobel,,,1906,1,research,True,4.0
+nobel_917,Satoshi Ōmura,nobel,,,2015,2,research,True,4.0
+nobel_353,Selman A. Waksman,nobel,,,1952,2,unclear,False,4.0
+nobel_367,Severo Ochoa,nobel,,,1959,2,unclear,False,4.0
+nobel_1049,Shimon Sakaguchi,nobel,,,2025,1,unclear,False,4.0
+nobel_875,Shinya Yamanaka,nobel,,,2012,2,research,True,4.0
+nobel_339,Sir Alexander Fleming,nobel,,,1945,2,unclear,False,4.0
+nobel_394,Sir Bernard Katz,nobel,,,1970,2,research,False,4.0
+nobel_323,Sir Charles Sherrington,nobel,,,1932,3,research,True,4.0
+nobel_369,Sir Frank Macfarlane Burnet,nobel,,,1960,2,unclear,False,4.0
+nobel_320,Sir Frederick Hopkins,nobel,,,1929,3,research,True,4.0
+nobel_330,Sir Henry Dale,nobel,,,1936,3,research,False,4.0
+nobel_341,Sir Howard Florey,nobel,,,1945,2,unclear,False,4.0
+nobel_437,Sir James W. Black,nobel,,,1988,2,unclear,False,4.0
+nobel_874,Sir John B. Gurdon,nobel,,,2012,3,research,True,4.0
+nobel_375,Sir John Eccles,nobel,,,1963,2,research,True,4.0
+nobel_812,Sir Martin J. Evans,nobel,,,2007,2,research,False,4.0
+nobel_737,Sir Paul Nurse,nobel,,,2001,2,research,False,4.0
+nobel_971,Sir Peter J. Ratcliffe,nobel,,,2019,3,research,False,4.0
+nobel_765,Sir Peter Mansfield,nobel,,,2003,3,unclear,False,4.0
+nobel_457,Stanley B. Prusiner,nobel,,,1997,3,research,False,4.0
+nobel_434,Stanley Cohen,nobel,,,1986,1,research,True,4.0
+nobel_425,Sune K. Bergström,nobel,,,1982,2,research,True,4.0
+nobel_436,Susumu Tonegawa,nobel,,,1987,3,unclear,False,4.0
+nobel_1011,Svante Pääbo,nobel,,,2022,2,unclear,False,4.0
+nobel_750,Sydney Brenner,nobel,,,2002,3,research,True,4.0
+nobel_350,Tadeus Reichstein,nobel,,,1950,2,unclear,False,4.0
+nobel_959,Tasuku Honjo,nobel,,,2018,3,research,True,4.0
+nobel_303,Theodor Kocher,nobel,,,1909,2,research,False,4.0
+nobel_886,Thomas C. Südhof,nobel,,,2013,2,research,False,4.0
+nobel_325,Thomas H. Morgan,nobel,,,1933,2,research,False,4.0
+nobel_357,Thomas H. Weller,nobel,,,1954,2,unclear,False,4.0
+nobel_736,Tim Hunt,nobel,,,2001,2,research,True,4.0
+nobel_424,Torsten N. Wiesel,nobel,,,1981,3,research,False,4.0
+nobel_918,Tu Youyou,nobel,,,2015,2,research,True,4.0
+nobel_395,Ulf von Euler,nobel,,,1970,1,research,False,4.0
+nobel_1035,Victor Ambros,nobel,,,2024,1,research,False,4.0
+nobel_347,Walter Hess,nobel,,,1949,3,research,False,4.0
+nobel_414,Werner Arber,nobel,,,1978,2,research,True,4.0
+nobel_361,Werner Forssmann,nobel,,,1956,2,unclear,False,4.0
+nobel_315,Willem Einthoven,nobel,,,1924,2,unclear,False,4.0
+nobel_916,William C. Campbell,nobel,,,2015,3,research,True,4.0
+nobel_970,William G. Kaelin Jr,nobel,,,2019,2,research,True,4.0
+nobel_328,William P. Murphy,nobel,,,1934,3,unclear,False,4.0
+nobel_927,Yoshinori Ohsumi,nobel,,,2016,3,research,True,4.0

@@ -1,0 +1,7 @@
+﻿group,n_docs,median_chars,event_ratio,rhetoric_ratio,self_ratio
+nobel:biographical,622,6344,0.124,0.0,0.314
+nobel:interview,300,7707,0.04,0.001,0.346
+nobel:lecture,60,28013,0.075,0.0,0.248
+nobel:speech,342,2603,0.027,0.0,0.344
+rmrb_scholarship:本专科生,300,133,0.405,0.016,0.224
+rmrb_scholarship:研究生,300,134,0.413,0.017,0.169

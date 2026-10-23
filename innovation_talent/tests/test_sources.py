@@ -165,3 +165,40 @@ def test_nobel_voice():
     bio = 'He was born in 1918. His father worked in uniforms. ' * 20
     assert nobel.narrative_voice(auto) == 'self'
     assert nobel.narrative_voice(bio) == 'narrator'
+
+
+def test_rmrb_name_lines_real_layout():
+    # 真实版式：姓名单独一行，两字姓名中间有空格；于、曾是姓氏；少数民族姓名含“·”
+    paras = [(t, '') for t in [
+        '经过严格选拔和评审，全国6万名本专科学生荣获国家奖学金。以下100名学生是优秀代表。',
+        '金 朝', '清华大学机械工程系机械工程专业2020级学生，中共预备党员。',
+        '于翔宇', '中国矿业大学（北京）资源与安全工程学院2021级学生。',
+        '曾　鑫', '中国科学院大学天文与空间科学学院天体物理专业2023级硕士研究生。',
+        '买热合巴·艾尼瓦尔', '南京大学法学院法学专业2022级学生，维吾尔族。']]
+    es = rmrb.parse_entries(paras)
+    assert [e['name'] for e in es] == ['金朝', '于翔宇', '曾鑫', '买热合巴·艾尼瓦尔']
+    assert es[1]['school'] == '中国矿业大学（北京）'
+    assert es[2]['school'] == '中国科学院大学' and es[2]['grade'] == '2023'
+    assert es[2]['program'].startswith('天文与空间科学学院')
+
+
+def test_rmrb_dedupe_and_dump_rebuild():
+    text = '姓名行说明\n刘胜与\n北京大学信息科学技术学院2021级学生。'
+    dump = [{'date': '2024-05-04', 'page': p, 'title': '本专科生国家奖学金获奖学生代表名录',
+             'text': text, 'url': 'https://paper.people.com.cn/rmrb/html/2024-05/04/x-0%d.htm' % p}
+            for p in (6, 5)]
+    arts = rmrb.dedupe_articles(rmrb.articles_from_dump(dump))
+    assert len(arts) == 1 and arts[0]['page'] == 5
+    assert rmrb.to_docs(arts[0])[0]['name'] == '刘胜与'
+
+
+def test_nobel_clean_text():
+    page = '\n'.join(['Nobel Prize in Physics 1975', 'Summary', 'Share this', 'Facebook',
+                      'X', 'LinkedIn', 'Email this page', 'Aage N. Bohr', 'Biographical',
+                      'I was born in Copenhagen.', 'Your browser does not support the video tag.',
+                      'Later I studied physics.', 'This autobiography/biography was written',
+                      'To cite this section', 'Nobel Prizes 2026', 'Explore prizes and laureates'])
+    assert nobel.clean_text(page, 'Aage N. Bohr') == \
+        'I was born in Copenhagen.\nLater I studied physics.'
+    d = nobel.clean_doc({'text': page, 'name': 'Aage N. Bohr', 'source_type': 'lecture'})
+    assert d['pdf_only'] is True

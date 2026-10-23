@@ -37,22 +37,33 @@ def _years(spec):
 def cmd_rmrb(args):
     from datetime import date
     from .sources import rmrb
-    f = _fetcher(args)
+    f = None if args.from_raw else _fetcher(args)
     if args.dates:
         days = [date(*map(int, d.split('-'))) for d in args.dates.split(',')]
     else:
         days = rmrb.dates_for(_years(args.years), args.window.split(':'))
-    docs, raw = [], []
+    if args.from_raw:
+        # 不联网：用之前 --dump-raw 保存的原文重新切分条目，并覆盖输出文件
+        arts = rmrb.dedupe_articles(rmrb.articles_from_dump(
+            corpus.read_jsonl(args.from_raw)))
+        docs = [d for a in arts for d in rmrb.to_docs(a, args.include_vocational)]
+        rmrb.check_counts(docs)
+        corpus.write_jsonl(args.out, docs)
+        logger.info('由原文重建：名录 %d 份，条目 %d 条：%s', len(arts), len(docs),
+                    args.out)
+        return
+    arts = []
     for d in days:
-        for art in rmrb.crawl_date(f, d, scan_all=args.scan_all):
-            raw.append({k: art[k] for k in ('date', 'page', 'url', 'title',
-                                            'text')})
-            docs.extend(rmrb.to_docs(art, args.include_vocational))
+        arts.extend(rmrb.crawl_date(f, d, scan_all=args.scan_all))
+    raw = [{k: a[k] for k in ('date', 'page', 'url', 'title', 'text')}
+           for a in arts]
+    arts = rmrb.dedupe_articles(arts)
+    docs = [d for a in arts for d in rmrb.to_docs(a, args.include_vocational)]
     rmrb.check_counts(docs)
     if args.dump_raw:
         corpus.write_jsonl(args.dump_raw, raw)
     n = corpus.merge_jsonl(args.out, docs)
-    logger.info('名录文章 %d 篇，解析条目 %d 条，%s 共 %d 条', len(raw), len(docs),
+    logger.info('名录 %d 份，解析条目 %d 条，%s 共 %d 条', len(arts), len(docs),
                 args.out, n)
 
 
@@ -311,6 +322,7 @@ def main(argv=None):
     s.add_argument('--scan-all', action='store_true',
                    help='打开每天全部文章再判断（慢），默认只打开标题含“国家奖学金”的文章')
     s.add_argument('--dump-raw', help='把名录原文另存为 JSONL，便于核对条目切分')
+    s.add_argument('--from-raw', help='不联网，用 --dump-raw 保存的原文重新切分条目')
     s.add_argument('--out', default=os.path.join(DATA, 'raw', 'rmrb.jsonl'))
     s.set_defaults(func=cmd_rmrb)
 

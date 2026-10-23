@@ -121,6 +121,55 @@ def narrative_voice(text):
     return 'self' if first * 1000 / len(words) >= 8 else 'narrator'
 
 
+_PAGE_LABELS = {'Biographical', 'Banquet speech', 'Interview', 'Nobel Prize lecture',
+                'Interview transcript'}
+_FOOTER = ('To cite this section', 'Go to the top of the page',
+           'Explore prizes and laureates', 'Did you find any typos',
+           'This autobiography/biography was written')
+_NOISE = {'Your browser does not support the video tag.', 'Read the Nobel Lecture'}
+
+
+def clean_text(text, name=''):
+    """去掉诺奖官网页面的导航菜单、分享按钮与页脚，只留正文。
+
+    页面结构为：导航 → Share this / Facebook / X / LinkedIn / Email this page
+    → 姓名 → 页面类型（Biographical 等）→ 正文 → To cite this section 等页脚。
+    """
+    lines = text.split('\n')
+    start = 0
+    for marker in ('Email this page', 'Share this'):
+        if marker in lines:
+            start = lines.index(marker) + 1
+            break
+    while start < len(lines) and (lines[start] in _PAGE_LABELS or
+                                  lines[start].strip() == name.strip() or
+                                  lines[start] in ('Facebook', 'X', 'LinkedIn')):
+        start += 1
+    end = len(lines)
+    for i in range(start, len(lines)):
+        if lines[i].startswith(_FOOTER) or re.match(r'^Nobel Prizes \d{4}$', lines[i]):
+            end = i
+            break
+    body = [ln for ln in lines[start:end] if ln not in _NOISE and
+            not re.match(r'^Pdf \d+ kB$', ln)]
+    return '\n'.join(body).strip()
+
+
+def is_pdf_stub(source_type, text):
+    """讲座页面多数只有 PDF 链接和版权信息，正文在 PDF 里。"""
+    return source_type == 'lecture' and len(text) < 3000
+
+
+def clean_doc(doc):
+    d = dict(doc)
+    d['text'] = clean_text(doc['text'], doc.get('name', ''))
+    d['title'] = '%s – %s' % (doc.get('name', ''), doc['source_type'])
+    if d['source_type'] == 'biographical':
+        d['narrative_voice'] = narrative_voice(d['text'])
+    d['pdf_only'] = is_pdf_stub(d['source_type'], d['text'])
+    return d
+
+
 def fetch_laureate_docs(fetcher, lau, page_types=PAGE_TYPES, min_chars=300):
     bases = lau['bases']
     if not bases and lau['prizes']:
@@ -138,14 +187,14 @@ def fetch_laureate_docs(fetcher, lau, page_types=PAGE_TYPES, min_chars=300):
                 continue
             voice = 'self' if pt in ('speech', 'interview', 'lecture') \
                 else narrative_voice(parsed['text'])
-            docs.append(corpus.new_doc(
+            docs.append(clean_doc(corpus.new_doc(
                 'nobel', pt, url, parsed['title'], parsed['text'],
                 name=lau['name'], pid=pid, laureate_id=lau['laureate_id'],
                 category=m.group(1), award_year=m.group(2),
                 birth_year=lau['birth_year'], gender=lau['gender'],
                 motivation=lau['prizes'][0]['motivation']
                 if lau['prizes'] else '',
-                narrative_voice=voice, language='en'))
+                narrative_voice=voice, language='en')))
     if not docs:
         logger.info('未找到页面：%s', lau['name'])
     return docs

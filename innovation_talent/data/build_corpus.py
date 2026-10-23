@@ -1,0 +1,166 @@
+# -*- coding: UTF-8 -*-
+"""由 data/raw/ 中的抓取原文生成整理后的数据与初步统计。
+
+在 innovation_talent/ 目录下运行：
+    python3 data/build_corpus.py
+输入：
+    data/raw/rmrb_lists_raw.jsonl   rmrb --dump-raw 保存的名录原文
+    data/raw/nobel_pages_raw.jsonl  nobel 子命令抓取的页面（未清洗）
+输出见 data/README.md。
+"""
+
+import csv
+import os
+import sys
+from collections import Counter, defaultdict
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(HERE))
+
+from talent_corpus import corpus  # noqa: E402
+from talent_corpus.analysis import build_persons  # noqa: E402
+from talent_corpus.preprocess import Tagger, prepare  # noqa: E402
+from talent_corpus.sources import nobel, rmrb  # noqa: E402
+
+RAW = os.path.join(HERE, 'raw')
+OUT_RMRB = os.path.join(HERE, 'rmrb_scholarship')
+OUT_NOBEL = os.path.join(HERE, 'nobel', 'texts')
+OUT_STATS = os.path.join(HERE, 'initial_stats')
+LEVEL_CN = {'undergraduate': '本专科生', 'graduate': '研究生'}
+PERIOD_CN = {'P0': '学前与小学', 'P1': '中学', 'P2': '本科', 'P3': '硕士与博士',
+             'P4': '博士后与青年研究者', 'P5': '独立研究期'}
+
+
+def write_csv(path, rows, fields):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8-sig', newline='') as f:
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction='ignore')
+        w.writeheader()
+        w.writerows(rows)
+
+
+def build_rmrb():
+    arts = rmrb.dedupe_articles(rmrb.articles_from_dump(
+        corpus.read_jsonl(os.path.join(RAW, 'rmrb_lists_raw.jsonl'))))
+    docs = [d for a in arts for d in rmrb.to_docs(a)]
+    corpus.write_jsonl(os.path.join(OUT_RMRB, 'entries.jsonl'), docs)
+    write_csv(os.path.join(OUT_RMRB, 'entries.csv'), docs,
+              ['person_id', 'name', 'school', 'program', 'grade', 'level',
+               'award_year', 'publish_date', 'page', 'text', 'url', 'doc_id'])
+    summary = Counter((d['publish_date'], d['level'], d['award_year'],
+                       d['title']) for d in docs)
+    write_csv(os.path.join(OUT_RMRB, 'list_summary.csv'),
+              [{'publish_date': k[0], 'level': LEVEL_CN.get(k[1], k[1]),
+                'award_year': k[2], 'title': k[3], 'n_entries': n}
+               for k, n in sorted(summary.items())],
+              ['publish_date', 'level', 'award_year', 'title', 'n_entries'])
+    return docs
+
+
+def build_nobel():
+    docs = [nobel.clean_doc(d) for d in corpus.read_jsonl(
+        os.path.join(RAW, 'nobel_pages_raw.jsonl'))]
+    for d in docs:
+        d['too_short'] = len(d['text']) < 300
+        d['has_text'] = not d['pdf_only'] and not d['too_short']
+    by_type = defaultdict(list)
+    for d in docs:
+        if d['has_text']:
+            by_type[d['source_type']].append(d)
+    for t, ds in by_type.items():
+        corpus.write_jsonl(os.path.join(OUT_NOBEL, t + '.jsonl'),
+                           sorted(ds, key=lambda x: (x['award_year'], x['name'])))
+    write_csv(os.path.join(HERE, 'nobel', 'text_index.csv'),
+              [dict(d, chars=len(d['text'])) for d in
+               sorted(docs, key=lambda x: (x['award_year'], x['name'],
+                                           x['source_type']))],
+              ['doc_id', 'laureate_id', 'name', 'category', 'award_year',
+               'source_type', 'narrative_voice', 'chars', 'has_text',
+               'pdf_only', 'too_short', 'url'])
+    return [d for d in docs if d['has_text']]
+
+
+def stats(rmrb_docs, nobel_docs):
+    tagger = Tagger()
+    prepared = [prepare(d, tagger) for d in rmrb_docs + nobel_docs]
+    persons = build_persons(prepared)
+    write_csv(os.path.join(OUT_STATS, 'persons_sample_type.csv'),
+              persons.values(),
+              ['person_id', 'name', 'corpus', 'level', 'school', 'award_year',
+               'n_docs', 'sample_type', 'innovation', 'stage'])
+    # 国奖样本的类型分布
+    rows = []
+    for level in ('undergraduate', 'graduate'):
+        ps = [p for p in persons.values() if p['corpus'] == 'rmrb_scholarship'
+              and p['level'] == level]
+        c = Counter(p['sample_type'] for p in ps)
+        for t, n in c.most_common():
+            rows.append({'level': LEVEL_CN[level], 'sample_type': t, 'n': n,
+                         'share': round(n / len(ps), 3)})
+        rows.append({'level': LEVEL_CN[level], 'sample_type': '（创新型合计）',
+                     'n': sum(p['innovation'] for p in ps),
+                     'share': round(sum(p['innovation'] for p in ps) / len(ps), 3)})
+    write_csv(os.path.join(OUT_STATS, 'sample_type_summary.csv'), rows,
+              ['level', 'sample_type', 'n', 'share'])
+    # 各类文本的事件句、口号句、第一人称比例
+    groups = defaultdict(list)
+    for d in prepared:
+        key = d['corpus'] + ':' + (LEVEL_CN.get(d.get('level'), '') or
+                                   d['source_type'])
+        groups[key].append(d)
+    rows = []
+    for k, ds in sorted(groups.items()):
+        n = len(ds)
+        rows.append({
+            'group': k, 'n_docs': n,
+            'median_chars': sorted(len(d['text']) for d in ds)[n // 2],
+            'event_ratio': round(sum(d['stats']['event_ratio'] for d in ds) / n, 3),
+            'rhetoric_ratio': round(sum(d['stats']['rhetoric_ratio'] for d in ds) / n, 3),
+            'self_ratio': round(sum(d['stats']['self_ratio'] for d in ds) / n, 3),
+        })
+    write_csv(os.path.join(OUT_STATS, 'text_profile.csv'), rows,
+              ['group', 'n_docs', 'median_chars', 'event_ratio',
+               'rhetoric_ratio', 'self_ratio'])
+    # 诺奖自传覆盖了哪些人生时期（按时期关键词，启发式）
+    bios = [d for d in prepared if d['source_type'] == 'biographical']
+    rows = []
+    for code, label in PERIOD_CN.items():
+        for voice in ('self', 'narrator', 'all'):
+            ds = [d for d in bios if voice == 'all' or d['narrative_voice'] == voice]
+            k = sum(1 for d in ds if any(s['period'] == code and s['period_explicit']
+                                         for s in d['sentences']))
+            rows.append({'period': code, 'label': label, 'voice': voice,
+                         'n_bios': len(ds), 'n_mentioning': k,
+                         'share': round(k / len(ds), 3) if ds else None})
+    write_csv(os.path.join(OUT_STATS, 'nobel_bio_period_coverage.csv'), rows,
+              ['period', 'label', 'voice', 'n_bios', 'n_mentioning', 'share'])
+    # 国奖事迹中的高频成就信号
+    from talent_corpus import load_lexicon
+    signals = load_lexicon()['sample_type_signals']
+    rows = []
+    stu = [d for d in prepared if d['corpus'] == 'rmrb_scholarship']
+    for t, words in signals.items():
+        for w in words:
+            n = sum(1 for d in stu if w in d['text'])
+            if n:
+                rows.append({'type': t, 'signal': w, 'n_entries': n,
+                             'share': round(n / len(stu), 3)})
+    rows.sort(key=lambda r: -r['n_entries'])
+    write_csv(os.path.join(OUT_STATS, 'scholarship_signal_counts.csv'), rows,
+              ['type', 'signal', 'n_entries', 'share'])
+    schools = Counter(d['school'] for d in rmrb_docs)
+    write_csv(os.path.join(OUT_STATS, 'scholarship_schools.csv'),
+              [{'school': s, 'n_entries': n} for s, n in schools.most_common()],
+              ['school', 'n_entries'])
+    return persons
+
+
+def main():
+    r = build_rmrb()
+    n = build_nobel()
+    persons = stats(r, n)
+    print('名录条目', len(r), '诺奖文本', len(n), '人物', len(persons))
+
+
+if __name__ == '__main__':
+    main()

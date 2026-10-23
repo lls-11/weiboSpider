@@ -29,14 +29,11 @@ _NEW_ART = re.compile(r'content_\d+\.html')
 _OLD_PAGE = re.compile(r'nbs\.D110000renmrb_(\d+)\.htm')
 _OLD_ART = re.compile(r'nw\.D110000renmrb_\d{8}_\d+-\d+\.htm')
 
-_HAN_NAME = r'[一-龥][一-龥·]{1,5}'
+_HAN_NAME = r'[一-龥][一-龥·]{1,15}'
 _INSTITUTION = re.compile(
     r'[一-龥A-Za-z（）()]{2,30}?'
     r'(大学|学院|学校|研究院|研究所|科学院|研究中心|党校)')
 _HEADER = re.compile(r'^(' + _HAN_NAME + r')[\s，,：:、|｜]+(.{0,80})$')
-_PROGRAM = re.compile(
-    r'((?:19|20)\d{2}级)?[^，。；,;]{0,20}?'
-    r'(本科生|专科生|高职生|硕士研究生|博士研究生|硕士生|博士生|研究生|直博生)')
 _NOT_NAMES = {'此外', '同时', '其中', '目前', '近年', '近年来', '此前', '随后',
               '后来', '如今', '当时', '期间', '因此', '截至', '另外', '在校',
               '本科', '硕士', '博士', '读研', '读博', '大学', '学校', '学院'}
@@ -123,21 +120,33 @@ def article_paragraphs(html_text):
     return out
 
 
-def _is_name(s):
+def _is_name(s, strict=True):
+    """strict 时排除“他”“在”“于”等常见句首字，用于“姓名 + 院校”同段的情形；
+    姓名单独成段时不排除（于、曾、全等也是姓氏）。"""
     s = s.strip()
-    return (2 <= len(s) <= 6 and re.fullmatch(_HAN_NAME, s) is not None
-            and s not in _NOT_NAMES and not s.startswith(_NOT_NAME_START))
+    # 少数民族姓名含“·”，可长达十余字
+    limit = 16 if '·' in s else 6
+    return (2 <= len(s) <= limit and re.fullmatch(_HAN_NAME, s) is not None
+            and s not in _NOT_NAMES and
+            not (strict and s.startswith(_NOT_NAME_START)))
+
+
+def _compact_name(s):
+    """两字姓名在版面上常排成“金　朝”，去掉中间空白后再判断。"""
+    c = re.sub(r'\s+', '', s)
+    return c if len(c) <= (16 if '·' in c else 6) else s
 
 
 def _header(text, lead):
     """判断段落是否为条目开头，返回 (姓名, 段内其余文本, 识别方式) 或 None。"""
+    lead = _compact_name(lead) if lead else lead
     if lead and _is_name(lead):
         return lead, text[len(lead):].lstrip(' ，,：:、|｜'), 'bold'
     m = _HEADER.match(text)
     if m and _is_name(m.group(1)) and _INSTITUTION.search(m.group(2)[:40]):
         return m.group(1), m.group(2), 'regex'
-    if _is_name(text):
-        return text, '', 'name_only'
+    if _is_name(_compact_name(text), strict=False):
+        return _compact_name(text), '', 'name_only'
     return None
 
 
@@ -158,18 +167,62 @@ def parse_entries(paragraphs):
     out = []
     for e in entries:
         body = '\n'.join(e['lines']).strip()
-        head = body[:80]
-        inst = _INSTITUTION.search(head)
-        prog = _PROGRAM.search(head)
+        school, program = split_affiliation(body)
+        grade = _GRADE.search(body[:120])
         out.append({
             'name': e['name'],
-            'school': inst.group(0) if inst else '',
-            'program': prog.group(0) if prog else '',
+            'school': school,
+            'program': program,
+            'grade': grade.group(1) if grade else '',
             'text': body,
             'parse_method': e['how'],
         })
     # 只有姓名、没有内容的条目通常是误判（如小标题）
     return [e for e in out if e['text'] or e['parse_method'] != 'name_only']
+
+
+_GRADE = re.compile(r'((?:19|20)\d{2})级')
+
+
+def split_affiliation(body):
+    """从事迹首句拆出院校与院系专业：
+    “北京大学信息科学技术学院信息与计算科学专业2021级图灵班学生。”
+    → ('北京大学', '信息科学技术学院信息与计算科学专业2021级图灵班学生')
+    """
+    first = re.split(r'[，。；,;]', body, 1)[0]
+    m = _INSTITUTION.search(first[:40])
+    if not m:
+        return '', first[:60]
+    end = m.end()
+    # 中国科学院大学、中国社会科学院大学等：懒惰匹配会停在“科学院”
+    if first[end:end + 2] == '大学':
+        end += 2
+    # 分校区：中国矿业大学（北京）、中国石油大学（华东）
+    campus = re.match(r'[（(][\u4e00-\u9fa5]{2,4}[）)]', first[end:])
+    if campus:
+        end += campus.end()
+    return first[m.start():end], first[end:]
+
+
+def dedupe_articles(articles):
+    """同一份名录在相邻两个版面各有一个入口，正文相同，只保留版次最小的一篇。"""
+    seen, out = set(), []
+    for a in sorted(articles, key=lambda x: (x['date'], x['page'])):
+        key = (a['date'], a['title'], hash(a['text']))
+        if key not in seen:
+            seen.add(key)
+            out.append(a)
+    return out
+
+
+def articles_from_dump(rows):
+    """由 --dump-raw 保存的原文重建文章；正文按行即为原段落。"""
+    for r in rows:
+        r = dict(r)
+        r.setdefault('format', 'new' if '/pc/' in r['url'] else 'old')
+        r['paragraphs'] = [(line, '') for line in r['text'].split('\n')
+                           if line.strip()]
+        yield r
 
 
 def list_level(title):
@@ -244,7 +297,8 @@ def to_docs(article, include_vocational=False):
         docs.append(corpus.new_doc(
             'rmrb_scholarship', 'list_entry', article['url'],
             article['title'], e['text'], name=e['name'],
-            school=e['school'], program=e['program'], level=level,
+            school=e['school'], program=e['program'], grade=e['grade'],
+            level=level,
             award_year=year, publish_date=article['date'],
             page=article['page'], parse_method=e['parse_method']))
     return docs
