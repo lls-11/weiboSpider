@@ -1,0 +1,62 @@
+﻿doc_id,name,corpus,indicator,indicator_name,dimension,anchor_stage,evidence_quality,sentence_id,life_period,attribution,quote,rationale
+rmrb_scholarship_5f2d0a15090c,李天一,rmrb_scholarship,C04,领域身份认同,1,2,1,S003,P2,narrator,聚焦废弃物资源化利用,只给出研究方向，没有过程，属于概括
+rmrb_scholarship_c7e742b43021,王腾昊,rmrb_scholarship,C28,自发项目,6,2,2,S003,P2,narrator,主持调研红色旅游和工业遗产保护现状,本人主持的调研项目，课程外
+rmrb_scholarship_74b6757579c2,姜雨珊,rmrb_scholarship,C33,想法转化为可检验方案,6,2,3,S004,P2,narrator,研发小型“背包快检”设备，完成5000余份样本检测,想法做成原型并大规模检验，有可核验结果
+rmrb_scholarship_617bec1a0350,周嘉晟,rmrb_scholarship,C10,主动信息搜寻,2,2,1,S003,P2,narrator,参与高性能网络设计领域的国家重点研发项目,参与他人项目，只记为概括
+rmrb_scholarship_ad0511e324fe,郝彦鑫,rmrb_scholarship,C33,想法转化为可检验方案,6,2,2,S004,P2,narrator,作为发明人之一，申请并获2项国家发明专利授权，助力解决高端环氧树脂的技术难题,把想法转为专利方案，本人角色为发明人之一
+rmrb_scholarship_b13f8b8e0c38,殷旭鹏,rmrb_scholarship,C04,领域身份认同,1,2,1,S003,P2,narrator,围绕机器人与模式识别开展研究,模板化表述
+rmrb_scholarship_edd178267dc7,潘南方,rmrb_scholarship,C04,领域身份认同,1,3,1,S003,P3,narrator,聚焦精神疾病影像可视化难题,模板化表述
+rmrb_scholarship_69f9006ceaa2,马英剑,rmrb_scholarship,C04,领域身份认同,1,3,1,S003,P3,narrator,聚焦纳米农药与绿色防控研究,模板化表述
+rmrb_scholarship_70782bc3d6ee,章仕起,rmrb_scholarship,C04,领域身份认同,1,3,1,S003,P3,narrator,专注能源领域学科前沿，聚焦绿氢制备关键核心技术,模板化表述
+rmrb_scholarship_43898b1518f9,栗玉朋,rmrb_scholarship,C04,领域身份认同,1,3,1,S003,P3,narrator,围绕群智能优化、图像分割和特征选择等领域展开研究,模板化表述
+rmrb_scholarship_d63611fafe04,李双阳,rmrb_scholarship,C04,领域身份认同,1,3,1,S003,P3,narrator,致力于研究抗凝血涂层及小口径人工血管,模板化表述
+rmrb_scholarship_f19f901e6194,马华龙,rmrb_scholarship,C28,自发项目,6,2,2,S003,P3,narrator,曾带队并多次赴韶关农村基层开展慢性病管理社会实践,本人带队、多次，有对象
+rmrb_scholarship_85c913faf976,王月莹,rmrb_scholarship,C28,自发项目,6,2,3,S003,P3,narrator,组队在全国四个省份的六个地区建设6个助农研学基站,本人组队发起，有数量与结果
+rmrb_scholarship_ae96c6127a8e,章誉兴,rmrb_scholarship,C21,隐藏规律发现,4,3,3,S002,P3,narrator,首次报道了哺乳动物中的杂交物种形成事件,从数据中发现新现象并有顶刊发表
+rmrb_scholarship_ae96c6127a8e,章誉兴,rmrb_scholarship,C28,自发项目,6,3,2,S003,P3,narrator,主持云南省教育厅科学研究基金项目1项,本人申请并主持的课题
+rmrb_scholarship_8c77ab5a8123,周颖,rmrb_scholarship,C33,想法转化为可检验方案,6,3,3,S004,P3,narrator,主持研发拓扑优化软件ETop，相关技术在航空航天、船舶等领域关键型号研制上实现应用,把方法做成软件并被实际采用
+rmrb_scholarship_8c77ab5a8123,周颖,rmrb_scholarship,C32,作品修改增益,6,3,2,S004,P3,narrator,主持研发拓扑优化软件ETop,软件研发隐含迭代，但未写版本，证据弱
+rmrb_scholarship_a511637ccbc3,王峰,rmrb_scholarship,C28,自发项目,6,3,2,S002,P3,narrator,主持完成湖南省研究生科研创新项目1项,本人主持并完成
+rmrb_scholarship_1e056e85a189,关瑞卿,rmrb_scholarship,C33,想法转化为可检验方案,6,3,2,S003,P3,narrator,完成某型航空装备预研试验、某型高超声速进气道相关风洞试验及某新型超燃冲压发动机相关试验设备研究,设计并完成试验，但本人角色不清
+rmrb_scholarship_b8cdb38f4f93,王培仲,rmrb_scholarship,C10,主动信息搜寻,2,3,2,S003,P3,narrator,赴美国参加美国心理学会年会，进行学术展示交流,主动寻求同行交流
+rmrb_scholarship_d4fe38a21762,张俊,rmrb_scholarship,C28,自发项目,6,3,2,S003,P3,narrator,主持国家自然科学基金青年学生基础研究项目,本人申请并主持
+nobel_cf9641f1ace8,George E. Smith,nobel,C33,想法转化为可检验方案,6,4,3,S025,P5,self,published the first paper disclosing the device concept accompanied by a paper on its experimental verification,概念与实验验证同时发表
+nobel_cf9641f1ace8,George E. Smith,nobel,C32,作品修改增益,6,4,3,S026,P5,self,significantly improved the performance of the original CCD,在原发明基础上的改进版本
+nobel_8ef21cf823bf,François Englert,nobel,C06,求知好奇心,2,1,1,S023,P1,self,"I developed an interest in literature, music and mathematics.",兴趣的概括陈述
+nobel_8ef21cf823bf,François Englert,nobel,C02,目标自我一致性,1,3,2,S027,P2,self,I realised however that my interest was less in practical applications than in the understanding of the underlying theoretical structure and I decided to learn physics.,工程学位后按自身兴趣转学物理，父母与老师原本推荐工科
+nobel_8ef21cf823bf,François Englert,nobel,C05,目标与实际选择一致性,1,2,2,S028,P3,self,got my Physics Masters Degree in 1958 and my PhD in 1959,决定学物理后实际完成学位
+nobel_8ef21cf823bf,François Englert,nobel,C18,跨领域类比,4,4,3,S035,P4,self,drove us later to study the fate of spontaneous symmetry breaking in the context of gauge theory,把凝聚态的自发对称破缺迁移到规范场论，后成为BEH机制
+nobel_8ef21cf823bf,François Englert,nobel,C11,对兴趣的反复返回,2,3,2,S043,P5,self,"In Brussels, we resumed our analysis on spontaneous symmetry breaking",回到美国时期的核心问题
+nobel_8ef21cf823bf,François Englert,nobel,C28,自发项目,6,4,2,S045,P5,self,Brout and I initiated a research group in fundamental interactions,发起研究组
+nobel_8ef21cf823bf,François Englert,nobel,C01,目标清晰度,1,4,2,S050,P5,self,what I consider as the most important problem in fundamental interactions: the solution to the conflict between the classical Einsteinian theory of gravitation,明确的领域层面长期目标
+nobel_96876147ef07,Yves Chauvin,nobel,C02,目标自我一致性,1,3,2,S026,P4,self,"the fact that process development consisted primarily of copying what already existed, with no possibility of exploring other fields, prompted me to resign",因工作只是照搬而辞职
+nobel_96876147ef07,Yves Chauvin,nobel,C25,抵抗无依据的多数压力,5,3,1,S030,P4,self,I have often got into arguments about it.,与主流做法争论，但没写依据与结果
+nobel_96876147ef07,Yves Chauvin,nobel,C03,自主性动机,1,3,2,S034,P4,self,managed to focus my work on what I thought would be most interesting,自主选择研究重点
+nobel_96876147ef07,Yves Chauvin,nobel,C07,知识缺口敏感性,2,3,2,S038,P4,self,"nothing much was being done in France on coordination chemistry, organometallics or homogeneous catalysis",识别国内研究空白并进入
+nobel_96876147ef07,Yves Chauvin,nobel,C33,想法转化为可检验方案,6,4,3,S046,P5,self,There are currently 35 plants in operation,把催化想法做成工业过程并大规模应用
+nobel_96876147ef07,Yves Chauvin,nobel,C18,跨领域类比,4,4,3,S060,P5,self,"I thought it would be a good idea to try to use these electrolytes, which belong to the class of ionic liquids, as catalyst solvents.",把电池电解质迁移为催化溶剂，结果证实可行
+nobel_5c0bbdaf68a0,Gerhard Ertl,nobel,C06,求知好奇心,2,1,2,S006,P1,self,enjoyed very much to follow its prescriptions in my bedroom,中学时在家做化学实验
+nobel_5c0bbdaf68a0,Gerhard Ertl,nobel,C11,对兴趣的反复返回,2,2,2,S018,P2,self,For my diploma thesis work I decided to return to chemistry,转向物理后又回到化学
+nobel_5c0bbdaf68a0,Gerhard Ertl,nobel,C33,想法转化为可检验方案,6,2,3,S022,P2,self,I became fascinated by the challenge to develop such an apparatus and measure the rate constant,研制装置并测得速率常数
+nobel_5c0bbdaf68a0,Gerhard Ertl,nobel,C23,创意评价准确性,5,2,2,S023,P3,self,"it became soon clear that the applicability of this technique would be limited, and hence I asked Gerischer for another project",判断方法前景有限并主动换题
+nobel_5c0bbdaf68a0,Gerhard Ertl,nobel,C33,想法转化为可检验方案,6,3,2,S028,P3,self,I managed to build such an apparatus,自建超高真空装置完成博士工作
+nobel_5c0bbdaf68a0,Gerhard Ertl,nobel,C16,远距离联结,4,3,2,S034,P4,self,we combined structural information from LEED with thermodynamics and kinetics,组合不同来源的信息研究表面反应
+nobel_5c0bbdaf68a0,Gerhard Ertl,nobel,C07,知识缺口敏感性,2,4,3,S041,P5,self,"after I learned at a conference, that despite of fifty years of research this was still an open problem",识别领域长期未解问题并解决（合成氨机理）
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C06,求知好奇心,2,1,2,S004,P0,self,"I was an avid collector of bugs, butterflies, lizards, snakes, and spiders.",童年自发收集
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C26,根据反证更新判断,5,1,2,S007,P0,self,displayed a fine set of teeth and sank them into my thumb,亲身证据推翻书本说法，由此学会怀疑
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C06,求知好奇心,2,1,2,S022,P0,self,"he would not explain to me, how neon signs work",追问原理
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C02,目标自我一致性,1,2,2,S029,P2,self,I learned that biology could be quantitative and it was little time before I changed my major to biology,按兴趣转专业
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C29,持续投入,6,2,2,S030,P2,self,I was able to do research nearly every quarter and summer,本科持续做研究
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C10,主动信息搜寻,2,2,2,S032,P2,self,reading the original literature in phage genetics and gene regulation,自主阅读原始文献
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C05,目标与实际选择一致性,1,3,2,S034,P3,self,I had decided that I wanted to work on gene regulation and I knew of only two prominent labs in the US,目标与择校选择一致
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C07,知识缺口敏感性,2,3,2,S041,P4,self,I thought it appropriate to do my postdoctoral work on something much less well understood,判断原领域已基本解决，转向未解问题
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C28,自发项目,6,3,2,S048,P4,self,about half the time trying to get something of my own started,主课题之外自主探索
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C30,失败后重新投入,6,3,2,S053,P4,self,none of the three projects that I worked on as possible starting points for my own entry into research worked,三个课题失败后重新出发
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C27,利用异议扩展策略,5,3,2,S058,P4,self,"Dan Wulff, another new recruit, suggested that I find a model eukaryotic cell that could be used for genetic studies of cell growth",采纳同事建议扩展研究路径
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C19,问题重新表征,4,4,3,S059,P4,self,baker’s yeast was one of the only singled celled eukaryotic organisms with facile genetics,把细胞生长问题重新表征为酵母遗传学问题
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C10,主动信息搜寻,2,3,2,S060,P4,self,I visited Bob Mortimer at Berkeley and Herschel Roman and Don Hawthorne at Seattle to find out how one worked with yeast,跨机构寻求方法
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C33,想法转化为可检验方案,6,3,2,S063,P4,self,I began by isolating temperature-sensitive mutants,设计可检验的遗传学方案
+nobel_98e5c028bbd7,Leland Hartwell,nobel,C18,跨领域类比,4,4,3,S064,P4,self,This approach came directly from my earlier experience with Bob Edgar at Cal Tech where I had seen the power of conditional mutants to analyze phage morphogenesis,把噬菌体方法迁移到酵母
+nobel_e4f158ecf9f7,Günter Blobel,nobel,C04,领域身份认同,1,1,1,S006,P0,self,This discovery formed the foundation for my future scientific career.,事后建构的身份叙述
+nobel_e4f158ecf9f7,Günter Blobel,nobel,C02,目标自我一致性,1,2,2,S049,P2,self,I was much more fascinated by the unsolved problems of medicine than by practicing it,放弃临床、选择研究
+nobel_e4f158ecf9f7,Günter Blobel,nobel,C33,想法转化为可检验方案,6,3,1,S060,P3,self,"He taught me how to conceptualize a collection of disparate facts, to formulate working hypotheses and to design experiments to test these hypotheses",导师传授的方法，未写本人具体事件

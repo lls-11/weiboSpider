@@ -155,8 +155,49 @@ def stats(rmrb_docs, nobel_docs):
     return persons
 
 
+def build_criteria(docs):
+    """国奖事迹中的可量化成就（候选校标），见 talent_corpus/criteria.py。"""
+    from talent_corpus import criteria
+    rows = []
+    for d in docs:
+        x = criteria.extract(d['text'])
+        x.update({k: d.get(k, '') for k in ('person_id', 'doc_id', 'name', 'school',
+                                            'level', 'award_year', 'grade')})
+        x['field'] = criteria.field_of(d.get('program', ''), d.get('school', ''))
+        x['doctoral'] = '博士' in d.get('program', '')
+        rows.append(x)
+    fields = ['person_id', 'doc_id', 'name', 'school', 'field', 'level', 'doctoral',
+              'award_year', 'grade', 'papers', 'papers_first_author',
+              'top_journal_mention', 'patents', 'patents_granted',
+              'software_copyrights', 'projects_led', 'awards', 'awards_international',
+              'awards_national', 'awards_provincial', 'award_top_level',
+              'award_best_grade', 'honors', 'volunteer_hours',
+              'national_scholarship_times', 'venture', 'truncated']
+    out = os.path.join(HERE, 'criteria')
+    write_csv(os.path.join(out, 'scholarship_criteria.csv'), rows, fields)
+    num = ['papers', 'papers_first_author', 'patents_granted', 'software_copyrights',
+           'projects_led', 'awards', 'awards_national', 'awards_international',
+           'honors', 'volunteer_hours']
+    summary = []
+    for level in ('undergraduate', 'graduate'):
+        g = [x for x in rows if x['level'] == level]
+        for k in num:
+            v = sorted(x[k] for x in g)
+            nz = [a for a in v if a]
+            summary.append({
+                'level': LEVEL_CN[level], 'measure': k, 'n': len(v),
+                'nonzero_share': round(len(nz) / len(v), 3),
+                'median_nonzero': nz[len(nz) // 2] if nz else '',
+                'p90': v[int(0.9 * len(v))], 'max': v[-1]})
+    write_csv(os.path.join(out, 'criteria_summary.csv'), summary,
+              ['level', 'measure', 'n', 'nonzero_share', 'median_nonzero', 'p90',
+               'max'])
+    return rows
+
+
 def main():
     r = build_rmrb()
+    build_criteria(r)
     n = build_nobel()
     persons = stats(r, n)
     print('名录条目', len(r), '诺奖文本', len(n), '人物', len(persons))

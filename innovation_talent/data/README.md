@@ -34,6 +34,10 @@ data/
 │   ├── laureates_stem.csv              科学类个人获奖记录 649 条
 │   ├── crawl_frame_stem.csv            科学类获奖者采样框
 │   └── stats.json                      基本信息表的描述统计
+├── criteria/                           国奖事迹中提取的成就指标（候选校标）
+│   ├── scholarship_criteria.csv        每人一行：论文、第一作者论文、专利、奖项、志愿时长等
+│   └── criteria_summary.csv            分学段的分布
+├── pilot_coding/                       36 篇试编码（30 条事迹 + 6 篇诺奖本人自传）
 └── initial_stats/                      初步统计（见下文）
 ```
 
@@ -154,7 +158,14 @@ data/
 
 本人自传对中学到博士阶段的覆盖明显高于他人传记，阶段分析应优先使用 `narrative_voice = self` 的自传。“学前与小学”“独立研究期”的比例偏高，部分原因是“was born”“professor”等词在几乎所有传记中都会出现，这两行只能作为上限参考。
 
-## 五、重新生成
+## 五、候选校标与试编码
+
+- `criteria/`：由 `talent_corpus/criteria.py` 从 600 条事迹中按规则提取，人工核对 25 条，论文与专利数准确，奖项数为下限；
+- `pilot_coding/`：按编码手册试编的结果，只有一名编码者，仅用于判断能编出什么。
+
+两者的解读与打分方法建议见 [docs/scoring_plan.md](../docs/scoring_plan.md)。
+
+## 六、重新生成
 
 在 `innovation_talent/` 目录下：
 
@@ -163,7 +174,7 @@ python3 data/build_corpus.py                 # 由 raw/ 重新生成名录、诺
 python3 -m talent_corpus rmrb --from-raw data/raw/rmrb_lists_raw.jsonl --out talent_data/raw/rmrb.jsonl   # 只重建名录条目
 ```
 
-## 六、下一步
+## 七、下一步
 
 1. **补充长文本**：用 `search-sheet` 为 599 名学生生成检索表，按 `school_report_leads.csv` 先补已知报道，抓取高校新闻与公众号长文；
 2. **改进样本分类**：按本人角色与成果层级重新分组（见第四节）；

@@ -13,7 +13,9 @@ from . import load_lexicon
 
 _ZH_SPLIT = re.compile(r'([^。！？；!?\n]*[。！？；!?]+[”’」』）)]*|[^。！？；!?\n]+)')
 _EN_SPLIT = re.compile(r'(?<=[.!?])["”\']?\s+(?=[A-Z"“])')
-_EN_ABBR = re.compile(r'\b(Dr|Mr|Mrs|Ms|Prof|St|Jr|Sr|vs|e\.g|i\.e|cf|Fig|No)\.$')
+# 缩写与姓名首字母（Willard S. Boyle、U.S. Navy）后的句点不是句末
+_EN_ABBR = re.compile(r'(\b(Dr|Mr|Mrs|Ms|Prof|St|Jr|Sr|vs|e\.g|i\.e|cf|Fig|No|Inc|Co|Ltd|Ph\.D|U\.S|U\.K)'
+                      r'|(^|[\s(])[A-Z])\.$')
 
 
 def detect_lang(text):

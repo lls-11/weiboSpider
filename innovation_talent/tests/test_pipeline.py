@@ -283,3 +283,29 @@ def test_numbered_text_filter():
     full = numbered_text(d)
     events = numbered_text(d, ('event', 'other'))
     assert '[S005]' in full and '[S005]' not in events
+
+
+def test_criteria_extract():
+    from talent_corpus import criteria as C
+    x = C.extract('发表SCI期刊论文16篇，其中以第一作者发表论文6篇。获计算机软件著作权授权11项。'
+                  '获国家发明专利授权2项、国家实用新型专利授权2项。主持国家级大学生创新创业训练计划项目1项。'
+                  '获中国国际“互联网+”大学生创新创业大赛铜奖、美国大学生数学建模竞赛一等奖、'
+                  '省级三等奖等。累计志愿服务时长超200小时。曾获国家奖学金两次。')
+    assert x['papers'] == 16 and x['papers_first_author'] == 6
+    assert x['software_copyrights'] == 11 and x['patents_granted'] == 4
+    assert x['projects_led'] == 1 and x['volunteer_hours'] == 200
+    assert (x['awards_international'], x['awards_national'], x['awards_provincial']) == (1, 1, 1)
+    assert x['award_best_grade'] == 2 and x['national_scholarship_times'] == 2
+    assert x['truncated']
+    y = C.extract('发表SCI期刊论文2篇、EI会议论文2篇。发表双核心论文1篇、科技核心论文一篇。')
+    assert y['papers'] == 6
+    assert C.field_of('临床医学专业2020级学生') == '医学'
+    assert C.field_of('建筑装饰工程技术专业', '贵州经贸职业技术学院') == '高职'
+
+
+def test_criteria_subset_and_levels():
+    from talent_corpus import criteria as C
+    x = C.extract('发表SCI期刊论文17篇，其中Nature期刊论文1篇（第一作者），Science期刊论文1篇（共同第一作者）。'
+                  '获美国大学生数学建模竞赛一等奖（2023年）、二等奖（2022年），陕西高等学校科技研究优秀成果一等奖。')
+    assert x['papers'] == 17 and x['papers_first_author'] == 2
+    assert x['awards_international'] == 2 and x['awards_provincial'] == 1
