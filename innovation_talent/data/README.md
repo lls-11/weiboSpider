@@ -34,6 +34,10 @@ data/
 │   ├── laureates_stem.csv              科学类个人获奖记录 649 条
 │   ├── crawl_frame_stem.csv            科学类获奖者采样框
 │   └── stats.json                      基本信息表的描述统计
+├── long_texts/                         高校与清华特奖长篇报道，按人切分
+│   ├── persons.jsonl                   112 段（每人一段；切分不开的合辑保留整篇）
+│   └── index.csv                       来源、切分方式、字数
+├── leads/                              长文本抓取清单（38 个网址）
 ├── criteria/                           国奖事迹中提取的成就指标（候选校标）
 │   ├── scholarship_criteria.csv        每人一行：论文、第一作者论文、专利、奖项、志愿时长等
 │   └── criteria_summary.csv            分学段的分布
@@ -158,14 +162,29 @@ data/
 
 本人自传对中学到博士阶段的覆盖明显高于他人传记，阶段分析应优先使用 `narrative_voice = self` 的自传。“学前与小学”“独立研究期”的比例偏高，部分原因是“was born”“professor”等词在几乎所有传记中都会出现，这两行只能作为上限参考。
 
-## 五、候选校标与试编码
+## 五、国内长篇报道（long_texts/）
+
+由 `leads/long_text_urls.csv` 中的 38 个网址抓取，取得 35 篇（原文在 `raw/long_text_articles_raw.jsonl`，失败清单在 `raw/long_text_articles_failed.csv`）。处理步骤：
+
+- 同一篇文章有多个转载时，保留最长的一篇；不足 500 字的片段去掉，剩 32 篇；
+- 多人合辑按版式切分：答辩实录按“院系—姓名”，风采展按“姓名，出生年月”“院系年级 + 姓名”“姓名：”或姓名单独成行，答辩会通讯稿按图片说明中的名单；
+- 切分不开的合辑（2014–2018、2025 年答辩会通讯稿，经验交流会等）保留整篇，`name` 为空。
+
+| 来源 | 段数 | 字数中位数 | 价值（据试编码） |
+|---|---|---|---|
+| 清华特奖答辩实录 | 14 | 999 | 高 |
+| 专访等整篇文章 | 22 | 2,083 | 专访高，交流会、合辑低 |
+| 答辩会通讯稿中的个人段落 | 27 | 187 | 中 |
+| 各校风采展 | 49 | 250–620 | 低 |
+
+## 六、候选校标与试编码
 
 - `criteria/`：由 `talent_corpus/criteria.py` 从 600 条事迹中按规则提取，人工核对 25 条，论文与专利数准确，奖项数为下限；
 - `pilot_coding/`：按编码手册试编的结果，只有一名编码者，仅用于判断能编出什么。
 
 两者的解读与打分方法建议见 [docs/scoring_plan.md](../docs/scoring_plan.md)。
 
-## 六、重新生成
+## 七、重新生成
 
 在 `innovation_talent/` 目录下：
 
@@ -174,7 +193,7 @@ python3 data/build_corpus.py                 # 由 raw/ 重新生成名录、诺
 python3 -m talent_corpus rmrb --from-raw data/raw/rmrb_lists_raw.jsonl --out talent_data/raw/rmrb.jsonl   # 只重建名录条目
 ```
 
-## 七、下一步
+## 八、下一步
 
 1. **补充长文本**：用 `search-sheet` 为 599 名学生生成检索表，按 `school_report_leads.csv` 先补已知报道，抓取高校新闻与公众号长文；
 2. **改进样本分类**：按本人角色与成果层级重新分组（见第四节）；

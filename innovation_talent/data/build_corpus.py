@@ -195,7 +195,33 @@ def build_criteria(docs):
     return rows
 
 
+def build_long_texts():
+    """高校与清华特奖长篇报道：去重、按人切分，见 talent_corpus/segment.py。"""
+    from talent_corpus import segment
+    docs = corpus.read_jsonl(os.path.join(RAW, 'long_text_articles_raw.jsonl'))
+    # 同一标题保留最长的一篇（腾讯新闻、智源社区的转载只有片段或与官网重复）
+    best = {}
+    for d in docs:
+        key = d['title'].split('-')[0].strip()
+        if key not in best or len(d['text']) > len(best[key]['text']):
+            best[key] = d
+    docs = [d for d in best.values() if len(d['text']) >= 500]
+    tagger = Tagger()
+    persons = [prepare(p, tagger) for p in segment.segment_docs(docs)]
+    out = os.path.join(HERE, 'long_texts')
+    corpus.write_jsonl(os.path.join(out, 'persons.jsonl'),
+                       [{k: v for k, v in p.items() if k not in ('sentences', 'stats')}
+                        for p in persons])
+    write_csv(os.path.join(out, 'index.csv'),
+              [dict(p, chars=len(p['text']), n_sentences=p['stats']['n_sentences'])
+               for p in persons],
+              ['doc_id', 'person_id', 'name', 'school', 'corpus', 'segment', 'chars',
+               'n_sentences', 'title', 'url', 'parent_doc_id'])
+    return docs, persons
+
+
 def main():
+    build_long_texts()
     r = build_rmrb()
     build_criteria(r)
     n = build_nobel()

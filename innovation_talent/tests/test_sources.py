@@ -202,3 +202,19 @@ def test_nobel_clean_text():
         'I was born in Copenhagen.\nLater I studied physics.'
     d = nobel.clean_doc({'text': page, 'name': 'Aage N. Bohr', 'source_type': 'lecture'})
     assert d['pdf_only'] is True
+
+
+def test_segment_layouts():
+    from talent_corpus import segment
+    dash = '答辩风采\n电子系—李智毅\n个人简介\n' + '他设计了新算法。' * 10 + '\n新雅书院—梁奕飞\n' + '他理转文。' * 10
+    p = segment.split_people(dash)
+    assert [x[0] for x in p] == ['李智毅', '梁奕飞'] and p[0][2] == 'dash'
+    born = '艾寒冰，1998年9月生，地球物理学院博士研究生。\n发表论文5篇。\n白文博2000年5月生，中共党员。\n参与课题3项。'
+    assert [x[0] for x in segment.split_people(born)] == ['艾寒冰', '白文博']
+    caption = ('候选人分享（从左至右依次为：康吉赢、胡宜逊）\n'
+               '日新书院康吉赢结缘数字人文这一文理融通的学科交叉领域，尝试6种算法，4次建模，重写10余稿，最终发表国际顶会论文。\n'
+               '电子工程系胡宜逊自入学起便立志探索现代电子的医疗技术潜力，面对数十道工序，从反复失误到样品成功，最终发表成果。')
+    assert [x[0] for x in segment.split_people(caption)] == ['康吉赢', '胡宜逊']
+    assert segment.split_people('只有一个人的专访正文。') is None
+    assert segment.name_from_title('清华特奖专访 | 戴言：做解题人') == '戴言'
+    assert segment.name_from_title('清华特等奖学金答辩现场！杨倩：正向榜样奔赴') == '杨倩'
