@@ -193,6 +193,74 @@ def cmd_code(args):
                     '%d 项指标' % len(rec.get('codes', [])))
 
 
+EVIDENCE_INPUTS = [os.path.join('data', 'long_texts', 'analysis_set.jsonl'),
+                   os.path.join('data', 'nobel', 'texts', 'biographical.jsonl'),
+                   os.path.join('data', 'nobel', 'texts', 'interview.jsonl')]
+
+
+def cmd_evidence(args):
+    from .coding import evidence as ev
+    docs = [d for path in args.inputs for d in corpus.read_jsonl(path)]
+    wanted = None
+    if args.doc_ids:
+        with open(args.doc_ids, encoding='utf-8') as f:
+            wanted = {line.strip() for line in f if line.strip()}
+    docs = ev.select_docs(docs, args.corpus.split(',') if args.corpus else None,
+                          wanted, self_only=not args.include_narrator)
+    coder = ev.EvidenceCoder(model=args.model, effort=args.effort,
+                             max_tokens=args.max_tokens, prompt_path=args.prompt or ev.PROMPT_PATH,
+                             families=ev.load_families(args.families),
+                             client=not args.dry_run)
+    if args.batch_collect:
+        units = {d['doc_id']: coder.unit(d) for d in docs}
+        recs = coder.collect_batch(args.batch_collect, units)
+        corpus.write_jsonl(args.out, recs, append=True)
+        logger.info('收回批量结果 %d 条：%s', len(recs), args.out)
+        return
+    done = {r['run']['doc_id'] for r in corpus.read_jsonl(args.out)
+            if not r.get('error') and
+            r['run']['prompt_version'] == coder.meta.get('prompt_version') and
+            r['run']['model'] == args.model}
+    todo = [coder.unit(d) for d in docs if d['doc_id'] not in done]
+    todo = todo[:args.limit or None]
+    if args.dry_run:
+        path = args.dry_run
+        corpus.write_jsonl(path, [dict(coder.params(u), run=u['run'])
+                                  for u in todo])
+        chars = sum(len(u['fixed_text']) for u in todo)
+        logger.info('试运行：%d 篇、正文共 %d 字符，请求已写入 %s（未调用 API）',
+                    len(todo), chars, path)
+        return
+    if args.batch_submit:
+        bid = coder.submit_batch(todo)
+        logger.info('已提交批量任务 %s（%d 篇），完成后运行 --batch-collect %s',
+                    bid, len(todo), bid)
+        return
+    for i, u in enumerate(todo, 1):
+        try:
+            rec = coder.code(u)
+        except TypeError as e:
+            if 'authentication' not in str(e):
+                raise
+            logger.error('未找到 Anthropic API 凭据：请设置环境变量 ANTHROPIC_API_KEY，'
+                         '或先运行 ant auth login。')
+            return 1
+        corpus.write_jsonl(args.out, [rec], append=True)
+        note = rec.get('error') or '证据 %d 条；%s' % (
+            len(rec.get('evidence', [])),
+            '；'.join(rec.get('problems', [])) or '核对通过')
+        logger.info('[%d/%d] %s %s %s', i, len(todo), u['doc']['doc_id'],
+                    u['doc'].get('name', ''), note)
+
+
+def cmd_evidence_export(args):
+    from .coding import evidence as ev
+    recs = corpus.read_jsonl(args.inp)
+    paths = ev.export_tables(recs, args.out_dir)
+    logger.info('导出 %s；%s', '、'.join(paths.values()),
+                json.dumps(ev.summarize(recs), ensure_ascii=False))
+
+
 def cmd_human_export(args):
     from .coding import human
     docs = human.sample_docs(corpus.read_jsonl(args.inp), args.frac,
@@ -383,6 +451,32 @@ def main(argv=None):
     s.add_argument('--batch-submit', action='store_true', help='提交批量任务（半价，异步）')
     s.add_argument('--batch-collect', metavar='BATCH_ID', help='收回批量任务结果')
     s.set_defaults(func=cmd_code)
+
+    s = sub.add_parser('evidence', help='按证据编码手册 1.0 做 T01—T14 证据编码（需 API 凭据）')
+    s.add_argument('inputs', nargs='*', default=EVIDENCE_INPUTS,
+                   help='JSONL 文档，默认国内叙事文本、诺奖自传与访谈')
+    s.add_argument('--out', default=os.path.join(DATA, 'evidence', 'runs.jsonl'),
+                   help='运行记录（只追加，保留每次原始输出）')
+    s.add_argument('--prompt', default=None, help='提示词文件，默认 prompts/evidence_coding_v1.0.md')
+    s.add_argument('--model', default='claude-opus-5-5')
+    s.add_argument('--effort', default='high',
+                   choices=['low', 'medium', 'high', 'xhigh', 'max'])
+    s.add_argument('--max-tokens', type=int, default=32000)
+    s.add_argument('--corpus', help='只编码这些语料组，逗号分隔，如 nobel,tsinghua_special')
+    s.add_argument('--doc-ids', help='只编码文件中列出的 doc_id（每行一个）')
+    s.add_argument('--limit', type=int, default=0, help='本次最多编码多少篇（试跑用）')
+    s.add_argument('--include-narrator', action='store_true',
+                   help='诺奖传记也编码第三人称（他人撰写）的版本')
+    s.add_argument('--families', help='CSV（doc_id, source_family_id），同源材料归组')
+    s.add_argument('--dry-run', metavar='FILE', help='只把请求写入 FILE，不调用 API')
+    s.add_argument('--batch-submit', action='store_true', help='提交批量任务（半价，异步）')
+    s.add_argument('--batch-collect', metavar='BATCH_ID', help='收回批量任务结果')
+    s.set_defaults(func=cmd_evidence)
+
+    s = sub.add_parser('evidence-export', help='把证据编码结果导出为 screening.csv、evidence.csv')
+    s.add_argument('--in', dest='inp', default=os.path.join(DATA, 'evidence', 'runs.jsonl'))
+    s.add_argument('--out-dir', default=os.path.join(DATA, 'evidence'))
+    s.set_defaults(func=cmd_evidence_export)
 
     s = sub.add_parser('human-export', help='分层抽样并导出人工编码表')
     s.add_argument('--in', dest='inp', default=os.path.join(DATA, 'prepared.jsonl'))
