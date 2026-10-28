@@ -36,6 +36,8 @@ _NAME_LIST = re.compile(r'依次为[:：]([一-龥、，,\s]+)')
 _STOP = {'个人简介', '答辩语录', '答辩风采', '成果展示', '科研心得', '发展规划', '答辩现场', '人物简介',
          '序号', '姓名', '院系'}
 _NOT_NAME_TAIL = re.compile(r'(感悟|心得|规划|展示|简介|语录|经历|成果|评语|寄语|风采)$')
+# 同一篇里可能混用“院系—姓名”和“姓名 院系”，这几种按一类计数
+_FAMILY = {'dash_rev': 'name_and_dept', 'dash': 'name_and_dept', 'name_dept': 'name_and_dept'}
 
 
 def _as_name(s):
@@ -99,8 +101,9 @@ def split_people(text, min_people=2):
     heads = _headers(lines)
     # 同一规则至少出现 min_people 次才认为是多人版式，避免误切
     if heads:
-        best = max(set(h[2] for h in heads), key=lambda r: sum(h[2] == r for h in heads))
-        heads = [h for h in heads if h[2] == best]
+        fam = [_FAMILY.get(h[2], h[2]) for h in heads]
+        best = max(set(fam), key=fam.count)
+        heads = [h for h, f in zip(heads, fam) if f == best]
     if len(heads) >= min_people:
         best_part = {}
         for k, (i, name, rule) in enumerate(heads):
