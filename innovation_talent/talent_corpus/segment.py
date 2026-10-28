@@ -2,11 +2,13 @@
 """把一篇写了多人的报道（答辩会、风采展）切分为每人一段。
 
 依据实际抓到的版式整理出几种“人物开头行”：
-    电子系—李智毅                                  （答辩实录：院系—姓名）
+    电子系—李智毅 / 胡耀文—物理系                   （答辩实录：院系—姓名，或倒序）
+    伍绍文 人文学院                                 （姓名 院系）
     艾寒冰，1998年9月生，地球物理与空间……            （姓名，出生年月）
     公共卫生学院2019级……硕士研究生程北京              （院系年级 + 姓名）
     姓名：刘俊莹                                   （字段式）
-    谈琪 / 计算机信息工程学院 人工智能专业 2025级……    （姓名单独一行，下一行是院系）
+    谈琪 / 计算机信息工程学院 人工智能专业 2025级……    （姓名单独一行，后两行内有院系、
+                                                   单独的院系名或“男，汉族……”）
 答辩会通讯稿没有人物开头行，改用图片说明里的名单（“依次为：丁恺睿、康吉赢……”），
 把以院系加姓名开头的段落分给对应的人。
 切分不出多人时返回 None，整篇保留为一份文档。
@@ -17,16 +19,46 @@ import re
 from . import corpus
 
 _NAME = r'[一-龥]{2,4}'
+_DEPT = r'[一-龥（）()]{1,14}(?:系|学院|书院|研究院|研究所|中心)'
 _HEADERS = [
+    ('dash_rev', re.compile(r'^(' + _NAME + r')\s*[—–-]{1,2}\s*' + _DEPT + r'$')),
     ('dash', re.compile(r'^[一-龥]{2,12}[—–-]{1,2}(' + _NAME + r')$')),
+    ('name_dept', re.compile(r'^(' + _NAME + r')\s+' + _DEPT + r'$')),
     ('born', re.compile(r'^(' + _NAME + r')[，,]?\s?(?:19|20)\d{2}年\d{1,2}月生')),
     ('field', re.compile(r'^姓名[:：]\s*(' + _NAME + r')$')),
     ('dept_tail', re.compile(r'^.{4,40}?(?:\d{4}级).{0,20}?(?:研究生|本科生|博士生|硕士生)\s*(' +
                              _NAME + r')$')),
 ]
-_DEPT_LINE = re.compile(r'(学院|书院|系|研究院|研究所).{0,30}(\d{4}级|本科生|研究生)')
+_DEPT_LINE = re.compile(r'(学院|书院|系|研究院|研究所).{0,30}(\d{4}级|本科生|研究生|博士生)')
+_DEPT_ONLY = re.compile(r'^' + _DEPT + r'$')
+_GENDER_LINE = re.compile(r'^[男女][，,]')
 _NAME_LIST = re.compile(r'依次为[:：]([一-龥、，,\s]+)')
-_STOP = {'个人简介', '答辩语录', '答辩风采', '成果展示', '科研心得', '发展规划'}
+_STOP = {'个人简介', '答辩语录', '答辩风采', '成果展示', '科研心得', '发展规划', '答辩现场', '人物简介',
+         '序号', '姓名', '院系'}
+_NOT_NAME_TAIL = re.compile(r'(感悟|心得|规划|展示|简介|语录|经历|成果|评语|寄语|风采)$')
+
+
+def _as_name(s):
+    """单独成行的姓名：去掉中间空白（“刘 强”），允许少数民族姓名中的“·”。"""
+    c = re.sub(r'\s+', '', s)
+    if c in _STOP or _NOT_NAME_TAIL.search(c):
+        return None
+    if re.fullmatch(_NAME, c) or re.fullmatch(r'[一-龥]{2,8}·[一-龥]{2,8}', c):
+        return c
+    return None
+
+
+def _person_follows(lines, i):
+    """姓名行后两行内出现院系年级、单独的院系名或“男，汉族……”，视为人物开头。"""
+    for j in (i + 1, i + 2):
+        if j >= len(lines):
+            return False
+        nxt = lines[j].strip()
+        if _DEPT_LINE.search(nxt) or _DEPT_ONLY.match(nxt) or _GENDER_LINE.match(nxt):
+            return True
+        if _as_name(nxt):          # 下一行又是姓名：这是名单，不是开头
+            return False
+    return False
 
 
 def _headers(lines):
@@ -36,14 +68,13 @@ def _headers(lines):
         s = line.strip()
         for rule, rx in _HEADERS:
             m = rx.match(s)
-            if m and m.group(1) not in _STOP:
+            if m and m.group(1) not in _STOP and not _NOT_NAME_TAIL.search(m.group(1)):
                 out.append((i, m.group(1), rule))
                 break
         else:
-            # 姓名单独一行、下一行是院系年级
-            if re.fullmatch(_NAME, s) and i + 1 < len(lines) and \
-                    _DEPT_LINE.search(lines[i + 1]) and s not in _STOP:
-                out.append((i, s, 'name_line'))
+            name = _as_name(s)
+            if name and _person_follows(lines, i):
+                out.append((i, name, 'name_line'))
     return out
 
 
@@ -71,11 +102,15 @@ def split_people(text, min_people=2):
         best = max(set(h[2] for h in heads), key=lambda r: sum(h[2] == r for h in heads))
         heads = [h for h in heads if h[2] == best]
     if len(heads) >= min_people:
-        out = []
+        best_part = {}
         for k, (i, name, rule) in enumerate(heads):
             end = heads[k + 1][0] if k + 1 < len(heads) else len(lines)
-            out.append((name, '\n'.join(lines[i:end]), rule))
-        return out
+            text = '\n'.join(lines[i:end])
+            if name not in best_part or len(text) > len(best_part[name][1]):
+                best_part[name] = (name, text, rule)
+        # 文末结果表里一行一个姓名，只有姓名的段落不算
+        out = [v for v in best_part.values() if len(v[1]) > len(v[0]) + 20]
+        return out if len(out) >= min_people else None
     return _by_name_list(lines)
 
 

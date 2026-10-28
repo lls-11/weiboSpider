@@ -309,3 +309,17 @@ def test_criteria_subset_and_levels():
                   '获美国大学生数学建模竞赛一等奖（2023年）、二等奖（2022年），陕西高等学校科技研究优秀成果一等奖。')
     assert x['papers'] == 17 and x['papers_first_author'] == 2
     assert x['awards_international'] == 2 and x['awards_provincial'] == 1
+
+
+def test_narrative_filter():
+    from talent_corpus.narrative import assess
+    story = ('然而，就在他尝试结合AI算法改善通信信道反馈时，大量的神经网络调参并没有让性能得到本质性提升，首篇论文也遭到了拒稿。'
+             '此后，他不再急于产出，而是用数学力学知识重新审视了所热爱的专业。')
+    short_story = '面对数十道工序，他在学习之余全力挤出时间，从反复失误到样品成功，最终发表成果。'
+    awards = ('发表SCI期刊论文6篇，其中以第一作者发表3篇。获国家发明专利授权2项。'
+              '曾获国家奖学金、北京市三好学生称号。累计志愿服务时长200小时。')
+    motto = '偶尔欣喜，偶尔忧愁，经常困惑，趋于平淡是科研常态。宝剑锋从磨砺出，梅花香自苦寒来。'
+    assert assess(story)['text_type'] == 'narrative'
+    assert assess(short_story)['text_type'] == 'narrative'
+    assert assess(awards)['text_type'] == 'list_only'
+    assert assess(motto)['text_type'] == 'list_only'

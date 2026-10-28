@@ -195,28 +195,68 @@ def build_criteria(docs):
     return rows
 
 
+LONG_TEXT_RAW = ('long_text_articles_raw.jsonl', 'long_text_articles_v2_raw.jsonl',
+                 'long_text_articles_v2_saved.jsonl')
+
+
+def _similar(a, b):
+    """两段文本的字符重合度（较短一段中有多少比例的 8 字片段出现在另一段）。"""
+    short, long_ = (a, b) if len(a) <= len(b) else (b, a)
+    grams = {short[k:k + 8] for k in range(0, max(1, len(short) - 8), 4)}
+    return sum(g in long_ for g in grams) / len(grams) if grams else 0.0
+
+
 def build_long_texts():
-    """高校与清华特奖长篇报道：去重、按人切分，见 talent_corpus/segment.py。"""
+    """高校与清华特奖等长篇报道：合并各批、去重、按人切分、区分叙事与成就清单。
+
+    见 talent_corpus/segment.py 与 talent_corpus/narrative.py。
+    只有 text_type 为 narrative 的段落进入文本分析（analysis_set.jsonl）。
+    """
     from talent_corpus import segment
-    docs = corpus.read_jsonl(os.path.join(RAW, 'long_text_articles_raw.jsonl'))
-    # 同一标题保留最长的一篇（腾讯新闻、智源社区的转载只有片段或与官网重复）
+    from talent_corpus.narrative import assess
+    docs = []
+    for fn in LONG_TEXT_RAW:
+        for d in corpus.read_jsonl(os.path.join(RAW, fn)):
+            # 浏览器另存的网页没有来源信息，按标题补上
+            if d['url'].startswith('file://') or d.get('corpus') == 'univ_article':
+                if '清华' in d['title']:
+                    d.update(corpus='tsinghua_special', school='清华大学')
+                else:
+                    d['corpus'] = 'univ_profile'
+            docs.append(d)
+    # 同一标题保留最长的一篇（转载片段或与官网重复）
     best = {}
     for d in docs:
-        key = d['title'].split('-')[0].strip()
+        key = d['title'].split('-')[0].split('_')[0].strip()
         if key not in best or len(d['text']) > len(best[key]['text']):
             best[key] = d
     docs = [d for d in best.values() if len(d['text']) >= 500]
+    segs = segment.segment_docs(docs)
+    # 同一人在不同转载中的段落（如 2019 年答辩实录的两个版本）：重合度高的只留最长的
+    segs.sort(key=lambda p: -len(p['text']))
+    kept = []
+    for p in segs:
+        dup = any(q['name'] and q['name'] == p['name'] and _similar(p['text'], q['text']) > 0.6
+                  for q in kept)
+        if not dup:
+            kept.append(p)
     tagger = Tagger()
-    persons = [prepare(p, tagger) for p in segment.segment_docs(docs)]
+    persons = []
+    for p in kept:
+        p = prepare(p, tagger)
+        p.update(assess(p['text']))
+        persons.append(p)
+    persons.sort(key=lambda p: (p['corpus'], p['title'], p['name']))
     out = os.path.join(HERE, 'long_texts')
-    corpus.write_jsonl(os.path.join(out, 'persons.jsonl'),
-                       [{k: v for k, v in p.items() if k not in ('sentences', 'stats')}
-                        for p in persons])
+    slim = [{k: v for k, v in p.items() if k not in ('sentences', 'stats')} for p in persons]
+    corpus.write_jsonl(os.path.join(out, 'persons.jsonl'), slim)
+    corpus.write_jsonl(os.path.join(out, 'analysis_set.jsonl'),
+                       [p for p in slim if p['text_type'] == 'narrative'])
     write_csv(os.path.join(out, 'index.csv'),
-              [dict(p, chars=len(p['text']), n_sentences=p['stats']['n_sentences'])
-               for p in persons],
-              ['doc_id', 'person_id', 'name', 'school', 'corpus', 'segment', 'chars',
-               'n_sentences', 'title', 'url', 'parent_doc_id'])
+              [dict(p, chars=len(p['text'])) for p in persons],
+              ['doc_id', 'person_id', 'name', 'school', 'corpus', 'segment', 'text_type',
+               'chars', 'n_sentences', 'n_process', 'n_strong_process', 'n_achievement',
+               'title', 'url', 'parent_doc_id'])
     return docs, persons
 
 
