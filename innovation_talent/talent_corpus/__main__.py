@@ -193,9 +193,8 @@ def cmd_code(args):
                     '%d 项指标' % len(rec.get('codes', [])))
 
 
-EVIDENCE_INPUTS = [os.path.join('data', 'long_texts', 'analysis_set.jsonl'),
-                   os.path.join('data', 'nobel', 'texts', 'biographical.jsonl'),
-                   os.path.join('data', 'nobel', 'texts', 'interview.jsonl')]
+# 默认只编自述类文本（data/build_self_narrative.py 生成）；要编报道类，显式传入其他文件
+EVIDENCE_INPUTS = [os.path.join('data', 'self_narrative', 'analysis_set.jsonl')]
 
 
 def cmd_evidence(args):
@@ -205,6 +204,8 @@ def cmd_evidence(args):
     if args.doc_ids:
         with open(args.doc_ids, encoding='utf-8') as f:
             wanted = {line.strip() for line in f if line.strip()}
+    if args.subset:
+        docs = [d for d in docs if d.get('subset') in args.subset.split(',')]
     docs = ev.select_docs(docs, args.corpus.split(',') if args.corpus else None,
                           wanted, self_only=not args.include_narrator)
     coder = ev.EvidenceCoder(model=args.model, effort=args.effort,
@@ -454,7 +455,7 @@ def main(argv=None):
 
     s = sub.add_parser('evidence', help='按证据编码手册 1.0 做 T01—T14 证据编码（需 API 凭据）')
     s.add_argument('inputs', nargs='*', default=EVIDENCE_INPUTS,
-                   help='JSONL 文档，默认国内叙事文本、诺奖自传与访谈')
+                   help='JSONL 文档，默认 data/self_narrative/analysis_set.jsonl')
     s.add_argument('--out', default=os.path.join(DATA, 'evidence', 'runs.jsonl'),
                    help='运行记录（只追加，保留每次原始输出）')
     s.add_argument('--prompt', default=None, help='提示词文件，默认 prompts/evidence_coding_v1.0.md')
@@ -462,7 +463,8 @@ def main(argv=None):
     s.add_argument('--effort', default='high',
                    choices=['low', 'medium', 'high', 'xhigh', 'max'])
     s.add_argument('--max-tokens', type=int, default=32000)
-    s.add_argument('--corpus', help='只编码这些语料组，逗号分隔，如 nobel,tsinghua_special')
+    s.add_argument('--corpus', help='只编码这些语料组，逗号分隔，如 nobel,univ_interview')
+    s.add_argument('--subset', help='只编码这些子集：nobel_autobiography,nobel_interview,cn_first_person')
     s.add_argument('--doc-ids', help='只编码文件中列出的 doc_id（每行一个）')
     s.add_argument('--limit', type=int, default=0, help='本次最多编码多少篇（试跑用）')
     s.add_argument('--include-narrator', action='store_true',

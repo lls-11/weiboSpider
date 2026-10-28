@@ -16,14 +16,14 @@ python -m talent_corpus evidence --limit 5 --dry-run talent_data/evidence/dry_ru
 # 2. 设置 API 密钥（只在当前窗口有效）
 $env:ANTHROPIC_API_KEY = "sk-ant-..."
 
-# 3. 小样本试编：先编 5 篇国内文本，人工看结果再决定是否扩大
-python -m talent_corpus evidence --corpus tsinghua_special --limit 5
+# 3. 小样本试编：先编 5 篇，人工看过结果再决定是否扩大
+python -m talent_corpus evidence --subset nobel_interview --limit 5
 
 # 4. 导出表格
 python -m talent_corpus evidence-export
 ```
 
-默认输入是三份文件：`data/long_texts/analysis_set.jsonl`（国内叙事文本），以及诺奖的 `biographical.jsonl` 和 `interview.jsonl`。传记只取本人撰写的版本，加上 `--include-narrator` 才会同时编他人撰写的版本。没有目标人物的多人合辑会自动跳过。全部材料共 706 篇、约 960 万字符，其中大部分是诺奖访谈和自传。建议先用 `--limit` 和 `--corpus` 小批量试编；正式批量运行时加 `--batch-submit`，价格减半，异步完成后再用 `--batch-collect <批次号>` 收回结果。
+默认输入是自述类分析集 `data/self_narrative/analysis_set.jsonl`（诺奖本人自传、诺奖深度访谈文字稿、国内第一人称专访，共 270 篇、约 700 万字符，筛选规则见该目录的 README）。用 `--subset nobel_autobiography`（或 `nobel_interview`、`cn_first_person`）只编其中一类；要编报道类文本，把文件路径作为参数传入。建议先用 `--limit` 小批量试编；正式批量运行时加 `--batch-submit`，价格减半，异步完成后再用 `--batch-collect <批次号>` 收回结果。
 
 其他参数用 `python -m talent_corpus evidence -h` 查看，常用的有：
 - `--doc-ids`：只编指定文档；
