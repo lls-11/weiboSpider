@@ -7,6 +7,7 @@
 | 路径 | 说明 |
 |---|---|
 | [docs/research_design.md](docs/research_design.md) | 研究方案：数据来源、编码方案、分析计划、操作步骤、局限与合规 |
+| [docs/llm_coding_rubric.md](docs/llm_coding_rubric.md) | 大模型文本编码细则（待审核）：可提取的维度与指标、打分规则、实例 |
 | [docs/scoring_plan.md](docs/scoring_plan.md) | 校标提取、可分析文本与打分方法的初步检验结果（含试编码） |
 | [docs/codebook.md](docs/codebook.md) | 编码手册：33 项指标 × 4 个阶段的行为锚点、文本可观测性、本土化候选编码 |
 | [data/](data/README.md) | 第一批公开数据：诺贝尔奖获得者信息表、国家奖学金名录与报道的地址清单 |
