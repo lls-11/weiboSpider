@@ -94,7 +94,8 @@ def test_deepseek_backend_offline():
         srv.shutdown()
     path, auth, body = seen[-1]
     assert path == '/chat/completions' and auth == 'Bearer k'
-    assert body['model'] == 'deepseek-chat' and body['temperature'] == 0.0
+    assert seen[0][2]['temperature'] == 0.0 and 'temperature' not in body
+    assert body['model'] == 'deepseek-chat'
     assert '输出格式' in body['messages'][0]['content']
     assert len(seen) == 2 and 'response_format' not in body
     res = rec['result']

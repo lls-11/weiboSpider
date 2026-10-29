@@ -24,6 +24,7 @@ HINTS = {
     404: '接口地址不对：检查 --base-url（DeepSeek 官方为 https://api.deepseek.com）',
     422: '请求参数不被接受，多半是模型名不对',
     429: '请求太频繁或额度受限，稍后再试，正式运行时把 --workers 调小',
+    503: '中转站上游暂时不可用，或你的密钥分组没有开通这个模型',
 }
 
 
@@ -36,8 +37,11 @@ def list_models(requests, base, headers):
         names = []
     if names:
         ds = [n for n in names if 'deepseek' in str(n).lower()]
-        print('该地址可用的模型（含 deepseek 的）：', ds or '（没有含 deepseek 的模型）')
-        print('全部模型共 %d 个：%s' % (len(names), ', '.join(map(str, names[:60]))))
+        print('  中转站列出的模型共 %d 个，其中含 deepseek 的：%s' % (len(names), ds or '无'))
+        print('  全部：%s' % ', '.join(map(str, names[:80])))
+    else:
+        print('  （没有取到模型列表）')
+    return names
 
 
 def main():
@@ -66,28 +70,72 @@ def main():
     print('密钥：已找到（%s…%s）' % (key[:5], key[-4:]))
     print('地址：%s    模型：%s' % (args.base_url, args.model))
 
-    body = {'model': args.model, 'max_tokens': 50, 'temperature': 0,
-            'response_format': {'type': 'json_object'},
-            'messages': [{'role': 'user', 'content': '请只输出 JSON：{"ok": true}'}]}
     base = args.base_url.rstrip('/')
     headers = {'Authorization': 'Bearer ' + key}
+
+    def post(model, json_mode=True):
+        body = {'model': model, 'max_tokens': 50,
+                'messages': [{'role': 'user', 'content': '请只输出 JSON：{"ok": true}'}]}
+        if json_mode:
+            body.update(temperature=0, response_format={'type': 'json_object'})
+        return requests.post(base + '/chat/completions', headers=headers, json=body, timeout=90)
+
     try:
-        r = requests.post(base + '/chat/completions', headers=headers, json=body, timeout=60)
+        print('\n[1] 按正式运行的方式请求（JSON 模式、温度 0）……')
+        r = post(args.model)
         if r.status_code in (404, 405) and not base.endswith('/v1'):
             print('地址 %s 返回 %d，改用 %s/v1 重试……' % (base, r.status_code, base))
             base += '/v1'
-            r = requests.post(base + '/chat/completions', headers=headers, json=body, timeout=60)
+            r = post(args.model)
+        show(r)
+        if r.status_code == 200:
+            return success(args, base, r, json_mode=True)
+
+        print('\n[2] 去掉 JSON 模式和温度参数，再试一次……')
+        r2 = post(args.model, json_mode=False)
+        show(r2)
+        if r2.status_code == 200:
+            print('\n结论：这个模型能用，但不支持 JSON 模式或温度参数。'
+                  '正式运行时加 --no-json-mode（程序也会自动降级）。')
+            return success(args, base, r2, json_mode=False)
+
+        print('\n[3] 列出中转站上的模型，并逐个试含 deepseek 的模型……')
+        names = list_models(requests, base, headers)
+        ds = [n for n in names if 'deepseek' in str(n).lower()][:12]
+        ok = []
+        for n in ds:
+            try:
+                t = post(n, json_mode=False)
+            except requests.RequestException as e:
+                print('  %-40s 连接失败：%s' % (n, e))
+                continue
+            state = '可用' if t.status_code == 200 else \
+                '不可用（%d）%s' % (t.status_code, t.text[:80].replace('\n', ' '))
+            print('  %-40s %s' % (n, state))
+            if t.status_code == 200:
+                ok.append(n)
     except requests.RequestException as e:
         print('失败：连不上接口。检查网络、代理或 --base-url。\n详细：', e)
         return 1
-    print('HTTP 状态码：', r.status_code)
+    print('\n结论：%s 不可用。' % args.model)
+    if ok:
+        print('能用的 DeepSeek 模型：%s。把本文件顶部 MODEL 改成其中的 V4 名称后再运行一次。' % '、'.join(ok))
+    elif names:
+        print('没有可用的 DeepSeek 模型：可能你的密钥分组没有开通，或上游暂时故障。请看中转站后台的'
+              '“模型列表 / 价格”页面，或联系中转站客服。')
+    else:
+        print('中转站没有返回模型列表。请在中转站后台查看 DeepSeek V4 的准确模型名。')
+    return 1
+
+
+def show(r):
+    print('  HTTP 状态码：%d' % r.status_code)
     if r.status_code != 200:
-        list_models(requests, base, headers)
-        print('失败：', HINTS.get(r.status_code, '见下方返回内容'))
-        if r.status_code == 400:
-            print('（400 多半是模型名不对，或该模型不支持 JSON 模式；模型名以控制台为准）')
-        print('返回内容：', r.text[:500])
-        return 1
+        print('  原因：%s' % HINTS.get(r.status_code, '见返回内容'))
+        print('  返回内容：%s' % r.text[:400])
+
+
+def success(args, base, r, json_mode):
     data = r.json()
     if base != args.base_url.rstrip('/'):
         print('注意：可用的地址是 %s，正式运行时请用这个地址。' % base)
@@ -95,8 +143,8 @@ def main():
     print('模型回复：', data['choices'][0]['message']['content'])
     print('用量：', json.dumps(data.get('usage'), ensure_ascii=False))
     print('\n可以开始正式运行，例如：\n  python -m talent_corpus person-code --provider %s '
-          '--model %s --base-url %s --subset cn_report,cn_first_person --limit 20'
-          % (args.provider, args.model, base))
+          '--model %s --base-url %s%s --subset cn_report,cn_first_person --limit 20'
+          % (args.provider, args.model, base, '' if json_mode else ' --no-json-mode'))
     return 0
 
 

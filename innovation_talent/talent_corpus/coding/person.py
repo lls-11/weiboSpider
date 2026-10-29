@@ -322,7 +322,8 @@ class CompatCoder:
     """
 
     def __init__(self, provider='deepseek', model=None, base_url=None, api_key=None,
-                 max_tokens=8000, temperature=0.0, prompt_path=PROMPT_PATH, timeout=600):
+                 max_tokens=8000, temperature=0.0, prompt_path=PROMPT_PATH, timeout=600,
+                 json_mode=True):
         base, env, default_model = PROVIDERS[provider]
         self.base_url = (base_url or base).rstrip('/')
         self.model = model or default_model
@@ -331,16 +332,16 @@ class CompatCoder:
         self.max_tokens, self.temperature, self.timeout = max_tokens, temperature, timeout
         system, self.meta = load_prompt(prompt_path)
         self.system = system + OUTPUT_FORMAT
-        self.json_mode = True
+        self.json_mode = json_mode
 
     def params(self, person):
         p = {'model': self.model, 'max_tokens': self.max_tokens,
              'messages': [{'role': 'system', 'content': self.system},
                           {'role': 'user', 'content': build_user_message(person)}]}
-        if self.temperature is not None:
-            p['temperature'] = self.temperature
         if self.json_mode:
             p['response_format'] = {'type': 'json_object'}
+            if self.temperature is not None:
+                p['temperature'] = self.temperature
         return p
 
     def _record(self, person, **kw):
@@ -361,8 +362,11 @@ class CompatCoder:
                     return self._record(person, error='connection: %s' % e)
                 time.sleep(2 ** attempt * 5)
                 continue
-            if r.status_code == 400 and self.json_mode and 'response_format' in r.text:
-                self.json_mode = False          # 有的模型不支持 JSON 模式，改为只靠提示词
+            if self.json_mode and r.status_code not in (200, 401, 402, 429):
+                # 有的模型或中转通道不支持 JSON 模式、温度参数，报错信息也不统一（如“模型服务不可用”）：
+                # 去掉这两个参数重试一次，成功则本次运行都不再使用
+                self.json_mode = False
+                logger.warning('请求失败（%d），去掉 JSON 模式和温度参数后重试：%s', r.status_code, r.text[:200])
                 continue
             if r.status_code in (429, 500, 502, 503, 504) and attempt < retries:
                 time.sleep(2 ** attempt * 5)
