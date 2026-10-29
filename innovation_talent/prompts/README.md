@@ -23,7 +23,7 @@ python -m talent_corpus evidence --subset nobel_interview --limit 5
 python -m talent_corpus evidence-export
 ```
 
-默认输入是自述类分析集 `data/self_narrative/analysis_set.jsonl`（诺奖本人自传、诺奖深度访谈文字稿、国内第一人称专访，共 270 篇、约 700 万字符，筛选规则见该目录的 README）。用 `--subset nobel_autobiography`（或 `nobel_interview`、`cn_first_person`）只编其中一类；要编报道类文本，把文件路径作为参数传入。建议先用 `--limit` 小批量试编；正式批量运行时加 `--batch-submit`，价格减半，异步完成后再用 `--batch-collect <批次号>` 收回结果。
+默认输入是 `data/self_narrative/analysis_set.jsonl`（诺奖本人自传、诺奖深度访谈文字稿、国内第一人称专访与写到过程的报道，共 422 篇、约 710 万字符，筛选规则见该目录的 README）。用 `--subset` 只编其中几类，可选 nobel_autobiography、nobel_interview、cn_first_person、cn_report、cn_report_short；要编报道类文本，把文件路径作为参数传入。建议先用 `--limit` 小批量试编；正式批量运行时加 `--batch-submit`，价格减半，异步完成后再用 `--batch-collect <批次号>` 收回结果。
 
 其他参数用 `python -m talent_corpus evidence -h` 查看，常用的有：
 - `--doc-ids`：只编指定文档；

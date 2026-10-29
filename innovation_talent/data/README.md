@@ -19,7 +19,7 @@ data/
 │   ├── rmrb_lists_raw.jsonl            名录原文（18 篇：6 份名录 + 3 份中职名录，各在两个版面出现）
 │   └── nobel_pages_raw.jsonl           诺奖官网页面（1,939 篇，含导航与页脚，未清洗）
 ├── build_self_narrative.py             生成自述类分析集
-├── self_narrative/                     自述类分析集 270 篇（诺奖自传、深度访谈、国内第一人称专访），见其中 README
+├── self_narrative/                     分析集 422 篇（诺奖自传、深度访谈、国内专访与报道），见其中 README
 ├── rmrb_scholarship/                   国家奖学金名录
 │   ├── entries.jsonl / entries.csv     600 条学生事迹
 │   ├── list_summary.csv                每份名录的条目数

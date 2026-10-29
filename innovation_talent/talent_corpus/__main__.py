@@ -193,7 +193,7 @@ def cmd_code(args):
                     '%d 项指标' % len(rec.get('codes', [])))
 
 
-# 默认只编自述类文本（data/build_self_narrative.py 生成）；要编报道类，显式传入其他文件
+# 默认编 data/build_self_narrative.py 生成的分析集（自述与写到过程的报道）
 EVIDENCE_INPUTS = [os.path.join('data', 'self_narrative', 'analysis_set.jsonl')]
 
 
@@ -464,7 +464,7 @@ def main(argv=None):
                    choices=['low', 'medium', 'high', 'xhigh', 'max'])
     s.add_argument('--max-tokens', type=int, default=32000)
     s.add_argument('--corpus', help='只编码这些语料组，逗号分隔，如 nobel,univ_interview')
-    s.add_argument('--subset', help='只编码这些子集：nobel_autobiography,nobel_interview,cn_first_person')
+    s.add_argument('--subset', help='只编码这些子集：nobel_autobiography,nobel_interview,cn_first_person,cn_report,cn_report_short')
     s.add_argument('--doc-ids', help='只编码文件中列出的 doc_id（每行一个）')
     s.add_argument('--limit', type=int, default=0, help='本次最多编码多少篇（试跑用）')
     s.add_argument('--include-narrator', action='store_true',

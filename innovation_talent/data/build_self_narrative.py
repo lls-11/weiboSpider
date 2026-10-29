@@ -5,8 +5,12 @@
 1. 诺奖本人自传（narrative_voice=self）：去掉文末奖项、出处等列表行；
 2. 诺奖深度访谈文字稿：只取正式访谈的 transcript，去掉获奖当天的电话访谈、
    视频简介和圆桌节目介绍；一页有多份正式访谈的，各成一篇；
-3. 国内文本：本人第一人称叙述占正文三成五以上、且不少于 800 字的专访
-   （获奖感言、寄语式合辑不纳入）。
+3. 国内第一人称专访：本人第一人称叙述占正文三成五以上、且不少于 800 字
+   （获奖感言、寄语式合辑不纳入）；
+4. 国内报道：不要求第一人称，记者转述的做法、经历同样有信息（如分享会通讯稿中
+   “他说，看文献的习惯就像喝咖啡……”）。只排除一句过程或做法描写都没有的荣誉罗列。
+   过程句与做法句合计 ≥ 3 的为 cn_report，1—2 句的为 cn_report_short（多为一两百字的
+   答辩会、分享会段落，信息有限，是否可用交给编码时的 screening 判断）。
 
 质量指标 n_process：第一人称且含过程词（尝试、失败、意识到、决定、问题、实验……）
 的句子数。英文文本要求 n_process ≥ 15。阈值依据 5 篇试编：Boyle 自传为 6，
@@ -23,11 +27,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
 from talent_corpus import corpus  # noqa: E402
+from talent_corpus.narrative import assess  # noqa: E402
 
 OUT = os.path.join(HERE, 'self_narrative')
 MIN_PROCESS_EN = 15
 MIN_FP_SHARE_ZH = 0.35
 MIN_FP_CHARS_ZH = 800
+MIN_PROCESS_ZH_REPORT = 3
 # 第一人称比例达标、但内容是获奖感言或寄语模板的合辑，人工排除
 EXCLUDE_ZH = {'univ_article_f3c187cd839f', 'univ_profile_29ec9b4dd961',
               'univ_profile_3d2a743af92d', 'univ_profile_4b36aa9ef253'}
@@ -138,6 +144,17 @@ def main():
         if keep:
             docs.append(dict(d, subset='cn_first_person', n_process=n,
                              first_person_share=round(share, 2)))
+            continue
+        # 不是第一人称、但写到了过程或做法的报道（含转述）；纯荣誉罗列（0 句）不收
+        if not d.get('name') or d['doc_id'] in EXCLUDE_ZH:
+            continue
+        a = assess(d['text'])
+        k = a['n_process'] + a['n_practice']
+        if k == 0:
+            continue
+        subset = 'cn_report' if k >= MIN_PROCESS_ZH_REPORT else 'cn_report_short'
+        rows.append((d, subset, k, len(d['text']), True))
+        docs.append(dict(d, subset=subset, n_process=k))
 
     os.makedirs(OUT, exist_ok=True)
     corpus.write_jsonl(os.path.join(OUT, 'analysis_set.jsonl'), docs)
@@ -150,7 +167,8 @@ def main():
             w.writerow([d['doc_id'], d.get('person_id', ''), d.get('name', ''),
                         subset, d.get('category', ''), d.get('award_year', ''),
                         n, chars, int(keep), d.get('title', ''), d.get('url', '')])
-    for s in ('nobel_autobiography', 'nobel_interview', 'cn_first_person'):
+    for s in ('nobel_autobiography', 'nobel_interview', 'cn_first_person',
+              'cn_report', 'cn_report_short'):
         cand = [r for r in rows if r[1] == s]
         kept = [r for r in cand if r[4]]
         print('%s：候选 %d，纳入 %d（%d 人）' % (

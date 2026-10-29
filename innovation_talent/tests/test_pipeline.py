@@ -323,3 +323,25 @@ def test_narrative_filter():
     assert assess(short_story)['text_type'] == 'narrative'
     assert assess(awards)['text_type'] == 'list_only'
     assert assess(motto)['text_type'] == 'list_only'
+
+
+def test_practice_description_counts_as_narrative():
+    from talent_corpus.narrative import assess
+    t = ('化工系2013级博士生彭翃杰的研究方向为高性能复合硫正极材料研究。博士期间他阅读积累的文献总数超过120G，'
+         '而这正代表着他学术上数年如一日的专注。他说，看文献的习惯就像喝咖啡，最开始可能只是为了提神，'
+         '但是最后反而是爱上了咖啡本身的香味，所以每天都喝，变成一种习惯。')
+    assert assess(t)['text_type'] == 'narrative'
+
+
+def test_split_sharing_session_paragraphs():
+    from talent_corpus.segment import split_people
+    t = ('2013年研究生特等奖学金获得者分享交流会举行\n'
+         '微纳电子系2009级博士生田禾的主要研究领域是新型石墨烯电子器件。机械系2011级硕士生李国轩与大家分享了'
+         '跨系合作研制机器人抓手的经历。\n'
+         '图为现场。记者 摄\n'
+         '化学系2009级博士生吴宇恩则是一位“不走寻常路”的特奖获得者。刚来清华时，吴宇恩成绩一直不理想。\n'
+         '校领导作总结讲话。')
+    parts = {n: text for n, text, _ in split_people(t)}
+    assert list(parts) == ['田禾', '李国轩', '吴宇恩']
+    assert '李国轩' not in parts['田禾']
+    assert '总结讲话' not in parts['吴宇恩'] and '成绩一直不理想' in parts['吴宇恩']

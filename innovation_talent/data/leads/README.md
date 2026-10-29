@@ -27,3 +27,11 @@
 | cn_annual | 3 | 中国大学生年度人物事迹 |
 
 同一份答辩实录有多个转载时都列入，以防个别网站抓取失败；入库时按标题去重。
+
+## 第三批：long_text_urls_v3.csv（8 条）
+
+清华研究生特奖分享会和获得者事迹报道，来自 2026 年 10 月 29 日的网页检索。这类通讯稿多用第三人称，但常转述本人的做法和想法（例如彭翃杰谈“看文献就像喝咖啡”），按研究组的意见纳入分析。其中 7 条只凭检索结果判断，内容待抓取后确认。已入库的 2013、2015 年分享会不再重复列出。
+
+抓取命令（PowerShell，在 innovation_talent 目录下）：
+
+    python -m talent_corpus articles --urls data/leads/long_text_urls_v3.csv --out talent_data/raw/articles_v3.jsonl

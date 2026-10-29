@@ -3,7 +3,7 @@ cn_annual_7f52f2ee7993,,,东南大学,cn_annual,whole,list_only,552,10,0,0,5,全
 cn_annual_980281bf9e30,p_87d88e716906,仉元旭,,cn_annual,name_line,list_only,505,11,0,0,4,第十三届中国大学生年度人物、特别奖揭晓,https://m.thepaper.cn/newsDetail_forward_2220489,cn_annual_f12c0d385af2
 cn_annual_9a8696963b68,p_be0062f61bc6,刘敏,,cn_annual,name_line,list_only,483,13,0,0,3,第十三届中国大学生年度人物、特别奖揭晓,https://m.thepaper.cn/newsDetail_forward_2220489,cn_annual_f12c0d385af2
 cn_annual_d81eb24649b3,p_90ca74b2d56f,吕松,,cn_annual,name_line,list_only,486,12,1,0,3,第十三届中国大学生年度人物、特别奖揭晓,https://m.thepaper.cn/newsDetail_forward_2220489,cn_annual_f12c0d385af2
-cn_annual_e365b731379b,p_87eec24d314a,张震鸣,,cn_annual,name_line,list_only,517,17,0,0,2,第十三届中国大学生年度人物、特别奖揭晓,https://m.thepaper.cn/newsDetail_forward_2220489,cn_annual_f12c0d385af2
+cn_annual_e365b731379b,p_87eec24d314a,张震鸣,,cn_annual,name_line,list_only,517,17,1,0,2,第十三届中国大学生年度人物、特别奖揭晓,https://m.thepaper.cn/newsDetail_forward_2220489,cn_annual_f12c0d385af2
 cn_annual_783855130eea,p_dc21f0323548,李二阳,,cn_annual,name_line,list_only,474,11,0,0,3,第十三届中国大学生年度人物、特别奖揭晓,https://m.thepaper.cn/newsDetail_forward_2220489,cn_annual_f12c0d385af2
 cn_annual_ee16033bbb01,p_232feeb3c9ad,王海涛,,cn_annual,name_line,list_only,496,16,1,0,1,第十三届中国大学生年度人物、特别奖揭晓,https://m.thepaper.cn/newsDetail_forward_2220489,cn_annual_f12c0d385af2
 cn_annual_926996b75ed5,p_859791336347,王绍鑫,,cn_annual,name_line,list_only,481,11,1,0,3,第十三届中国大学生年度人物、特别奖揭晓,https://m.thepaper.cn/newsDetail_forward_2220489,cn_annual_f12c0d385af2
@@ -64,11 +64,16 @@ sjtu_star_a34b3f49b543,p_3cb0b1c06619,路礼军,上海交通大学,sjtu_star,nam
 sjtu_star_2f4bb0041d16,p_6795b02515c5,阚银辉,上海交通大学,sjtu_star,name_line,list_only,1009,18,0,0,9,更高处见！交大第五届研究生“学术之星”答辩会圆满落幕！,https://m.thepaper.cn/baijiahao_10355722,sjtu_star_5338292c46bf
 sjtu_star_2ee3efb0e1ee,p_c32fe8f02f56,马艳玲,上海交通大学,sjtu_star,name_line,list_only,335,8,0,0,6,更高处见！交大第五届研究生“学术之星”答辩会圆满落幕！,https://m.thepaper.cn/baijiahao_10355722,sjtu_star_5338292c46bf
 sjtu_star_ba0b1647b31b,,,上海交通大学,sjtu_star,whole,narrative,1639,28,6,2,1,第九届上海交通大学研究生“学术之星”分享会顺利举行[图]-上海交通大学机械与动力工程学院,https://me.sjtu.edu.cn/xsyd-xw/76922.html,
-tsinghua_special_c397a7f1fd13,,特奖,清华大学,tsinghua_special,whole,narrative,2437,58,4,1,21,2013年清华研究生特奖获得者分享成长故事-清华大学,https://www.tsinghua.edu.cn/info/1176/28266.htm,
-tsinghua_special_4efe9dcad42e,,,清华大学,tsinghua_special,whole,list_only,2021,52,0,0,14,2016清华大学本科生特等奖学金答辩会举行,https://www.tsinghua.edu.cn/info/1181/44151.htm,
+tsinghua_special_2d4ebdd8e1c5,p_dfae025a204c,冯硝,清华大学,tsinghua_special,dept_lead,list_only,132,3,1,0,1,2013年清华研究生特奖获得者分享成长故事-清华大学,https://www.tsinghua.edu.cn/info/1176/28266.htm,tsinghua_special_c397a7f1fd13
+tsinghua_special_f05c2d37ec82,p_b3a319d86dcc,吴宇恩,清华大学,tsinghua_special,dept_lead,list_only,98,2,1,0,1,2013年清华研究生特奖获得者分享成长故事-清华大学,https://www.tsinghua.edu.cn/info/1176/28266.htm,tsinghua_special_c397a7f1fd13
+tsinghua_special_67e39e842854,p_3151e25c35cf,喻丰,清华大学,tsinghua_special,dept_lead,list_only,153,3,0,0,0,2013年清华研究生特奖获得者分享成长故事-清华大学,https://www.tsinghua.edu.cn/info/1176/28266.htm,tsinghua_special_c397a7f1fd13
+tsinghua_special_aba8f4cbc3e3,p_92373c52e419,张如范,清华大学,tsinghua_special,dept_lead,list_only,211,5,0,0,0,2013年清华研究生特奖获得者分享成长故事-清华大学,https://www.tsinghua.edu.cn/info/1176/28266.htm,tsinghua_special_c397a7f1fd13
+tsinghua_special_e96340fc2694,p_ce1184287e9c,李国轩,清华大学,tsinghua_special,dept_lead,list_only,161,3,1,0,0,2013年清华研究生特奖获得者分享成长故事-清华大学,https://www.tsinghua.edu.cn/info/1176/28266.htm,tsinghua_special_c397a7f1fd13
+tsinghua_special_9c1d9dbabc4a,p_c46cf5ab6c58,田禾,清华大学,tsinghua_special,dept_lead,list_only,96,2,0,0,1,2013年清华研究生特奖获得者分享成长故事-清华大学,https://www.tsinghua.edu.cn/info/1176/28266.htm,tsinghua_special_c397a7f1fd13
+tsinghua_special_4efe9dcad42e,,,清华大学,tsinghua_special,whole,narrative,2021,52,0,0,14,2016清华大学本科生特等奖学金答辩会举行,https://www.tsinghua.edu.cn/info/1181/44151.htm,
 tsinghua_special_f98730bd4e28,,,清华大学,tsinghua_special,whole,narrative,2083,41,3,0,9,2018年清华大学本科生特等奖学金答辩会举行,https://www.tsinghua.edu.cn/info/1177/22564.htm,
 tsinghua_special_446b782603ca,p_1b7afa5c5d4a,宫栋宇,清华大学,tsinghua_special,name_list,list_only,178,3,1,0,1,2020年清华大学本科生特等奖学金答辩会举行-清华大学,https://www.tsinghua.edu.cn/info/1177/26108.htm,tsinghua_special_8189727e2b44
-tsinghua_special_07cf8e7483e3,p_1a0f4cf7b278,解海鹏,清华大学,tsinghua_special,name_list,list_only,194,6,1,0,3,2020年清华大学本科生特等奖学金答辩会举行-清华大学,https://www.tsinghua.edu.cn/info/1177/26108.htm,tsinghua_special_8189727e2b44
+tsinghua_special_07cf8e7483e3,p_1a0f4cf7b278,解海鹏,清华大学,tsinghua_special,name_list,narrative,194,6,1,1,3,2020年清华大学本科生特等奖学金答辩会举行-清华大学,https://www.tsinghua.edu.cn/info/1177/26108.htm,tsinghua_special_8189727e2b44
 tsinghua_special_e8926a6ab3a3,p_1f36d0b522e4,谢廷玉,清华大学,tsinghua_special,name_list,list_only,176,4,1,0,1,2020年清华大学本科生特等奖学金答辩会举行-清华大学,https://www.tsinghua.edu.cn/info/1177/26108.htm,tsinghua_special_8189727e2b44
 tsinghua_special_5f2a82cd4284,p_6e558caee52d,陈逸贤,清华大学,tsinghua_special,name_list,list_only,185,7,0,0,0,2020年清华大学本科生特等奖学金答辩会举行-清华大学,https://www.tsinghua.edu.cn/info/1177/26108.htm,tsinghua_special_8189727e2b44
 tsinghua_special_2666c0c535b5,p_5d5cdb37f41f,刘泽华,清华大学,tsinghua_special,name_list,list_only,317,7,0,0,2,2021年清华大学本科生特等奖学金答辩会举行-清华大学,https://www.tsinghua.edu.cn/info/1176/88881.htm,tsinghua_special_0da3e0aaef51
@@ -107,7 +112,7 @@ tsinghua_special_1bac18b9f586,p_f75a170e4a14,周汝赟,清华大学,tsinghua_spe
 tsinghua_special_0360d0705e81,p_5c64dcf8ed76,尤丽娅,清华大学,tsinghua_special,dash,narrative,1343,34,1,1,9,2023清华本科生特等奖学金答辩现场实录！（附答辩结果）,https://www.thepaper.cn/newsDetail_forward_25267708,tsinghua_special_f413d209bd69
 tsinghua_special_ba85ebaa7ec0,p_59805ea1c8a1,应文昱,清华大学,tsinghua_special,dash,list_only,750,20,0,0,6,2023清华本科生特等奖学金答辩现场实录！（附答辩结果）,https://www.thepaper.cn/newsDetail_forward_25267708,tsinghua_special_f413d209bd69
 tsinghua_special_20f62ec6c78d,p_483b17ab45b3,戴言,清华大学,tsinghua_special,dash,narrative,920,25,3,0,9,2023清华本科生特等奖学金答辩现场实录！（附答辩结果）,https://www.thepaper.cn/newsDetail_forward_25267708,tsinghua_special_f413d209bd69
-tsinghua_special_46edbf0a40d9,p_2242f7d2b008,朱颖雷,清华大学,tsinghua_special,dash,list_only,1139,26,1,0,8,2023清华本科生特等奖学金答辩现场实录！（附答辩结果）,https://www.thepaper.cn/newsDetail_forward_25267708,tsinghua_special_f413d209bd69
+tsinghua_special_46edbf0a40d9,p_2242f7d2b008,朱颖雷,清华大学,tsinghua_special,dash,narrative,1139,26,1,0,8,2023清华本科生特等奖学金答辩现场实录！（附答辩结果）,https://www.thepaper.cn/newsDetail_forward_25267708,tsinghua_special_f413d209bd69
 tsinghua_special_d8e538c40a4b,p_2c55ac5e9056,李智毅,清华大学,tsinghua_special,dash,narrative,999,27,8,2,5,2023清华本科生特等奖学金答辩现场实录！（附答辩结果）,https://www.thepaper.cn/newsDetail_forward_25267708,tsinghua_special_f413d209bd69
 tsinghua_special_ee13e82cf5e0,p_340998e1aba6,林奕然,清华大学,tsinghua_special,dash,narrative,1002,24,3,0,7,2023清华本科生特等奖学金答辩现场实录！（附答辩结果）,https://www.thepaper.cn/newsDetail_forward_25267708,tsinghua_special_f413d209bd69
 tsinghua_special_49834b2992f0,p_ecb267e94090,林祐均,清华大学,tsinghua_special,dash,narrative,1060,24,3,0,5,2023清华本科生特等奖学金答辩现场实录！（附答辩结果）,https://www.thepaper.cn/newsDetail_forward_25267708,tsinghua_special_f413d209bd69
@@ -141,7 +146,7 @@ tsinghua_special_d488939e5384,p_1f36d0b522e4,谢廷玉,清华大学,tsinghua_spe
 tsinghua_special_9f38f8047248,p_6e558caee52d,陈逸贤,清华大学,tsinghua_special,name_line,narrative,624,13,2,0,1,全记录！2020年清华大学特等奖学金（本科生）答辩,https://m.thepaper.cn/newsDetail_forward_9964323,tsinghua_special_a40c131fc357
 tsinghua_special_54c9abba987f,p_1a8b00c44883,周冉,清华大学,tsinghua_special,name_line,list_only,494,16,0,0,2,全记录｜2019年清华大学本科生特等奖学金答辩,https://www.thepaper.cn/newsDetail_forward_4967208,tsinghua_special_32ec6ccd2986
 tsinghua_special_0fd0b6142dc2,p_948244fb4b65,崔世博,清华大学,tsinghua_special,name_line,list_only,462,12,1,0,1,全记录｜2019年清华大学本科生特等奖学金答辩,https://www.thepaper.cn/newsDetail_forward_4967208,tsinghua_special_32ec6ccd2986
-tsinghua_special_4965e0491e0b,p_5d1b0dc49304,张博涵,清华大学,tsinghua_special,name_line,list_only,628,14,1,0,4,全记录｜2019年清华大学本科生特等奖学金答辩,https://www.thepaper.cn/newsDetail_forward_4967208,tsinghua_special_32ec6ccd2986
+tsinghua_special_4965e0491e0b,p_5d1b0dc49304,张博涵,清华大学,tsinghua_special,name_line,narrative,628,14,2,0,4,全记录｜2019年清华大学本科生特等奖学金答辩,https://www.thepaper.cn/newsDetail_forward_4967208,tsinghua_special_32ec6ccd2986
 tsinghua_special_7acc62ccf1ac,p_12b5b4e5b3d3,成大立,清华大学,tsinghua_special,name_line,narrative,638,17,6,1,3,全记录｜2019年清华大学本科生特等奖学金答辩,https://www.thepaper.cn/newsDetail_forward_4967208,tsinghua_special_32ec6ccd2986
 tsinghua_special_d7a797be5223,p_4d7c4c4778af,游凯超,清华大学,tsinghua_special,name_line,narrative,1205,33,2,0,9,全记录｜2019年清华大学本科生特等奖学金答辩,https://www.thepaper.cn/newsDetail_forward_4967208,tsinghua_special_32ec6ccd2986
 tsinghua_special_8d0d656e5c2e,p_1f0dd88a9bc3,王力铖,清华大学,tsinghua_special,name_line,narrative,480,12,2,0,2,全记录｜2019年清华大学本科生特等奖学金答辩,https://www.thepaper.cn/newsDetail_forward_4967208,tsinghua_special_32ec6ccd2986
@@ -176,7 +181,14 @@ tsinghua_special_21598c46559f,,戴言,清华大学,tsinghua_special,whole,narrat
 tsinghua_special_b45df7f60b1f,,李忆唐,清华大学,tsinghua_special,whole,narrative,4155,105,21,4,19,清华特奖专访 | 李忆唐：智能所及，关怀所至,https://hub.baai.ac.cn/view/51193,
 tsinghua_special_7ba1efcab420,p_f7f16b28c4ae,杨倩,清华大学,tsinghua_special,whole,narrative,2137,59,7,0,11,清华特等奖学金答辩现场！杨倩：正向榜样奔赴-清华大学,https://www.tsinghua.edu.cn/info/1182/88826.htm,
 tsinghua_special_af33dd74fbf7,p_39b5cff78af0,黄成,清华大学,tsinghua_special,whole,narrative,1408,24,6,0,10,清华经管学院本科生黄成获得清华大学特等奖学金-清华大学经济管理学院,https://www.sem.tsinghua.edu.cn/info/1022/5150.htm,
-tsinghua_special_aa12b86c45e0,,,清华大学,tsinghua_special,whole,narrative,2414,68,9,3,28,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,
+tsinghua_special_f23a788f29f2,p_19ba8b46e160,丁文伯,清华大学,tsinghua_special,dept_lead,narrative,160,4,2,1,1,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,tsinghua_special_aa12b86c45e0
+tsinghua_special_092cf7ce2ead,p_54c5bf29c54a,吴伟,清华大学,tsinghua_special,dept_lead,list_only,102,3,0,0,0,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,tsinghua_special_aa12b86c45e0
+tsinghua_special_6924dd990ccd,p_635e755d0132,周滢垭,清华大学,tsinghua_special,dept_lead,list_only,139,3,1,0,1,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,tsinghua_special_aa12b86c45e0
+tsinghua_special_b24a0deca3ba,p_1aa9aa087f74,宋子由,清华大学,tsinghua_special,dept_lead,narrative,196,3,1,1,1,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,tsinghua_special_aa12b86c45e0
+tsinghua_special_0766e61209db,p_c26bdbb1fbf6,崔彬,清华大学,tsinghua_special,dept_lead,narrative,119,4,1,1,1,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,tsinghua_special_aa12b86c45e0
+tsinghua_special_be5d2e341a25,p_1f1bd169b3d0,曹玮,清华大学,tsinghua_special,dept_lead,narrative,205,5,1,1,2,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,tsinghua_special_aa12b86c45e0
+tsinghua_special_185640030da1,p_bfc3ce5fb06c,李成晴,清华大学,tsinghua_special,dept_lead,narrative,133,4,2,0,1,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,tsinghua_special_aa12b86c45e0
+tsinghua_special_571fe99f035e,p_7ce5cd700cda,杭婧,清华大学,tsinghua_special,dept_lead,list_only,154,2,1,0,1,研究生特等奖学金获得者分享研究与生活点滴-清华大学,https://www.tsinghua.edu.cn/info/1175/20402.htm,tsinghua_special_aa12b86c45e0
 tsinghua_special_e5651a850c50,p_cacb98667a8f,乔明达,清华大学,tsinghua_special,dash_rev,list_only,529,13,0,0,4,肩负使命，追求卓越——2017年清华大学本科生特奖答辩会精彩现场,file://肩负使命，追求卓越——2017年清华大学本科生特奖答辩会精彩现场.html,univ_article_881f5594566e
 tsinghua_special_aa161a2fb7d0,p_5f1d18c779b4,余天呈,清华大学,tsinghua_special,dash_rev,narrative,686,20,2,0,5,肩负使命，追求卓越——2017年清华大学本科生特奖答辩会精彩现场,file://肩负使命，追求卓越——2017年清华大学本科生特奖答辩会精彩现场.html,univ_article_881f5594566e
 tsinghua_special_eb70f6d3f7ed,p_7d850dd62f9c,周乐一,清华大学,tsinghua_special,dash_rev,narrative,812,20,3,0,4,肩负使命，追求卓越——2017年清华大学本科生特奖答辩会精彩现场,file://肩负使命，追求卓越——2017年清华大学本科生特奖答辩会精彩现场.html,univ_article_881f5594566e
@@ -208,7 +220,7 @@ tsinghua_special_6ebce3c82226,p_e0e0d3d013e7,王煜楠,清华大学,tsinghua_spe
 tsinghua_special_b2979118d440,p_29f09f6881c0,白钰卓,清华大学,tsinghua_special,dash,narrative,915,21,3,1,3,重磅！清华大学2021本科生特等奖学金答辩现场实录，最强神仙打架,https://www.163.com/dy/article/GOIC1U8N0516EN5U.html,tsinghua_special_d9913b7427e2
 tsinghua_special_e761270b7ebc,p_8d0959930f03,程志刚,清华大学,tsinghua_special,dash,narrative,876,21,1,1,5,重磅！清华大学2021本科生特等奖学金答辩现场实录，最强神仙打架,https://www.163.com/dy/article/GOIC1U8N0516EN5U.html,tsinghua_special_d9913b7427e2
 tsinghua_special_c29e374346a1,p_b63753ea4d93,陈宗昊,清华大学,tsinghua_special,dash,narrative,788,22,2,1,5,重磅！清华大学2021本科生特等奖学金答辩现场实录，最强神仙打架,https://www.163.com/dy/article/GOIC1U8N0516EN5U.html,tsinghua_special_d9913b7427e2
-tsinghua_special_2fd0efe7f366,p_12b25dbfeba3,韩天倚,清华大学,tsinghua_special,dash,narrative,944,22,2,0,6,重磅！清华大学2021本科生特等奖学金答辩现场实录，最强神仙打架,https://www.163.com/dy/article/GOIC1U8N0516EN5U.html,tsinghua_special_d9913b7427e2
+tsinghua_special_2fd0efe7f366,p_12b25dbfeba3,韩天倚,清华大学,tsinghua_special,dash,narrative,944,22,2,1,6,重磅！清华大学2021本科生特等奖学金答辩现场实录，最强神仙打架,https://www.163.com/dy/article/GOIC1U8N0516EN5U.html,tsinghua_special_d9913b7427e2
 tsinghua_special_dc0939181eb8,p_3125c6aeffc1,韩皓潭,清华大学,tsinghua_special,dash,narrative,851,26,4,1,3,重磅！清华大学2021本科生特等奖学金答辩现场实录，最强神仙打架,https://www.163.com/dy/article/GOIC1U8N0516EN5U.html,tsinghua_special_d9913b7427e2
 univ_interview_02b530053ab9,p_3ab75be092e7,王志斌,上海科技大学,univ_interview,whole,narrative,2421,54,10,7,15,人物专访|博士生国家奖学金获得者王志斌：未雨绸缪,https://sist.shanghaitech.edu.cn/sist_en/2024/0118/c7744a1087886/page.htm,
 univ_interview_6a429a43fbba,p_2efae55fe306,邓禹,上海科技大学,univ_interview,whole,narrative,2174,73,13,4,13,人物专访|博士生国家奖学金获得者邓禹：为者常成 行者常至,https://sist.shanghaitech.edu.cn/2023/0119/c5005a1073899/page.htm,
@@ -276,4 +288,4 @@ univ_profile_1d3c101fa44c,,,安徽医科大学,univ_profile,whole,narrative,4109
 zju_zhu_d3f335bb79b7,,,浙江大学,zju_zhu,whole,narrative,2774,62,8,1,19,浙大最受关注奖学金公布！三位女生来自杭州同一所高中,https://zjnews.zjol.com.cn/zjnews/202410/t20241016_30585141.shtml,
 zju_zhu_8c4da1e3fdef,p_f610c6862464,齐俏,浙江大学,zju_zhu,whole,narrative,2955,67,17,5,13,科研进阶中淬炼初心,https://www.zju.edu.cn/2020/1217/c55552a2234241/pagem.htm,
 zju_zhu_739b7e4859b2,p_ec5c862d775a,孔令卓,浙江大学,zju_zhu,whole,narrative,2055,64,14,3,15,竺奖专访丨孔令卓：相信时光，总会为奋斗者加冕,https://m.thepaper.cn/newsDetail_forward_25159275,
-zju_zhu_e2abb14c4fdf,p_7b7aa4319118,李思涵,浙江大学,zju_zhu,whole,list_only,2205,64,0,0,23,管院又一名“竺奖”获得者诞生！李思涵：干有意义的研究，做有担当的浙大人,https://www.mbachina.com/html/zju/20250109/371583.html,
+zju_zhu_e2abb14c4fdf,p_7b7aa4319118,李思涵,浙江大学,zju_zhu,whole,narrative,2205,64,0,0,23,管院又一名“竺奖”获得者诞生！李思涵：干有意义的研究，做有担当的浙大人,https://www.mbachina.com/html/zju/20250109/371583.html,

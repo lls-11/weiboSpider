@@ -7,6 +7,8 @@
     艾寒冰，1998年9月生，地球物理与空间……            （姓名，出生年月）
     公共卫生学院2019级……硕士研究生程北京              （院系年级 + 姓名）
     姓名：刘俊莹                                   （字段式）
+    电子系2011级博士生丁文伯研究方向为……             （段首：院系年级 + 姓名，接正文；
+                                                   只保留提到此人的段落，避免混入会议综述）
     谈琪 / 计算机信息工程学院 人工智能专业 2025级……    （姓名单独一行，后两行内有院系、
                                                    单独的院系名或“男，汉族……”）
 答辩会通讯稿没有人物开头行，改用图片说明里的名单（“依次为：丁恺睿、康吉赢……”），
@@ -26,12 +28,15 @@ _HEADERS = [
     ('name_dept', re.compile(r'^(' + _NAME + r')\s+' + _DEPT + r'$')),
     ('born', re.compile(r'^(' + _NAME + r')[，,]?\s?(?:19|20)\d{2}年\d{1,2}月生')),
     ('field', re.compile(r'^姓名[:：]\s*(' + _NAME + r')$')),
+    ('dept_lead', re.compile(r'^' + _DEPT + r'\d{4}级(?:博士生|硕士生|本科生|博士研究生|硕士研究生)'
+                             r'([一-龥]{2,4}?)(?=研究|曾|在|的|是|以|来自|于|对|将|从|为|已|就|也|一直|作为|则|与|把|还|主要|不仅|通过|，)')),
     ('dept_tail', re.compile(r'^.{4,40}?(?:\d{4}级).{0,20}?(?:研究生|本科生|博士生|硕士生)\s*(' +
                              _NAME + r')$')),
 ]
 _DEPT_LINE = re.compile(r'(学院|书院|系|研究院|研究所).{0,30}(\d{4}级|本科生|研究生|博士生)')
 _DEPT_ONLY = re.compile(r'^' + _DEPT + r'$')
 _GENDER_LINE = re.compile(r'^[男女][，,]')
+_CAPTION = re.compile(r'摄\s*$')
 _NAME_LIST = re.compile(r'依次为[:：]([一-龥、，,\s]+)')
 _STOP = {'个人简介', '答辩语录', '答辩风采', '成果展示', '科研心得', '发展规划', '答辩现场', '人物简介',
          '序号', '姓名', '院系'}
@@ -96,8 +101,12 @@ def _by_name_list(lines):
     return [(n, '\n'.join(ls), 'name_list') for n, ls in parts.items()] or None
 
 
+# 分享会通讯稿常把几个人写在同一段里：在句末与下一个“院系年级博士生”之间断开
+_MID_LEAD = re.compile(r'(?<=[。！？”])(?=' + _DEPT + r'\d{4}级(?:博士生|硕士生|本科生|博士研究生|硕士研究生))')
+
+
 def split_people(text, min_people=2):
-    lines = [ln for ln in text.split('\n') if ln.strip()]
+    lines = [ln for ln in _MID_LEAD.sub('\n', text).split('\n') if ln.strip()]
     heads = _headers(lines)
     # 同一规则至少出现 min_people 次才认为是多人版式，避免误切
     if heads:
@@ -108,7 +117,10 @@ def split_people(text, min_people=2):
         best_part = {}
         for k, (i, name, rule) in enumerate(heads):
             end = heads[k + 1][0] if k + 1 < len(heads) else len(lines)
-            text = '\n'.join(lines[i:end])
+            seg = lines[i:end]
+            if rule == 'dept_lead':
+                seg = seg[:1] + [ln for ln in seg[1:] if name in ln and not _CAPTION.search(ln)]
+            text = '\n'.join(seg)
             if name not in best_part or len(text) > len(best_part[name][1]):
                 best_part[name] = (name, text, rule)
         # 文末结果表里一行一个姓名，只有姓名的段落不算
