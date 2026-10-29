@@ -250,7 +250,12 @@ codes 只列体现了的指标；id 只能取上面列出的编号；level 只�
 stage 只能是 中学及以前、本科、研究生、工作后、不详。
 """
 
-PROVIDERS = {'deepseek': ('https://api.deepseek.com', 'DEEPSEEK_API_KEY', 'deepseek-chat')}
+# 服务商：(接口地址, 密钥环境变量, 默认模型名)。密钥也可写在 talent_data/<服务商>_key.txt。
+# codego 是中转站；默认模型名需以中转站的模型列表为准（运行 check_api.py 可列出）。
+PROVIDERS = {
+    'deepseek': ('https://api.deepseek.com', 'DEEPSEEK_API_KEY', 'deepseek-chat'),
+    'codego': ('https://codegoai.com/v1', 'CODEGO_API_KEY', 'deepseek-v4'),
+}
 
 
 KEY_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'talent_data')

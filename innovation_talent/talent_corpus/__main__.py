@@ -576,10 +576,10 @@ def main(argv=None):
     s = sub.add_parser('person-code', help='以人为单位编码 C01—C33（提示词 person_coding_v1，需 API 凭据）')
     person_inputs(s)
     s.add_argument('--out', default=os.path.join(DATA, 'person', 'runs.jsonl'))
-    s.add_argument('--provider', default='claude', choices=['claude', 'deepseek'],
-                   help='claude 需 ANTHROPIC_API_KEY；deepseek 需 DEEPSEEK_API_KEY')
-    s.add_argument('--model', help='模型名，默认 claude-opus-5-5 / deepseek-chat；以服务商控制台为准')
-    s.add_argument('--base-url', help='OpenAI 兼容接口地址，默认 https://api.deepseek.com')
+    s.add_argument('--provider', default='claude', choices=['claude', 'deepseek', 'codego'],
+                   help='claude 需 ANTHROPIC_API_KEY；deepseek 需 DEEPSEEK_API_KEY；codego（中转站）需 CODEGO_API_KEY')
+    s.add_argument('--model', help='模型名，默认 claude-opus-5-5 / deepseek-chat / deepseek-v4（codego）；以服务商的模型列表为准')
+    s.add_argument('--base-url', help='OpenAI 兼容接口地址，默认按 --provider 取（deepseek 官方 / codego 中转站）')
     s.add_argument('--workers', type=int, default=1, help='并发请求数（deepseek 建议 4—8）')
     s.add_argument('--temperature', type=float, default=0.0, help='deepseek 采样温度，默认 0')
     s.add_argument('--effort', default='medium', choices=['low', 'medium', 'high', 'xhigh', 'max'],
