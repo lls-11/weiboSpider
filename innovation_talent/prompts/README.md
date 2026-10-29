@@ -53,3 +53,54 @@ python -m talent_corpus evidence-export
 - **字段**：检查子码与指标是否匹配，以及必提字段是否齐全（字段清单见 `evidence.py` 的 `DETAIL_FIELDS`）。
 
 核对不通过的证据**不删除**，只在 `flags` 中注明原因，交人工复核。
+
+---
+
+# 以人为单位的指标编码（person_coding_v1.md）
+
+每人一次调用，输出这个人体现了模型 C01—C33 中的哪些指标，最后整理成每人一行的分析表。与上面的证据编码（手册 1.0）相互独立，可以并行使用。
+
+**控制成本的做法：**
+- 系统提示约 1,900 字，开启了提示缓存，批量运行时重复部分只按缓存价计费；
+- 输出只列出踩中的指标，没踩中的默认为 0；
+- 文本量、获奖等级、论文专利奖项数、套话比例等能由程序计算的变量，都不交给模型；
+- 默认推理强度为 medium。
+
+```powershell
+# 1. 试运行：不调用 API，看人数和正文字数
+python -m talent_corpus person-code --dry-run talent_data/person/dry_run.jsonl
+
+# 2. 先试 20 人（国内）
+python -m talent_corpus person-code --subset cn_report,cn_first_person --limit 20
+
+# 3. 生成分析表
+python -m talent_corpus person-table
+```
+
+全量运行共 368 人（国内 143 人、诺奖 225 人），正文约 710 万字符，其中诺奖英文文本约占 98%。建议加 `--batch-submit` 提交批量任务，价格减半，完成后用 `--batch-collect <批次号>` 收回。
+
+## 输出：talent_data/person/persons.csv（每人一行）
+
+| 变量 | 来源 | 说明 |
+|---|---|---|
+| group、language | 程序 | cn / nobel |
+| subsets、corpora、source_types | 程序 | 材料子集、来源栏目、文本类型 |
+| school、category、award_year、birth_year | 程序 | 学校；诺奖学科、获奖年、出生年 |
+| n_texts、chars、log_chars | 程序 | 篇数、原文总字数及其自然对数（控制变量） |
+| chars_sent、honor_sentences_removed | 程序 | 实际发给模型的字数；删去的荣誉罗列句数 |
+| first_person_share | 程序 | 含第一人称的句子比例 |
+| cliche_ratio | 程序 | 含套话的句子比例（宣传文本程度） |
+| award_level、award_label | 程序 | 按来源判定的获奖等级：1 国家奖学金、2 校级最高荣誉、3 全国大学生年度人物、4 诺贝尔奖。清华特奖答辩材料中含未获奖的候选人 |
+| in_rmrb_list | 程序 | 是否为人民日报国奖名录代表 |
+| crit_* | 程序 | 仅国内：论文、第一作者论文、专利、主持项目、各级奖项数等（`criteria.py`，从原文提取） |
+| text_type | 模型 | 过程叙述 / 荣誉罗列或通报 |
+| education、discipline、gender、n_events | 模型 | 学历阶段、学科门类、性别、具体事件数 |
+| C01—C33 | 模型 | 0 = 未体现，1 = 只有声明，2 = 有具体行为。C12、C13、C15、C17 不从文本编码，不出现 |
+| D1_behavior—D6_behavior、D1_any—D6_any | 程序 | 6 个类别中，有行为证据的指标数、有任何证据的指标数 |
+| n_behavior、n_statement、n_unverified | 程序 | 行为、声明指标总数；引语未通过核对的判断数 |
+
+**引语核对**：默认只计入引语在原文中找得到的判断，加 `--include-unverified` 则全部计入。
+
+## 输出：talent_data/person/codes.csv（每条判断一行）
+
+person_id、name、group、indicator、dimension、level、stage（行为发生阶段）、verified、quote，用于抽查判断质量，或按阶段做分析。

@@ -262,6 +262,69 @@ def cmd_evidence_export(args):
                 json.dumps(ev.summarize(recs), ensure_ascii=False))
 
 
+def _people(args):
+    from .coding import person as pc
+    docs = [d for path in args.inputs for d in corpus.read_jsonl(path)]
+    if args.subset:
+        docs = [d for d in docs if d.get('subset') in args.subset.split(',')]
+    people = pc.group_people(docs)
+    if args.person_ids:
+        with open(args.person_ids, encoding='utf-8') as f:
+            wanted = {line.strip() for line in f if line.strip()}
+        people = [p for p in people if p['person_id'] in wanted]
+    return people
+
+
+def cmd_person_code(args):
+    from .coding import person as pc
+    people = _people(args)
+    coder = pc.PersonCoder(model=args.model, effort=args.effort, max_tokens=args.max_tokens,
+                           client=not args.dry_run)
+    by_id = {p['person_id']: p for p in people}
+    if args.batch_collect:
+        recs = coder.collect_batch(args.batch_collect, by_id)
+        corpus.write_jsonl(args.out, recs, append=True)
+        logger.info('收回批量结果 %d 人：%s', len(recs), args.out)
+        return
+    done = {r['person_id'] for r in corpus.read_jsonl(args.out)
+            if not r.get('error') and r.get('model') == args.model and
+            r.get('prompt_version') == coder.meta.get('prompt_version')}
+    todo = [p for p in people if p['person_id'] not in done][:args.limit or None]
+    if args.dry_run:
+        corpus.write_jsonl(args.dry_run, [dict(coder.params(p), person_id=p['person_id'])
+                                          for p in todo])
+        logger.info('试运行：%d 人、正文共 %d 字符，系统提示 %d 字符，请求已写入 %s（未调用 API）',
+                    len(todo), sum(len(p['text']) for p in todo), len(coder.system), args.dry_run)
+        return
+    if args.batch_submit:
+        bid = coder.submit_batch(todo)
+        logger.info('已提交批量任务 %s（%d 人），完成后运行 --batch-collect %s', bid, len(todo), bid)
+        return
+    for i, p in enumerate(todo, 1):
+        try:
+            rec = coder.code(p)
+        except TypeError as e:
+            if 'authentication' not in str(e):
+                raise
+            logger.error('未找到 Anthropic API 凭据：请设置环境变量 ANTHROPIC_API_KEY，'
+                         '或先运行 ant auth login。')
+            return 1
+        corpus.write_jsonl(args.out, [rec], append=True)
+        codes = (rec.get('result') or {}).get('codes', [])
+        note = rec.get('error') or '指标 %d 项（未核实 %d）' % (
+            len(codes), sum(1 for c in codes if not c['verified']))
+        logger.info('[%d/%d] %s %s', i, len(todo), p['name'], note)
+
+
+def cmd_person_table(args):
+    from .coding import person as pc
+    people = _people(args)
+    paths, n, n_coded = pc.build_table(people, corpus.read_jsonl(args.codes), args.out_dir,
+                                       pc.rmrb_name_set(args.rmrb),
+                                       verified_only=not args.include_unverified)
+    logger.info('共 %d 人，已编码 %d 人：%s', n, n_coded, '、'.join(paths.values()))
+
+
 def cmd_human_export(args):
     from .coding import human
     docs = human.sample_docs(corpus.read_jsonl(args.inp), args.frac,
@@ -479,6 +542,33 @@ def main(argv=None):
     s.add_argument('--in', dest='inp', default=os.path.join(DATA, 'evidence', 'runs.jsonl'))
     s.add_argument('--out-dir', default=os.path.join(DATA, 'evidence'))
     s.set_defaults(func=cmd_evidence_export)
+
+    def person_inputs(s):
+        s.add_argument('inputs', nargs='*', default=EVIDENCE_INPUTS,
+                       help='JSONL 文档，默认 data/self_narrative/analysis_set.jsonl')
+        s.add_argument('--subset', help='只用这些子集，逗号分隔，如 cn_report,cn_first_person')
+        s.add_argument('--person-ids', help='只用文件中列出的 person_id（每行一个）')
+
+    s = sub.add_parser('person-code', help='以人为单位编码 C01—C33（提示词 person_coding_v1，需 API 凭据）')
+    person_inputs(s)
+    s.add_argument('--out', default=os.path.join(DATA, 'person', 'runs.jsonl'))
+    s.add_argument('--model', default='claude-opus-5-5')
+    s.add_argument('--effort', default='medium', choices=['low', 'medium', 'high', 'xhigh', 'max'])
+    s.add_argument('--max-tokens', type=int, default=8000)
+    s.add_argument('--limit', type=int, default=0, help='本次最多编码多少人（试跑用）')
+    s.add_argument('--dry-run', metavar='FILE', help='只把请求写入 FILE，不调用 API')
+    s.add_argument('--batch-submit', action='store_true', help='提交批量任务（半价，异步）')
+    s.add_argument('--batch-collect', metavar='BATCH_ID', help='收回批量任务结果')
+    s.set_defaults(func=cmd_person_code)
+
+    s = sub.add_parser('person-table', help='生成每人一行的分析表 persons.csv 与 codes.csv')
+    person_inputs(s)
+    s.add_argument('--codes', default=os.path.join(DATA, 'person', 'runs.jsonl'))
+    s.add_argument('--rmrb', default=os.path.join('data', 'rmrb_scholarship', 'entries.jsonl'),
+                   help='国奖名录，用于标记是否为人民日报名录代表')
+    s.add_argument('--include-unverified', action='store_true', help='引语未核实的判断也计入')
+    s.add_argument('--out-dir', default=os.path.join(DATA, 'person'))
+    s.set_defaults(func=cmd_person_table)
 
     s = sub.add_parser('human-export', help='分层抽样并导出人工编码表')
     s.add_argument('--in', dest='inp', default=os.path.join(DATA, 'prepared.jsonl'))
