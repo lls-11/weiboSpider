@@ -46,3 +46,10 @@ def test_schema_and_table(tmp_path):
     assert row['C30'] == '2' and row['C10'] == '0' and row['n_unverified'] == '1'
     assert row['award_level'] == '2' and row['D6_behavior'] == '1'
     assert row['crit_papers'] == '5'
+
+
+def test_honor_list_rule():
+    assert pc.is_honor_list('曾获国家奖学金、“一二·九”奖学金、清华大学综合优秀奖学金等。')
+    assert not pc.is_honor_list('谢廷玉曾用八个月时间梳理“塔克-伍德命题”四十余年的争论，以第二作者的身份发表文章。')
+    assert not pc.is_honor_list('自中学时期起，戴言便对计算机产生了浓厚的兴趣，曾获得诸多信息学竞赛金牌；')
+    assert not pc.is_honor_list('曾在清华马约翰杯比赛中获得100米蝶泳冠军，也是院里游泳俱乐部的创始人。')

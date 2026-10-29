@@ -50,17 +50,27 @@ AWARD_LEVEL = {
 
 _HONOR_ONLY = re.compile(r'荣获|曾获|获评|获得|入选|发表|授权|论文|专利|称号|奖学金|等奖|金奖|银奖|铜奖|冠军|'
                          r'亚军|季军|SCI|EI|影响因子|优秀学生|三好|标兵|先进个人')
-_KEEP = PROCESS_MARKERS + HABIT_MARKERS + REPORTED_MARKERS
+_KEEP = PROCESS_MARKERS + HABIT_MARKERS + REPORTED_MARKERS + (
+    '兴趣', '历经', '波折', '坎坷', '梳理', '花了', '用了', '创始', '创办', '发起', '牵头')
 _SENT_ZH = re.compile(r'(?<=[。！？!?；;])')
 
 
+def is_honor_list(s):
+    """荣誉清单句：含 2 个以上荣誉词，或用顿号罗列荣誉；且没有任何过程、做法、转述标记。
+    只含一个“发表”“获得”的叙述句（如“曾用八个月时间梳理……发表文章”）保留。"""
+    hits = _HONOR_ONLY.findall(s)
+    if not hits or any(m in s for m in _KEEP):
+        return False
+    return len(hits) >= 2 or '、' in s
+
+
 def blind_zh(text):
-    """删去只罗列奖项、成果的句子：含荣誉词且不含任何过程、做法或转述标记。返回 (文本, 删去句数)。"""
+    """删去荣誉清单句（is_honor_list）。返回 (文本, 删去句数)。"""
     out, removed = [], 0
     for line in text.split('\n'):
         kept = []
         for s in _SENT_ZH.split(line):
-            if s.strip() and _HONOR_ONLY.search(s) and not any(m in s for m in _KEEP):
+            if s.strip() and is_honor_list(s):
                 removed += 1
                 continue
             kept.append(s)
