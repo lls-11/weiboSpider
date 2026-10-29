@@ -79,6 +79,31 @@ python -m talent_corpus person-table
 
 全量运行共 368 人（国内 143 人、诺奖 225 人），正文约 710 万字符，其中诺奖英文文本约占 98%。建议加 `--batch-submit` 提交批量任务，价格减半，完成后用 `--batch-collect <批次号>` 收回。
 
+## 用 DeepSeek 运行
+
+```powershell
+$env:DEEPSEEK_API_KEY = "你的 DeepSeek 密钥"
+
+# 试运行（不调用 API）
+python -m talent_corpus person-code --provider deepseek --limit 20 --dry-run talent_data/person/dry_run_ds.jsonl
+
+# 试跑 20 人（国内）
+python -m talent_corpus person-code --provider deepseek --subset cn_report,cn_first_person --limit 20
+
+# 全量，4 路并发
+python -m talent_corpus person-code --provider deepseek --workers 4
+python -m talent_corpus person-table
+```
+
+- **模型名**：默认 `deepseek-chat`。要用其他型号（如 V4），用 `--model` 指定，名称以 DeepSeek 控制台和文档为准。
+- **接口地址**：默认 `https://api.deepseek.com`。用第三方平台托管的 DeepSeek 时，用 `--base-url` 改成该平台的 OpenAI 兼容地址。
+- **与 Claude 的区别**：
+  - DeepSeek 的 JSON 模式只保证输出是合法 JSON，不检查字段取值。所以输出格式写进了系统提示，程序收到后再核对：越界的字段记“不详”，非法的指标判断丢弃，丢弃数记在 `n_dropped_invalid`。
+  - 模型如果不支持 JSON 模式，程序会自动改为只靠提示词约束。
+  - DeepSeek 自动缓存相同的系统提示，无须设置。它没有批量接口，用 `--workers` 并发提速。
+  - 采样温度默认为 0，让同一份材料多次运行的结果尽量一致。
+- **混用模型**：同一份运行记录里可以混有不同模型的结果，`person-table` 对每人取最近一次成功的结果。要比较两个模型，用 `--out` 写到不同文件，分别生成分析表。
+
 ## 输出：talent_data/person/persons.csv（每人一行）
 
 | 变量 | 来源 | 说明 |

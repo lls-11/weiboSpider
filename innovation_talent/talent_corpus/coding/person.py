@@ -233,6 +233,146 @@ class PersonCoder:
         return out
 
 
+# ---------------------------------------------------------------- DeepSeek 等 OpenAI 兼容接口
+
+OUTPUT_FORMAT = """
+
+## 输出格式
+
+只输出一个 JSON 对象，不要输出其他文字。字段与取值：
+{"text_type": "过程叙述" 或 "荣誉罗列或通报",
+ "education": "本科" | "硕士" | "博士" | "博士后或已工作" | "不详",
+ "discipline": "理学" | "工学" | "医学" | "农学" | "人文" | "社科" | "经管" | "艺术体育" | "不详",
+ "gender": "男" | "女" | "不详",
+ "n_events": 整数,
+ "codes": [{"id": "C30", "level": 2, "stage": "研究生", "quote": "逐字原文"}]}
+codes 只列体现了的指标；id 只能取上面列出的编号；level 只能是 1 或 2；
+stage 只能是 中学及以前、本科、研究生、工作后、不详。
+"""
+
+PROVIDERS = {'deepseek': ('https://api.deepseek.com', 'DEEPSEEK_API_KEY', 'deepseek-chat')}
+
+
+def _parse_json(text):
+    """去掉可能的 ```json 包裹后解析。"""
+    t = (text or '').strip()
+    m = re.search(r'```(?:json)?\s*(.*?)```', t, re.S)
+    if m:
+        t = m.group(1)
+    i, j = t.find('{'), t.rfind('}')
+    return json.loads(t[i:j + 1] if i >= 0 and j > i else t)
+
+
+def clean_result(res):
+    """JSON 模式不保证取值合法：越界的字段改为“不详”，非法的指标判断丢弃，并记录丢弃数。"""
+    out = {
+        'text_type': res.get('text_type') if res.get('text_type') in ('过程叙述', '荣誉罗列或通报')
+        else '过程叙述',
+        'education': res.get('education') if res.get('education') in EDUCATION else '不详',
+        'discipline': res.get('discipline') if res.get('discipline') in DISCIPLINE else '不详',
+        'gender': res.get('gender') if res.get('gender') in ('男', '女', '不详') else '不详',
+    }
+    try:
+        out['n_events'] = int(res.get('n_events') or 0)
+    except (TypeError, ValueError):
+        out['n_events'] = 0
+    codes, dropped = [], 0
+    for c in res.get('codes') or []:
+        if not isinstance(c, dict):
+            dropped += 1
+            continue
+        cid = str(c.get('id', '')).strip().upper()
+        try:
+            level = int(c.get('level'))
+        except (TypeError, ValueError):
+            level = 0
+        if cid not in INDICATORS or level not in (1, 2):
+            dropped += 1
+            continue
+        stage = c.get('stage') if c.get('stage') in STAGES else '不详'
+        codes.append({'id': cid, 'level': level, 'stage': stage, 'quote': str(c.get('quote') or '')})
+    out['codes'] = codes
+    out['dropped_invalid'] = dropped
+    return out
+
+
+class CompatCoder:
+    """OpenAI 兼容的 chat/completions 接口（默认 DeepSeek）。用 requests 直接调用，不需要额外安装包。
+
+    DeepSeek 会自动缓存相同的前缀（系统提示），重复部分按缓存价计费。没有批量接口，
+    用 workers 并发提速。
+    """
+
+    def __init__(self, provider='deepseek', model=None, base_url=None, api_key=None,
+                 max_tokens=8000, temperature=0.0, prompt_path=PROMPT_PATH, timeout=600):
+        base, env, default_model = PROVIDERS[provider]
+        self.base_url = (base_url or base).rstrip('/')
+        self.model = model or default_model
+        self.api_key = api_key or os.environ.get(env, '')
+        self.env = env
+        self.max_tokens, self.temperature, self.timeout = max_tokens, temperature, timeout
+        system, self.meta = load_prompt(prompt_path)
+        self.system = system + OUTPUT_FORMAT
+        self.json_mode = True
+
+    def params(self, person):
+        p = {'model': self.model, 'max_tokens': self.max_tokens,
+             'messages': [{'role': 'system', 'content': self.system},
+                          {'role': 'user', 'content': build_user_message(person)}]}
+        if self.temperature is not None:
+            p['temperature'] = self.temperature
+        if self.json_mode:
+            p['response_format'] = {'type': 'json_object'}
+        return p
+
+    def _record(self, person, **kw):
+        return make_record(person, self.model,
+                           prompt_version=self.meta.get('prompt_version', ''), **kw)
+
+    def code(self, person, retries=4):
+        import requests
+        if not self.api_key:
+            raise RuntimeError('未找到 API 密钥：请设置环境变量 %s' % self.env)
+        url = self.base_url + '/chat/completions'
+        headers = {'Authorization': 'Bearer ' + self.api_key, 'Content-Type': 'application/json'}
+        for attempt in range(retries + 1):
+            try:
+                r = requests.post(url, headers=headers, json=self.params(person), timeout=self.timeout)
+            except requests.RequestException as e:
+                if attempt == retries:
+                    return self._record(person, error='connection: %s' % e)
+                time.sleep(2 ** attempt * 5)
+                continue
+            if r.status_code == 400 and self.json_mode and 'response_format' in r.text:
+                self.json_mode = False          # 有的模型不支持 JSON 模式，改为只靠提示词
+                continue
+            if r.status_code in (429, 500, 502, 503, 504) and attempt < retries:
+                time.sleep(2 ** attempt * 5)
+                continue
+            if r.status_code != 200:
+                return self._record(person, error='api_status_%s: %s' % (r.status_code, r.text[:300]))
+            return self.from_response(person, r.json())
+        return self._record(person, error='retries_exhausted')
+
+    def from_response(self, person, data):
+        choice = (data.get('choices') or [{}])[0]
+        u = data.get('usage') or {}
+        usage = {'input_tokens': u.get('prompt_tokens'), 'output_tokens': u.get('completion_tokens'),
+                 'cache_read_input_tokens': u.get('prompt_cache_hit_tokens')}
+        served = data.get('model', self.model)
+        finish = choice.get('finish_reason', '')
+        if finish == 'length':
+            return self._record(person, error='max_tokens', stop_reason=finish, usage=usage,
+                                served_by=served)
+        text = (choice.get('message') or {}).get('content', '')
+        try:
+            parsed = clean_result(_parse_json(text))
+        except ValueError:
+            return self._record(person, error='invalid_json', stop_reason=finish, usage=usage,
+                                served_by=served)
+        return self._record(person, parsed=parsed, stop_reason=finish, usage=usage, served_by=served)
+
+
 # ---------------------------------------------------------------- 分析表
 
 def _cliche_ratio(text, lang, lx):
@@ -307,6 +447,7 @@ def llm_vars(rec, verified_only=True):
     row['n_behavior'] = sum(1 for v in level.values() if v == 2)
     row['n_statement'] = sum(1 for v in level.values() if v == 1)
     row['n_unverified'] = n_unverified
+    row['n_dropped_invalid'] = res.get('dropped_invalid', 0)
     row['coding_error'] = rec.get('error', '')
     return row
 

@@ -53,3 +53,51 @@ def test_honor_list_rule():
     assert not pc.is_honor_list('谢廷玉曾用八个月时间梳理“塔克-伍德命题”四十余年的争论，以第二作者的身份发表文章。')
     assert not pc.is_honor_list('自中学时期起，戴言便对计算机产生了浓厚的兴趣，曾获得诸多信息学竞赛金牌；')
     assert not pc.is_honor_list('曾在清华马约翰杯比赛中获得100米蝶泳冠军，也是院里游泳俱乐部的创始人。')
+
+
+def test_deepseek_backend_offline():
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+    answer = {'text_type': '过程叙述', 'education': '本科', 'discipline': '工科', 'gender': '男',
+              'n_events': '2', 'codes': [
+                  {'id': 'c30', 'level': 2, 'stage': '本科', 'quote': '重新设计了三版电路'},
+                  {'id': 'C99', 'level': 2, 'stage': '本科', 'quote': 'x'},
+                  {'id': 'C10', 'level': 3, 'stage': '本科', 'quote': 'x'}]}
+    seen = []
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            body = json.loads(self.rfile.read(int(self.headers['content-length'])))
+            seen.append((self.path, self.headers.get('Authorization'), body))
+            if 'response_format' in body:      # 模拟不支持 JSON 模式的模型
+                data, code = b'{"error": "response_format not supported"}', 400
+            else:
+                data, code = json.dumps({'model': 'deepseek-test', 'choices': [{
+                    'finish_reason': 'stop', 'message': {
+                        'content': '```json\n' + json.dumps(answer, ensure_ascii=False) + '\n```'}}],
+                    'usage': {'prompt_tokens': 10, 'completion_tokens': 5}}).encode(), 200
+            self.send_response(code)
+            self.send_header('content-type', 'application/json')
+            self.send_header('content-length', str(len(data)))
+            self.end_headers()
+            self.wfile.write(data)
+
+        def log_message(self, *a):
+            pass
+
+    srv = HTTPServer(('127.0.0.1', 0), Handler)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    try:
+        coder = pc.CompatCoder(base_url='http://127.0.0.1:%d' % srv.server_address[1], api_key='k')
+        rec = coder.code(pc.group_people([DOC])[0])
+    finally:
+        srv.shutdown()
+    path, auth, body = seen[-1]
+    assert path == '/chat/completions' and auth == 'Bearer k'
+    assert body['model'] == 'deepseek-chat' and body['temperature'] == 0.0
+    assert '输出格式' in body['messages'][0]['content']
+    assert len(seen) == 2 and 'response_format' not in body
+    res = rec['result']
+    assert rec['error'] == '' and rec['served_by'] == 'deepseek-test'
+    assert res['discipline'] == '不详' and res['n_events'] == 2 and res['dropped_invalid'] == 2
+    assert [c['id'] for c in res['codes']] == ['C30'] and res['codes'][0]['verified']

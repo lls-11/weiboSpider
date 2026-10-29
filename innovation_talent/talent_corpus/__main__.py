@@ -278,8 +278,16 @@ def _people(args):
 def cmd_person_code(args):
     from .coding import person as pc
     people = _people(args)
-    coder = pc.PersonCoder(model=args.model, effort=args.effort, max_tokens=args.max_tokens,
-                           client=not args.dry_run)
+    claude = args.provider == 'claude'
+    if claude:
+        coder = pc.PersonCoder(model=args.model or 'claude-opus-5-5', effort=args.effort,
+                               max_tokens=args.max_tokens, client=not args.dry_run)
+    else:
+        if args.batch_submit or args.batch_collect:
+            logger.error('%s 没有批量接口，请去掉 --batch-submit / --batch-collect，用 --workers 并发', args.provider)
+            return 1
+        coder = pc.CompatCoder(provider=args.provider, model=args.model, base_url=args.base_url,
+                               max_tokens=args.max_tokens, temperature=args.temperature)
     by_id = {p['person_id']: p for p in people}
     if args.batch_collect:
         recs = coder.collect_batch(args.batch_collect, by_id)
@@ -287,33 +295,49 @@ def cmd_person_code(args):
         logger.info('收回批量结果 %d 人：%s', len(recs), args.out)
         return
     done = {r['person_id'] for r in corpus.read_jsonl(args.out)
-            if not r.get('error') and r.get('model') == args.model and
+            if not r.get('error') and r.get('model') == coder.model and
             r.get('prompt_version') == coder.meta.get('prompt_version')}
     todo = [p for p in people if p['person_id'] not in done][:args.limit or None]
     if args.dry_run:
         corpus.write_jsonl(args.dry_run, [dict(coder.params(p), person_id=p['person_id'])
                                           for p in todo])
-        logger.info('试运行：%d 人、正文共 %d 字符，系统提示 %d 字符，请求已写入 %s（未调用 API）',
-                    len(todo), sum(len(p['text']) for p in todo), len(coder.system), args.dry_run)
+        logger.info('试运行（%s，模型 %s）：%d 人、正文共 %d 字符，系统提示 %d 字符，请求已写入 %s（未调用 API）',
+                    args.provider, coder.model, len(todo), sum(len(p['text']) for p in todo),
+                    len(coder.system), args.dry_run)
         return
     if args.batch_submit:
         bid = coder.submit_batch(todo)
         logger.info('已提交批量任务 %s（%d 人），完成后运行 --batch-collect %s', bid, len(todo), bid)
         return
-    for i, p in enumerate(todo, 1):
-        try:
-            rec = coder.code(p)
-        except TypeError as e:
-            if 'authentication' not in str(e):
-                raise
-            logger.error('未找到 Anthropic API 凭据：请设置环境变量 ANTHROPIC_API_KEY，'
-                         '或先运行 ant auth login。')
-            return 1
+    if not claude and not coder.api_key:
+        logger.error('未找到 API 密钥：请设置环境变量 %s', coder.env)
+        return 1
+    logger.info('开始编码：%s，模型 %s，%d 人（已完成 %d 人跳过），并发 %d',
+                args.provider, coder.model, len(todo), len(done), args.workers)
+
+    def report(i, p, rec):
         corpus.write_jsonl(args.out, [rec], append=True)
         codes = (rec.get('result') or {}).get('codes', [])
         note = rec.get('error') or '指标 %d 项（未核实 %d）' % (
             len(codes), sum(1 for c in codes if not c['verified']))
         logger.info('[%d/%d] %s %s', i, len(todo), p['name'], note)
+
+    try:
+        if args.workers <= 1:
+            for i, p in enumerate(todo, 1):
+                report(i, p, coder.code(p))
+        else:
+            from concurrent.futures import ThreadPoolExecutor, as_completed
+            with ThreadPoolExecutor(max_workers=args.workers) as ex:
+                futs = {ex.submit(coder.code, p): p for p in todo}
+                for i, f in enumerate(as_completed(futs), 1):
+                    report(i, futs[f], f.result())
+    except TypeError as e:
+        if 'authentication' not in str(e):
+            raise
+        logger.error('未找到 Anthropic API 凭据：请设置环境变量 ANTHROPIC_API_KEY，'
+                     '或先运行 ant auth login。')
+        return 1
 
 
 def cmd_person_table(args):
@@ -552,8 +576,14 @@ def main(argv=None):
     s = sub.add_parser('person-code', help='以人为单位编码 C01—C33（提示词 person_coding_v1，需 API 凭据）')
     person_inputs(s)
     s.add_argument('--out', default=os.path.join(DATA, 'person', 'runs.jsonl'))
-    s.add_argument('--model', default='claude-opus-5-5')
-    s.add_argument('--effort', default='medium', choices=['low', 'medium', 'high', 'xhigh', 'max'])
+    s.add_argument('--provider', default='claude', choices=['claude', 'deepseek'],
+                   help='claude 需 ANTHROPIC_API_KEY；deepseek 需 DEEPSEEK_API_KEY')
+    s.add_argument('--model', help='模型名，默认 claude-opus-5-5 / deepseek-chat；以服务商控制台为准')
+    s.add_argument('--base-url', help='OpenAI 兼容接口地址，默认 https://api.deepseek.com')
+    s.add_argument('--workers', type=int, default=1, help='并发请求数（deepseek 建议 4—8）')
+    s.add_argument('--temperature', type=float, default=0.0, help='deepseek 采样温度，默认 0')
+    s.add_argument('--effort', default='medium', choices=['low', 'medium', 'high', 'xhigh', 'max'],
+                   help='仅 claude')
     s.add_argument('--max-tokens', type=int, default=8000)
     s.add_argument('--limit', type=int, default=0, help='本次最多编码多少人（试跑用）')
     s.add_argument('--dry-run', metavar='FILE', help='只把请求写入 FILE，不调用 API')
