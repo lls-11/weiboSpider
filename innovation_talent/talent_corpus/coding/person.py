@@ -253,6 +253,19 @@ stage 只能是 中学及以前、本科、研究生、工作后、不详。
 PROVIDERS = {'deepseek': ('https://api.deepseek.com', 'DEEPSEEK_API_KEY', 'deepseek-chat')}
 
 
+KEY_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'talent_data')
+
+
+def read_key_file(provider):
+    """环境变量没有设置时，读取 talent_data/<provider>_key.txt（talent_data 不提交到 Git）。"""
+    path = os.path.join(KEY_DIR, '%s_key.txt' % provider)
+    try:
+        with open(path, encoding='utf-8') as f:
+            return f.read().strip()
+    except OSError:
+        return ''
+
+
 def _parse_json(text):
     """去掉可能的 ```json 包裹后解析。"""
     t = (text or '').strip()
@@ -308,7 +321,7 @@ class CompatCoder:
         base, env, default_model = PROVIDERS[provider]
         self.base_url = (base_url or base).rstrip('/')
         self.model = model or default_model
-        self.api_key = api_key or os.environ.get(env, '')
+        self.api_key = api_key or os.environ.get(env, '') or read_key_file(provider)
         self.env = env
         self.max_tokens, self.temperature, self.timeout = max_tokens, temperature, timeout
         system, self.meta = load_prompt(prompt_path)
