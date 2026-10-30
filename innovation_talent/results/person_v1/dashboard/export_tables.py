@@ -31,7 +31,7 @@ def main():
 
     def cname(c):
         if lab[c] not in big:
-            return '稀少项（证据过少）'
+            return '未归入两大簇'
         return '方向与投入' if lab['C01'] == lab[c] else '问题发现与解决'
 
     prior = {i[0]: i[4] for i in MI}
