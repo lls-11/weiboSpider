@@ -7,8 +7,11 @@
 2. 模型对每人输出 text_type、学历、学科、性别、事件数，以及踩中的指标（level 1 声明 / 2 行为、
    阶段、原文引语）；只列踩中的指标，控制输出长度；
 3. verify 核对引语是否出现在发给模型的材料中，核对不过的标记为未核实（不删除）；
+   并用 mark_shared 标出“同一句引语被多个指标共用”的判断（shared_quote 0—3），供人工复核；
 4. build_table 合并程序计算的变量（文本量、来源、获奖等级、论文专利奖项数、套话比例、
    第一人称比例）和模型输出，写出 persons.csv（每人一行）与 codes.csv（每条判断一行）。
+   persons.csv 同时给出两套计数口径：n_behavior/n_statement（每条判断都算）与
+   n_behavior_dedup/n_statement_dedup（逐字相同的引语只算 level 最高的一条）。
 
 获奖等级按来源判定（见 AWARD_LEVEL），是近似值：清华特奖答辩材料中有未获奖的候选人。
 """
@@ -133,8 +136,60 @@ def _norm(s):
     return _NORM.sub('', s or '').lower()
 
 
+SHARED_EXACT, SHARED_CONTAIN, SHARED_OVERLAP, SHARED_MIN_JACCARD = 1, 2, 3, 0.8
+
+
+def _share_level(a, b):
+    """两条引语的复用程度：1 完全相同，2 一句包含另一句，3 字符高度重叠，0 无关。"""
+    if not a or not b:
+        return 0
+    if a == b:
+        return SHARED_EXACT
+    if a in b or b in a:
+        return SHARED_CONTAIN
+    sa, sb = set(a), set(b)
+    if len(sa & sb) / len(sa | sb) > SHARED_MIN_JACCARD:
+        return SHARED_OVERLAP
+    return 0
+
+
+def mark_shared(codes):
+    """标出“同一句引语被多个指标使用”的判断，供人工复核；不删数据。
+
+    每条判断加两个字段：shared_quote（0—3，越大越可疑）与 shared_with（共用的指标编号）。
+    同一对指标之间可以合法共用引语（如 C01 目标内容与 C02 目标理由），所以这只是标记。
+    """
+    nq = [_norm(c.get('quote')) for c in codes]
+    for i, c in enumerate(codes):
+        best, with_ = 0, []
+        for j, other in enumerate(codes):
+            if i == j:
+                continue
+            s = _share_level(nq[i], nq[j])
+            if s:
+                best = max(best, s)
+                with_.append(other['id'])
+        c['shared_quote'] = best
+        c['shared_with'] = ','.join(with_)
+    return codes
+
+
+def dedup_codes(codes):
+    """完全相同的引语只保留 level 最高的一条，用于“每条判断都算 / 去重后”两套口径对比。
+
+    只合并逐字相同（去空白标点后）的引语；包含与重叠关系不合并，避免误删。
+    """
+    best = {}
+    for c in codes:
+        k = _norm(c.get('quote')) or '#' + c['id']
+        old = best.get(k)
+        if old is None or c['level'] > old['level']:
+            best[k] = c
+    return [best[k] for k in best]
+
+
 def verify(person, result):
-    """核对引语；同一指标出现多次时保留 level 最高且已核实的一条。"""
+    """核对引语；同一指标出现多次时保留 level 最高且已核实的一条；并标记共用引语。"""
     text = _norm(person['text'])
     best = {}
     for c in result.get('codes', []):
@@ -142,7 +197,7 @@ def verify(person, result):
         old = best.get(c['id'])
         if old is None or (c['verified'], c['level']) > (old['verified'], old['level']):
             best[c['id']] = c
-    return dict(result, codes=[best[k] for k in INDICATORS if k in best])
+    return dict(result, codes=mark_shared([best[k] for k in INDICATORS if k in best]))
 
 
 def make_record(person, model, parsed=None, error='', stop_reason='', usage=None,
@@ -266,7 +321,8 @@ def read_key_file(provider):
     path = os.path.join(KEY_DIR, '%s_key.txt' % provider)
     try:
         with open(path, encoding='utf-8') as f:
-            return f.read().strip()
+            # 从网页或记事本复制时容易带上引号，去掉免得 401
+            return f.read().strip().strip('"\'').strip()
     except OSError:
         return ''
 
@@ -450,13 +506,15 @@ def llm_vars(rec, verified_only=True):
     res = rec.get('result') or {}
     row = {k: res.get(k, '') for k in LLM_COLS}
     level = {c: 0 for c in INDICATORS}
-    n_unverified = 0
-    for c in res.get('codes', []):
+    n_unverified, counted = 0, []
+    # 老记录可能没有 shared_quote 字段，这里统一补上（不重新调用模型）
+    for c in mark_shared([dict(c) for c in res.get('codes', [])]):
         if not c.get('verified'):
             n_unverified += 1
             if verified_only:
                 continue
         level[c['id']] = c['level']
+        counted.append(c)
     row.update(level)
     for d in range(1, 7):
         ids = [c for c in INDICATORS if DIM_OF[c] == d]
@@ -464,6 +522,13 @@ def llm_vars(rec, verified_only=True):
         row['D%d_any' % d] = sum(1 for c in ids if level[c] >= 1)
     row['n_behavior'] = sum(1 for v in level.values() if v == 2)
     row['n_statement'] = sum(1 for v in level.values() if v == 1)
+    # 去重口径：逐字相同的引语只保留 level 最高的一条，供两套口径对比
+    ded = dedup_codes(counted)
+    row['n_behavior_dedup'] = sum(1 for c in ded if c['level'] == 2)
+    row['n_statement_dedup'] = sum(1 for c in ded if c['level'] == 1)
+    row['n_codes'] = len(counted)
+    row['n_shared_quote'] = sum(1 for c in counted if c.get('shared_quote'))
+    row['n_shared_exact'] = sum(1 for c in counted if c.get('shared_quote') == SHARED_EXACT)
     row['n_unverified'] = n_unverified
     row['n_dropped_invalid'] = res.get('dropped_invalid', 0)
     row['coding_error'] = rec.get('error', '')
@@ -490,11 +555,13 @@ def build_table(people, records, out_dir, rmrb_names=None, verified_only=True):
         row['coded'] = int(rec is not None)
         if rec:
             row.update(llm_vars(rec, verified_only))
-            for c in rec['result'].get('codes', []):
+            for c in mark_shared([dict(c) for c in rec['result'].get('codes', [])]):
                 codes.append({'person_id': p['person_id'], 'name': p['name'],
                               'group': row['group'], 'indicator': c['id'],
                               'dimension': DIM_OF[c['id']], 'level': c['level'],
                               'stage': c['stage'], 'verified': int(c['verified']),
+                              'shared_quote': c.get('shared_quote', 0),
+                              'shared_with': c.get('shared_with', ''),
                               'quote': c['quote']})
         rows.append(row)
     cols = []
@@ -508,7 +575,8 @@ def build_table(people, records, out_dir, rmrb_names=None, verified_only=True):
         w.writerows(rows)
     with open(paths['codes'], 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.DictWriter(f, fieldnames=['person_id', 'name', 'group', 'indicator', 'dimension',
-                                          'level', 'stage', 'verified', 'quote'])
+                                          'level', 'stage', 'verified', 'shared_quote',
+                                          'shared_with', 'quote'])
         w.writeheader()
         w.writerows(codes)
     return paths, len(rows), sum(r['coded'] for r in rows)

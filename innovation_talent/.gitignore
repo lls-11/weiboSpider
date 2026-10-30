@@ -1,2 +1,10 @@
-talent_data/
+# talent_data 是本地工作目录：里面有 API 密钥和几百 MB 的中间文件，不进 Git。
+talent_data/*
+!talent_data/person/
+talent_data/person/*
+# 但分析结果要进 Git（每人一行、每条判断一行、原始调用记录），便于复现与共享。
+!talent_data/person/persons.csv
+!talent_data/person/codes.csv
+!talent_data/person/runs.jsonl
+
 __pycache__/
