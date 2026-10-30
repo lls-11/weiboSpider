@@ -2,9 +2,11 @@
 talent_data/*
 !talent_data/person/
 talent_data/person/*
-# 但分析结果要进 Git（每人一行、每条判断一行、原始调用记录），便于复现与共享。
+# 但编码结果与分析输出要进 Git（每人一行、每条判断一行、原始调用记录、分析表与图），便于复现与共享。
 !talent_data/person/persons.csv
 !talent_data/person/codes.csv
 !talent_data/person/runs.jsonl
+!talent_data/person/analysis/
+!talent_data/person/analysis/**
 
 __pycache__/
