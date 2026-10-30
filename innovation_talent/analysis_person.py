@@ -228,6 +228,65 @@ def cn_education(P):
             'len_grad': float(d[d.grad == 1].chars_sent.median()), 'rows': pd.DataFrame(rows)}
 
 
+TIER_RULE = """稳健性分级（每项指标六条标准，R1、R2 为门槛）：
+R1 可观测：诺奖组 ≥ 20% 的人、国内组 ≥ 5% 的人有行为证据；
+R2 是行为而非声明：两组“只有声明”的比例都 ≤ 20%；
+R3 可区分：与其他指标共用引语的判断 ≤ 50%；
+R4 归属本类：控制篇幅后，与本类指标的平均偏相关高于与他类的；
+R5 篇幅稳健：诺奖组短篇与长篇三分位中，该指标占比的 log2 比值绝对值 ≤ 0.75；
+R6 跨组稳定：两组构成占比的 log2 比值绝对值 ≤ 1。
+A 稳健：R1、R2 都满足，且 R3—R6 至少满足 3 条；
+B 可观测但有缺陷：R1 不满足但诺奖组 ≥ 20%（只在后期出现），或 R2 不满足（多为声明），或 R3—R6 少于 3 条；
+C 文本测不到：诺奖组 < 15%。"""
+
+
+def robustness(P, C, prev, comp, item):
+    nb = P[P.group == 'nobel']
+    t = pd.qcut(nb.chars_sent, 3, labels=['s', 'm', 'l'])
+
+    def share(d):
+        tot = d[['b_' + c for c in IND]].sum()
+        return pd.Series((tot / tot.sum()).values, index=IND)
+
+    ls, ll = share(nb[t == 's']), share(nb[t == 'l'])
+    sh = C.groupby('indicator').shared_quote.apply(lambda x: float((x > 0).mean()))
+    df = prev.set_index('id')[['name', 'dim', 'nobel_beh', 'cn_beh', 'nobel_stmt_share', 'cn_stmt_share']].copy()
+    df = df.join(comp.set_index('id')[['log2_ratio']]).join(item.set_index('id')[['own_mean', 'other_mean']])
+    df['shared'] = sh
+    df['len_log2'] = np.log2((ll + 0.004) / (ls + 0.004))
+    r = pd.DataFrame(index=df.index)
+    r['R1'] = (df.nobel_beh >= 0.2) & (df.cn_beh >= 0.05)
+    r['R2'] = (df.nobel_stmt_share.fillna(0) <= 0.2) & (df.cn_stmt_share.fillna(0) <= 0.2)
+    r['R3'] = df.shared <= 0.5
+    r['R4'] = df.own_mean.fillna(-1) > df.other_mean
+    r['R5'] = df.len_log2.abs() <= 0.75
+    r['R6'] = df.log2_ratio.abs() <= 1
+    rest = r[['R3', 'R4', 'R5', 'R6']].sum(axis=1)
+    tier = np.where(df.nobel_beh < 0.15, 'C',
+                    np.where(r.R1 & r.R2 & (rest >= 3), 'A', 'B'))
+    why = []
+    for c in df.index:
+        w = []
+        if not r.R1[c]:
+            w.append('国内几乎看不到' if df.nobel_beh[c] >= 0.15 else '证据过少')
+        if not r.R2[c]:
+            w.append('多为声明')
+        if not r.R3[c]:
+            w.append('与相邻指标难分')
+        if not r.R4[c]:
+            w.append('不归本类')
+        if not r.R5[c]:
+            w.append('随篇幅变化')
+        if not r.R6[c]:
+            w.append('两组差异大')
+        why.append('；'.join(w))
+    out = df.join(r.astype(int))
+    out['n_rest'] = rest
+    out['tier'] = tier
+    out['issues'] = why
+    return out.reset_index().round(3)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     P, C, excluded = load()
@@ -238,6 +297,10 @@ def main():
     cols, R, item, struct = structure(P)
     stage = stage_profile(C)
     edu = cn_education(P)
+    rob = robustness(P, C, prev, comp, item)
+    rob.to_csv(os.path.join(OUT, 'robustness.csv'), index=False, encoding='utf-8-sig')
+    with open(os.path.join(OUT, 'robustness_rule.txt'), 'w', encoding='utf-8') as f:
+        f.write(TIER_RULE + '\n')
 
     prev.merge(comp[['id', 'cn_share', 'nobel_share', 'log2_ratio']], on='id') \
         .merge(leff, on='id').merge(stage['nobel']['rows'], on='id') \
