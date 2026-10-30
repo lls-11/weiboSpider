@@ -287,7 +287,8 @@ def cmd_person_code(args):
             logger.error('%s 没有批量接口，请去掉 --batch-submit / --batch-collect，用 --workers 并发', args.provider)
             return 1
         coder = pc.CompatCoder(provider=args.provider, model=args.model, base_url=args.base_url,
-                               max_tokens=args.max_tokens, temperature=args.temperature)
+                               max_tokens=args.max_tokens, temperature=args.temperature,
+                               json_mode=not args.no_json_mode)
     by_id = {p['person_id']: p for p in people}
     if args.batch_collect:
         recs = coder.collect_batch(args.batch_collect, by_id)
@@ -582,6 +583,8 @@ def main(argv=None):
     s.add_argument('--base-url', help='OpenAI 兼容接口地址，默认按 --provider 取（deepseek 官方 / codego 中转站）')
     s.add_argument('--workers', type=int, default=1, help='并发请求数（deepseek 建议 4—8）')
     s.add_argument('--temperature', type=float, default=0.0, help='deepseek 采样温度，默认 0')
+    s.add_argument('--no-json-mode', action='store_true',
+                   help='不使用 JSON 模式和温度参数（模型或中转通道不支持时用）')
     s.add_argument('--effort', default='medium', choices=['low', 'medium', 'high', 'xhigh', 'max'],
                    help='仅 claude')
     s.add_argument('--max-tokens', type=int, default=8000)
