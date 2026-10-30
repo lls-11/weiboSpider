@@ -1,0 +1,512 @@
+<meta name="dash-one-writer">
+<style>
+  .ti { display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); color: var(--color-fg); max-width: 72rem; margin-inline: auto; }
+  .ti-head { display: grid; gap: var(--cds-gap-sm); }
+  .ti-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .ti-lede { font-size: var(--cds-font-size-body); line-height: 1.7; max-width: 46rem; margin: 0; color: var(--color-fg); }
+  .ti .ti-num { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ti-sec { display: grid; gap: var(--cds-gap-md); }
+  .ti-sec > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .ti-sec > p { margin: 0; max-width: 46rem; line-height: 1.7; color: var(--color-fg-muted); font-size: var(--cds-font-size-body); }
+  .ti-grid { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+  .ti-tiles { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); }
+  .ti-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; }
+  .ti-card h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .ti-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; line-height: 1.6; }
+  .ti-tile .ti-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .ti-tile .ti-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .ti-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .ti-legend span { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+  .ti-sw { width: 0.75rem; height: 0.75rem; border-radius: 50%; display: inline-block; background: var(--cds-chart-muted); }
+  .ti-sw.ti-sq { border-radius: 2px; }
+  .ti-sw.ti-ring { background: transparent; border: 2px solid var(--color-fg); border-radius: 2px; }
+  .ti-chart { position: relative; min-width: 0; }
+  .ti-chart svg { display: block; overflow: visible; }
+  .ti-chart text { font-family: var(--font-anthropic-sans); fill: var(--color-fg-muted); font-size: 11px; }
+  .ti-chart text.ti-strong { fill: var(--color-fg); }
+  .ti-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); line-height: 1.5; max-width: 16rem; z-index: 2; }
+  .ti-tip .ti-tip-h { color: var(--cds-text-secondary); }
+  .ti-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: 6rem; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .ti-fail::before { content: ""; width: 0.375rem; height: 0.375rem; border-radius: 50%; background: var(--color-bad); }
+  .ti-clusters { display: grid; gap: var(--cds-gap-md); }
+  .ti-cl h4 { margin: 0 0 var(--cds-gap-xs); font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
+  .ti-chips { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
+  .ti-chip { font-size: var(--cds-font-size-caption); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: 2px var(--cds-pad-xs); white-space: nowrap; }
+  .ti-chip i { font-style: normal; color: var(--color-fg-muted); margin-left: 4px; }
+  .ti-list { margin: 0; padding-left: 1.2rem; display: grid; gap: var(--cds-gap-sm); line-height: 1.7; max-width: 50rem; }
+  .ti-list li { font-size: var(--cds-font-size-body); }
+  .ti-list b { font-weight: 600; }
+  [data-dash-source-state=empty] { color: transparent; }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+
+<div class="ti">
+  <header class="ti-head" id="top">
+    <h1>创新人才指标文本分析</h1>
+    <p class="ti-lede">
+      <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_people">—</b> 人的成长叙述中（国内学生
+      <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_cn">—</b> 人，诺奖得主
+      <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_nobel">—</b> 人），模型的多数指标能在文本里找到具体行为，两组的侧重也相当一致；但六个类别的划分在数据中只得到很弱的支持，指标更像分成“方向与投入”“问题发现与解决”两大簇。这些是探索性结果：编码者是单一大模型，尚无人工信度检验。
+    </p>
+  </header>
+
+  <section class="ti-sec" id="quality">
+    <h2>判断可信吗</h2>
+    <p>每一条判断都要求附原文引语，程序逐条核对。下面四个数决定后面的结果能信几分。</p>
+    <div class="ti-tiles">
+      <div class="ti-card ti-tile">
+        <div class="ti-big" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_judgements">—</div>
+        <div class="ti-label">条指标判断</div>
+      </div>
+      <div class="ti-card ti-tile">
+        <div class="ti-big" data-draw="v" data-fmt="pct0" data-source="summary" data-field="value" data-where="metric=verified_rate">—</div>
+        <div class="ti-label">引语能在原文中逐字找到</div>
+      </div>
+      <div class="ti-card ti-tile">
+        <div class="ti-big" data-draw="v" data-fmt="pct0" data-source="summary" data-field="value" data-where="metric=behavior_rate">—</div>
+        <div class="ti-label">判为“具体行为”，其余为“只有声明”</div>
+      </div>
+      <div class="ti-card ti-tile">
+        <div class="ti-big" data-draw="v" data-fmt="pct0" data-source="summary" data-field="value" data-where="metric=shared_quote_rate">—</div>
+        <div class="ti-label">引语与另一项指标重叠</div>
+      </div>
+    </div>
+    <p class="ti-note">另有 <span data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_excluded">—</span> 人的材料被模型判为荣誉罗列，未进入分析。引语重叠的比例高，说明同一句话常被同时算作几项指标，相近指标在文本中不易分开；完全相同的引语占 <span data-draw="v" data-fmt="pct0" data-source="summary" data-field="value" data-where="metric=shared_exact_rate">—</span>。</p>
+  </section>
+
+  <section class="ti-sec" id="observable">
+    <h2>哪些指标在文本中看得到</h2>
+    <p>每项指标有具体行为证据的人数占比。诺奖得主有 <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_indicators_nobel_30">—</b> 项超过三成；国内学生的材料短得多，只有 <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_indicators_cn_10">—</b> 项超过一成。两组不宜直接比高低，原因见下一节。</p>
+    <div class="ti-grid">
+      <div class="ti-card" style="grid-column: 1 / -1;">
+        <h3>有行为证据的人数占比</h3>
+        <p class="ti-note">按诺奖组从高到低排列。横线是两组的差距；鼠标移到一行上可看 95% 置信区间与“只有声明”的比例。</p>
+        <div class="ti-legend"><span><i class="ti-sw" data-sw="0"></i>国内学生</span><span><i class="ti-sw" data-sw="1"></i>诺奖得主</span></div>
+        <div class="ti-chart" data-draw="prev" data-source="indicators" style="min-height: 40rem;"></div>
+      </div>
+      <div class="ti-card">
+        <h3>多为“声明”而非行为的指标</h3>
+        <p class="ti-note">该指标的全部判断中只有声明（如“我热爱科研”）的比例，只列至少一组超过一成的指标。第一类“自主方向与价值认同”最突出：文本多是在表态，较少写出具体选择。</p>
+        <div class="ti-legend"><span><i class="ti-sw ti-sq" data-sw="0"></i>国内学生</span><span><i class="ti-sw ti-sq" data-sw="1"></i>诺奖得主</span></div>
+        <div class="ti-chart" data-draw="stmt" data-source="indicators" style="min-height: 14rem;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-sec" id="length">
+    <h2>篇幅与两组的侧重</h2>
+    <p>国内材料最长 <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=len_max_cn">—</b> 字，诺奖材料最短 <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=len_min_nobel">—</b> 字符，两组篇幅完全不重叠；组内篇幅与行为证据数的等级相关在 <b class="ti-num" data-draw="v" data-fmt="n2" data-source="summary" data-field="value" data-where="metric=len_rho_cn">—</b> 左右。所以不比数量，只比构成：每项指标占本组全部行为证据的比例。构成基本不随篇幅变：诺奖组短篇与长篇三分位之间的等级相关为 <b class="ti-num" data-draw="v" data-fmt="n2" data-source="summary" data-field="value" data-where="metric=rho_nobel_short_long">—</b>，国内组为 <b class="ti-num" data-draw="v" data-fmt="n2" data-source="summary" data-field="value" data-where="metric=rho_cn_short_long">—</b>，两组之间为 <b class="ti-num" data-draw="v" data-fmt="n2" data-source="summary" data-field="value" data-where="metric=rho_cn_nobel">—</b>。</p>
+    <div class="ti-grid">
+      <div class="ti-card" style="grid-column: 1 / -1;">
+        <h3>六个类别占全部行为证据的比例，与模型的类别权重对照</h3>
+        <p class="ti-note">模型权重取“类别 × 阶段”表中阶段 2（领域胜任能力）与阶段 4（原创贡献拓展）两列，各自归一为合计 100%。国内组更集中在第六类和第一类（坚持投入、动机），诺奖组在第五类“独立判断与认知调节”和第二类上更多。第三类只有一项指标可从文本编码，比例天然偏低。</p>
+        <div class="ti-legend"><span><i class="ti-sw ti-sq" data-sw="0"></i>国内学生</span><span><i class="ti-sw ti-sq" data-sw="1"></i>诺奖得主</span><span><i class="ti-sw ti-sq" data-sw="2"></i>模型权重·阶段 2</span><span><i class="ti-sw ti-sq" data-sw="3"></i>模型权重·阶段 4</span></div>
+        <div class="ti-chart" data-draw="comp" data-source="dimensions" style="min-height: 22rem;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-sec" id="structure">
+    <h2>指标的归类站得住吗</h2>
+    <p>如果六个类别的划分成立，同一类的指标应当比不同类的更常一起出现。控制篇幅后，诺奖组同类指标两两之间的平均偏相关为 <b class="ti-num" data-draw="v" data-fmt="n3" data-source="summary" data-field="value" data-where="metric=r_same">—</b>，不同类之间为 <b class="ti-num" data-draw="v" data-fmt="n3" data-source="summary" data-field="value" data-where="metric=r_diff">—</b>，差异未达显著（单侧 p = <span data-draw="v" data-fmt="n3" data-source="summary" data-field="value" data-where="metric=r_p">—</span>）。第一类内部最紧密，第二类的几项分别靠向其他类别。</p>
+    <div class="ti-grid">
+      <div class="ti-card">
+        <h3>指标两两之间的偏相关（诺奖组，控制篇幅）</h3>
+        <p class="ti-note">按模型的六个类别排列，方框是同一类别。颜色越深，两项指标越常在同一人身上同时出现。</p>
+        <div class="ti-legend"><span><i class="ti-sw ti-sq" data-sw="0"></i>正相关</span><span><i class="ti-sw ti-sq" data-sw="1"></i>负相关</span></div>
+        <div class="ti-chart" data-draw="matrix" data-source="partial_r indicators" style="min-height: 24rem;"></div>
+      </div>
+      <div class="ti-card">
+        <h3>数据中自然形成的指标簇</h3>
+        <p class="ti-note">对上面的偏相关做层次聚类（平均连接）。括号里是模型原来的类别。证据过少的几项单独成簇，不能据此判断归属。</p>
+        <div class="ti-clusters" data-draw="clusters" data-source="indicators"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-sec" id="stage">
+    <h2>证据出现在哪个人生阶段</h2>
+    <p>诺奖得主的回顾覆盖一生，可以看每项指标的行为证据集中在哪个阶段，并与模型的阶段相关度先验对照。可判断的指标中，有 <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=trend_agree">—</b> 项（共 <span data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=trend_judged">—</span> 项）的变化方向与先验一致。不一致的主要是第一类：先验认为越往后越重要，证据却集中在本科，因为选方向、定目标多发生在本科阶段。出现得早不等于后来不重要，这一点需要专家判断。</p>
+    <div class="ti-card">
+      <h3>各阶段的相对富集程度（诺奖组）</h3>
+      <p class="ti-note">富集 = 该指标落在某阶段的证据比例 ÷ 全部证据落在该阶段的比例，大于 1 表示偏向这一阶段。框线标出模型先验中相关度最高的阶段；右侧是变化方向是否与先验一致。证据不足 20 条或先验各阶段无差别的不作判断。</p>
+      <div class="ti-legend"><span><i class="ti-sw ti-sq" data-sw="0"></i>偏向该阶段</span><span><i class="ti-sw ti-sq" data-sw="1"></i>少于平均</span><span><i class="ti-sw ti-ring"></i>先验最高的阶段</span></div>
+      <div class="ti-chart" data-draw="stage" data-source="indicators" style="min-height: 40rem;"></div>
+    </div>
+  </section>
+
+  <section class="ti-sec" id="education">
+    <h2>国内研究生与本科生</h2>
+    <p>同为国内报道、篇幅接近，可以检验模型的阶段假设：本科生 <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_ug">—</b> 人，研究生 <b class="ti-num" data-draw="v" data-fmt="int" data-source="summary" data-field="value" data-where="metric=n_grad">—</b> 人。控制篇幅后，研究生在第二类“好奇与主动探索”上的行为证据只有本科生的 <b class="ti-num" data-draw="v" data-fmt="n2" data-source="education" data-field="irr" data-where="dim=2">—</b> 倍，方向与模型中这一类权重随阶段下降一致；其他类别的差异都不显著。研究生材料多来自篇幅短的分享会段落，这个结果要谨慎看待。</p>
+    <div class="ti-card">
+      <h3>研究生相对本科生的行为证据倍数（泊松回归，控制篇幅）</h3>
+      <p class="ti-note">点是发生率比，横线是 95% 置信区间，竖线为 1（无差别）。横轴为对数刻度。</p>
+      <div class="ti-chart" data-draw="forest" data-source="education" style="min-height: 15rem;"></div>
+    </div>
+  </section>
+
+  <section class="ti-sec" id="reading">
+    <h2>怎么读这些结果</h2>
+    <ul class="ti-list">
+      <li><b>能看到什么。</b>“自主投入与迭代实现”“好奇与主动探索”中的多数指标在文本中看得到。问题新颖性、休息后的顿悟、作品修改增益、生成与评价的调节、利用异议扩展策略几项证据很少，文本检验不了它们，留给访谈、作品或任务测量。</li>
+      <li><b>第一类多是表态。</b>领域身份认同、目标自我一致性大多只有声明。文本能测到的是“怎么说自己”，要判断真实的方向感，需要看具体选择。</li>
+      <li><b>侧重与套路。</b>国内报道更集中在“持续投入”“失败后重新投入”“自主性动机”，与宣传稿“受挫—坚持—突破”的写法吻合；这部分差异很可能来自文体，而不是人。</li>
+      <li><b>分类需要修订的信号。</b>同类指标并不比异类更常一起出现。数据更像两大簇：一簇是方向、动机与持续投入，一簇是发现问题、联结、验证与调整。建议专家讨论第二、四、五类的边界。</li>
+      <li><b>阶段先验大体可信。</b>好奇、提问等指标偏早，重表征、评价、验证等指标偏后，与先验一致；第一类和“对兴趣的反复返回”“远距离联结”“隐藏规律发现”与先验相反，值得复议。</li>
+      <li><b>局限。</b>编码者是单一大模型，未做人工双编码；样本都是成功者，看不到“具备特征却没有成功”的人；诺奖材料是晚年回顾；国内材料以记者叙述为主。以上结果用来提出问题、调整指标，不能直接定权重。</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+  (function () {
+    const LIFE = ['中学及以前', '本科', '研究生', '工作后'];
+    const STAGE_KEYS = ['s1', 's2', 's3', 's4'];
+    const fmts = {
+      int: (v) => d3.format(',')(Math.round(v)),
+      pct0: d3.format('.0%'),
+      pct1: d3.format('.1%'),
+      n2: d3.format('.2f'),
+      n3: d3.format('.3f'),
+    };
+    const num = (v) => (v === '' || v === null || v === undefined ? NaN : Number(v));
+
+    // 把 dash.colors 里的颜色解析成 rgb，供插值用
+    function resolve(el, c) {
+      const probe = document.createElement('span');
+      probe.style.color = c;
+      probe.style.display = 'none';
+      el.appendChild(probe);
+      const out = getComputedStyle(probe).color;
+      probe.remove();
+      return out;
+    }
+
+    // 数据未就绪时的统一处理：返回各数据集的行，或 null
+    function ready(el, ids) {
+      const ds = ids.map((id) => dash.data(id));
+      if (ds.some((d) => d.status === 'error' || d.status === 'declined' || d.status === 'missing' || d.status === 'connect')) {
+        el.classList.remove('dash-skeleton');
+        const f = document.createElement('div');
+        f.className = 'ti-fail';
+        f.textContent = 'Failed to load';
+        el.replaceChildren(f);
+        return null;
+      }
+      if (ds.some((d) => d.status !== 'ok')) {
+        el.replaceChildren();
+        el.classList.add('dash-skeleton');
+        return null;
+      }
+      el.classList.remove('dash-skeleton');
+      return ds.map((d) => d.data);
+    }
+
+    function makeTip(el) {
+      const tip = document.createElement('div');
+      tip.className = 'ti-tip';
+      tip.hidden = true;
+      el.appendChild(tip);
+      return {
+        show(ev, head, lines) {
+          const h = document.createElement('div');
+          h.className = 'ti-tip-h';
+          h.textContent = head;
+          tip.replaceChildren(h, ...lines.map((t) => { const d = document.createElement('div'); d.textContent = t; return d; }));
+          tip.hidden = false;
+          const box = el.getBoundingClientRect();
+          let x = ev.clientX - box.left + 12, y = ev.clientY - box.top + 12;
+          const tw = tip.offsetWidth, th = tip.offsetHeight;
+          if (x + tw > box.width) x = Math.max(0, ev.clientX - box.left - tw - 12);
+          if (y + th > box.height) y = Math.max(0, ev.clientY - box.top - th - 12);
+          tip.style.left = x + 'px';
+          tip.style.top = y + 'px';
+        },
+        hide() { tip.hidden = true; },
+      };
+    }
+
+    function measure(svg, texts, size) {
+      const t = svg.append('text').attr('font-size', size).attr('visibility', 'hidden');
+      let w = 0;
+      texts.forEach((s) => { t.text(s); w = Math.max(w, t.node().getComputedTextLength()); });
+      t.remove();
+      return w;
+    }
+
+    // 图例色块
+    function paintLegend() {
+      document.querySelectorAll('[data-sw]').forEach((sw) => {
+        const i = Number(sw.getAttribute('data-sw'));
+        if (dash.colors && dash.colors[i]) sw.style.background = dash.colors[i];
+      });
+    }
+    paintLegend();
+    dash.onData(paintLegend);
+
+    // 段落里的单个数值
+    dash.draw('v', (el) => {
+      const id = el.getAttribute('data-source');
+      const d = dash.data(id);
+      if (d.status !== 'ok') { el.textContent = '—'; return; }
+      const cond = {};
+      (el.getAttribute('data-where') || '').split('&').filter(Boolean).forEach((kv) => {
+        const [k, v] = kv.split('=');
+        cond[decodeURIComponent(k)] = decodeURIComponent(v);
+      });
+      const row = d.data.find((r) => Object.keys(cond).every((k) => String(r[k]) === cond[k]));
+      const v = row ? num(row[el.getAttribute('data-field')]) : NaN;
+      const f = fmts[el.getAttribute('data-fmt')] || String;
+      el.textContent = Number.isFinite(v) ? f(v) : '—';
+    });
+
+    // 观测性：两组的点与连线
+    dash.draw('prev', (el) => {
+      const got = ready(el, ['indicators']);
+      if (!got) return;
+      const rows = got[0].map((r) => ({ ...r, cn: num(r.cn_beh), nb: num(r.nobel_beh) })).sort((a, b) => b.nb - a.nb);
+      const W = el.clientWidth || 640, rowH = 22, top = 26;
+      const H = top + rows.length * rowH + 6;
+      el.replaceChildren();
+      const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+      const label = (r) => `${r.id} ${r.name}`;
+      const lw = Math.min(measure(svg, rows.map(label), 12) + 10, W * 0.45);
+      const x = d3.scaleLinear([0, 1], [lw, W - 14]);
+      const c0 = dash.colors[0], c1 = dash.colors[1];
+      const g = svg.append('g');
+      [0, 0.25, 0.5, 0.75, 1].forEach((t) => {
+        g.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', top - 6).attr('y2', H).style('stroke', 'var(--cds-chart-grid)');
+        g.append('text').attr('x', x(t)).attr('y', top - 12).attr('text-anchor', t === 0 ? 'start' : t === 1 ? 'end' : 'middle').text(d3.format('.0%')(t));
+      });
+      const tip = makeTip(el);
+      rows.forEach((r, i) => {
+        const y = top + i * rowH + rowH / 2;
+        const row = svg.append('g').style('cursor', 'default');
+        row.append('rect').attr('x', 0).attr('y', y - rowH / 2).attr('width', W).attr('height', rowH).style('fill', 'transparent');
+        row.append('text').attr('x', lw - 10).attr('y', y + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('class', 'ti-strong').text(label(r));
+        row.append('line').attr('x1', x(Math.min(r.cn, r.nb))).attr('x2', x(Math.max(r.cn, r.nb))).attr('y1', y).attr('y2', y)
+          .style('stroke', 'var(--cds-chart-muted)').style('stroke-width', 2).style('stroke-linecap', 'round');
+        row.append('circle').attr('cx', x(r.cn)).attr('cy', y).attr('r', 4.5).style('fill', c0);
+        row.append('circle').attr('cx', x(r.nb)).attr('cy', y).attr('r', 4.5).style('fill', c1);
+        row.on('mousemove', (ev) => tip.show(ev, `${r.id} ${r.name}（第 ${r.dim} 类）`, [
+          `国内学生 ${d3.format('.0%')(r.cn)}（${d3.format('.0%')(num(r.cn_beh_lo))}–${d3.format('.0%')(num(r.cn_beh_hi))}）`,
+          `诺奖得主 ${d3.format('.0%')(r.nb)}（${d3.format('.0%')(num(r.nobel_beh_lo))}–${d3.format('.0%')(num(r.nobel_beh_hi))}）`,
+          `只有声明的比例：国内 ${Number.isFinite(num(r.cn_stmt_share)) ? d3.format('.0%')(num(r.cn_stmt_share)) : '无判断'}，诺奖 ${Number.isFinite(num(r.nobel_stmt_share)) ? d3.format('.0%')(num(r.nobel_stmt_share)) : '无判断'}`,
+        ])).on('mouseleave', tip.hide);
+      });
+    });
+
+    // 声明比例
+    dash.draw('stmt', (el) => {
+      const got = ready(el, ['indicators']);
+      if (!got) return;
+      const rows = got[0].map((r) => ({ ...r, a: num(r.cn_stmt_share) || 0, b: num(r.nobel_stmt_share) || 0 }))
+        .filter((r) => Math.max(r.a, r.b) >= 0.1).sort((p, q) => Math.max(q.a, q.b) - Math.max(p.a, p.b));
+      const W = el.clientWidth || 360, rowH = 26, top = 22;
+      const H = top + rows.length * rowH + 4;
+      el.replaceChildren();
+      const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+      const label = (r) => `${r.id} ${r.name}`;
+      const lw = Math.min(measure(svg, rows.map(label), 12) + 10, W * 0.5);
+      const x = d3.scaleLinear([0, 1], [lw, W - 36]);
+      [0, 0.5, 1].forEach((t) => {
+        svg.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', top - 4).attr('y2', H).style('stroke', 'var(--cds-chart-grid)');
+        svg.append('text').attr('x', x(t)).attr('y', top - 10).attr('text-anchor', t === 0 ? 'start' : 'middle').text(d3.format('.0%')(t));
+      });
+      const tip = makeTip(el);
+      rows.forEach((r, i) => {
+        const y = top + i * rowH;
+        const g = svg.append('g');
+        g.append('rect').attr('x', 0).attr('y', y).attr('width', W).attr('height', rowH).style('fill', 'transparent');
+        g.append('text').attr('x', lw - 10).attr('y', y + rowH / 2 + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('class', 'ti-strong').text(label(r));
+        [[r.a, 0], [r.b, 1]].forEach(([v, k]) => {
+          g.append('rect').attr('x', x(0)).attr('y', y + 4 + k * 9).attr('width', Math.max(0, x(v) - x(0))).attr('height', 8).attr('rx', 2).style('fill', dash.colors[k]);
+        });
+        g.append('text').attr('x', x(Math.max(r.a, r.b)) + 4).attr('y', y + rowH / 2 + 4).text(d3.format('.0%')(Math.max(r.a, r.b)));
+        g.on('mousemove', (ev) => tip.show(ev, label(r), [`国内学生 ${d3.format('.0%')(r.a)}`, `诺奖得主 ${d3.format('.0%')(r.b)}`])).on('mouseleave', tip.hide);
+      });
+    });
+
+    // 类别构成与模型权重
+    dash.draw('comp', (el) => {
+      const got = ready(el, ['dimensions']);
+      if (!got) return;
+      const rows = got[0].map((r) => ({ ...r, v: ['cn_share', 'nobel_share', 'model_s2', 'model_s4'].map((k) => num(r[k])) }));
+      const names = ['国内学生', '诺奖得主', '模型权重·阶段 2', '模型权重·阶段 4'];
+      const W = el.clientWidth || 640, bh = 9, gap = 2, groupH = 4 * (bh + gap) + 14, top = 22;
+      const H = top + rows.length * groupH;
+      el.replaceChildren();
+      const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+      const label = (r) => `${r.dim} ${r.dim_name}`;
+      const lw = Math.min(measure(svg, rows.map(label), 12) + 12, W * 0.42);
+      const max = d3.max(rows, (r) => d3.max(r.v));
+      const x = d3.scaleLinear([0, Math.ceil(max * 10) / 10], [lw, W - 40]);
+      x.ticks(4).forEach((t) => {
+        svg.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', top - 4).attr('y2', H).style('stroke', 'var(--cds-chart-grid)');
+        svg.append('text').attr('x', x(t)).attr('y', top - 10).attr('text-anchor', t === 0 ? 'start' : 'middle').text(d3.format('.0%')(t));
+      });
+      const tip = makeTip(el);
+      rows.forEach((r, i) => {
+        const y0 = top + i * groupH + 4;
+        const g = svg.append('g');
+        g.append('rect').attr('x', 0).attr('y', y0 - 4).attr('width', W).attr('height', groupH).style('fill', 'transparent');
+        g.append('text').attr('x', lw - 12).attr('y', y0 + 2 * (bh + gap) + 2).attr('text-anchor', 'end').attr('font-size', 12).attr('class', 'ti-strong').text(label(r));
+        r.v.forEach((v, k) => {
+          const y = y0 + k * (bh + gap);
+          g.append('rect').attr('x', x(0)).attr('y', y).attr('width', Math.max(0, x(v) - x(0))).attr('height', bh).attr('rx', 2).style('fill', dash.colors[k]);
+          g.append('text').attr('x', x(v) + 4).attr('y', y + bh - 1).attr('font-size', 10).text(d3.format('.0%')(v));
+        });
+        g.on('mousemove', (ev) => tip.show(ev, `${label(r)}（可编码指标 ${r.k} 项）`, r.v.map((v, k) => `${names[k]} ${d3.format('.1%')(v)}`))).on('mouseleave', tip.hide);
+      });
+    });
+
+    // 偏相关热图
+    dash.draw('matrix', (el) => {
+      const got = ready(el, ['partial_r', 'indicators']);
+      if (!got) return;
+      const [pr, ind] = got;
+      const info = new Map(ind.map((r) => [r.id, r]));
+      const ids = ind.map((r) => r.id).filter((id) => pr.some((p) => p.a === id));
+      const rmap = new Map(pr.map((p) => [p.a + '|' + p.b, num(p.r)]));
+      const W = el.clientWidth || 420, lab = 34, n = ids.length;
+      const cell = Math.min(20, (W - lab - 4) / n);
+      const S = lab + cell * n, H = S + 4;
+      el.replaceChildren();
+      const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${Math.max(W, S + 2)} ${H}`).attr('height', H);
+      const pos = resolve(el, dash.colors[0]), neg = resolve(el, dash.colors[1]), base = resolve(el, 'var(--color-panel)');
+      const cp = d3.interpolateRgb(base, pos), cn = d3.interpolateRgb(base, neg);
+      const color = (r) => (r >= 0 ? cp(Math.min(1, r / 0.35)) : cn(Math.min(1, -r / 0.35)));
+      const tip = makeTip(el);
+      const fs = Math.max(7, Math.min(10, cell * 0.55));
+      ids.forEach((a, i) => {
+        svg.append('text').attr('x', lab - 4).attr('y', lab + i * cell + cell / 2 + fs / 3).attr('text-anchor', 'end').attr('font-size', fs).text(a.slice(1));
+        svg.append('text').attr('transform', `translate(${lab + i * cell + cell / 2 + fs / 3},${lab - 4}) rotate(-90)`).attr('font-size', fs).text(a.slice(1));
+        ids.forEach((b, j) => {
+          if (i === j) return;
+          const r = rmap.get(a + '|' + b);
+          svg.append('rect').attr('x', lab + j * cell).attr('y', lab + i * cell).attr('width', cell - 0.5).attr('height', cell - 0.5)
+            .style('fill', Number.isFinite(r) ? color(r) : 'transparent')
+            .on('mousemove', (ev) => tip.show(ev, `${a} ${info.get(a).name} × ${b} ${info.get(b).name}`, [`偏相关 r = ${d3.format('.2f')(r)}`]))
+            .on('mouseleave', tip.hide);
+        });
+      });
+      // 同一类别的方框
+      d3.groups(ids.map((id, i) => ({ id, i, dim: info.get(id).dim })), (d) => d.dim).forEach(([, items]) => {
+        const s = d3.min(items, (d) => d.i), e = d3.max(items, (d) => d.i) + 1;
+        svg.append('rect').attr('x', lab + s * cell).attr('y', lab + s * cell).attr('width', (e - s) * cell).attr('height', (e - s) * cell)
+          .style('fill', 'none').style('stroke', 'var(--color-fg)').style('stroke-width', 1.2).style('pointer-events', 'none');
+      });
+    });
+
+    // 指标簇
+    dash.draw('clusters', (el) => {
+      const got = ready(el, ['indicators']);
+      if (!got) return;
+      el.replaceChildren();
+      const groups = d3.groups(got[0], (r) => r.cluster).sort((a, b) => b[1].length - a[1].length);
+      groups.forEach(([name, items]) => {
+        const box = document.createElement('div');
+        box.className = 'ti-cl';
+        const h = document.createElement('h4');
+        h.textContent = `${name}（${items.length} 项）`;
+        const chips = document.createElement('div');
+        chips.className = 'ti-chips';
+        items.forEach((r) => {
+          const c = document.createElement('span');
+          c.className = 'ti-chip';
+          c.textContent = `${r.id} ${r.name}`;
+          const t = document.createElement('i');
+          t.textContent = `第${r.dim}类`;
+          c.appendChild(t);
+          chips.appendChild(c);
+        });
+        box.append(h, chips);
+        el.appendChild(box);
+      });
+    });
+
+    // 阶段富集热图
+    dash.draw('stage', (el) => {
+      const got = ready(el, ['indicators']);
+      if (!got) return;
+      const rows = got[0];
+      const W = el.clientWidth || 640, rowH = 22, top = 26;
+      const H = top + rows.length * rowH + 4;
+      el.replaceChildren();
+      const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+      const label = (r) => `${r.id} ${r.name}`;
+      const lw = Math.min(measure(svg, rows.map(label), 12) + 10, W * 0.4);
+      const tagW = 52;
+      const cw = (W - lw - tagW - 8) / 4;
+      const pos = resolve(el, dash.colors[0]), neg = resolve(el, dash.colors[1]), base = resolve(el, 'var(--color-panel)');
+      const cp = d3.interpolateRgb(base, pos), cn = d3.interpolateRgb(base, neg);
+      const color = (e) => {
+        if (!(e > 0)) return cn(1);
+        const l = Math.log2(e);
+        return l >= 0 ? cp(Math.min(1, l / 2)) : cn(Math.min(1, -l / 2));
+      };
+      LIFE.forEach((s, k) => svg.append('text').attr('x', lw + k * cw + cw / 2).attr('y', top - 10).attr('text-anchor', 'middle').text(s));
+      svg.append('text').attr('x', W - tagW / 2).attr('y', top - 10).attr('text-anchor', 'middle').text('与先验');
+      const tip = makeTip(el);
+      const tagColor = { '一致': 'var(--color-ok)', '相反': 'var(--color-bad)' };
+      rows.forEach((r, i) => {
+        const y = top + i * rowH;
+        const n = num(r.stage_n);
+        const g = svg.append('g');
+        g.append('text').attr('x', lw - 10).attr('y', y + rowH / 2 + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('class', 'ti-strong').text(label(r));
+        STAGE_KEYS.forEach((sk, k) => {
+          const e = num(r['enrich_' + sk]);
+          g.append('rect').attr('x', lw + k * cw + 1).attr('y', y + 2).attr('width', cw - 2).attr('height', rowH - 4).attr('rx', 2)
+            .style('fill', n > 0 ? color(e) : 'transparent').style('opacity', n >= 20 ? 1 : 0.45);
+          if (r.prior_peak === LIFE[k]) {
+            g.append('rect').attr('x', lw + k * cw + 1.5).attr('y', y + 2.5).attr('width', cw - 3).attr('height', rowH - 5).attr('rx', 2)
+              .style('fill', 'none').style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
+          }
+        });
+        g.append('text').attr('x', W - tagW / 2).attr('y', y + rowH / 2 + 4).attr('text-anchor', 'middle')
+          .style('fill', tagColor[r.trend_agree] || 'var(--color-fg-muted)').text(r.trend_agree === '不判断' ? '—' : r.trend_agree);
+        g.append('rect').attr('x', 0).attr('y', y).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+          .on('mousemove', (ev) => tip.show(ev, `${label(r)}（证据 ${n} 条）`, [
+            ...STAGE_KEYS.map((sk, k) => `${LIFE[k]}：富集 ${d3.format('.2f')(num(r['enrich_' + sk]))}，先验相关度 ${r['prior_' + sk]}`),
+          ])).on('mouseleave', tip.hide);
+      });
+    });
+
+    // 研究生与本科生：森林图
+    dash.draw('forest', (el) => {
+      const got = ready(el, ['education']);
+      if (!got) return;
+      const rows = got[0].map((r) => ({ ...r, irr: num(r.irr), lo: num(r.lo), hi: num(r.hi), p: num(r.p) }));
+      const W = el.clientWidth || 640, rowH = 32, top = 24;
+      const H = top + rows.length * rowH + 4;
+      el.replaceChildren();
+      const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+      const label = (r) => `${r.dim} ${r.dim_name}`;
+      const right = (r) => `${d3.format('.2f')(r.irr)}（${d3.format('.2f')(r.lo)}–${d3.format('.2f')(r.hi)}）`;
+      const lw = Math.min(measure(svg, rows.map(label), 12) + 12, W * 0.38);
+      const rw = Math.min(measure(svg, rows.map(right), 11) + 10, W * 0.3);
+      const dom = [Math.min(0.5, d3.min(rows, (r) => r.lo)), Math.max(2, d3.max(rows, (r) => r.hi))];
+      const x = d3.scaleLog(dom, [lw, W - rw]).clamp(true);
+      [0.05, 0.1, 0.25, 0.5, 1, 2, 4].filter((t) => t >= dom[0] && t <= dom[1]).forEach((t) => {
+        svg.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', top - 4).attr('y2', H).style('stroke', t === 1 ? 'var(--cds-chart-reference)' : 'var(--cds-chart-grid)').style('stroke-dasharray', t === 1 ? '4 3' : null);
+        svg.append('text').attr('x', x(t)).attr('y', top - 10).attr('text-anchor', 'middle').text(String(t));
+      });
+      const tip = makeTip(el);
+      rows.forEach((r, i) => {
+        const y = top + i * rowH + rowH / 2;
+        const sig = r.p < 0.05;
+        const c = sig ? dash.colors[0] : 'var(--cds-chart-muted)';
+        const g = svg.append('g');
+        g.append('rect').attr('x', 0).attr('y', y - rowH / 2).attr('width', W).attr('height', rowH).style('fill', 'transparent');
+        g.append('text').attr('x', lw - 12).attr('y', y + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('class', 'ti-strong').text(label(r));
+        g.append('line').attr('x1', x(r.lo)).attr('x2', x(r.hi)).attr('y1', y).attr('y2', y).style('stroke', c).style('stroke-width', 2).style('stroke-linecap', 'round');
+        g.append('circle').attr('cx', x(r.irr)).attr('cy', y).attr('r', 5).style('fill', c);
+        g.append('text').attr('x', W - rw + 8).attr('y', y + 4).text(right(r));
+        g.on('mousemove', (ev) => tip.show(ev, label(r), [
+          `本科生平均 ${d3.format('.2f')(num(r.ug_mean))} 项，研究生平均 ${d3.format('.2f')(num(r.grad_mean))} 项`,
+          `发生率比 ${right(r)}，p = ${d3.format('.3f')(r.p)}`,
+        ])).on('mouseleave', tip.hide);
+      });
+    });
+  })();
+</script>
